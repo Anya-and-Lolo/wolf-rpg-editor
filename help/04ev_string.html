@@ -9,30 +9,33 @@
 
 
 <style>
-body {
+<!--
+
+body{
   margin: 0;
   display: flex;
   height: 100vh;
   overflow: hidden;
   font-family: sans-serif;
 }
-#menu-frame {
+#menu-frame{
   width: 185px;
   min-width: 185px;
   max-width: 185px;
   border-right: 1px solid #aaa;
   height: 100%;
 }
-#content {
+#content{
   flex-grow: 1;
   overflow-y: auto;
   padding: 16px;
 }
-iframe {
+iframe{
   width: 100%;
   height: 100%;
   border: none;
 }
+-->
 </style>
 </HEAD>
 <BODY>
@@ -109,7 +112,8 @@ iframe {
 　→　※「<b>正規表現</b>」内で\s[0]などの特殊文字を使う場合は&lt;&lt;&gt;&gt;で挟んでください(例：&lt;&lt;\s[0]&gt;&gt;など)。<br>
 　　　　&lt;&lt;&gt;&gt;部分は自動で消滅します(「&lt;&lt;」を文字として直接入れたい場合は「\&lt;\&lt;と」記入してください）。<br>
 <BR>　「<B>隠しコード実行(&lt;&lt;から始まる）</B>」 … 右辺に入れたコードに従って、通常のコマンド指定ではできない、特殊な処理を実行できます。<b><a href="04ev_string_specialcode.html" target="B">隠しコードの一覧はこちら</a></b>です。<br>
-<br>
+  <br>
+  <br>
 <BR>
 <BR>
 <BR>
@@ -139,7 +143,31 @@ iframe {
 <p>　この「文字列操作」の「キーボード入力」中、並列イベントなどで「キー入力」コマンドの「自動キー入力」を使って「Enter（キーコード：128）」を入力すると、そこまで入力した分でキーボード入力が決定されます。<br>
 　時間制限付きの文字入力イベントなどに使えるでしょう、。<br>
 </p>
-<HR>
+  <HR>
+<p><b>【ヒント　正規表現で改行含む文字列をマッチさせたい場合】</b><br>
+  <br>
+  　正規表現で「<b>.*</b>」と入れると、「<b>任意の文字列、任意の長さの文字列</b>」にヒットしますが、<b>「改行」を含む文字列にはヒットしません</b>。<br>
+  　「<b>改行を含む文字列</b>」にヒットさせたい場合は「<b>(.|\n)*</b>」などを入れてみてください（\n＝改行）。<br>
+  <br>
+  　例：</p>
+  <table border="1">
+    <tbody>
+      <tr>
+        <td>2行の文字列<br>
+        「<b>あいうえ<br>
+        おかき</b>」</td>
+        <td style="text-align : center;"><b><br>
+        →</b></td>
+        <td><b>【条件分岐(文字列）】にて<br>
+        ・正規表現「.*」ではヒットしない。<br>
+        ・正規表現「(.|\n)*」ならヒットする。</b></td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br>
+  　<b>【注意！】</b> <br>
+  　　他にも「<b>改行を含む文字列</b>」にヒットさせるのに 「<b>[\s\S]*</b>」（「\s：改行やスペース」または「\S：改行やスペース以外」の任意長） という表現が知られているのですが、こちらはウディタ内では機能しないようです。</p>
+  <HR>
 <P><BR>
 </P>
 <P><BR>
