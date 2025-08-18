@@ -8,30 +8,33 @@
 <TITLE>ゲーム設定</TITLE><LINK rel="stylesheet" href="style.css">
 
 <style>
-body {
+<!--
+
+body{
   margin: 0;
   display: flex;
   height: 100vh;
   overflow: hidden;
   font-family: sans-serif;
 }
-#menu-frame {
+#menu-frame{
   width: 185px;
   min-width: 185px;
   max-width: 185px;
   border-right: 1px solid #aaa;
   height: 100%;
 }
-#content {
+#content{
   flex-grow: 1;
   overflow-y: auto;
   padding: 16px;
 }
-iframe {
+iframe{
   width: 100%;
   height: 100%;
   border: none;
 }
+-->
 </style>
 </HEAD>
 <BODY>
@@ -40,7 +43,7 @@ iframe {
 <iframe src="00_menu.html" title="メニュー"></iframe>
 </div>
 <!--ここから右欄-->
-<div id="content" id="scroll-target">
+<div id="content">
 
 <P><BR>
 <B><FONT size="+1">【Game.exe 動作バージョン調整】</FONT></B><BR>
@@ -49,8 +52,9 @@ iframe {
 　もしWOLF RPGエディターをアップデートした際などに期待通りに動作しなくなった場合は、「<b>Game.exe　動作バージョン調整</b>」で適切な動作バージョンに変更してください。<br>
 　<br>
 　<img src="Main_game_setting2A.png" border="0" style="width:95%;max-width:882px;">
-<HR size="1" id="standard">
-<P><BR>
+
+  <hr size="1" id="standard">
+  <P><BR>
 <B>【Game.exe 動作バージョン調整】</B> <br>
 <BR>
 　ここを切り替えることで、おおよそ旧バージョンの（バグがあったときの）仕様でGame.exeを動作させることができます。<br>
@@ -59,6 +63,10 @@ iframe {
 <BR>
 　「<B>最新版の挙動で動作</B>」　…　最新版の挙動で動作します。<BR>
 <br>
+  <br>
+　「<B>現Ver3.643の仕様で動作</B>(2025-08)」　…　最新の挙動です。<br>
+  <br>
+  <br>
 <br>
 　「<B>現Ver3.588の仕様で動作</B>(2025-04)」　…　最新の挙動です。<br>
 <br>
@@ -334,4 +342,4 @@ iframe {
 
 </div>
 </BODY>
-</HTML>
+</html>
