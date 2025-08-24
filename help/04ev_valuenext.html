@@ -10,30 +10,33 @@
 
 
 <style>
-body {
+<!--
+
+body{
   margin: 0;
   display: flex;
   height: 100vh;
   overflow: hidden;
   font-family: sans-serif;
 }
-#menu-frame {
+#menu-frame{
   width: 185px;
   min-width: 185px;
   max-width: 185px;
   border-right: 1px solid #aaa;
   height: 100%;
 }
-#content {
+#content{
   flex-grow: 1;
   overflow-y: auto;
   padding: 16px;
 }
-iframe {
+iframe{
   width: 100%;
   height: 100%;
   border: none;
 }
+-->
 </style>
 </HEAD>
 <BODY>
@@ -87,8 +90,10 @@ size=+1>【変数操作＋】</FONT></B><BR>
 	font-size : 80%;
 ">　※この精密Y座標をそのまま使って、後述の「位置」の「通行判定」などを得ると、「<b>足下でない</b>」ためズレが発生します。<b>「キャラの足下の通行判定」を知りたい場合は【精密Y座標に+1】して使ってください。</b></span><BR>
 　・<B>高さ（ピクセル数）</B> … イベントの現在の高さ（9100000～で始まるキャラクター状態変数で指定可能)をピクセル数で得られます。<BR>
-　・<B>向き（1～9、テンキーに対応）</B> … キャラクターの向きです。方向と値の対応は以下の<B>図A</B>をご覧ください。
-<TABLE border="0">
+　・<B>向き（1～9、テンキーに対応）</B> … キャラクターの向きです。方向と値の対応は以下の<B>図A</B>をご覧ください。 <br>
+  　　　なお、「方向固定」されていないイベントを「接触」起動や「決定キー」起動した場合、イベントは主人公のいる方向を向きます。<b><span style="color : #cc0000;
+	font-size : 80%;
+">0フレームで処理が終わって【一見、主人公の方を向いていない】場合であってもイベント処理中は「主人公のいる方向」を返します！　内部的には一瞬主人公の方向を向いて、すぐ戻っているためです。</span></b><TABLE border="0">
 <TBODY>
 <TR>
 <TD width="16"></TD>
