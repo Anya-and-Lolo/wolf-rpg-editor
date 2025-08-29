@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>決定キーで起動するイベント</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+
+<HR>
+<H2>【決定キーで起動するイベント】</H2>
+<HR>
+
+<P>
+【目標】<BR>
+　決定キーを押すと起動するイベントを作ります。<br>
+<br>
+　ここでは、サンプルゲーム内の「サンプルマップA」内に、<BR>
+　<b>調べると「宝箱がある」とメッセージが表示される宝箱</b>のイベントを新たに作ります。<BR>
+<BR>
+　<img src="image/EV_001_1.jpg" border="1" width="320" height="239"><br>
+　こんな感じ。<br>
+<br>
+　※やることは<B><A href="MUST_001x.html" target="B">◆新しいイベントを作ってみたい</A></B>とほぼ同じですので、<br>
+&#160;　　こちらではイベントのグラフィックにキャラチップではなくタイルチップから選択する方法で作成します。<br>
+</P>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>
+【1】<BR>
+　・まずマップ選択<IMG src="image/icon_mapselector.png" width="22" height="20" border="0">で「<B>サンプルマップA</B>」に切り替えて下さい。<BR>
+　<BR>
+　・適当な場所にイベントを新しく作成して下さい。<BR>
+<BR>
+　→ 分からないときは、<B><A href="MUST_001x.html" target="B">◆新しいイベントを作ってみたい</A></B>の【1】～【3】を参考に。<BR>
+</TD><TD nowrap>
+</TD></TR></TBODY></TABLE>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>
+【2】<BR>
+　イベントのグラフィックを設定しましょう。<BR>
+　<br>
+　赤い枠で囲まれた部分をダブルクリックして下さい。<BR>
+　
+</TD><TD nowrap>
+<IMG src="image/MUST_001xev1.jpg" border="1">
+</TD></TR></TBODY></TABLE>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>
+【3】<BR>
+　右のようなウィンドウが表示されます。<br>
+　<br>
+　・ウィンドウの左側のリストから<br>
+　　<b>（タイルセット）</b>を選びます。<br><br>
+　・すると右側にマップチップが表示されます。<br>
+　　その中から<b>宝箱</b>を選びましょう。<br>
+　　宝箱は<b>下の方</b>にあります。<br>
+　　右のスクロールバーを使って探しましょう。<br>
+　<br>
+　※（タイルセット）で選択できるのは、<br>
+　　　<b>現在のマップで使われている<br>
+　　　タイルセットからのみ</b>です。<br>
+　
+</TD><TD nowrap>
+<img src="image/EV_001_2.gif" border="1" width="320" height="265">
+</TD></TR></TBODY></TABLE>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>
+【4】<BR>
+　宝箱をイベントのグラフィックに設定できました。<br>
+　続いて、<b>「起動条件」を確認</b>します。<br>
+  <br>
+　・赤丸で囲んだところに注目して下さい。<BR>
+&#160;　ここで「<b>起動条件</b>」を設定することができます。<BR>
+<BR>
+　・クリックすると５つの起動条件が表示されるので、<BR>
+&#160;　<b>「決定キーで実行」</b>を選びます。<BR>
+<BR>
+　※イベントは新規で作成すると初めから<BR>
+　　「決定キーで実行」に設定されていますので<br>
+　　今回は確認するだけですね。<BR>
+<BR>
+　これで今作っているイベントは<br>
+　「決定キーで起動するイベント」になりました。<br>
+</TD><TD nowrap>
+<img src="image/EV_001_3.gif" border="1" width="288" height="222">
+</TD></TR></TBODY></TABLE>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>
+【5】<BR>
+　最後にイベントの中身を作っていきます。<br>
+　<br>
+　<B>イベントウィンドウ</B>の右下にある<BR>
+　「<B>■コマンドウィンドウ表示■</B>」を<BR>
+　クリックしてください。</TD>
+<TD nowrap>
+<IMG src="image/window_evbase2.jpg" width="198" height="60" border="1">
+</TD></TR></TBODY></TABLE>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>
+【6】<BR>
+　「<B>イベントコマンドの挿入</B>」ウィンドウが<BR>
+　出てくるので、上部タブにある<BR>
+　「<B>文章の表示</B>」になっていることを確認して下さい。<br>
+　<br>
+　・中央の文字入力欄に<br>
+　　<b>「宝箱がある。」</b>と打ち込み、<br>
+　　<b>「入力」</b>ボタンをクリックします。<br>
+　</TD>
+<TD nowrap>
+<IMG src="image/window_evbase3.jpg" width="300" height="254" border="1">
+</TD></TR></TBODY></TABLE>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>
+【7】<BR>
+　これでイベントは完成です。<br>
+　<br>
+　右のような状態になっていますか。<br>
+　赤線で囲んだ部分に注意して下さい。<br>
+<br>
+　１：グラフィックは「宝箱」<br>
+　２：起動条件が「決定キーで実行」<br>
+　３：右側のイベントコマンド表示欄に<br>
+　　　■文章：宝箱がある。<br>
+　　　■<br>
+　　　と表示されている。<br>
+<TD nowrap>
+<img src="image/EV_001_4.gif" border="1" width="278" height="175">
+</TD></TR></TBODY></TABLE>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>
+【8】<BR>
+　さて、マップをセーブして、<BR>
+　作ったイベントをテストしてみましょう。<BR>
+<BR>
+　「<B>セーブ（マップ全体）</B>」をクリックした後、<BR>
+　「<B>テストプレイ</B>」をクリックしてください。</TD>
+<TD nowrap><IMG src="image/window_evbase4.png" width="247" height="100" border="1"></TD>
+</TR></TBODY></TABLE>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>【9】　<BR>
+　作成したイベントに近づいて<br>
+　決定キー（Enterキー/スペースキー/[Z]キー）を<br>
+　押してみましょう。<br>
+<br>
+　右の画像のように<br>
+　「宝箱がある。」と表示されましたか？<br>
+<br>
+　以上で「決定キーで起動するイベント」は完成です。<br>
+　お疲れ様でした。<br>
+　</TD>
+<TD nowrap><img src="image/EV_001_1.jpg" border="1" width="320" height="239"></TD>
+</TR></TBODY></TABLE>
+
+<HR>
+
+<br><br><br>
+
+<HR>
+<P>＜執筆者：<A href="http://blog.livedoor.jp/mikenekonyanko/" target="_blank">ミケ</A>＞　</P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

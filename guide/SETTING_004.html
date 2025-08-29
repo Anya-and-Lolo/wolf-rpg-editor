@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>メッセージ待ちの画像を変更したい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【メッセージ待ちの画像を変更したい】</H2>
+<HR>
+　<B>【目標】</B><BR>
+<HR>
+<P>
+　イベントコマンド「文章の表示」で表示できる<BR>
+　メッセージウィンドウの中央下に、<BR>
+　赤い下向き三角形の画像が表示されていますね。<BR>
+　これは「入力待ちポーズ画像」といって、<BR>
+　この画像を変更することで、簡単に<BR>
+　ゲームの雰囲気を変えることが出来ます。<BR>
+<BR>
+　今回は、入力待ちポーズ画像を、用意した画像に変更<BR>
+　することでシステム画像の変更の仕方を習得します。<BR>
+<BR>
+　　<IMG src="image/Text_Pause01.png" border="0" alt="Text_Pause01.png"><BR>
+<BR>
+　この画像は基本ルールに則った素材として利用可能です。<BR>
+　使用される場合は、素材利用基本ルールの詳細が<BR>
+　記事「<A href="http://www.silversecond.com/WolfRPGEditor/Guide/MATERIAL_007.html" target="_blank">素材を使うためのルールってどんな感じなの？</A>」<BR>
+　に記載されていますのでご確認下さい。</P>
+
+<HR>
+　<B>【手順】</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【1】 素材の用意<BR>
+<BR>
+　今回使用する画像<B>「Text_Pause01.png」</B>(上の【目標】内にあります)を右クリックで、<BR>
+　<B>「名前を付けて保存」</B>を行ってください。保存する場所は、<BR>
+　Dataフォルダ内の<B>「SystemFile」</B>フォルダを指定してください。<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【2】 システムDBを開く<BR>
+<BR>
+　システムデータベース<IMG src="image/icon_sysDB.png" width="22" height="20" border="0">をクリックすると、<BR>
+　右のようなウィンドウが表示されます。<BR>
+</TD>
+<TD nowrap><IMG src="image/window_SystemDB.jpg" width="332" height="291" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【3】 編集するタイプの選択<BR>
+<BR>
+　①ウィンドウが開いた直後は「タイプ」が「マップ設定」になっています。<BR>
+　　<B>「10:ウィンドウ画像」</B>をクリックして下さい。<BR>
+　②ウィンドウの中ほどにデータ一覧があります。<BR>
+　　データはこの中から<B>「○入力待ちﾎﾟｰｽﾞ画像」</B>を選択してください。<BR>
+</TD>
+<TD nowrap><IMG src="image/SETTING_004_1.png" width="346" height="330" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【3】 画像を設定<BR>
+<BR>
+　　次に、ウィンドウに使われる画像を設定します。<BR>
+<BR>
+　①画像ファイル名の右にある<B>[File]</B>ボタンを押すと<BR>
+　　素材が入っているフォルダが開かれますので、<BR>
+　②<B>「Text_Pause01.png」</B>を選択し、ウィンドウ右下の<BR>
+　③ボタン<B>「OK」</B>を押してください。<BR>
+　　画像ファイル名に<B>「SystemFile/Text_Pause01.png」</B>が<BR>
+　　入力されました。<BR>
+　④次に、画像ファイル名の１つ下の項目<B>「縦分割数(一部のみ)」</B>に<BR>
+　　<B> 6 </B>を入力し(初期設定では既に 6 になっています)、<BR>
+　⑤ウィンドウ右下のボタン<B>「OK」か「更新」</B>を押して上書きします。<BR>
+</TD>
+<TD nowrap><IMG src="image/SETTING_004_2.png" width="582" height="480" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【4】 画像を設定<BR>
+<BR>
+　ではテストプレイして、メッセージウィンドウの中央下を見てみましょう。<BR>
+　変更前は赤い三角形がちまちま縦に動いていましたが、<BR>
+　変更後は<B>銀色の三角形が横方向にくるくると回っている</B>と思います。<BR>
+　お疲れ様でした！<BR>
+</TD>
+<TD nowrap><IMG src="image/SETTING_004_3.png" width="433" height="111" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+　<B>【余談】</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>１．縦分割数について<BR>
+<BR>
+・ウディタでは、一部の画像はアニメーションさせることができ、<BR>
+　1枚の画像をアニメーションのそれぞれのコマに分割して<BR>
+　連続的に表示していく設定が「分割数」です。<BR>
+　表示されるときに擬似的に分割されているだけなので、<BR>
+　フォルダの中にある画像が切り刻まれていたりは<BR>
+　全くしませんのでご安心を。<BR>
+・入力待ちポーズ画像は縦にのみ分割してアニメーションさせることができ、<BR>
+　「縦分割数(一部のみ)」の設定が 2 以上だと、画像は縦幅だけが<BR>
+　その数に均等に分割されます。横幅は変わりません。<BR>
+　縦分割数が 1 以下だとアニメーションしません。<BR>
+　デフォルトの赤い下向き三角形の画像「Text_Pause.png」を<BR>
+　見てみると、三角形は縦に6つ並んでいます。<BR>
+　縦分割数の設定は 6 でしたので、この三角形が一枚ずつに<BR>
+　分割されて表示されているのでした。<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>２．メッセージウィンドウの背景を変える<BR>
+<BR>
+　今回はメッセージウィンドウの下に表示されるポーズカーソルを<BR>
+　変更しましたが、メッセージウィンドウの背景となっている<BR>
+　画像も変更することが出来ます。<BR>
+　これはユーザデータベースのタイプ16番「画像/音声設定」で、<BR>
+　項目2番「ﾒｯｾｰｼﾞｳｨﾝﾄﾞｳ ﾍﾞｰｽ画像」で変更することができます。<BR>
+<BR>
+　　　<IMG src="image/WindowBase01.png" border="0" alt="WindowBase01.png"><BR>
+<BR>
+　この画像も基本ルールに則った素材として利用可能です。<BR>
+　余力があればやってみてくださいね。<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<HR>
+
+<P>＜執筆者：ウディタ公式ガイド執筆コミュ。＞
+    <ul>
+        <li>トピック原案：真波、<A href="http://hinezumi.velvet.jp/index.php" target="_blank">ユノ</A></li>
+        <li>HTML作成：真波</li>
+    </ul>
+</P>
+<HR>
+【改訂履歴】<BR>
+　Ver1.00　2013/11/22 新規作成<BR>
+<HR><A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+
+</BODY>
+</HTML>

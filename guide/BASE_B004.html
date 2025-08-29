@@ -1,0 +1,480 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+ 
+<HTML LANG="ja">
+
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>[戦]ステータス異常を作りたい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+<BODY>
+<HR>
+<H2>【◆[戦]ステータス異常を作りたい】</H2>
+<HR>
+<P>
+	【目標】 <br>
+	新しいステータス異常「ひるみ」(３ターン行動不能)を作ります。<br> 
+　<br>
+　少々長いですが、おおまかには以下の３つのことをやっています。<br> 
+　<br>
+　　☆ユーザーデータベースの「8:ステータス異常」に新しく「ひるみ」を作ります。<br> 
+　　☆『特殊技能編』：敵を「ひるみ」状態にする特殊技能「威圧」を<br>
+　　　　　　　　　　　　　作り、主人公に習得させます。<br> 
+　　☆　『 武器編 』　：装備しての通常攻撃で敵に「ひるみ」状態を与える<br>
+　　　　　　　　　　　　　武器「インパクトダガー」を作り、主人公に装備させます。<br> 
+　<br>
+　下の２つ『特殊技能編』『武器編』は必要に応じてどうぞ。<br> 
+　<br>
+☆では、まずステータス異常「ひるみ」を作ります。<br> 
+</P>
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【1】ユーザデータベース<IMG src="image/icon_userDB.png" width="22" height="20" border="0">をクリックすると、<br>
+			右のようなウィンドウが表示されます。<br>
+		</TD>
+		<TD nowrap>
+			<IMG src="image/window_UserDB.jpg" width="332" height="291" border="1">
+		</TD>
+	</TR>
+</TBODY>
+</TABLE>
+ 
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【2】ウィンドウが開いた直後は<br>
+			「タイプ」が「技能」になっています。<br>
+			「8:ステータス状態」をクリックして下さい。<br>
+		</TD>
+		<TD nowrap>
+			<IMG src="./image/BASE_B004_1.png" width="316" height="228" border="0"><br>
+		</TD>
+	</TR>
+</TBODY>
+</TABLE>
+ 
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【3】「データ」の空いているところをクリックして下さい。<br>
+		</TD>
+		<TD nowrap>
+			<IMG src="./image/BASE_B004_2.png" width="163" height="192" border="0"><br>
+		</TD>
+	</TR>
+</TBODY>
+</TABLE>
+ 
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【4】「ページ１」の各項目を入力して下さい。<br>
+　<br>
+			　「ステータス名」に「ひるみ」、<br>
+			　「最低持続ターン[-1=永久]」に「3」、<br>
+			　「発生時の文章[(人名)～]」に「はひるんだ！」、<br>
+			　「行動制限」を「制限なし」から「行動不能」にします。<br>
+		</TD>
+		<TD nowrap>
+			<IMG src="./image/BASE_B004_3.png" width="329" height="449" border="0">
+		</TD>
+</tr>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【5】これでステータス状態の設定は終わりです。<br>
+			ウィンドウ下の「OK」をクリックして、いったんウィンドウを閉じて下さい。<br>
+			これで、今まで行った作業がウディタに保存されます。<br>
+　<br>
+			次に、ステータス異常を引き起こす手段を作成します。<br>
+　<br>
+			☆『特殊技能編』：<b>特殊技能を使う</b>ことで敵に「ひるみ」状態を<br>
+			　　　　　　　　　　　付加するなら、このままお進みください。 <br>
+			☆　『 武器編 』　：装備して通常攻撃を行うことで<b>敵に「ひるみ」状態を<br>
+			　　　　　　　　　　付加する武器</b>を作るなら、<A HREF="#wolf">こちら</A>へどうぞ。<br>
+		</TD>
+		<TD nowrap>
+			<IMG src="image/BASE_S006_4.png" width="284" height="44" border="0">
+		</TD>
+</TR>
+</TBODY>
+</TABLE>
+ 
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			☆『特殊技能編』<br>
+　<br>
+　<br>
+			【1】ユーザデータベース<IMG src="image/icon_userDB.png" width="22" height="20" border="0">をクリックすると、<br>
+			右のようなウィンドウが表示されます。<br>
+		</TD>
+		<TD nowrap>
+			<IMG src="image/window_UserDB.jpg" width="332" height="291" border="1">
+		</TD>
+	</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【2】「タイプ」が「技能」になっていることを確認してください。 <br>
+			（もしなっていなければ、「0:技能」をクリック）<br>
+		</TD>
+		<TD nowrap>
+			<IMG src="image/BASE_S007_1.png" width="298" height="150" border="0"> 
+		</TD>
+	</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【3】「データ」の空いているところをクリックして下さい。<br>
+		</TD>
+		<TD nowrap>
+			<IMG src="image/BASE_S007_2.png" width="300" height="150" border="0"> 
+			</TD>
+	</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【4】「ページ１」の各項目を入力します。 <br>
+			「技能の名前」に「威圧」 <br>
+			「┏効果対象」に「10:敵一体[攻撃]」<br> 
+			「使用時文章[(人名)～]」に「は敵を威圧した！」を、<br>
+			それぞれ入力して下さい。 <br>
+		</TD>
+		<TD nowrap>
+			<IMG src="image/BASE_B004_4.png" width="379" height="448" border="0">
+		</TD>
+</TR>
+</TBODY>
+</TABLE>
+ 
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【5】次に、「ページ２」の各項目を入力します。 <br>
+			「付加するｽﾃｰﾀｽ状態」に「ひるみ」を入力して下さい。<br> 
+		</TD>
+		<TD nowrap>
+			<IMG src="image/BASE_B004_5.png" width="368" height="301" border="0">
+		</TD>
+</TR>
+</TBODY>
+</TABLE>
+ 
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【6】更新ボタンかＯＫボタンを押して下さい。<br>
+			新しい技能「威圧」が保存されました。<br>
+			次に、使うために主人公に習得させます。 <br>
+		</TD>
+		<TD nowrap>
+			<IMG src="image/BASE_S006_4.png" width="284" height="44" border="0">
+		</TD>
+</TR>
+</TBODY>
+</TABLE>
+ 
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【7】可変データベース<IMG src="image/icon_changeDB.png" width="22" height="20" border="0">をクリックすると、<br>
+			右のようなウィンドウが表示されます。<br>
+		</TD>
+		<TD nowrap>
+			<IMG src="image/window_ChangeDB.jpg" width="332" height="291" border="1"> 
+		</TD>
+</TR>
+</TBODY>
+</TABLE>
+ 
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【8】「1：┣ 技能習得Lv」を選択します。 <br>
+		</TD>
+		<TD nowrap>
+			<IMG src="image/BASE_S006_1.png" width="138" height="227" border="0">
+		</TD>
+</TR>
+</TBODY>
+</TABLE>
+ 
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【9】そのまま右の方を見ると、<br>
+			右の図のように覚えるレベルと<br>
+			覚える技能の入力欄が表示されています。<br>
+		</TD>
+		<TD nowrap>
+			<IMG src="image/BASE_S006_2.png" width="342" height="213" border="0">
+		</TD>
+</TR>
+</TBODY>
+</TABLE>
+ 
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【10】上から2つ目の「<能力>覚えるレベル」を「1」に、<br>
+			その１つ下の「┗覚える技能」を「威圧」に設定します。<br> 
+ <br>
+			※一番上には既にレベル3で「ヒール」を覚えるように<br>
+			設定がされているので、これは残しておきます。<br> 
+		</TD>
+		<TD nowrap>
+			<IMG src="image/BASE_B004_6.png" width="352" height="281" border="0">
+		</TD>
+</TR>
+</TBODY>
+</TABLE>
+ 
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【11】設定したら、ウィンドウの右下にある「OK」をクリックします。<br>
+			これで主人公が特殊技能「威圧」を覚えました。<br>
+			戦闘で使ってみると、敵に「ひるみ」状態が付加し、<br>
+			敵は３ターンの行動不能となるはずです。<br>
+　<br>
+			これで、特殊技能を使ったステータス異常の<br>
+			作成は終わりです。お疲れさまでした。<br>
+　<br>
+			(これより下は、武器を使ったステータス異常の作成方法です。)
+		</TD>
+		<TD nowrap>
+			<IMG src="image/BASE_S006_4.png" width="284" height="44" border="0">
+		</TD>
+</TR>
+</TBODY>
+</TABLE>
+
+
+ 
+<A NAME="wolf"></A>
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			☆『武器編』<br>
+　<br>
+　<br>
+			【1】ユーザデータベース<IMG src="image/icon_userDB.png" width="22" height="20" border="0">をクリックすると、<br>
+			右のようなウィンドウが表示されます。<br>
+		</TD>
+		<TD nowrap>
+			<IMG src="image/window_UserDB.jpg" width="332" height="291" border="1">
+		</TD>
+	</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【2】ウィンドウが開いた直後は<br>
+			「タイプ」が「技能」になっています。<br>
+			「3:武器」をクリックして下さい。<br>
+		</TD>
+		<TD nowrap>
+			<IMG src="image/BASE_S009_1.png" width="150" height="220" border="0">　→　<IMG src="image/BASE_S009_2.png" width="150" height="220" border="0"> 
+		</TD>
+	</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【3】「データ」の空いているところをクリックして下さい。<br>
+		</TD>
+		<TD nowrap>
+			<IMG src="image/BASE_S009_3.png" width="300" height="100" border="0"> 
+		</TD>
+	</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【4】「ページ１」の各項目を入力します。<br> 
+			「武器の名前」に「インパクトダガー」<br> 
+			「装備のタイプ」に「0:短剣[ﾕｰｻﾞ5]」<br> 
+			「攻撃アニメーション」に「1:大斬り[ﾕｰｻﾞ1]」<br> 
+			 を、それぞれ入力して下さい。<br>
+		</TD>
+		<TD nowrap>
+			<IMG src="image/BASE_B004_7.png" width="381" height="278" border="0">
+		</TD>
+</TR>
+</TBODY>
+</TABLE>
+ 
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【5】「ページ２」の各項目を入力します。<br> 
+			「┏ 付与ステータス状態」に「ひるみ」<br> 
+			「┗ 付与確率」に「50」をそれぞれ入力して下さい。<br> 
+		</TD>
+		<TD nowrap>
+			<IMG src="image/BASE_B004_8.png" width="394" height="239" border="0">
+		</TD>
+</TR>
+</TBODY>
+</TABLE>
+ 
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【6】更新ボタンかＯＫボタンを押して下さい。 <br>
+			新しい武器「インパクトダガー」が保存されました。<br>
+		</TD>
+		<TD nowrap>
+			<IMG src="image/BASE_S006_4.png" width="284" height="44" border="0">
+		</TD>
+</TR>
+</TBODY>
+</TABLE>
+ 
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【7】可変データベース<IMG src="image/icon_changeDB.png" width="22" height="20" border="0">をクリックすると、<br>
+			右のようなウィンドウが表示されます。<br>
+		</TD>
+		<TD nowrap>
+			<IMG src="image/window_ChangeDB.jpg" width="332" height="291" border="1"> 
+		</TD>
+</TR>
+</TBODY>
+</TABLE>
+ 
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【8】「タイプ」が「0:主人公ステータス」に<br>
+			なっていることを確認してください。<br> 
+			（もしなっていなければ、「0:主人公ステータス」をクリック）<br>
+		</TD>
+		<TD nowrap>
+			<IMG src="image/BASE_S004_1.png" width="300" height="150" border="0"> 
+		</TD>
+</TR>
+</TBODY>
+</TABLE>
+ 
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【9】データ０番「0:ウルファール」の<br>
+			２ページ目の項目を設定します。<br>
+			上から６つ目の「装備中の武器」を<br>
+			「インパクトダガー」に変えて下さい。 <br>
+		</TD>
+		<TD nowrap>
+			<IMG src="image/BASE_B004_9.png" width="410" height="349" border="0">
+		</TD>
+</TR>
+</TBODY>
+</TABLE>
+ 
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【10】更新ボタンかＯＫボタンを押して下さい。<br>
+			ウルファールの武器が「インパクトダガー」になりました。<br>
+　<br>
+			武器を変更せずに戦闘を行い、通常攻撃をしてみてください。<br>
+			うまく設定できていれば、50%の確率で敵に「ひるみ」状態を付加し、<br>
+			敵は３ターンの行動不能になります。<br>
+　<br>
+			武器を使ったステータス異常の設定方法は以上です。<br>
+			おつかれさまでした。<br> 
+		</TD>
+		<TD nowrap>
+			<IMG src="image/BASE_B004_10.png" width="300" height="237" border="0">
+		</TD>
+</TR>
+</TBODY>
+</TABLE>
+
+
+
+ 
+<HR>
+<P>＜執筆者：<A href="http://sns.prtls.jp/rpgeditor/community.html?cid=33af3514107db1a4" target="_blank">ウディタ公式ガイド執筆コミュ。</A>＞<br>
+	<ul>
+		<li>真波</li>
+	</ul>
+</P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><br>
+</P>
+</BODY>
+</HTML>

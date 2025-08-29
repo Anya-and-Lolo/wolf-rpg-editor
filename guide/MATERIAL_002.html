@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>違うマップチップ素材をゲームで使いたい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【違うマップチップ素材をゲームで使いたい】</H2>
+<HR>
+<P>【目標】 <BR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>
+デフォルトで使用されているマップチップ素材とは異なる素材を使用する方法を紹介します。<br>
+今回紹介するのは、講座用にベースチップ、オートタイルを用意して、それを導入し、使えるようにする手順です。<br>
+新しくマップを作るときに、登録したマップチップが使えるようになれば成功です。<br>
+ちなみに、今回の素材を使いますと、右にあるようなマップが作成できます。<br>
+さらに、タイル設定ファイルについても説明いたします。<br>
+</TD>
+<TD nowrap><img src="image/MATERIAL_002_1.png" width="400" height="300"><BR>
+この記事の作成者はかなりの凝り性です(笑)。<br>ここに使用されているテクニックについては、<br>「<a href="MAP_005.html">◆オートタイルの境界を自由に描きたい</a>」を参照下さい。</TD>
+<!--この例は20×15のサイズのマップです。またレイヤー3は使っておりません。-->
+</TR>
+
+</TBODY>
+</TABLE>
+</P><HR><P>
+【手順】
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【1】　マップチップ素材をまずは用意する<br>
+　こちらより、必要になるチップ類をダウンロードしてください。<br>
+　今回入手したチップは「MapChip」フォルダに入れると登録する際に便利です。<br>
+　(なお、Sample.tileはおき場所は問いません、管理しやすいところにどうぞ）<br><br>
+<!--ただし、ゲームデータとして使われることはないので、使った後はDataフォルダから移動させても構いません、
+もっとも、そこまで容量は大きくはないですが。-->
+　なお、今回の素材は、解像度が320×240に対応した素材です。<br>
+　「ゲームの基本設定」にて、解像度を設定しておきましょう。<br>
+</TD>
+<TD nowrap><img src="image/Base.png" width="128" height="32" border="0">  <img src="image/Carpet.png" width="16" height="80" border="0">
+  <img src="image/Grass.png" width="16" height="80" border="0">  <img src="image/Water.png" width="64" height="80" border="0"><BR>
+お使いのブラウザの機能で「画像を保存」してください。<br>なお、タイルセットは<a href="image/Sample.tile">こちら</a>です。<br>「リンク先のファイルを保存」してください。</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【2】　登録するために<br>
+　<img src="image/icon_tileset.png" width="22" height="20" border="0">のアイコンをクリックし、マップチップ設定画面を開きます。<br>
+　その後、空いている番号をクリックします。<br>
+</TD>
+<TD nowrap><img src="image/MATERIAL_002_2.png" width="312" height="287"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【3】　名前を登録しましょう。<br>
+　名前の欄に書き込まれた文字が、チップセットの識別の為に使われます。<br>
+　ここでは「テスト」という名前で登録してみましょう。<br>
+</TD>
+<TD nowrap><img src="image/MATERIAL_002_3.png" width="312" height="287"><br>ここです。</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【4】　登録したいベースチップを登録しましょう。<br>
+　「基本タイルセットファイル」の欄に、ベースチップを登録します。<br>
+　ここでは「Base.png」を登録しましょう。<br>
+　空欄の隣の「読込」ボタンを押すと、ダイアログが出現しますので、<br>
+　そこから使いたいマップチップを選択します。<br>
+　右の画面に選んだマップチップが表示されればOKです。<br>
+</TD>
+<TD nowrap><img src="image/MATERIAL_002_4.png" width="312" height="287"><br>Base.pngの中身が右側に出てきましたか？</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【5】　オートタイルを登録しましょう。<br>
+　ここでは、「Carpet.png」「Grass.png」「Water.png」を登録しましょう。<br>
+　「オートタイルファイル」の下にある欄に使用したいオートタイルを登録します。<br>
+　登録方法はベースチップと同じです。<br>
+　右の画面の上の方に、選択したオートタイルの一部が表示されればOKです。<br>
+</TD>
+<TD nowrap><img src="image/MATERIAL_002_5.png" width="312" height="287"><br>選んだオートタイルが右側に出てきましたか？</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>※通行設定も忘れんと<br>
+　通行設定をきっちりしないと、実際のゲームで思った動作をしません。<br>
+　通行設定のやり方や詳細については、「<a href="MATERIAL_001.html">◆マップチップの通行設定を変更したい</a>」を参照してください。<br>
+　今回は、この画面にあるように設定すればOKです。<br>
+</TD>
+<TD nowrap><img src="image/MATERIAL_002_6.png" width="312" height="287"><br>通行設定はこんな風に<br>なお、通行方向などは変更なしでOKです</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【6】　登録したマップチップは使えますか？<br>
+　登録が済んだら、実際に使ってみましょう。<br>
+　<br>
+　新しくマップを作成し(<img src="image/icon_newmap.png" width="22" height="20" border="0">のアイコンをクリック)、<br>
+　出てきたダイアログの「タイルセット」のリストを開いてみます。<br>
+　ここで先ほど登録したチップの名前「テスト」が現れていれば成功です。<br>
+　それを選択し、OKをクリックしてください。<br>
+　これで、登録した「テスト」のチップを使ってマップを描くことができます。<br>
+</TD>
+<TD nowrap><img src="image/MATERIAL_002_7.png" width="199" height="300"> <img src="image/MATERIAL_002_8.png" width="300" height="250"><br>こうなればOK!右のように使えるようになります。</TD>
+</TR>
+</TBODY>
+</TABLE>
+</P><HR><P>
+【余談】
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【A】　タイル設定ファイル(.tileファイル)だと全部一発で済みまっせ！<br>
+　ウディタでは、マップチップ設定で設定した内容を、タイル設定ファイルとして出力することができます。<br>
+　そこには、名前、ベースチップ、オートタイル、通行設定などが登録されており、<br>
+　そのファイルを読み込みますと、これらの項目が自動で読み込まれます。<br>
+　通行設定については、「<a href="MATERIAL_001.html">◆マップチップの通行設定を変更したい</a>」を参照してください。<br>
+　ただし、これを読み込むにあたり、使用するチップは、<u>予め「MapChip」フォルダに置きましょう</u>。<br>
+　<br>
+　今回は「Sample.tile」を読み込みましょう。<br>
+　画面上のタイルセット「読込」をクリックし、上記のタイル設定ファイルを選択しましょう。<br>
+　こうすると、名前、ベースチップ、オートタイル、通行設定などが、<b>一気に</b>読み込まれたことが分かります。<br>
+　<br>
+　なお、タイルセット「単体保存」をクリックすると、今選択されているマップの設定情報<br>
+　（名前、ベースチップ、オートタイル、通行設定など）を、タイル設定ファイルとして<br>
+　.tileファイルに出力することができます。<br>
+</TD>
+<TD nowrap><img src="image/MATERIAL_002_9.png" width="312" height="287"><br>ここで読み込めます。</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【B】　オートタイルの読み込み個数<br>
+　ウディタがVer.2以上なら、最大で15個のオートタイルを登録できます。<br>
+　但し、登録欄は一度に8つ分までしか表示されません。<br>
+　8番目以降のオートタイルを登録したいのならば、「オートタイルファイル」の隣にある「2」をクリックします。<br>
+　すると登録できるオートタイルが8～15に切り替わります(1～7に戻すときは「1」をクリック)。<br>
+　<br>
+　<b>＊注意！</b><br>
+　<u>0番には登録できません</u>。(×がついています)<br>
+　このチップはチップ消去(いわゆる消しゴム)のために使われるからです。<br>
+</TD>
+<TD nowrap><img src="image/MATERIAL_002_10.png" width="312" height="287"><br>ここです。</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+</P>
+<HR>
+<P>＜＜執筆者：<A href="http://sns.prtls.jp/rpgeditor/community.html?cid=33af3514107db1a4" target="_blank">ウディタ公式ガイド執筆コミュ。</A>＞＞<BR>
+<UL>
+	<LI>設計書作成：Hdk103-Arch、ユノ</LI>
+	<LI>トピック執筆：Hdk103-Arch</LI>
+</UL>
+＜素材提供者＞<br>
+<UL>
+	<li>Base.png：ユノ</li>
+	<li>Carpet.png：ユノ</li>
+	<li>Grass.png：ユノ</li>
+	<li>Water.png：ユノ</li>
+	<li>Sample.tile：ユノ</li>
+</UL>
+本トピックで使用されている素材に関しましては、<br>
+ウディタ素材スレッドの利用規約に準じて使用することができます。<br>
+</P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

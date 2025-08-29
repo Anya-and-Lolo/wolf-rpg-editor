@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<title>所持アイテムを増減させたい</title>
+<link rel="stylesheet" href="manual.css" type="text/css">
+<style type="text/css">
+body {  width : 95%; }
+table { width : 600px; border-collapse: separate; border-spacing: 10px; }
+td { position:relative; left:15px; }
+</style>
+</head>
+<body>
+<hr>
+<H2>【所持アイテムを増減させたい】</H2>
+<hr>
+<br>【目標】<br>
+<table border="0"><tr><td valign="top">・ニワトリを調べるとアイテムを入手できるようにする<br>
+・2回目以降アイテムをもらえないようにする<br>
+・アイテム入手後、ニワトリのグラフィックを削除する<br>
+<br>
+宝箱からアイテムを入手する方法については、<a href="EV_006.html" target="B">◆一度空いたら空きっぱなしの宝箱</a>で詳しく書かれています。</td></tr></table>
+<br>
+<hr>
+<br>
+【1】<br>
+<table border="0"><tr><td valign="top">
+・まずマップ選択<img height=20 src="image/icon_mapselector.png" width=22 border=0>で<b>「イベントを作成したいマップ」</b>に切り替えて下さい。<br>
+<br>
+・適当な場所にイベントを作成してニワトリの画像を設定しておきます。<br>
+<br>
+手順は<a href="EV_001.html" target="B">◆決定キーで起動するイベント</a>の【1】～【5】を参考にしてください。
+</td><td valign="top"><img src="image/BASE_E012_1.png" border="0"></td></tr></table>
+<br>
+<hr>
+<br>
+【2】<br>
+<table border="0"><tr><td valign="top">
+作成したら、イベントウィンドウの右下にある<b>「■コマンド入力ウィンドウ表示■」</b>をクリックしてください。<br>
+<br>
+<b>1.</b>「イベントコマンドの挿入」ウィンドウが出たら、<br>
+　<b>その他2タブ</b>をクリックします。<b>画像の1</b><br>
+<br>
+<b>2.</b>丸で囲まれた「イベントの挿入」が選ばれてい<br>
+　るか、確認します。<b>画像2</b><br>
+　文字の左の白丸に黒丸がついていれば、選択<br>
+　されています。<br>
+　※ もし、選ばれてなかったらクリックして選択し<br>
+　て下さい。<br>
+<br>
+<b>3.</b>四角3で囲まれた場所をクリックすると、選ぶこ<br>
+　とができるコモンイベントのリストが表示されま<br>
+　す。<br>
+　<b>画像3</b>今回はアイテム入手のイベントなので、<br>
+　「コモン0：○アイテム増減」を選択しましょう。
+</td><td valign="top"><img src="image/EV_006_4.jpg" border="0"></td></tr></table>
+<br>
+<hr>
+<br>
+【3】<br>
+<table border="0"><tr><td valign="top">
+続いてコモンEv入力（数値）という欄をいじります。<br>
+<br>
+<b>1.</b>「アイテム番号」では入手する<br>
+　アイテムを選択します。<br>
+　※　末尾の［ユーザー２］という<br>
+　表記は気にする必要ありませ<br>
+　ん。<br>
+　<br>
+<b>2.</b>「増減数」は１のアイテムをいく<br>
+　つ増やすか・減らすかを設定し<br>
+　ます。<br>
+　マイナスの数値を設定すれば<br>
+　アイテムを減らすこともできま<br>
+　す。<br>
+<br>
+<b>3.</b>次の「入手メッセージ」ですが、<br>
+　これは「「○○」を○個手に入れ<br>
+　た。」<br>
+　というメッセージを表示するかど<br>
+　うか、を選択できるという事で<br>
+　す。<br>
+　ここで表示せず、後ほど「文章<br>
+　の表示」で表示することもでき<br>
+　ます。<br>
+　<br>
+<b>4.</b>最後に矢印の「入力」ボタンを<br>
+　押します。<br>
+<br>
+これでアイテムを手に入れる処理が完成しました。
+</td><td valign="top"><img src="image/EV_006_5.jpg" border="0"></td></tr></table>
+<br>
+<hr>
+<br>
+【4】<br>
+<table border="0"><tr><td valign="top">
+ここまででアイテムを入手するイベントは出来ましたが、<br>
+このままでは話しかけるたびにアイテムを入手できてしまいます。<br>
+（それでも構わない方は<a href="#BASE_E003_1" target="B">ここをクリック</a>）<br>
+<br>
+それを防ぐための処理を作りましょう。<br>
+なんのための処理かは特に考えず、次の【5】の通りに設定しましょう。<br>
+<br>
+詳細を知りたい方は<a href="EV_006.html" target="B">◆一度空いたら空きっぱなしの宝箱</a>をご覧下さい。
+</td></tr></table>
+<br>
+<hr>
+<br>
+【5】<br>
+<table border="0"><tr><td valign="top">
+・「コモンイベントの挿入ウィンドウ」から<b>「変数操作」</b>を見つけてクリックします。<br>
+<br>
+・赤いラインを引いた箇所を確認します。右の画像と同じになるように設定してください。<br>
+　<br>
+・最後に右下の<b>入力</b>を押します。<br>
+<br>
+ここで設定したのは「このイベントのセルフ変数0番」に「1+0=1」を代入するという処理です。
+</td><td valign="top"><img src="image/EV_006_6.gif" border="0"></td></tr></table>
+<br>
+<hr>
+<br>
+【6】<br>
+<table border="0"><tr><td valign="top">
+画像はイベントウィンドウの左上です。<br>
+黄色の四角で囲んだ部分に注目してください。<br>
+<br>
+1.「新規ページ」ボタンをクリックします。<br>
+<br>
+2.「ページ2」ボタンをクリックしてページ2を開きます。
+</td><td valign="top"><img src="image/EV_006_8.gif" border="0"></td></tr></table>
+<br>
+<hr>
+<br>
+【7】<br>
+<table border="0"><tr><td valign="top">
+グラフィックやイベントが設定されていない新しいページができました。　<br>
+2ページ目はアイテムを入手した後の状態のイベントです。<br>
+グラフィックを「画像なし」（デフォルト）に設定します。
+</td><td valign="top"><img src="image/EV_006_9.gif" border="0"></td></tr></table>
+<br>
+<hr>
+<br>
+【8】<br>
+<table border="0"><tr><td valign="top">
+「イベント起動条件」を設定しましょう。<br>
+紫の四角で囲んだ箇所に注目してください。<br>
+　<br>
+1.一番左のチェックボックスをクリックしてチェックをつけます。<br>
+<br>
+2.「Self」ボタンをクリックして選択。<br>
+<br>
+3.「セルフ変数0」を選びます。<br>
+<br>
+4.数値の「1」を入力します。<br>
+<br>
+5.「と同じ」を選択します。<br>
+<br>
+イベントの内容は、何も無しのままです。<br>
+<br>
+これで2ページ目に、<b>画像がなく</b>、<b>調べても何も起こらないイベント</b>が完成しました。
+</td><td valign="top"><img src="image/EV_006_10.gif" border="0"></td></tr></table>
+<br>
+<hr>
+<br>
+【セーブ】<br>
+<table border="0"><tr><td valign="top">
+マップをセーブしてテストプレイをしましょう！<br>
+<font id="c1">イベントウィンドウの<b>テストプレイボタン</b>をクリックすると、自動でセーブされます。</font>
+</td><td valign="top"><img src="image/window_evbase4.png" border="0"></td></tr></table>
+<br>
+<hr>
+<br>
+<a name="BASE_E003_1">【テストプレイ1】</a><br>
+<table border="0"><tr><td valign="top">
+まずはイベントを調べてみます。<br>
+<br>
+無事にアイテムをゲット！<br>
+文章もしっかり表示されています。<br>
+<br>
+※もし上手くいかなかったら……。<br>
+・<b>アイテム番号</b>が間違ってい<br>
+　ないか。<br>
+・<b>増減数</b>が0やマイナスになっ<br>
+　ていないか。<br>
+・<b>入手メッセージ</b>が「0:なし」に<br>
+　なっていないか。<br>
+　確認してください。
+</td><td valign="top"><img src="image/BASE_E003_1.png" border="0"></td></tr></table>
+<br>
+<hr>
+<br>
+【テストプレイ2】<br>
+<table border="0"><tr><td valign="top">
+キャンセルキーを押してメニューを出し、アイテム欄を確認しましょう。<br>
+<br>
+ウィンドウの後ろ、丸で囲んだ部分のイベント画像が消えているのも確認できました。<br>
+<br>
+※もし上手くいかなかったら……。<br>
+・<b>変数操作</b>で代入するセルフ<br>
+　変数を間違えていないか。<br>
+・その<b>セルフ変数を上書きし<br>
+　ていないか。</b><br>
+・<b>代入した値</b>が間違っていな<br>
+　いか。
+・<b>ページ</b>を間違えていないか。<br>
+・ページ2の<b>起動条件</b>が間<br>
+　違っていないか。<br>
+　（<a href="EV_006.html" target="B">◆一度空いたら空きっぱなしの宝箱</a>の【10】参照）<br>
+　を確認してください。<br>
+</td><td valign="top"><img src="image/BASE_E003_2.png" border="0"></td></tr></table>
+<br>
+<table border="0"><tr><td valign="top">
+長くなりましたが、お疲れ様でした。<br>
+以上で「所持アイテムを増減させたい」は終了です。</td></tr></table>
+<br>
+<br>
+<hr>
+<br><br><br>
+<hr>
+<br>
+＜執筆者：七海＞<br>
+<br>
+<hr>
+<a href="index.html" target="_top">
+【←フレームが表示されていない方はここをクリック】
+</a><br><br><br>
+</body>
+</html>

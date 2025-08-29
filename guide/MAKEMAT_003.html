@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>画像を透過したい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【画像を透過したい】</H2>
+<HR>
+<P>【目標】 <BR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>ゲームで使用する画像で、キャラチップやマップチップは、透過処理を行うのが普通です。<br>
+これを行わないと、右の画像みたいなことが発生します。<br>
+Windows付属のペイント等では、透過情報を扱えません。それなりの専用ツールが必要になります。<br><!--そもそも「ペイント」でドット絵を描くことはおすすめしません-->
+ここでは、フリーのドットエディタソフト「EDGE」を例に、説明します。<br>
+画像に使われているうちの1色を指定して、それを透明色として使用する(その色で塗られた箇所を透明にする)ことが、今回行うことになります。<br>
+<br>
+なお、詳しい操作方法などについては、EDGE同梱のマニュアルなどを参照してください。<br>
+ちなみに、EDGE作者様のサイトは<a href ="http://takabosoft.com/">こちら(TAKABO SOFT)</a>です。この中にEDGEのコーナーがございます。<br>
+</TD>
+<TD nowrap><img src="image/MAKEMAT_003_1.png" width="320" height="240" border="0"><BR>
+こんなことにならないように(左のニワトリとは別の画像を使っています)</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><b>＊注意！</b><br>
+EDGEでは、使用色が256色までの画像しか扱えません(フルカラー画像は不可となります)。<br>
+もしEDGEで開けないというエラーが発生したときは、減色ツールをご使用下さい。<br>
+公式で紹介されている減色ツールとして「<a href="http://www.vector.co.jp/soft/win95/art/se450364.html">最適BMPtoPNG</a>」などがございます。<br>
+</TD>
+<TD nowrap><img src="image/MAKEMAT_003_2.png" width="320" height="55" border="0"><BR>
+こんなエラーがでたらすいません。何らかの方法で減色お願いします。</TD>
+</TR>
+</TBODY>
+</TABLE>
+</P>
+<!--今回はフルカラーの画像については対象外とさせていただきます。-->
+<HR>
+<P>【手順】<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>今回は、こちらで用意した画像で、黒く塗られている部分を透過してみましょう。<br>
+このニワトリを、ゲームで使用するときに不自然にならないように透過処理を行うのです。<br>
+<br>
+まずこちらの画像を、お使いのパソコンに保存します。<br>
+「Internet Explorer」をお使いなら、画像を右クリックして、「名前を付けて画像を保存」で保存ができます。<br>
+</TD>
+<TD nowrap><img src="image/MAKEMAT_003_Chicken.png" width="120" height="64" border="0"><BR>
+今回使用する画像です</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【1】画像を用意する。まず256色画像ですか?<br>
+　EDGEで透過させたい画像を選択し、開きます。<br>
+　フルカラー画像は、開くことができません。<br>
+　なお、今回の画像は既に256色にしております。<br>
+<BR>
+</TD>
+<TD nowrap><img src="image/MAKEMAT_003_3.png" width="250" height="150" border="0"><BR>
+ひらきます</TD>
+</TR>
+
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【2】透過したい色はどれですか？<br>
+　画像の中で、透過させたい色を選びます。<br>
+　EDGEでは、カラーパレットの画面(図参照)に、その画像に登録されている色が一覧で出ています。<br>
+　パレットの画面の右下にある色(番号と共に色が出ている)には、<br>
+　左に描画色(書き込むときの色)、右に背景色(今回透過に使う、背景を塗る色)が表示されています。<br>
+　背景色の部分に、透過したい色が選ばれていることを確認しましょう。<br>
+　もし違う色が選ばれているようでしたら、パレット上で、透過したい色を右クリックし、<br>
+　透過したい色が選ばれたことを確認しましょう。<br>
+　なお、画像で右クリックすると(ただし鉛筆や直線描画などが選ばれているとき)、<br>
+　描画色が、そのときにカーソルの位置にある色に変わります。<br>
+　それをもとにパレットから背景色を選ぶといいでしょう。<br>
+<br></TD>
+<TD nowrap><img src="image/MAKEMAT_003_4.png" width="700" height="500" border="0"><BR>
+赤枠の番号をチェック！この画像ではこの色が背景として使われてます。<BR>他の色では透過できません！</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【3】画像を透過して保存<br>
+　「名前をつけて保存」を実行し、そのときに「背景色を透過」にチェックを入れます(形式は.pngを選ぶ)。<br>
+　これで保存すると、そのときの背景色を透過した画像が保存されます。<br></TD>
+<TD nowrap><img src="image/MAKEMAT_003_5.png" width="250" height="150" border="0"><BR>
+ここを忘れないように！</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【4】確認しよう<br>
+　実際にゲームで使ってみて、テストプレイで透過されていることを確認しましょう。<br>
+　透過色として指定した部分がちゃんと透過されていればOKです。<br>
+　エディタ上で透過されていないようにみえる場合がありますが(黒以外を透過色とした場合)、ゲーム画面ではきちんと透過されます。<br>
+</TD>
+<TD nowrap><img src="image/MAKEMAT_003_6.png" width="320" height="240" border="0"><BR>
+ちゃんと透過されてますね</TD>
+</TR>
+</TBODY>
+</TABLE>
+</P>
+<HR>
+<P>【余談】<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><UL><li>「<a href="MATERIAL_003.html">◆ツクール用サイズの素材をウディタに使いたい</a>」の記事で説明されている「tkool2WOLF+」ですが、これにも透過機能があります。<br>
+詳しくは、そちらで説明しますので、確認してみてください。<br></li>
+<br>
+<li>また、自分で一から絵を描いて、透過を行いたいときは、256色の場合、0番の色をRGB=(0,0,0)の黒として、透過色として予約するといいでしょう。<br>
+<!--もし黒では分かりにくいとかいう場合、使いそうにない色(どぎついピンク等)を透過色にする方法もあります。それでもパレット0番にするところは変わりません-->
+もちろん保存するときは、パレット0番を背景色に選んでから「背景色を透過」を忘れずに。<br>
+もし、絵の中で黒を使いたいなら、別の番号で黒を用意するか、RGB値の異なる黒を用意しましょう。<br></li>
+<br>
+<li>画像の形式で、透過を扱えるのは、pngです。(gifも透過を扱えますが、ウディタでは使用できません)<br>
+bmp(ビットマップ)やjpgでは、透過情報を扱えません。<br></li></UL>
+</TD>
+<TD nowrap></TD>
+</TR>
+</TBODY>
+</TABLE>
+</P>
+<HR>
+
+<HR>
+<P>＜＜執筆者：<A href="http://sns.prtls.jp/rpgeditor/community.html?cid=33af3514107db1a4" target="_blank">ウディタ公式ガイド執筆コミュ。</A>＞＞<BR>
+<UL>
+	<LI>設計書作成：Hdk103-Arch、ユノ</LI>
+	<LI>トピック執筆：Hdk103-Arch</LI>
+</UL></P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

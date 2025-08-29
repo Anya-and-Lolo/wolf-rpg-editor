@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>新しいイベントを作ってみたい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【新しいイベントを作ってみたい】</H2>
+<HR>
+<P>【目標】 <BR>
+　サンプルゲーム内の「<B>サンプルマップA</B>」内に、<BR>
+　<B>話しかけると「コケリア～ンヌ」としゃべるニワトリのイベント</B>を新たに作ります。<BR>
+<BR>
+<BR>
+　※<B>イベントって何？</B><BR>
+　　今のところは、「話しかけると何かしゃべってくれる、RPGの村人みたいな存在」<BR>
+　　と思っておけば、問題ありません。</P>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【1】　<BR>
+      　マップ選択<IMG src="image/icon_mapselector.png" width="22" height="20" border="0">を開き、<BR>
+      　「<B>1:サンプルマップA</B>」を選択します。<BR>
+      　<BR>
+      </TD>
+      <TD nowrap><IMG src="image/mapselector.png" width="172" height="240" border="1"></TD>
+    </TR>
+
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY><TR>
+      <TD nowrap>【2】<BR>
+      　イベントレイヤー<IMG src="image/icon_eventlayer.png" width="22" height="20" border="0"> に切り替え、<BR>
+      　ゲーム開始地点すぐ上あたりで<BR>
+      　<B>右クリック</B>をすると、<B>→</B>のような<BR>
+      　メニューが表示されます。<BR>
+      <BR>
+      　ここでは「<B>イベント作成/編集</B>」を<BR>
+      　クリックして下さい。</TD>
+      <TD nowrap><IMG src="image/MUST_001_newevent.jpg" width="291" height="224" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【3】　<BR>
+      　すると、右のような<BR>
+      　イベント設定ウィンドウが<BR>
+      　表示されます。<BR>
+      <BR>
+      　</TD>
+      <TD nowrap><IMG src="image/window_mapevent.jpg" width="415" height="187" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【4】<BR>
+      　まず、イベントの歩行グラフィックの設定を行います。<BR>
+      　<B>赤い枠で囲まれた部分をダブルクリック</B>して下さい。<BR>
+      </TD>
+      <TD nowrap><IMG src="image/MUST_001xev1.jpg" width="126" height="181" border="1"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【5】　<BR>
+      　すると、右のような<BR>
+      　ウィンドウが表示されるので、<BR>
+      　「<B>Chicken.png</B>」を選んで<BR>
+      　「<B>OK</B>」を押します。<BR>
+      <BR>
+      <BR>
+      　※右欄のキャラクター画像を<BR>
+      　　クリックすることで、<BR>
+      　　設置する向きを<BR>
+      　　変えることができます。</TD>
+      <TD nowrap><IMG src="image/MUST_001xev3.jpg" width="328" height="270" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【6】　<BR>
+      　無事、ニワトリのグラフィックを<BR>
+      　設定することができました。</TD>
+      <TD nowrap><IMG src="image/MUST_001xev31.jpg" width="111" height="158" border="1"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【7】<BR>
+      　次はニワトリにしゃべらせる<BR>
+      　処理を追加します。<BR>
+      <BR>
+      　イベントウィンドウ右下の<BR>
+      　「<B>■コマンド入力ウィンドウ表示■</B>」<BR>
+      　ボタンを押してください。</TD>
+      <TD nowrap><IMG src="image/MUST_001xev2.jpg" width="198" height="60" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【8】　<BR>
+      　すると、「<B>イベントコマンドの挿入</B>」<BR>
+      　ウィンドウが開くので、右のように<BR>
+      　選択中のタブが「<B>文章の表示</B>」に<BR>
+      　なっていることを確認して下さい。</TD>
+      <TD nowrap><IMG src="image/window_text.jpg" width="300" height="254" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【9】　<BR>
+      　文字入力欄に「<B>コケリア～ンヌ♪</B>」と<BR>
+      　入れて、「<B>入力</B>」ボタンをクリックします。</TD>
+      <TD nowrap><IMG src="image/MUST_001xev4.jpg" width="260" height="146" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【10】<BR>
+      　最終的に、右のような状態に<BR>
+      　なっていれば成功です。<BR>
+      <BR>
+      　<B>起動条件</B>は、最初から<BR>
+      　「<B>決定キーで実行</B>」に<BR>
+      　なっているので、このまま<BR>
+      　決定キーで話しかけられる<BR>
+      　イベントとして作動します。</TD>
+      <TD nowrap><IMG src="image/MUST_001xev5.jpg" width="412" height="186" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【11】　<BR>
+      　イベントウィンドウ右下にある<BR>
+      　「<B>セーブ（マップ全体）</B>」ボタンをクリックして、<BR>
+      　「<B>テストプレイ</B>」ボタンをクリックすると、<BR>
+      　このマップ（今作ったイベント）をセーブして、<BR>
+      　テストプレイを始めることができます。</TD>
+      <TD nowrap><IMG src="image/MUST_001xev6.png" width="247" height="100" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【12】　<BR>
+      　タイトル画面で「ニューゲーム」を選び、<BR>
+      　最初の紹介を終わらせたら、<BR>
+      <B>　さっそくニワトリに向かって<BR>
+      　決定キーを押し、話しかけてみましょう！</B><BR>
+      <BR>
+      　「コケリア～ンヌ♪」としゃべりました！<BR>
+      <BR>
+      　これで、初めてのイベント作成は終了です！<BR>
+      　おつかれさまでした！</TD>
+      <TD nowrap><IMG src="image/MUST_001xev7.png" width="318" height="240" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<BR>
+<P><BR>
+<BR>
+<BR>
+　　</P>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap><B>【余談】<BR>
+      　イベントの「名前」って自由に入れていいの？</B><BR>
+      <BR>
+      　グラフィックを設定すると、「<B>名前</B>」欄に<BR>
+      　自動でファイル名が入りますが、この部分には、<BR>
+      　別に「<B>ニワトリ</B>」でも「<B>コケリアーンヌイベント</B>」でも<BR>
+      　何を入れてくださっても構いません。<BR>
+      <BR>
+      　ではこの「<B>名前</B>」、何に使われるのかというと、<BR>
+      　イベントレイヤーを編集中、イベントに<BR>
+      　カーソルを合わせることで、この「<B>名前</B>」欄の<BR>
+      　イベント名が<B>タイトルバーに表示される</B>のです。<BR>
+      　<BR>
+      　それだけなので、かっこいい名前を付けても<BR>
+      　何も得しません！</TD>
+      <TD nowrap><IMG src="image/MUST_001xev8.png" width="191" height="173" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<HR>
+<P>＜執筆者：<A href="http://www.silversecond.net/" target="_blank">SmokingWOLF</A>＞　</P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

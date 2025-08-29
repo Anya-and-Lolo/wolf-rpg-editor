@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>相手が触ってくると起動するイベント</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+
+<HR>
+<H2>【相手が触ってくると起動するイベント】</H2>
+<HR>
+
+<P>
+
+【目標】<BR>
+　相手が触ってくると起動するイベントを作ります。<br>
+<br>
+　ここでは、サンプルゲーム内の「サンプルマップA」内に、<b>ウルファールに迫ってきて、</b><br>
+　<b>接触すると「夕一が襲ってきた！」とメッセージが表示されるニワトリ</b>のイベントを新たに作ります。<br>
+<br>
+　<img src="image/EV_003_1.jpg" border="1" width="320" height="240"><br>
+</P>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>
+【1】<BR>
+　・まずマップ選択<img src="image/icon_mapselector.png" width="22" height="20" border="0">で「<B>サンプルマップA</B>」に切り替えて下さい。<BR>
+
+　<BR>
+　・適当な場所にイベントを新しく作成して下さい。<BR>
+<BR>
+　→ 分からないときは、<B><A href="MUST_001x.html" target="B">◆新しいイベントを作ってみたい</A></B>の【1】～【3】を参考に。<BR>
+</TD><TD nowrap>
+</TD></TR></TBODY></TABLE>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>
+【2】<BR>
+
+　イベントのグラフィックを設定しましょう。<BR>
+　<br>
+　赤い枠で囲まれた部分をダブルクリックして下さい。<BR>
+　
+</TD><TD nowrap>
+<IMG src="image/MUST_001xev1.jpg" border="1">
+</TD></TR></TBODY></TABLE>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>
+【3】<BR>
+　右のようなウィンドウが表示されます。<br>
+
+　<br>
+　・ウィンドウの左側のリストから<br>
+　　<b>Chicken.png</b>を選びます。<br><br>
+　・すると、右側に色々な向きを向いた<br>
+　　ニワトリ（キャラチップ）が表示されます。<br>
+　　向きが異なるニワトリを選択する事で<br>
+　　ニワトリの向いている方向が変わりますが、<br>
+　　今回は変更せずにこのままにします。<br>
+　<br>
+　
+</TD><TD nowrap>
+<img src="image/EV_003_2.jpg" border="1">
+</TD></TR></TBODY></TABLE>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>
+【4】<BR>
+　ニワトリをイベントのグラフィックに設定できました。<br>
+　続いて、接触時にイベントが起動するように、<br>
+　「<b>起動条件</b>」の設定を「<b>イベント接触</b>」に変更します。<br>
+
+  <br>
+　これで、今作っているイベントは<br>
+　「イベントがプレイヤーに接触した時に起動する」<br>
+　設定になりました。<br>
+  <br><br>
+　また、同時に以下の２つの設定も行っておきます。<br>
+　・イベントがプレイヤーに近づいてくるように<br>
+　　「<b>移動ルート</b>」を「<b>ﾌﾟﾚｰﾔｰ接近</b>」に変更。<br>
+　・イベントが１歩だけ歩くごとに止まらないように<br>
+　　「<b>移動頻度</b>」を「<b>0:毎フレーム</b>」に変更。<br>
+
+</TD><TD nowrap>
+<img src="image/EV_003_3.png" width="344" height="218" border="1">
+</TD></TR></TBODY></TABLE>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>
+【5】<BR>
+　最後にイベントの中身を作っていきます。<br>
+　<br>
+　<B>イベントウィンドウ</B>の右下にある<BR>
+
+　「<B>■コマンドウィンドウ表示■</B>」を<BR>
+　クリックしてください。</TD>
+<TD nowrap>
+<IMG src="image/window_evbase2.jpg" width="198" height="60" border="1">
+</TD></TR></TBODY></TABLE>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>
+【6】<BR>
+　「<B>イベントコマンドの挿入</B>」ウィンドウが<BR>
+
+　出てくるので、上部タブにある<BR>
+　「<B>文章の表示</B>」になっていることを確認して下さい。<br>
+　<br>
+　・中央の文字入力欄に<br>
+　　<b>「夕一が襲い掛かってきた！」</b>と打ち込み、<br>
+　　<b>「入力」</b>ボタンをクリックします。<br>
+
+　</TD>
+<TD nowrap>
+<IMG src="image/window_evbase3.jpg" width="300" height="254" border="1">
+</TD></TR></TBODY></TABLE>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>
+【7】<BR>
+　これでイベントは完成です。<br>
+　完成したイベントの設定は、<br>
+　下記のようになっていますでしょうか。<br>
+  <br>
+　１：グラフィックは「<b>ニワトリ</b>」<br>
+　２：移動ルートが「<b>ﾌﾟﾚｰﾔｰ接近</b>」<br>
+　３：移動頻度が「<b>0:毎フレーム</b>」<br>
+　４：起動条件が「<b>イベント接触</b>」<br>
+　５：右側のイベントコマンド表示欄に<br>
+　　　■<b>文章：夕一が襲い掛かってきた！</b><br>
+　　　■<br>
+　　　と表示されている。<br>
+<TD nowrap>
+<img src="image/EV_003_4.png" width="409" height="178" border="1">
+
+</TD></TR></TBODY></TABLE>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>
+【8】<BR>
+　さて、マップをセーブして、<BR>
+　作ったイベントをテストしてみましょう。<BR>
+<BR>
+　「<B>セーブ（マップ全体）</B>」をクリックした後、<BR>
+　「<B>テストプレイ</B>」をクリックしてください。</TD>
+
+<TD nowrap><IMG src="image/window_evbase4.png" width="247" height="100" border="1"></TD>
+</TR></TBODY></TABLE>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>【9】　<BR>
+　静止画からは分かりにくいですが、右の画像のように<br>
+　迫ってきた夕一に接触した瞬間に<br>
+　「夕一が襲い掛かってきた！」と表示されましたか？<br>
+
+<br>
+　以上で「相手が触ってくると起動するイベント」は完成です。<br>
+　お疲れ様でした。<br>
+　</TD>
+<TD nowrap><img src="image/EV_003_1.jpg" width="320" height="240" border="1"></TD>
+</TR></TBODY></TABLE>
+
+<HR>
+
+<br><br><br>
+
+<HR>
+<TABLE border="0"><TBODY><TR><TD nowrap>
+<B>【余談】</B><BR>
+　このままでは、接触してもニワトリが追いかけ続けてくるので、<br>
+　自分が動かないと<b>何度もイベントが発生</b>してしまいます。<br>
+  <br>
+　接触すると戦闘が発生し、倒すと消える敵シンボルなどのように、<br>
+　一度発生すると２回目が起こらないイベントの作り方は、<br>
+　<a href=EV_004.html>◆イベント後に消え、マップを移動して戻ると復活しているイベント</a><br>
+　<a href=EV_005.html>◆一度消えたら二度と出てこないイベント</a>　を参照して下さい。<br>
+  <br>
+
+</TR></TBODY></TABLE>
+<HR>
+
+<P>＜執筆者：<A href="http://sinryokunokoya.karamatu.com/" target="_blank">Barong</A>＞　</P>
+
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

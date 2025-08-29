@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>マウス入力を取得したい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【マウス入力を取得したい】</H2>
+<HR>
+　<B>【目標】</B><BR>
+<HR>
+<P>
+　マウス入力の特長は何と言っても直感的に操作できることです。<BR>
+　うまく管理できるようになれば、マウス操作だけのゲームも<BR>
+　作ることができます。<BR>
+<BR>
+　ウディタはマウスのクリック状態を常に監視しています。<BR>
+　監視結果を変数に呼びだすと、その時点で<BR>
+　クリックが押されているかを調べることができます。<BR>
+<BR>
+　今回は、マウスで画面のどこかを左クリックするとしゃべるイベントを<BR>
+　設定し、マウス入力の取得の仕方を習得します。<BR>
+　このイベントの中身は、<BR>
+　「左クリックが押されている間だけ信号を出し、<BR>
+　　その信号があるときだけ文章表示を起動する」<BR>
+　で、このイベントを並列実行に設定することで、<BR>
+　クリック状態の監視を常に行うようにしています。</P>
+
+<HR>
+　<B>【手順】</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【1】 イベントの作成<BR>
+<BR>
+　「サンプルマップA」の適当な場所にイベントを作成し、<BR>
+　ニワトリの画像を設定しておきます。<BR>
+<BR>
+　やり方が分からない場合は、「<A href="http://www.silversecond.com/WolfRPGEditor/Guide/MUST_001x.html" target="_blank">新しいイベントを作ってみたい</A>」の<BR>
+　【1】～【5】を参考にしてみてください。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE_E008_2.png" width="325" height="234" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【2】 起動条件<BR>
+<BR>
+　まずは、<B>起動条件を「並列実行」に</B>変えておきましょう。<BR>
+　起動条件は、イベント画像を設定するところのすぐ下にあります。<BR>
+　今回行う「左クリックが押されているかどうか」は<BR>
+　<B>呼び出した時点しか見ません</B>ので、常に検知して欲しければ<BR>
+　並列実行でこのイベントを起動し続ける必要があります。<BR>
+</TD>
+<TD nowrap><IMG src="image/PRO_006_1.png" width="283" height="248" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【3】 左クリック検知<BR>
+<BR>
+　イベントウィンドウの右下にある、<BR>
+　<B>「■ コマンド入力ウィンドウ表示 ■」</B>をクリックしてください。<BR>
+<BR>
+　①タブを<B>「6 変数操作+」</B>に変更します。<BR>
+　②変数の種類は「Self」をボタンで選択してください。<BR>
+　　プルダウンリストから<B>「このイベント:Self0」</B>を選んで、<BR>
+　　その右の代入演算子は<B>「＝」</B>を選択してください。<BR>
+　③次に、<B>「その他」</B>にラジオボタン(クリックすると、<BR>
+　　黒い点がそこに移動する丸いボタン)を合わせ、<BR>
+　　プルダウンリストから<B>「ﾏｳｽ左ｸﾘｯｸ状態(平=0,押=1,新押=2)」</B>を選択します。<BR>
+　④ウィンドウ右下の<B>「入力」</B>ボタンを押してください。<BR>
+<BR>
+　これで、「マウスの左クリックが押されているときに信号を出す」<BR>
+　処理が出来ました。<BR>
+</TD>
+<TD nowrap><IMG src="image/PRO_006_2.png" width="470" height="255" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【4】 条件分岐、文章表示<BR>
+<BR>
+　次に、信号が出ていれば文章を表示するよう設定します。<BR>
+<BR>
+　タブを<B>「7 条件(変数)」</B>に変更し、変数の種類は<B>「Self」</B>を<BR>
+　ボタンで選択してください。<BR>
+　条件分岐の内容は３段あるうちの、上から１段目に<BR>
+　<B>「このイベント:Self0」が(数値)「1」「と同じ」</B>を指定します。<BR>
+　３段目の下にある<B>「「上記以外の場合」を作成」の<BR>
+　チェックは外して</B>おいてください。<BR>
+　入力出来たら<B>「入力」</B>ボタンを押します。<BR>
+</TD>
+<TD nowrap><IMG src="image/PRO_006_3.png" width="470" height="255" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【5】 条件分岐、文章表示<BR>
+<BR>
+　最後に、先ほど作った分岐の中に文章入力を入れます。<BR>
+<BR>
+　<B>「◇分岐:【1】[このEvのｾﾙﾌ変数0が 1と同じ]の場合↓」</B>の中(空欄)に<BR>
+　カーソルを合わせ、タブ<B>「文章の表示」</B>から<BR>
+　<B>「クリックされたよ！」という文章を「入力」</B>してください。<BR>
+<BR>
+　これで、クリックに反応するイベントコマンドは完成です。<BR>
+</TD>
+<TD nowrap><IMG src="image/PRO_006_4.png" width="441" height="353" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【6】 確認<BR>
+<BR>
+　では、テストプレイしてみましょう。<BR>
+　画面のどこかをマウスでクリックして、<BR>
+　「クリックされたよ！」と表示されたら成功です。<BR>
+　お疲れ様でした！<BR>
+</TD>
+<TD nowrap><IMG src="image/PRO_006_5.png" width="320" height="240" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+　<B>【余談】</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>
+・クリックできるボタンを作る<BR>
+　マウス座標やクリック状態などの基本的な情報の取得コマンドは<BR>
+　コマンドタブ「6 変数操作+」の「その他」にまとまっていますが、<BR>
+　「ピクチャ番号」のところにも「ﾏｳｽｶｰｿﾙ重なってる？(1=YES)」が<BR>
+　あります。ピクチャ表示とこれを組み合わせると、クリックして<BR>
+　押せるボタンが作れますよ。<BR>
+<BR>
+・マウスカーソルの現在画面座標の求め方<BR>
+　システム変数71および72に、それぞれマウスのX位置とY位置が<BR>
+　常に入っています。これは変数操作＋でも求められる情報ですが、<BR>
+　こちら(システム変数)を使うと手間が省けます。<BR>
+<BR>
+・文章や選択肢をマウスで動かす<BR>
+　システム変数の73には、<BR>
+　「マウスクリックで、文章と選択肢を入力できるモードのオン/オフ」<BR>
+　ができる変数が入っています。これをオンにしておくと、<BR>
+　マウスクリックで文章表示を次に進めたり、選択肢を選んで決定したり<BR>
+　といったことができるようになります。オンにしたければ、<BR>
+　ゲーム起動時などに変数操作で切り替えておく必要があります。<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<HR>
+
+<P>＜執筆者：ウディタ公式ガイド執筆コミュ。＞
+    <ul>
+        <li>トピック原案：真波、<A href="http://hinezumi.velvet.jp/index.php" target="_blank">ユノ</A></li>
+        <li>HTML作成：真波</li>
+    </ul>
+</P>
+<HR>
+【改訂履歴】<BR>
+　Ver1.00　2013/12/05 新規作成<BR>
+<HR><A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+
+</BODY>
+</HTML>

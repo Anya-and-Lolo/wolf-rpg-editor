@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<title>主人公にゲーム中に技能を覚えさせたい</title>
+<link rel="stylesheet" href="manual.css" type="text/css">
+<style type="text/css">
+body { width : 95%; }
+table { width : 600px; border-collapse: separate; border-spacing: 10px; }
+td { position:relative; left:15px; }
+</style>
+</head>
+<body>
+<hr>
+<H2>【主人公にゲーム中に技能を覚えさせたい】</H2>
+<hr>
+<br>【目標】<br>
+<br>
+<table border="0"><tr><td valign="top">・調べると技能を覚えられるようにする<br>
+<br>
+※おまけ<br>
+・技能を覚えたらイベントの内容を変化させる<br>
+<br>
+・関連項目<br>
+<a href="BASE_S006.html" target="B">◆主人公の技の習得レベルを設定したい</a><br>
+<a href="BASE_S007.html" target="B">◆技能（魔法）の種類を増やしたい</a><br>
+</td></tr></table><br>
+
+<hr>
+<br>
+【1】<br>
+<br>
+<table border="0"><tr><td valign="top"><img src="image/BASE_E012_1.png" border="0" style="float:right; position:relative; left:15px;">・まずマップ選択<IMG height=20 src="image/icon_mapselector.png" width=22 border=0>で「イベントを作成したいマップ」に切り替えて下さい。<br>
+<br>
+・適当な場所にイベントを作成してニワトリの画像を設定しておきます。<br>
+<br>
+手順は<a href="EV_001.html" target="B">◆決定キーで起動するイベント</a>の【1】～【5】を参考にしてください。  <br>
+</td></tr></table><br>
+
+<hr>
+<br>
+【2】<br>
+<br>
+<table border="0"><tr><td valign="top"><img src="image/EV_006_4.jpg" border="0" style="float:right; position:relative; left:15px;">作成したら、イベントウィンドウの右下にある<b>「■コマンド入力ウィンドウ表示■」</b>をクリックしてください。<br>
+<br>
+1.「イベントコマンドの挿入」ウィンドウが出たら、<br>
+　<b>その他2</b>タブをクリックします。画像の1<br>
+<br>
+2.丸で囲まれた「イベントの挿入」が選ばれてい<br>
+　るか、確認します。画像2<br>
+　文字の左の白丸に黒丸がついていれば、選択<br>
+　されています。<br>
+　※ もし、選ばれてなかったらクリックして選択し<br>
+　て下さい。<br>
+<br>
+3.四角3で囲まれた場所をクリックすると、選ぶこ<br>
+　とができるコモンイベントのリストが表示されま<br>
+　す。<br>
+　画像3今回は技能習得のイベントなので、<br>
+　<b>「コモン8：○特殊技能増減」</b>を選択しましょう。<br>
+</td></tr></table><br>
+
+<hr>
+<br>
+<a name="BASE_E007_1">【3】</a><br>
+<br>
+<table border="0"><tr><td valign="top"><img src="image/BASE_E007_1.png" border="0" style="float:right; position:relative; left:15px;">続いてコモンEv入力（数値）という欄をいじります。<br>
+<br>
+1.<b>対象主人公</b>では技能を覚えさせたいキャラクターを選択します。<br>
+<br>
+2.<b>どの技能？</b>では覚えさせたい技能を選択します。<br>
+<br>
+3.<b>どうする？</b>では技能を修得するか、忘れさせるかを選択できます。<br>
+今回は習得するので「0:習得する」を選択します。<br>
+<br>
+4.最後に右下の<b>入力ボタン</b>をクリックします。<br>
+<br>
+これで技能の習得処理が完成しました。<br>
+</td></tr></table><br>
+
+<hr>
+<br>
+【4】<br>
+<br>
+<table border="0"><tr><td valign="top"><br>
+ここまでで技能を覚えるイベントは出来ました。<br>
+しかし、このままでは調べるたびに同じ技能を覚えてしまいます。<br>
+実際には同じ技能は複数覚えられませんので、そのままでも構わないのですが、<br>
+せっかくなので技能習得後は専用のセリフを喋るようにします。<br>
+<font id="c1">※興味がない方は<a href="#BASE_E007_3" target="B">ここをクリック</a></font><br>
+<br>
+以降の処理の詳細は、<a href="EV_006.html" target="B">◆一度空いたら空きっぱなしの宝箱</a>の【5】以降を参照してください。<br>
+</td></tr></table><br>
+
+<hr>
+<br>
+【5】<br>
+<br>
+<table border="0"><tr><td valign="top"><br>
+<img src="image/EV_006_6.gif" border="0" style="float:right; position:relative; left:15px;">・「コモンイベントの挿入ウィンドウ」から<b>「変数操作」</b>を見つけてクリックします。<br>
+<br>
+・赤いラインを引いた箇所を確認します。右の画像と同じになるように設定してください。<br>
+　<br>
+・最後に右下の入力を押します。<br>
+<br>
+ここで設定したのは「このイベントのセルフ変数0番」に「1+0=1」を代入するという処理です。 <br>
+</td></tr></table><br>
+
+<hr>
+<br>
+【6】<br>
+<br>
+<table border="0"><tr><td valign="top"><br>
+<img src="image/EV_006_8.gif" border="0" style="float:right; position:relative; left:15px;">画像はイベントウィンドウの左上です。<br>
+黄色の四角で囲んだ部分に注目してください。<br>
+<br>
+1.<b>「新規ページ」</b>ボタンをクリックします。<br>
+<br>
+2.<b>「ページ2」</b>ボタンをクリックしてページ2を開きます。  <br>
+</td></tr></table><br>
+
+<hr>
+<br>
+【7】<br>
+<br>
+<table border="0"><tr><td valign="top"><br>
+<img src="image/EV_006_9.gif" border="0" style="float:right; position:relative; left:15px;">2ページ目は<b>技能を覚えた後</b>の状態のイベントです。<br>
+このままでは透明なイベントになってしまいますので、グラフィックをページ1と同じ「ニワトリ」に設定します。<br>
+<br>
+1.グレーの四角をダブルクリック<br>
+<br>
+2.[CharaChip]からChicken.pngを選択<br>
+<br>
+できたら「OK」ボタンをクリックします。<br>
+</td></tr></table><br>
+
+<hr>
+<br>
+【8】<br>
+<br>
+<table border="0"><tr><td valign="top"><br>
+<img src="image/EV_006_10.gif" border="0" style="float:right; position:relative; left:15px;">「イベント起動条件」を設定しましょう。<br>
+紫の四角で囲んだ箇所に注目してください。<br>
+　<br>
+1.一番左のチェックボックスをクリックしてチェックをつけます。<br>
+<br>
+2.「Self」ボタンをクリックして選択。<br>
+<br>
+3.「セルフ変数0」を選びます。<br>
+<br>
+4.数値の「1」を入力します。<br>
+<br>
+5.「と同じ」を選択します。<br>
+<br>
+これは、このイベントのセルフ変数0が1と同じ場合のみページ2が起動する。<br>
+という意味です。<br>
+</td></tr></table><br>
+
+<hr>
+<br>
+<a name="BASE_E007_2">【9】</a> <br>
+<br>
+<table border="0"><tr><td valign="top"><br>
+<img src="image/BASE_E007_2.png" border="0" style="float:right; position:relative; left:15px;">セリフを入力していきます。<br>
+<br>
+「■コマンド入力ウィンドウ表示■」をクリックしてください。<br>
+<br>
+1.<b>文章の表示タブ</b>をクリックします。<br>
+<br>
+2.文字列の入力欄に、表示させたいセリフを入力します。<br>
+<br>
+3.最後に入力ボタンをクリックします。<br>
+</td></tr></table><br>
+
+<hr>
+<br>
+【セーブ】<br>
+<br>
+<table border="0"><tr><td valign="top"><br>
+<img src="image/window_evbase4.png" border="0" style="float:right; position:relative; left:15px;">マップをセーブしてテストプレイをしましょう！<br>
+イベントウィンドウの<b>テストプレイボタン</b>をクリックすると、<b>自動でセーブ</b>されます。 <br>
+</td></tr></table><br>
+
+<hr>
+<br>
+<a name="BASE_E007_3">【テストプレイ1】</a><br>
+<br>
+<table border="0"><tr><td valign="top"><br>
+<img src="image/BASE_E007_3.png" border="0" style="float:right; position:relative; left:15px;">アイテムと違い技能の習得時は、<b>文章が表示されません。</b><br>
+（文章を表示したい場合は<a href="#BASE_E007_2" target="B">【9】</a>を参考に、ページ1に文章を追加してください）<br>
+なのでキャンセルキーを押して、メニューの<b>特殊技能</b>から確認します。<br>
+<br>
+※うまくいかなかったら……。<br>
+<a href="#BASE_E007_1" target="B">【3】</a>の設定内容を確認してください。<br>
+</td></tr></table><br>
+
+<hr>
+<br>
+【テストプレイ2】<br>
+<br>
+<table border="0"><tr><td valign="top"><br>
+<img src="image/BASE_E007_4.png" border="0" style="float:right; position:relative; left:15px;">技能の習得は確認できましたので、続いてセリフが変わっているか確認します。<br>
+<br>
+イベントをもう一度調べてみましょう。<br>
+入力した文章が表示されていたら成功です。<br>
+</td></tr></table><br>
+<br>
+<table border="0"><tr><td valign="top"><br>
+以上で「主人公にゲーム中に技能を覚えさせたい」は終了です。<br>
+お疲れ様でした。<br>
+</td></tr></table><br>
+<hr>
+<br><br><br>
+<hr>
+<br>
+＜執筆者：七海＞<br>
+<br>
+<hr>
+<a href="index.html" target="_top">
+【←フレームが表示されていない方はここをクリック】
+</a><br><br><br>
+</body>
+</html>

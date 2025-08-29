@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>移動キー入力[1～9]の小技</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【移動キー入力[1～9]の小技】</H2>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【1】キー入力コマンドから横・縦の移動量を算出
+
+■移動キー入力や向きの値を取得し、そこから横の移動量・縦の移動量を計算する方法です
+※値が 4 の場合、左なので横移動量[-1] 縦移動量[0] と考えます
+　値が 9 の場合、右上なので横移動量[1] 縦移動量[-1] と考えます
+　以上を理解した上でご利用ください。
+
+取得した移動キー・向きの値から 1 を引きます、これによって
+<b>　　789　　　678
+　　4  6　→　3  5
+　　123　　　012</b>
+となります。　ここから %3 して３で割った余りを取得すると
+<b>　　678　　　012
+　　3  5　→　0  2
+　　012　　　012</b>
+となり、あとは-1してやることで横の移動量として使える数値[-1 ～ 1]になります。
+
+では /3 して３で割った値を取得した場合は
+<b>　　678　　　222
+　　3  5　→　1  1
+　　012　　　000</b>
+となるので、3 ではなく -3 で割っていれば[-2 ～ 0]となり
+そこから +1 してやることで縦の移動量として使える数値[-1 ～ 1]になります。
+<pre></TD>
+<TD nowrap><pre><a target="B" href="pro_b001.png"><img src="image/pro_b001.png" border="1"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【2】横移動量と縦移動量から移動キー入力・向きの値を計算する
+
+※それぞれの移動量の範囲は[-1 ～ 1]の間とする
+まず数値の 5 へ横の移動量[-1 ～ 1]を足す
+<b>　4　←　5　→　6</b>
+　-1　　  0　　  +1　　[横]
+次に縦の移動量に -3 をかけたものを足すと
+　　　　　　[縦]
+<b>　７┃８┃９　 -1
+　↑┃↑┃↑
+　４┃５┃６　  0
+　↓┃↓┃↓
+　１┃２┃３　+1</b>
+となり、値が算出される。
+<pre></TD>
+<TD nowrap><pre><a target="B" href=""><img src="image/pro_b002.png" border="1"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【3】向きの値から反対側の向きの値を計算する
+
+反対側の向き = 10 - 向き[1 ～ 9]
+
+左下[1]を向いていれば 10 - 1 なので 9[右上]
+上[8]を向いていれば 10 - 8 なので 2[下]
+<pre></TD>
+<TD nowrap><pre><a target="B" href=""><img src="image/pro_b003.png" border="1"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【4】移動キー入力・向きの値から斜め[1,3,7,9]かどうか計算する
+
+値を２で割った余りを取得すると 0 か 1 の値を得られる
+奇数[1,3,5,7,9]なら２で割った余りが 1
+偶数[2,4,6,8]なら２で割った余りが 0
+なので 1 なら斜めである。
+<pre></TD>
+<TD nowrap><pre><a target="B" href=""><img src="image/pro_b004.png" border="1"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<!--
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【5】
+　
+<pre></TD>
+<TD nowrap><pre><a target="B" href=""><img src=""></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【6】
+　
+<pre></TD>
+<TD nowrap><pre><a target="B" href=""><img src=""></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【7】
+　
+<pre></TD>
+<TD nowrap><pre><a target="B" href=""><img src=""></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【8】
+　
+<pre></TD>
+<TD nowrap><pre><a target="B" href=""><img src=""></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【9】
+　
+<pre></TD>
+<TD nowrap><pre><a target="B" href=""><img src=""></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【10】
+　
+<pre></TD>
+<TD nowrap><pre><a target="B" href=""><img src=""></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+<!--　テーブル見本
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【】
+　
+<pre></TD>
+<TD nowrap><pre><a target="B" href=""><img src=""></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+見本ここまで　-->
+<HR>
+
+<HR>
+<!--
+<P>＜執筆者：<A href="http://www.silversecond.net/" target="_blank">SmokingWOLF</A>＞　</P>
+-->
+<P>＜執筆者：きじこ</A>＞　</P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

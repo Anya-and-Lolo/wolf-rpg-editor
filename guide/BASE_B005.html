@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>戦闘中にイベントを発生させたい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【戦闘中にイベントを発生させたい】</H2>
+<HR>
+<P>【目標】 <BR>
+　<b>戦闘開始直後、敵全滅～戦闘終了時の間<BR>
+　ターンの開始時、ターンの終了時</b><BR>
+　上記のタイミングにイベントを発生させる
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【1】
+　使用するウディタのバージョンは <b>[2.x系]</b> です
+　まずはコモンイベントの一覧を開きましょう。
+　右の円にある <IMG src="image/icon_eventlayer.png" width="22" height="20" border="0"> を左クリック。
+</pre></TD>
+<TD nowrap><a href="image/BASE_B005_0.png"><img src="image/BASE_B005_0.png"></a><BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap><pre>【2】
+　コモンイベントエディタが開いたら
+　ウィンドウの左側にある、コモンイベント一覧の中から
+　<b>203:○[変更可]戦闘開始時処理</b>　を探します。
+　かなり下の方にあるので横のバーを一気に下げてしまっていいでしょう。
+　今回使用するのは<b> 203 ～ 206 </b>の４つのコモンイベントです。
+</TD>
+<TD nowrap><pre><a href="image/BASE_B005_1.png"><img src="image/BASE_B005_1.png"></a><pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre><a name="No3">【3】</a>
+　戦闘開始時にメッセージを表示させてみましょう。
+　
+　コモンイベント一覧から
+　<b>203:○[変更可]戦闘開始時処理</b> を選択。
+　
+　イベントコマンドから文章の表示を選択。
+　
+　文章の内容はてきとうに
+　<b>戦闘開始時処理です</b>
+　とでも入力しておきましょう。
+　
+　Ctrl+S　か　更新ボタンを押し
+　保存するのを忘れずに。
+<pre></TD>
+<TD nowrap><pre><a href="image/BASE_B005_2.png"><img height=318 src="image/BASE_B005_2.png"></a><pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【4】
+　それでは戦闘を行ってどうなったか確認してみましょう。
+　
+　<a href="http://www.silversecond.com/WolfRPGEditor/Guide/BASE_E001.html">◆バトルを発生させたい</a>を参考にして
+　てきとうな相手との戦闘を発生させてみてください。
+　
+　敵が全て表示されたあとに
+　メッセージが表示されましたか？
+　
+　されていれば成功です。
+　
+　<b>>>> メッセージが表示されない場合の可能性。 <<<</b>
+　１、<b>203:○[変更可]戦闘開始時処理</b> 以外のコモンを改造している。
+　２、何らかの理由で <b>203:○[変更可]戦闘開始時処理</b> が読み込まれていない。
+　　　>> コモン <b>188:X◆戦闘処理</b> を開き
+　　　>> 43行目で <b>○[変更可]戦闘開始時処理</b> が呼び出されているか確認する。
+<pre></TD>
+<TD nowrap><a href="image/BASE_B005_3.gif"><img height=256 src="image/BASE_B005_3.gif"></a></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【5】
+　<b>204:○[変更可]1ﾀｰﾝ開始時処理　<188:X◆戦闘処理 71行目>
+　205:○[変更可]1ﾀｰﾝ終了時処理　<188:X◆戦闘処理 118行目>
+　206:○[変更可]戦闘終了後処理　<188:X◆戦闘処理 181行目></b>
+　等も同様に <b><a href="#No3">[3]</a></b> を設定してみて、どのタイミングで呼び出されるか
+　テストプレイでしっかり確認しておきましょう。
+　
+　これで戦闘中のある程度決まったタイミングに
+　イベントを発生させることができるようになりました。
+　
+　おつかれさまです。
+<pre></TD>
+<TD nowrap><pre>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<!--　テーブル見本
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【】
+
+<pre></TD>
+<TD nowrap><pre>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+見本ここまで　-->
+<HR>
+<HR>
+<P>＜執筆者：きじこ＞　</P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

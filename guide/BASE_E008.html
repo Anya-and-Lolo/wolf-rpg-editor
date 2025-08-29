@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>イベント内で、メニューやセーブ画面を出したい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【イベント内で、メニューやセーブ画面を出したい】</H2>
+<HR>
+　<B>【目標】</B><BR>
+<HR>
+<P>
+　長いイベントの間に戦闘が発生する場合に、<BR>
+　メニュー画面を呼び出してプレイヤーに準備をさせたい場合があります。<BR>
+　また、特定の場所でしかセーブが出来ないダンジョンなどのマップを作る時には、<BR>
+　「セーブポイント」としてセーブ画面を呼び出すイベントが必要になります。<BR>
+　そんな時に役立つのが本トピックの内容です。<BR>
+<BR>
+　今回は、「話しかけるとメニュー画面を出してくれるイベント」と、<BR>
+　「話しかけるとセーブ画面を出してくれるイベント」を作成し、<BR>
+　メインメニューやサブメニューの起動の仕方を習得します。</P>
+<HR>
+　<B>【手順】</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><B>■メインメニューとサブメニュー</B><BR>
+<BR>
+<BR>
+　イベントを作成する前に、ウディタ基本システムの<BR>
+　メインメニューとサブメニューについて説明します。<BR>
+<BR>
+　メインメニューとは、ゲーム中で「x」ボタンを押した時に表示される、<BR>
+　各メニューの入り口となる大元のメニューのことです。<BR>
+<BR>
+　サブメニューとは、メインメニューからさらに選択できる、<BR>
+　アイテム、特殊技能、装備、セーブ、システムといった<BR>
+　詳細設定をするメニューのことです。<BR>
+<BR>
+<BR>
+　メインメニューとサブメニューでは<BR>
+　呼び出し方が異なりますので、それぞれを解説します。<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE_E008_1.png" width="324" height="552" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+　<B>■メインメニュー起動</B><BR>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【1】 イベントの作成<BR>
+<BR>
+　「サンプルマップA」の適当な場所にイベントを作成し、<BR>
+　ニワトリの画像を設定しておきます。<BR>
+<BR>
+　やり方が分からない場合は、「<A href="http://www.silversecond.com/WolfRPGEditor/Guide/MUST_001x.html" target="_blank">新しいイベントを作ってみたい</A>」の<BR>
+　【1】～【5】を参考にしてみてください。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE_E008_2.png" width="325" height="234" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【2】 イベントの入力<BR>
+<BR>
+　イベントウィンドウの右下にある、<BR>
+　<B>「■ コマンド入力ウィンドウ表示 ■」</B>をクリックしてください。<BR>
+<BR>
+　①タブを<B>「I コモンイベント」</B>に変更し、イベント操作処理の欄を設定します。<BR>
+　②ラジオボタンで<B>「イベントの挿入」</B>を選択し<BR>
+　　 (デフォルトではここが選択されています)<BR>
+　③右のプルダウンリストで<B>「ｺﾓﾝ127:X[移]メニュー起動」</B>を選択してください。<BR>
+　④最後に、ウィンドウ右下の<B>「入力」</B>ボタンを押します。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE_E008_3.png" width="412" height="363" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【3】 イベントの確認<BR>
+<BR>
+　これで<B>「話しかけるとメニュー画面を出してくれるイベント」</B>が作れました。<BR>
+　イベントの内容は右の画像のようになっているでしょうか。<BR>
+<BR>
+　イベントコマンド入力ウィンドウを閉じて、<BR>
+　テストプレイをしてみてください。<BR>
+　<B>決定キーで話しかけるとメニュー画面を<BR>
+　出してくれるイベント</B>になっていれば成功です。<BR>
+　お疲れ様でした！<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE_E008_4.png" width="302" height="276" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+　<B>■サブメニュー呼出</B><BR>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>
+　今回は「起動するとセーブ画面を出してくれるイベント」を作成します。<BR>
+<BR>
+【1】 イベントの作成<BR>
+<BR>
+　「サンプルマップA」の適当な場所にイベントを作成し、<BR>
+　ニワトリの画像を設定しておきます。<BR>
+<BR>
+　やり方が分からない場合は、「<A href="http://www.silversecond.com/WolfRPGEditor/Guide/MUST_001x.html" target="_blank">新しいイベントを作ってみたい</A>」の<BR>
+　【1】～【5】を参考にしてみてください。
+</TD>
+<TD nowrap><IMG src="image/BASE_E008_2.png" width="325" height="234" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【2】 イベントの入力<BR>
+<BR>
+　イベントウィンドウの右下にある、<BR>
+　<B>「■ コマンド入力ウィンドウ表示 ■」</B>をクリックしてください。<BR>
+<BR>
+　①タブを<B>「I コモンイベント」</B>に変更し、イベント操作処理の欄を設定します。<BR>
+　②ラジオボタンで<B>「イベントの挿入」</B>を選択し<BR>
+　　 (デフォルトではここが選択されています)<BR>
+　③右のプルダウンリストで<B>「ｺﾓﾝ14:○各種メニュー呼出」</B>を選択してください。<BR>
+　④セーブ画面を呼び出す処理を入れます。<B>【コモンEv入力(数値)】</B>の欄で、<BR>
+　　<B>「呼び出すメニュー」</B>を<B>「0:セーブ画面」</B>にしてください。<BR>
+　⑤最後に、ウィンドウ右下の<B>「入力」</B>ボタンを押します。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE_E008_5.png" width="412" height="368" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【3】 イベントの確認<BR>
+<BR>
+　これで<B>「話しかけるとセーブ画面を出してくれるイベント」</B>が作れました。<BR>
+　イベントの内容は右の画像のようになっているでしょうか。<BR>
+<BR>
+　イベントコマンド入力ウィンドウを閉じて、<BR>
+　テストプレイをしてみてください。<BR>
+　<B>決定キーで話しかけるとセーブ画面を<BR>
+　出してくれるイベント</B>になっていれば成功です。<BR>
+　お疲れ様でした！<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE_E008_6.png" width="304" height="278" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+　<B>【余談】</B><BR>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>
+<B>■呼び出すことのできるサブメニューについて</B><BR>
+<BR>
+　手順ではセーブ画面を呼び出しましたが、<BR>
+　<B>「呼び出すメニュー」の数値</B>を変えることで<BR>
+　他のサブメニューを呼び出すことができます。<BR>
+<BR>
+　呼び出すことのできるサブメニューは下記の通りです。<BR>
+　　 0 : セーブ画面<BR>
+　　-1 : ロード画面<BR>
+　　 1 : アイテム画面<BR>
+　　 2 : 技能画面<BR>
+　　 3 : 装備画面<BR>
+　　 4 : システム画面<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<HR>
+
+<P>＜執筆者：ウディタ公式ガイド執筆コミュ。＞
+    <ul>
+        <li>トピック原案：真波、<a href="http://hinezumi.velvet.jp/" target="_blank">ユノ</a></li>
+        <li>HTML作成：真波</li>
+    </ul>
+</P>
+<HR>
+【改訂履歴】<BR>
+　Ver1.00　2013/08/11 新規作成<BR>
+<HR><A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

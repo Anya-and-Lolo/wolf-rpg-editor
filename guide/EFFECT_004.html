@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>メッセージ内の文字の色を変えたい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【メッセージ内の文字の色を変えたい】</H2>
+<HR>
+<BR>
+ウディタには<B>特殊文字</B>という機能があります。<BR>
+そのうちの一つを使って、<B>文字の色</B>を変えてみましょう。<BR>
+<BR>
+【目標】<BR>
+<BR>
+　１．システムデータベースで文字色を設定する。<BR>
+　<BR>
+　２．特殊文字を使って、設定した文字色の文章を表示してみる。<BR>
+<BR>
+<BR>
+<HR>
+<P>【手順】</P>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap valign="top">―― 【1】文字色の設定 ――<BR>
+      <BR>
+　まず<IMG src="image/icon_sysDB.png" width="22" height="20" border="0">を押してシステムデータベースを開きます。<BR>
+　<BR>
+　左上リストから、「タイプ12:文字色」をえらんでください。<BR>
+　既に何か入力されている所は避けて、空いているデータを選びます。<BR>
+　今回は例として、4番に入力しようと思います。<BR>
+　<BR>
+　分かりやすい名前を付けて、数値を入力しましょう。<BR>
+　数値が大きくなる程、その色がより濃く出てきます。<BR>
+　入力できたらOKをクリックしてください。<BR>
+　<BR>
+　<font color="#696969" style="font-size:9pt">※光と同じで赤・緑・青の三色が全て混ざると白に、<BR>
+　 　逆に0に近づく程黒くなります。<BR>
+　 　灰色は三色の値を同じぐらいに設定する事で再現できます。<BR>
+　 　逆に鮮やかにしたい場合は、その色の数値を大きく、<BR>
+　 　そして他の色との差も大きくしましょう。</font><BR>
+　<BR>
+      </TD>
+      <TD nowrap><IMG src="image/EFFECT_004_1.png" width="530" height="200" border="1"></TD></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY><TR>
+      <TD nowrap valign="top"><BR>
+      ―― 【2】イベント作成 ――　<BR>
+      <BR>
+　次にマップ選択<img height=20 src="image/icon_mapselector.png" width=22 border=0>で「サンプルマップA」に切り替えてください。<BR>
+　分かりやすいところにイベントを作成します。<BR>
+　グラフィックはニワトリです。<BR>
+　（参考：<a href="EV_001.html" target="B">【決定キーで起動するイベント】</a><BR>
+　<BR>
+      </TD>
+      <TD nowrap></TD></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY><TR>
+      <TD nowrap valign="top"><BR>
+      ―― 【3】文章の作成 ――　<BR>
+      <BR>
+　文章の入力をしていきます。<BR>
+　<BR>
+　イベントウィンドウの右下にある<BR>
+　「■ コマンド入力ウィンドウ表示 ■」をクリックして<BR>
+　イベントコマンド入力ウィンドウを開いてください。<BR>
+　<BR>
+　左側一覧から「1 文章の表示」を選択しましょう。<BR>
+　入力ボックス内に、次の文章を入力してください。<BR>
+　<BR>
+　「\c[4]WOLF RPG エディター」<BR>
+　<BR>
+　<B>\c[(数字)]</B>という文字列が文字色を変えてくれる特殊文字です。<BR>
+　今回設定したのは4番の文字色なので、[]内には4が入ります。<BR>
+　<BR>
+      </TD>
+      <TD nowrap><IMG src="image/EFFECT_004_2.png" width="320" height="180" border="1"></TD></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY><TR>
+      <TD nowrap valign="top"><BR>
+　イベントが<B>完成</B>しました。<BR>
+　マップをセーブしてテストプレイをしてみましょう。<BR>
+　<BR>
+　イベントに話しかけてみてください。<BR>
+　文字の色が変わっていれば成功です。<BR>
+　お疲れ様でした。<BR>
+　<BR>
+      </TD>
+      <TD nowrap><IMG src="image/EFFECT_004_3.png" width="320" height="240" border="1"></TD></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY><TR>
+      <TD nowrap valign="top"><BR>
+      【余談】<BR>
+<BR>
+　特殊文字を使った文字色の変更は、<B>その文章内でだけ</B>有効です。<BR>
+　<BR>
+　<B>デフォルトの文字色</B>を変更する場合は、<BR>
+　システムデータベース[12：文字色]の一番上、<BR>
+　[0:デフォルト色]の設定を変更しましょう。<BR>
+　<BR>
+　また、一つの文章内で複数回、文字の色を変える事も出来ます。<BR>
+　途中でデフォルト色に戻したい時は、<B>\c[0]</B>を入力してください。<BR>
+　<BR>
+      </TD>
+      <TD nowrap><IMG src="image/EFFECT_004_4.png" width="520" height="240" border="1"></TD></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<BR>
+
+<HR>
+<HR>
+<P>＜執筆者：七海＞　</P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

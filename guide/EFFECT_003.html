@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>メッセージ内の文字を大きくしたい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+
+<HR>
+<H2>【メッセージ内の文字を大きくしたい】</H2>
+<HR>
+
+<P>
+
+【目標】<BR>
+　普通の文字と大きな文字、小さな文字を表示するメッセージを作ります。<br>
+<br>
+　ここでは、サンプルゲーム内の「サンプルマップA」内に、<br>
+　最初に普通の文字で「<b>ニワトリ中くらい文字</b>」、<br>
+　次に大きな文字で「<b>ニワトリ大きい文字！</b>」、<br>
+　最後に小さな文字で「<b>ニワトリ小さい文字…</b>」と話すニワトリを作ります。<br>
+<br>
+　<img src="image/EFFECT_003_1.jpg" border="1" width="320" height="240"><br>
+</P>
+
+<HR>
+
+<TABLE border="0">
+  <TBODY>
+    <TR>
+
+      <TD nowrap>【1】　<BR>
+　・まずマップ選択<IMG src="image/icon_mapselector.png" width="22" height="20" border="0">で「<B>サンプルマップA</B>」に<BR>
+　　切り替えて下さい。<BR><BR>
+
+　・適当な場所に<B>イベントを作成して<BR>
+&#160;　ニワトリの画像を設定</B>しておきます。<BR>
+
+　　（ここでは右の画像の位置に設置）<BR>
+<BR><BR>&#160;→ 分からないときは、<BR>
+　 &#160;<B><A href="MUST_001x.html" target="B">◆新しいイベントを作ってみたい</A></B>の<BR>
+　　【1】～【5】までの手順をまねてください。<BR>
+<BR>
+</TD><TD nowrap><IMG src="image/window_evbase.jpg" width="289" height="240" border="1"></TD></TR></TBODY></TABLE><HR>
+<TABLE border="0">
+  <TBODY><TR>
+      <TD nowrap>【2】　<BR>
+
+      　・ニワトリが「<b>ニワトリ中くらい文字</b>」と話すように<BR>
+      　　<b>文章の表示</b>処理を追加します。<BR>
+      <BR><BR>
+      &#160;→ 分からないときは、<BR>
+　 &#160;<B><A href="MUST_001x.html" target="B">◆新しいイベントを作ってみたい</A></B>の<BR>
+
+　　【7】～【10】の手順をまねてください。<BR></TD>
+      <TD nowrap><IMG src="image/EFFECT_003_2.jpg" width="300" height="180" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>
+【3】<BR>
+　先程と同様に、こんどは<br>
+　「<b>ニワトリ大きい文字！</b>」と入力します。<br>
+
+　<br>
+　そして、文字の大きさを変更する為に、<br>
+　行頭に「<b>\f[32]</b>」と入力します。<br>
+　「\f」がフォントサイズを変えるよ、という意味で、<br>
+　「[32]」がサイズは３２だよ、と言う指定です。<br>
+　<br>
+
+</TD><TD nowrap>
+<img src="image/EFFECT_003_3.jpg" width="300" height="180" border="1">
+</TD></TR></TBODY></TABLE>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>
+【4】<BR>
+　次は小さく<br>
+　「<b>ニワトリ小さい文字…</b>」と表示させます。<br>
+　<br>
+
+　文字を小さく表示するのも大きく表示するのも、<br>
+　「<b>サイズの指定が大きいか小さいか</b>」<br>
+　という違いだけで、行うことは同じです。<br>
+
+　<br>
+　なので、行頭に「<b>\f[8]</b>」と入力します。<br>
+　<br>
+
+</TD><TD nowrap>
+<img src="image/EFFECT_003_4.jpg" width="300" height="180" border="1">
+</TD></TR></TBODY></TABLE>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>
+【5】<BR>
+　これで文字サイズの違う３つの発言をする<br>
+　ニワトリのイベントが完成しました。<br>
+　完成したイベントの設定は、<br>
+　下記のようになっていますでしょうか。<br>
+　<br>
+　１：左下、<b>起動条件</b>が「<b>決定キーで実行</b>」<br>
+　２：右側、イベントコマンド表示欄に<br>
+　　　■<b>文章：ニワトリ普通の文字</b><br>
+　　　■<b>文章：\f[32]ニワトリ大きい文字！</b><br>
+　　　■<b>文章：\f[8]ニワトリ小さい文字…</b><br>
+　　　■<br>
+　　　と表示されている。<br>
+
+</TD><TD nowrap>
+<IMG src="image/EFFECT_003_5.png" width="375" height="188" border="1">
+</TD></TR></TBODY></TABLE>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>
+【6】<BR>
+　さて、マップをセーブして、<BR>
+　作ったイベントをテストしてみましょう。<BR>
+<BR>
+　「<B>セーブ（マップ全体）</B>」をクリックした後、<BR>
+　「<B>テストプレイ</B>」をクリックしてください。</TD>
+
+<TD nowrap><IMG src="image/window_evbase4.png" width="247" height="100" border="1"></TD>
+</TR></TBODY></TABLE>
+
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>【7】　<BR>
+　右の画像のように、大きな文字で「ニワトリ大きな文字！」と<br>
+　メッセージが表示されていれば、大きな文字の表示は成功です。<br>
+<br>
+　お疲れ様でした。<br>
+　</TD>
+<TD nowrap><img src="image/EFFECT_003_1.jpg" width="320" height="240" border="1"></TD>
+</TR></TBODY></TABLE>
+
+<HR>
+
+<br><br>
+
+<HR>
+<TABLE border="0"><TBODY><TR><TD nowrap>
+<B>【余談】</B><BR>
+　サイズの大小は、デフォルトの値に対する相対的なものです。<br>
+　基本的に、初期の段階ではデフォルトのサイズは「12」となっています。<br>
+  <br>
+　なので、「\f[12]」でデフォルト（指定無し）のサイズに、<br>
+　「\f[10]」など１２以下の値で小さいサイズに、<br>
+　「\f[14]」など１２以上の値で大きいサイズになります。<br>
+  <br>
+　ちなみに、この値はシステム変数の８番「<b>基本フォントサイズ</b>」で設定されており、<br>
+　変数操作で変更する事で、指定無しの状態の文字サイズを変更する事ができます。<br>
+  <br>
+
+</TR></TBODY></TABLE>
+<HR>
+
+<P>＜執筆者：<A href="http://sinryokunokoya.karamatu.com/" target="_blank">Barong</A>＞　</P>
+
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

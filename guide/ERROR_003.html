@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>「1フレームあたりの処理が500000個を超えました！」と出てきた</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【「1フレームあたりの処理が500000個を超えました！」と出てきた】</H2>
+<HR>
+<P>【目標】 <BR>
+	<b>「1フレームあたりの処理が500000個を超えました！」と出るエラーを解消する</b><br>
+	<br>
+	ウディタに少し慣れたころからよく出会う、このエラーメッセージの原因と対処法を理解します。<br>
+	一度理解してしまえば、次からはとっさに対応できるようになりますよ。<br>
+</P>
+<HR>
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			ウディタ(Ver.1.31段階)では1フレーム中(=1/60秒)の間の処理は50万個が限界です。<br>
+			つまりこのエラーは1フレーム中に50万個以上の処理をしてしまっているのが原因です。<br>
+			では、何故このようなエラーが起きるのでしょうか。<br>
+		</TD>
+		<TD nowrap>
+			<!-- 画像なし -->
+		</TD>
+	</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【無限ループに陥っている場合】<br>
+			「無限ループ」とは、あるループ内で、 <br>
+			それを抜け出すことができず、無限に同じ処理を繰り返すことです。<br>
+			この結果、1フレーム内での処理が50万個を超えることがよくあります。<br>
+			主な原因は以下の二つです。<br>
+		</TD>
+		<TD nowrap>
+			<!-- 画像なし -->
+		</TD>
+	</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+
+<table border="0">
+	<TR>
+		<TD nowrap>
+			①ループに「ループ中断」がない<br>
+			ループが中断されないため、<br>
+			50万個どころか無限にループし続けている状態です。<br>
+			ループの適切な位置に「ループ中断」を入れることで、<br>
+			エラーが解消することがあります。<br>
+		</TD>
+		<TD nowrap>
+			<!-- 画像なし -->
+		</TD>
+	</TR>
+	<TR>
+		<TD nowrap>
+			◆「ループ中断」を入力するには<br>
+			・マップイベントエディタを開いて、<br>
+			　「■コマンド入力ウィンドウ表示■」をクリックしてください。<br>
+			・上部タブを「その他１」に切り替えます。<br>
+			・上部タブより少し下にある「ループ中断」をクリックします。<br>
+		</TD>
+		<TD nowrap>
+			<IMG src="./image/ERROR_003_1.png" width="367" height="317" border="0"><br>
+		</TD>
+	</TR>
+	<TR>
+		<TD nowrap>
+			【One Point!】<br>
+			また、ループ内で条件を満たすことができずに、<br>
+			「ループ中断」を実行できていない場合も考えられます。<br>
+			以上、以下、より大きい、未満、きちんと条件を満たせているか、<br>
+			条件分岐に使っている変数が間違っていないかを確認しましょう。<br>
+		</TD>
+		<TD nowrap>
+			<!-- 画像なし -->
+		</TD>
+	</TR>
+	<TR><TD colspan="2"><HR></TD></TR>
+	<TR>
+		<TD nowrap>
+			②イベントの自動実行<br>
+			自動実行イベントは<br>
+			<b>「実行し終わっても自動的に、最初からまた同じことを繰り返す」</b><br>
+			という性質を持っているので、<br>
+			これも一種の無限ループになってしまう場合があります。<br>
+			この場合、原因である「自動実行」はループではなくイベントなので、<br>
+			ループ中断の代わりに「イベントの一時消去」を使ってください。<br>
+		</TD>
+		<TD nowrap>
+			<!-- 画像なし -->
+		</TD>
+	</TR>
+	<TR>
+		<TD nowrap>
+			◆「イベントの一時消去」を入力するには<br>
+			・マップイベントエディタを開いて、<br>
+			　「■コマンド入力ウィンドウ表示■」をクリックしてください。<br>
+			・上部タブを「その他１」に切り替えます。<br>
+			・下段の下から３つめにある「イベントの一時消去」を選択。<br>
+			・対象は「このイベント」にして、フェードは［0］を入力します。<br>
+			・設定できたら「入力」ボタンをクリック。<br>
+		</TD>
+		<TD nowrap>
+			<IMG src="./image/ERROR_003_2.png" width="367" height="317" border="0"><br>
+		</TD>
+	</TR>
+	<TR>
+		<TD nowrap>
+			【One Point!】<br>
+			この場合も、自動イベントの開始条件が満たされ続けているために<br>
+			イベントが起動し続けている、と言いかえることができます。<br> 
+			つまり、自動イベントでは、イベント自体を消してしまう方法の他にも<br>
+			イベントの最後で条件を満たさない状態にしてやることでループから抜ける<br>
+			ということもできるのです。<br> 
+		</TD>
+		<TD nowrap>
+			<!-- 画像なし -->
+		</TD>
+	</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+	
+<TABLE border="0">
+<TBODY>
+	<TR>
+		<TD nowrap>
+			【単純に処理がオーバーしている場合】<br>
+			アクションゲームなどで並列イベントを使う場合等によく起こります。<br>
+			適切な場所にウェイトを挟むか、処理数を減らすことが主な対策法です。<br>
+		</TD>
+		<TD nowrap>
+			<!-- 画像なし -->
+		</TD>
+	</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+
+<TABLE>
+	<TR>
+		<TD nowrap>
+			◆「ウェイト」を入力するには<br>
+			・マップイベントエディタを開いて、<br>
+			　「■コマンド入力ウィンドウ表示■」をクリックしてください。<br>
+			・次に、上部タブを「その他１」に切り替えます。<br>
+			・下段の下から２つめの「ウェイト　　ﾌﾚｰﾑ」を選択してください。<br>
+			・最後に、右下の「入力」をクリックすると、<br>
+			　イベントに１フレームのウェイトが入力されます。<br>
+		</TD>
+		<TD nowrap>
+			<IMG src="./image/ERROR_003_3.png" width="367" height="317" border="0"><br>
+		</TD>
+	</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+
+<P>＜執筆者：<A href="http://sns.prtls.jp/rpgeditor/community.html?cid=33af3514107db1a4" target="_blank">ウディタ公式ガイド執筆コミュ。</A>＞<br>
+	<ul>
+		<li>真波</li>
+		<li><A href="http://hinezumi.velvet.jp/" target="_blank">ユノ</A></li>
+		<li>esc23</li>
+		<li><A href="http://008877451.cocolog-nifty.com/aoyamaclub/" target="_blank">青山</A></li>
+	</ul>
+</P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P>
+	<br>
+</P>
+</BODY>
+</HTML>

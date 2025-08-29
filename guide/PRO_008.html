@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>特定キーで主人公の移動速度を上げる機能（ダッシュ機能）</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+
+<HR>
+<H2>【特定キーで主人公の移動速度を上げる機能（ダッシュ機能）】</H2>
+<HR>
+<BR>
+キャラクターやイベントには、それぞれに移動速度が設定されています。<BR>
+今回はサブキーが押されると主人公の移動速度を変える、いわゆる<B>ダッシュ機能</B>を作ってみたいと思います。<BR>
+<BR>
+【目標】<BR>
+<BR>
+　１．キー入力からサブキーが押されたかどうかを取得する。<BR>
+　<BR>
+　２．サブキーが押されていれば主人公の移動速度を変更する。<BR>
+　<BR>
+　３．サブキーが離されると、主人公の移動速度を元に戻す。<BR>
+<BR>
+　■関連項目<BR>
+　<a href="PRO_005.html" target="B">【特定のキーが押されたかどうかを取得したい】</a><BR>
+<BR>
+<HR>
+<P>【手順】</P>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap valign="top">―― 【1】コモンイベント作成 ――<BR>
+      <BR>
+　今回は全てのマップで動作させたいので、コモンイベントを利用します。<BR>
+　コモンイベントの設定<img height=20 src="image/icon_common.png" width=22 border=0>をクリックして、コモンイベントエディタを開いてください。<BR>
+　<BR>
+　コモンイベント一覧から、空いているコモンイベントを選択します。<BR>
+　分かりやすいように名前を付けておきましょう。<BR>
+　起動条件は<B>「並列実行(常時)」</B>にします。<BR>
+　<BR>
+      </TD>
+      <TD nowrap><IMG src="image/PRO_008_1.png" width="420" height="160" border="1"></TD></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY><TR>
+      <TD nowrap valign="top"><BR>
+      ―― 【2】キー入力の受け付け ――　<BR>
+      <BR>
+　続いて、下部ボタンかイベントコマンド表示欄をダブルクリックして<BR>
+　イベントコマンド入力ウィンドウを表示してください。<BR>
+　<BR>
+　コマンドウィンドウから「9:キー入力」を選択、<BR>
+　代入先は「このコモンセルフ:0」、<BR>
+　キー種は「基本」、方向キーは「受け付けない」、<BR>
+　そして「サブキー」のみにチェックを入れて他は外してください。<BR>
+　<BR>
+　出来たら「入力ボタン」をクリックです。<BR>
+　<BR>
+      </TD>
+      <TD nowrap><IMG src="image/PRO_008_2.png" width="510" height="140" border="1"></TD></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY><TR>
+      <TD nowrap valign="top"><BR>
+      ―― 【3】条件分岐の作成 ――　<BR>
+      <BR>
+　「7:条件分岐(変数)」を選択、まず「3変数を連動」チェックを外しましょう。<BR>
+　<BR>
+　設定は上から、<BR>
+　変をクリックして「V1:が1と同じ」<font color="#696969" style="font-size:9pt">（使用している場合は別の変数）</font><BR>
+　「V1:が-1と同じ」<BR>
+　「このコモンセルフ0:が12と同じ」<BR>
+　そして「上記以外の場合を作成」にチェックを入れ、<BR>
+　合計4つの分岐を作成します。<BR>
+　<BR>
+　そして「入力ボタン」をクリック。<BR>
+　<BR>
+      </TD>
+      <TD nowrap><IMG src="image/PRO_008_3.png" width="420" height="198" border="1"></TD></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY><TR>
+      <TD nowrap valign="top"><BR>
+      ―― 【4】移動速度の変更（ダッシュ時） ――　<BR>
+      <BR>
+　上2つの分岐は、今は空けたまま置いておきます。<BR>
+　その下、<B>3番目の分岐内</B>をクリックして選択しましょう。<BR>
+　<BR>
+　イベントコマンドから「H:イベント制御」を選択してください。<BR>
+　右上の方にある「キャラ動作指定」をクリックします。<BR>
+　<BR>
+　左上のプルダウンをクリック、「主人公」を選びます。<BR>
+　ボタンが多くて見つけづらいですが、中央付近下部、「速度・頻度の設定」部分を見てください。<BR>
+　プルダウンをクリックして、「4」を選択しましょう。<BR>
+　<font color="#696969" style="font-size:9pt">※ここの数値が大きいほど早くなります。</font><BR>
+　<BR>
+　選び終わったら、その下、「移動速度の設定」ボタンをクリックします。<BR>
+　「OKボタン」を押しましょう。<BR>
+　<BR>
+　これで<B>主人公をダッシュさせる</B>部分が完成しました。<BR>
+　<BR>
+      </TD>
+      <TD nowrap><IMG src="image/PRO_008_4.png" width="410" height="490" border="1"></TD></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY><TR>
+      <TD nowrap valign="top"><BR>
+      ―― 【5】移動速度の変更（歩き） ――　<BR>
+      <BR>
+　続いて移動速度を元に戻す処理を作成します。<BR>
+　今度は一番下、<B>上記以外</B>の分岐内をクリックして選択しましょう。<BR>
+　<BR>
+　先ほど同様コマンド表示欄から動作指定をクリックして開いてください。<BR>
+　同じく「速度・頻度の設定」から、今度は速度「3」を選択して設定しましょう。<BR>
+　<BR>
+　終わったら「OKボタン」です。<BR>
+　<BR>
+      </TD>
+      <TD nowrap><IMG src="image/PRO_008_5.png" width="360" height="290" border="1"></TD></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY><TR>
+      <TD nowrap valign="top"><BR>
+      ―― 【6】コモン停止時の処理 ――　<BR>
+      <BR>
+　最後に、このコモンの停止時にも移動速度を元に戻す処理を作成します。<BR>
+　これが無いと、もしもサブキーを押しっぱなしにしたままコモンを停止した場合、<BR>
+　ダッシュ状態がずっと続いてしまう事になります。<BR>
+　<BR>
+　上から2番目、<B>「V1:が-1以下」</B>の分岐内をクリックして選択しましょう。<BR>
+　<BR>
+　同じく動作指定から速度「3」を選択して設定しましょう。<BR>
+　<font color="#696969" style="font-size:9pt">（上記以外の分岐内からコピー[cキー]＆ペースト[vキー]でも構いません）</font><BR>
+　<BR>
+　<BR>
+　今度は「3:変数操作」を開きます。<BR>
+　<BR>
+　[変]ボタンをクリックして「[V1:] = 1」と入力してください。<BR>
+　
+      </TD>
+      <TD nowrap><IMG src="image/PRO_008_6.png" width="470" height="280" border="1"></TD></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY><TR>
+      <TD nowrap valign="top"><BR>
+　以上でダッシュコモンは<B>完成</B>です。<BR>
+　テストプレイをしてみましょう。<BR>
+<BR>
+　サブキーを押している間は速くなり、放すと元に戻れば成功です。<BR>
+　お疲れ様でした。<BR>
+<BR>
+      </TD>
+      <TD nowrap></TD></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY><TR>
+      <TD nowrap valign="top"><BR>
+【余談】<BR>
+<BR>
+　このダッシュコモンは、イベントの演出時などに他の動作指定を上書きしてしまい、<BR>
+　予期せぬ動作を引き起こす可能性があります。<BR>
+　<BR>
+　そんな時は事前に変数操作で「V1=1」と入力して、<BR>
+　ダッシュコモンの動作を停止してやると解決するでしょう。<BR>
+　<font color="#696969" style="font-size:9pt">（一番上の分岐内を通るように）</font><BR>
+　<BR>
+　再度起動させる場合は「V1=0」です。<BR>
+　<BR>
+　また、確実に速度を元に戻したい場合は、<BR>
+　変数操作で「V1=-1」としてやると速度を戻してから動作を停止できます。<BR>
+　<BR>
+　その際イベントの処理順序によっては、<B>ウェイトが1フレーム必要</B>になります。<BR>
+　注意しましょう。<BR>
+　<BR>
+      </TD>
+      <TD nowrap><IMG src="image/PRO_008_7.png" width="340" height="150" border="1"></TD></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<BR>
+<BR>
+
+<HR>
+<HR>
+<P>＜執筆者：七海＞　</P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

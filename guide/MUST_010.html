@@ -1,0 +1,253 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>変数に名前を付けたい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【変数に名前を付けたい】</H2>
+<HR>
+<P><pre>【目標】
+セルフ変数、システム変数を除く
+
+<b>コモンセルフ変数・通常変数
+通常予備変数・文字変数</b> に
+好きな名前を付け、見分けやすくする
+
+使用バージョン[2.x系]
+
+<a href="#1">やり方その１</a>
+<a href="#3">やり方その２</a>
+
+</pre></p>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre><a target="B" name="1">【1】やり方その１</a>
+　・まずマップ選択<IMG height=20 src="image/icon_mapselector.png" width=22 border=0>で
+　「イベントを作成したいマップ」
+　に切り替えて下さい。
+
+　・適当な場所にイベントを作成します。
+　イベントの画像は別に指定しなくてもかまいません。
+
+　手順は<a target="B" href="EV_001.html" target="B">◆決定キーで起動するイベント</a>の
+　【1】～【5】を参考にしてください。
+<pre></TD>
+<TD nowrap><pre><a target="B" href="image/BASE_E012_1.png"><img src="image/BASE_E012_1.png" border="1"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【2】
+　作成したら、イベントウィンドウの右下にある
+　<b>「■コマンド入力ウィンドウ表示■」</b>を
+　クリックしてください。
+
+　1.「イベントコマンドの挿入」ウィンドウが出たら
+　　<b>3 変数操作</b> をクリックして選択します。
+
+　2.変数名の設定 と書いてある部分がありますね。
+　　こちらを使用して変数に名前をつけます。
+　　※ <b>5 文字列操作</b> にも
+　　　 同様の設定項目があります。
+　　
+　3.名前を付けたい変数を指定します。
+　　<b>3 変数操作</b> の場合は
+　　<b>V n</b>「通常変数」
+　　<b>V n-j</b>「通常予備変数」
+　　
+　　<b>5 文字列操作</b> の場合は
+　　<b>S n</b>「文字変数」
+　　
+　　
+　　コモン編集時の場合なら
+　　<b>3 変数操作</b> の場合は
+　　<b>CSelf n</b>「コモンセルフ変数」
+　　<b>V n</b>「通常変数」
+　　
+　　<b>5 文字列操作</b> の場合は
+　　<b>CSelf n</b>「コモンセルフ変数」
+　　<b>S n</b>「文字変数」
+　　
+　　※ n と j は数値が入ります。
+　　
+　4.付けたい名前を入力し、すぐ右にある
+　「名前を付ける」をクリックすれば完了です。
+　
+　　3.の横にある コピー は、3.で指定した変数名を
+　　4.の項目にコピーできる機能です
+　　
+　　サイズ+1 は
+　　Vn「通常変数」の場合はnの上限が
+　　Vn-j「通常予備変数」の場合は
+　　　指定したn の j の上限が
+　　Sn「文字変数」の場合はnの上限が
+　　それぞれ増えます。
+　　
+　　これで変数に名前を付けることができました。
+　　やり方その２を知りたい方は
+　　そのまま進んでください。
+　　
+　　それ以外の方はこれで終了です
+　　お疲れ様でした。
+<pre></TD>
+<TD nowrap><pre><a target="B" href="image/MUST_010_1.png"><img width="360" src="image/MUST_010_1.png"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre><a name="3">【3】やり方その２</a>
+
+　まずはコモンセルフ(CSelf)変数以外の設定方法です。
+　
+　（画像１）赤い円で囲んだ<IMG src="image/icon_sysDB.png" width="22" height="20" border="0">をクリックし
+　（画像２）システムデータベースを開きます。
+<pre></TD>
+<TD nowrap>画像１<br>
+<pre><a target="B" href="image/MUST_010_2.png"><IMG src="image/MUST_010_2.png" width="332" border="1"></a><br><br>
+画像２<br>
+<a target="B" href="image/window_SystemDB.jpg"><IMG src="image/window_SystemDB.jpg" width="332" height="291" border="1"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【4】対応するタイプ
+ 　 　 　4:文字変数名「S n」
+　 　　14:通常変数名「V n」
+　15～23:予備変数名「V n-j」
+　※ n と j は数値が入ります。
+　
+　変更したい変数名に対応している
+　タイプの<b>データ</b>に名前を付けます
+　
+　変更したらウィンドウの右下にある
+　「ＯＫ」か「更新」をクリック
+　もしくは「ＣＴＲＬ＋Ｓ」を押します。
+　そうすると変更した内容が
+　保存されます。
+　
+　これで変更と反映が完了しました。
+<pre></TD>
+<TD nowrap><pre><a target="B" href="image/MUST_010_3.png"><img src="image/MUST_010_3.png"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【5】コモンセルフ(CSelf)変数の場合
+
+　<a target="B" href="MUST_009.html">新しいコモンを作ってみたい</a> の
+　手順【1】を参考に
+　<b>コモンイベントエディタ</b> を
+　開いてください。
+　
+　ウィンドウ右上にある
+　「セルフ変数使用状況」を
+　クリックしてください。
+<pre></TD>
+<TD nowrap><pre><a target="B" href="image/MUST_010_4.png"><IMG src="image/MUST_010_4.png" width="332" height="291" border="1"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【6】
+
+　右の画像のような
+　ウィンドウが出ましたか？
+　
+　その項目一つ一つが
+　<b>コモンセルフ(CSelf)変数</b> の
+　名前を入力できるところです。
+　
+　項目内を変更したら、忘れずに右下の
+　「設定完了」をクリックしましょう。
+
+　キャンセルだと変更した
+　内容が保存されません。
+　
+　
+　※ 左下のコピーペースト機能について
+　<b>全てコピー</b> は
+　　<b>現在編集しているコモン</b> の
+　　CSelf00～CSelf99全ての
+　　文字列をコピーします。
+　　
+　<b>全て貼り付け</b> は
+　　全てコピーで得た内容を
+　　丸々上書きします。
+　　
+　<b>空欄にだけ貼り付け</b> は
+　　項目にスペースでもいいので
+　　何かしらの文字が入っていれば
+　　その部分はそのままで、他の空欄
+　　にのみ全てコピーで得た内容を
+　　上書きしていきます。
+　
+<pre></TD>
+<TD nowrap><pre><a target="B" href="image/MUST_010_5.png"><IMG src="image/MUST_010_5.png" width="332" height="291" border="1"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【7】確認
+　【5】か【6】で変更した名前が
+　きちんと反映されているか確認しましょう。
+　
+　コマンド一覧から
+　<b>3 変数操作</b> や
+　<b>5 文字列操作</b> を選び
+　変更したコモンセルフ変数を指定
+　変数に名前がついているか確認できたら完了です。
+　
+　おつかれさまでした。
+<pre></TD>
+<TD nowrap></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+
+<HR>
+<P>＜執筆者：きじこ</A>＞　</P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>選択肢のウィンドウ画像を変更したい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【選択肢のウィンドウ画像を変更したい】</H2>
+<HR>
+　<B>【目標】</B><BR>
+<HR>
+<P>
+　ウィンドウ画像を変更することで、簡単に<BR>
+　ゲームの雰囲気を変えることが出来ます。<BR>
+<BR>
+　今回は、<B>選択肢表示時に背景となる画像を「CursorBase.png」に変更</B>し、<BR>
+　システム画像の変更の仕方を習得します。</P>
+
+<HR>
+　<B>【手順】</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【1】 システムDBを開く<BR>
+<BR>
+　システムデータベース<IMG src="image/icon_sysDB.png" width="22" height="20" border="0">をクリックすると、<BR>
+　右のようなウィンドウが表示されます。<BR>
+</TD>
+<TD nowrap><IMG src="image/window_SystemDB.jpg" width="332" height="291" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【2】 編集するタイプの選択<BR>
+<BR>
+　①ウィンドウが開いた直後は「タイプ」が「マップ設定」になっています。<BR>
+　<B>「10:ウィンドウ画像」</B>をクリックして下さい。<BR>
+　②ウィンドウの中ほどにデータ一覧があります。<BR>
+　データはこの中から<B>「1:×選択肢ｳｨﾝﾄﾞｳ画像」</B>を選択してください。<BR>
+</TD>
+<TD nowrap><IMG src="image/SETTING_003_1.png" width="346" height="330" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【3】 画像を設定<BR>
+<BR>
+　次に、ウィンドウに使われる画像を設定します。<BR>
+　画像ファイル名の右にある<B>[File]</B>ボタンを押すと<BR>
+　素材が入っているフォルダが開かれますので、<BR>
+　<B>「CursorBase.png」</B>を選択し、ウィンドウ右下の<BR>
+　ボタン<B>「OK」</B>を押してください。<BR>
+　画像ファイル名に<B>「SystemFile/CursorBase.png」</B>が<BR>
+　入力されました。ウィンドウ右下のボタン<BR>
+　<B>「OK」か「更新」</B>を押して上書きします。<BR>
+</TD>
+<TD nowrap><IMG src="image/SETTING_003_2.png" width="586" height="466" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【4】 画像を設定<BR>
+<BR>
+　今回は選択肢を出すことさえできればいいので、<BR>
+　一番簡単な形で作ります。<BR>
+　サンプルマップAの適当な位置にイベントを作成し、<BR>
+　ニワトリの画像を設定します。<BR>
+　コマンド入力ウィンドウを開き、タブを<B>「2 選択肢」</B>に変更して<BR>
+　一番上の文字入力欄に、(何でもいいのですが)「選択肢」など<BR>
+　入力してください。入力できたら、ウィンドウ右下の<BR>
+　<B>「入力」</B>ボタンを押してコマンドを入力します。<BR>
+</TD>
+<TD nowrap><IMG src="image/SETTING_003_3.png" width="470" height="255" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【5】 画像を設定<BR>
+<BR>
+　ではテストプレイしてみましょう。<BR>
+　選択肢イベントコマンドを起動すると、選択肢の背景画像に<BR>
+　黒い画像が使われているはずです。もしうまくいかないときは、<BR>
+　手順１を見直してみてくださいね。<BR>
+　お疲れ様でした！<BR>
+</TD>
+<TD nowrap><IMG src="image/SETTING_003_4.png" width="388" height="295" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+　<B>【余談】</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>・今回は選択肢表示時に選択肢の背景として表示される画像を<BR>
+変更しましたが、ふだんキャンセルキーで開けるメニューの<BR>
+背景となっている画像も変更することが出来ます。<BR>
+<BR>
+これはユーザデータベースのタイプ16番「画像/音声設定」で、<BR>
+項目0番「ウィンドウ画像ファイル」で変更することができます。<BR>
+余力があればやってみてくださいね。<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<HR>
+
+<P>＜執筆者：ウディタ公式ガイド執筆コミュ。＞
+    <ul>
+        <li>トピック原案：真波、<A href="http://hinezumi.velvet.jp/index.php" target="_blank">ユノ</A></li>
+        <li>HTML作成：真波</li>
+    </ul>
+</P>
+<HR>
+【改訂履歴】<BR>
+　Ver1.00　2013/11/22 新規作成<BR>
+<HR><A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+
+</BODY>
+</HTML>

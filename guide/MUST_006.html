@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>サンプルの「タイトル」マップは何してるの？</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【サンプルの「タイトル」マップは何してるの？】</H2>
+<HR>
+<P>【目標】 <BR>
+　サンプルデータの「<B>0：タイトル</B>」マップには、<BR>
+　ただ一つ<B>「タイトル用イベント」という名前のイベントがあります</B>。<BR>
+　ここでは、このイベントがどんな処理をしているのか、説明していきます。<BR>
+<BR>
+　（内容はVer1.16段階のものです、イベントコマンド等が異なる可能性があります）<BR>
+<BR>
+　　　<IMG src="image/MUST_006_1.gif" width="363" height="250" border="0"><BR>
+　　　　↑が、「0：タイトル」マップ内にある「<B>タイトル用イベント</B>」です</P>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【1】　「<B>タイトル用イベント</B>」は何をしているの？<BR>
+      <BR>
+      　おおざっぱに整理すると、以下の処理を行っています。<BR>
+      <BR>
+      　1．ゲームが始まった瞬間に<B>タイトル画像</B>を表示する<BR>
+      <BR>
+      　2．プレイヤーに<B>「スタート」「コンティニュー」<BR>
+      　　 「ゲーム終了」</B>の選択肢を選ばせる。<BR>
+      <BR>
+      　3.1．<B>「スタート」</B>を選ぶと、<B>マップを移動</B>して、<BR>
+      　　　 ウルファールが<B>ゲームの紹介</B>をする。<BR>
+      <BR>
+      　3.2．<B>「コンティニュー」</B>を選ぶと、データの<BR>
+      　　　 <B>ロード画面が表示</B>される。<BR>
+      <BR>
+      　これらの手順が、具体的にどのような設定・処理によって<BR>
+      　動作しているのか、実際にイベントを見ていきましょう。</TD>
+<TD nowrap><IMG src="image/MUST_000_gameplay.jpg" border="0" width="260" height="202"></TD>
+</TR>
+
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【2】　イベントを開く<BR>
+      <BR>
+      　マップ選択 <IMG src="image/icon_mapselector.png" width="22" height="20" border="0"> ウィンドウの<BR>
+      　「<B>0：タイトル</B>」を<B>クリック</B>し、<BR>
+      　タイトルマップを開きます。<BR>
+      <BR>
+      　<B>まん中に一つだけある<BR>
+      　イベント</B>を<B>右クリック</B>し、<BR>
+      　「<B>イベントの作成/編集</B>」<BR>
+      　をクリックして下さい。</TD>
+<TD nowrap><IMG src="image/MUST_006_2.gif" width="190" height="180" border="0"></TD>
+</TR>
+
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【3】　<BR>
+      　右のウィンドウが<BR>
+      　表示されます。<BR>
+      <BR>
+      　今回は、「<B>起動条件</B>」と<BR>
+      　右の<B>イベントコマンド欄</B>に<BR>
+      　注目していきます。</TD>
+<TD nowrap><IMG src="image/MUST_006_3.gif" width="454" height="206" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【4】　<B>起動条件「自動実行」</B><BR>
+      <BR>
+      　まず起動条件に注目すると、「<B>自動実行</B>」に<BR>
+      　なっていることが分かります。<BR>
+      <BR>
+      　これは、<B>同じマップ内にプレイヤーがいると、<BR>
+      　どこにいても勝手に実行されるイベント</B>で<BR>
+      　あることを表しています。<BR>
+      <BR>
+      　言い換えると、この起動条件なら、<BR>
+      　<B>ゲームの開始位置</B>を「<B>0：タイトル</B>」マップの<BR>
+      　どこかにさえしておけば、どこにいようが<BR>
+      　タイトル画面の処理が実行されるのです。</TD>
+<TD nowrap><IMG src="image/MUST_006_4.gif" width="133" height="129" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【5】　<B>具体的な処理内容</B><BR>
+      <BR>
+      　「タイトル」イベントのコマンド処理内容に、解説を付けてみました。<BR>
+      　量が多くてびっくりするかもしれませんが、今のところは<BR>
+      　選択肢の「<B>スタート</B>」を選択したときの処理に、ちょっと目を通しておいてくだされば十分です。<BR>
+      <HR>
+      <IMG src="image/MUST_006_6.gif" width="640" height="880" border="0"></TD>
+<TD nowrap></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【6】　<B>重要な点は？</B><BR>
+      <BR>
+      　　この「タイトル」イベントは、以下の点に注意して少し修正を加えることで、<BR>
+      　　あなたの作品へ流用することが可能です。<BR>
+      <BR>
+      　　1．「<B>スタート</B>」選択時の「<B>サンプルマップＡに移動</B>」（【5】参照）の部分を、<BR>
+      　　　　ご自分のゲームに合わせた<B>移動先に変更</B>して下さい。<BR>
+      <BR>
+      　　2．その後の｢<B>ゲーム開始時の演出</B>｣（【5】参照）の部分も、ご自分のゲームに合わせて<BR>
+      　　 &nbsp;　<B>消去</B>するなり、<B>メッセージを変更</B>してください。<BR>
+      <BR>
+      　　　よく分からない場合は「<B>文章:ウルファール\n～</B>」と書いてあるメッセージだけ、<BR>
+      　　　<B>Delキー</B>を押して消してしまいましょう！<BR>
+      <BR>
+      <BR>
+      　※【注意】 間違えて｢<B>ゲーム開始時の演出</B>｣の上にある<BR>
+      　　　　　<B>「場所移動」を消してしまう</B>と、<B>タイトル画面から抜けられなくなります</B>！<BR>
+      　　　　　 よく間違えて消してしまう人がいるので、どうかご注意を。<BR>
+      </TD>
+<TD nowrap></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<HR>
+<P>＜執筆者：<A href="http://www.silversecond.net/" target="_blank">SmokingWOLF</A>＞　</P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

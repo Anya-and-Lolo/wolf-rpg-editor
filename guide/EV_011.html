@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>EV_011:◆主人公･イベントの移動速度を変更したい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【EV_011:◆主人公･イベントの移動速度を変更したい】</H2>
+<HR>
+　<B>【目標】</B><BR>
+<HR>
+<P>
+　移動速度の変更は、いろいろな演出に使えます。<BR>
+　街から広大なフィールドに出たときに移動速度がゆっくりになる、<BR>
+　沼地のような足場の悪いところで移動速度が落ちる、<BR>
+　踏むと足が速くなりすぎて止まりにくくなる罠など。<BR>
+<BR>
+　今回は、サンプルゲームのダンジョンを<BR>
+　<B>「入ると足が遅くなり、街に戻るとそれが治る」</B><BR>
+　という設定にして、主人公の移動速度を変更させます。<BR>
+　ダンジョンの中でだけ移動速度を変えるには、<BR>
+　<B>「入る時に移動速度を遅くする」</B>のはもちろん、<BR>
+　<B>「出るときに移動速度を元に戻す」</B>必要もあります。<BR>
+　この2つをそれぞれ、ダンジョンに入るイベントと<BR>
+　ダンジョンから出るイベントに差し込みます。<BR>
+　移動速度の変更は基本的にこの２つでワンセットです。</P>
+<HR>
+　<B>【手順】</B><BR>
+<HR>
+
+　<B>■ダンジョンに入る時に移動速度を遅くする</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【1】 イベントを開く<BR>
+<BR>
+　「サンプルマップA」を開き、ダンジョンの扉に設置されている<BR>
+　イベント<B>「02:ダンジョンの扉」</B>のウィンドウを開きます。<BR>
+　条件分岐の中にある<B>場所移動コマンド</B>にカーソルを合わせて、<BR>
+　クリックでその場所を選択しておいてください。<BR>
+</TD>
+<TD nowrap><IMG src="image/EV_011_1.png" width="440" height="287" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【2】 イベントコマンド入力ウィンドウを開く<BR>
+<BR>
+　イベントウィンドウの右下にある、<BR>
+　<B>「■ コマンド入力ウィンドウ表示 ■」</B>をクリックしてください。<BR>
+<BR>
+　次に、タブを<B>「Ｈ イベント制御」</B>に変更し、<BR>
+　ウィンドウ右上にある<B>「■ｷｬﾗ動作指定」</B>を<BR>
+　クリックしてください。<BR>
+</TD>
+<TD nowrap><IMG src="image/EV_011_2.png" width="441" height="404" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【3】 キャラ動作指定<BR>
+<BR>
+　①ここでキャラクターの動作を設定できます。<BR>
+　　主人公の移動速度を２速にしてみましょう。<BR>
+　　ウィンドウ左上にあるプルダウンリストで<BR>
+　　<B>「主人公」</B>を選択してください。<BR>
+　②また、ウィンドウ中央下の速度･頻度の設定では<BR>
+　　プルダウンリストで<B> 2 </B>を選択してから、<BR>
+　　下のボタン<B>「移動速度を設定」</B>を押してください。<BR>
+　③入力し終えたら右下の<B>「OK」</B>ボタンを押してください。<BR>
+</TD>
+<TD nowrap><IMG src="image/EV_011_3.png" width="493" height="384" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+　<B>■ダンジョンから出る時に移動速度を速くする</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【1】 イベントを開く<BR>
+<BR>
+　「ダンジョン」マップを開き、ダンジョンの出口に設置されている<BR>
+　イベント<B>「00:入口場所移動」</B>のウィンドウを開きます。<BR>
+　<B>場所移動コマンド</B>にカーソルを合わせて、<BR>
+　クリックでその場所を選択しておいてください。<BR>
+</TD>
+<TD nowrap><IMG src="image/EV_011_4.png" width="440" height="287" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【2】 イベントコマンドの入力<BR>
+<BR>
+　先ほどの「ダンジョンに入る時に移動速度を遅くする」と<BR>
+　同様に、今度は主人公の移動速度を3速にします。<BR>
+<BR>
+　イベントウィンドウの右下にある、<BR>
+　<B>「■ コマンド入力ウィンドウ表示 ■」</B>をクリックしてください。<BR>
+<BR>
+　次に、タブを<B>「Ｈ イベント制御」</B>に変更し、<BR>
+　ウィンドウ右上にある<B>「■ｷｬﾗ動作指定」</B>を<BR>
+　クリックしてください。<BR>
+</TD>
+<TD nowrap><IMG src="image/EV_011_2.png" width="441" height="404" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【3】 キャラ動作指定<BR>
+<BR>
+　①ウィンドウ左上にあるプルダウンリストで<BR>
+　　<B>「主人公」</B>を選択してください。<BR>
+　②速度･頻度の設定は<BR>
+　　プルダウンリストで<B> 3 </B>を選択してから、<BR>
+　　下のボタン<B>「移動速度を設定」</B>を押してください。<BR>
+　③入力し終えたら右下の<B>「OK」</B>ボタンを押してください。<BR>
+</TD>
+<TD nowrap><IMG src="image/EV_011_5.png" width="493" height="384" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【4】 イベントの確認<BR>
+<BR>
+　これでイベントの内容は入力できました。<BR>
+　ではテストプレイしてみましょう。<BR>
+<BR>
+　ダンジョンに出たり入ったりしてみて、ダンジョンの中でだけ<BR>
+　移動速度が遅くなっていれば成功です。<BR>
+　お疲れ様でした！<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+　<B>【余談】</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>　主人公やイベントの移動速度は、一度変更すると次に変更されるまで<BR>
+　ずっとその速度のままで、マップ切り替えやセーブロードなどでは<BR>
+　自動で元に戻ったりしません。ですので、<B>一時的に移動速度を変更する<BR>
+　場合は、一時的な速度の変更が不要になるタイミングで元に戻す<BR>
+　イベントを入れてあげる</B>必要があります。<BR>
+<BR>
+　イベントの初期移動速度は、それぞれのイベントの「移動ルート」でも設定できます。<BR>
+　ここで設定した速度は、イベントコマンドで移動速度変更があるとそちらが優先されます。<BR>
+<BR>
+　また、ちょっと中級の技術になりますが、今回の内容を応用すれば、<BR>
+　キーボードの特定のキーを押しているときにだけ移動速度が上がる、<BR>
+　キーダッシュ機能も作ることが出来ます。<BR>
+　詳しくは、記事「<A href="http://www.silversecond.com/WolfRPGEditor/Guide/PRO_008.html" target="_blank">特定キーで主人公の移動速度を上げる機能（ダッシュ機能）</A>」を<BR>
+　ご参照ください。
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<HR>
+
+<P>＜執筆者：ウディタ公式ガイド執筆コミュ。＞
+    <ul>
+        <li>トピック原案：真波、<A href="http://hinezumi.velvet.jp/index.php" target="_blank">ユノ</A></li>
+        <li>HTML作成：真波</li>
+    </ul>
+</P>
+<HR>
+【改訂履歴】<BR>
+　Ver1.00　2013/10/26 新規作成<BR>
+<HR><A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+
+</BODY>
+</HTML>

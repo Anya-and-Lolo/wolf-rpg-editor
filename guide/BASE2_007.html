@@ -1,0 +1,280 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>ゲームシステムの詳細設定をしたい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【ゲームシステムの詳細設定をしたい】</H2>
+<HR>
+　<B>【目標】</B><BR>
+<HR>
+<P>
+　基本システムのユーザーデータベースでは、ゲームの中で色々な<BR>
+　ところに使われている用語や画像を変更することができます。<BR>
+　今回は、メニューの「アイテム」を「道具」に変える設定、<BR>
+　ウィンドウ画像を変える設定、敵のHPゲージを消す設定を<BR>
+　それぞれ行い、どうすればどんなことが設定できるのかを理解します。</P>
+<HR>
+　<B>【手順】</B><BR>
+<HR>
+
+　<B>■メニューの「アイテム」を「道具」に変える</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【1】 ユーザDBを開く<BR>
+<BR>
+　ユーザーデータベース<IMG src="image/icon_userDB.png" width="22" height="20" border="0">をクリックすると、<BR>
+　右のようなウィンドウが表示されます。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_002_1.png" width="340" height="300" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【2】 編集するタイプの選択<BR>
+<BR>
+　ウィンドウが開いた直後は「タイプ」が「技能」になっています。<BR>
+　<B>「15:用語設定」</B>をクリックして下さい。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_007_1.png" width="190" height="290" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【3】 項目の編集<BR>
+<BR>
+　<B>「ページ１」</B>の項目0<B>「[ﾒﾆｭｰ]アイテム」</B>の入力欄に、<BR>
+　「<B>道具</B>」と入力してください。<BR>
+　入力出来たら、<B>更新ボタンかＯＫボタン</B>を押して下さい。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_007_2.png" width="354" height="480" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【4】 テストプレイ<BR>
+<BR>
+　テストプレイをしてみましょう。<BR>
+　メニューの「アイテム」という項目の名前が<BR>
+　<B>「道具」</B>に変わりました。変わったのは名前だけで、<BR>
+　機能には一切違いはありません。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_007_3.png" width="249" height="220" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+　<B>■ウィンドウ画像を変える</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【1】 ユーザDBを開く<BR>
+<BR>
+　ユーザーデータベース<IMG src="image/icon_userDB.png" width="22" height="20" border="0">をクリックすると、<BR>
+　右のようなウィンドウが表示されます。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_002_1.png" width="340" height="300" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【2】 編集するタイプの選択<BR>
+<BR>
+　ウィンドウが開いた直後は「タイプ」が「技能」になっています。<BR>
+　<B>「16:画像/音声設定」</B>をクリックして下さい。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_007_4.png" width="190" height="290" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【3】 項目の編集<BR>
+<BR>
+　<B>「ページ１」</B>の項目0<B>「ウィンドウ画像ファイル」</B>の右にある<BR>
+　<B>「File」</B>ボタンを押すと、画像が入っているフォルダを参照できます。<BR>
+　この中から<B>「WindowBase.png」</B>を選択して、OKボタンを押しましょう。<BR>
+　入力欄に<B>「SystemFile/WindowBase.png」</B>が入力されました。<BR>
+　<B>更新ボタンかＯＫボタン</B>を押して保存してください。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_007_5.png" width="611" height="480" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【4】 テストプレイ<BR>
+<BR>
+　テストプレイをしてみましょう。<BR>
+　メニューを開くと、文字の背景にあるウィンドウ画像が<BR>
+　変わっているはずです。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_007_6.png" width="320" height="240" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+　<B>■敵のHPゲージを消す</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【1】 ユーザDBを開く<BR>
+<BR>
+　ユーザーデータベース<IMG src="image/icon_userDB.png" width="22" height="20" border="0">をクリックすると、<BR>
+　右のようなウィンドウが表示されます。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_002_1.png" width="340" height="300" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【2】 編集するタイプの選択<BR>
+<BR>
+　ウィンドウが開いた直後は「タイプ」が「技能」になっています。<BR>
+　<B>「17:システム設定」</B>をクリックして下さい。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_007_7.png" width="190" height="290" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【3】 項目の編集<BR>
+<BR>
+　<B>「ページ２」</B>の項目27<B>「[戦闘]敵ゲージの表示」</B>を変更します。<BR>
+　プルダウンリストから<B>「[0]表示しない」</B>を選択します。<BR>
+　<B>更新ボタンかＯＫボタン</B>を押して保存してください。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_007_8.png" width="282" height="480" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【4】 テストプレイ<BR>
+<BR>
+　テストプレイをしてみましょう。<BR>
+　戦闘時の相手のHPゲージが見えなくなりました。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_007_9.png" width="390" height="334" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+　<B>【余談】</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap><B>■UDB15:用語設定 について</B><BR>
+<BR>
+　今回はメニューの項目「アイテム」の名前を変更しましたが、<BR>
+　その他にもHPやレベル、特殊技能、お金の単位など<BR>
+　<B>ゲームで使用する用語の変更</B>ができます。<BR>
+　「SP」を「MP」に変えたり「セーブ」を「日記」に変えたりと<BR>
+　色々な変更ができますが、分からなくならない程度に…。<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap><B>■UDB16:画像/音声設定 について</B><BR>
+<BR>
+　今回はここのウィンドウ画像ファイルを変更しました。<BR>
+　ここではキャンセル時やセーブ時に鳴る効果音など、<BR>
+　呼び出される頻度の高い<B>効果音と画像ファイルを変更</B>できます。<BR>
+　効果音は、Fileボタンを押して開くウィンドウに表示されている<BR>
+　SystemFileフォルダのほか、SEフォルダの方にもあります。<BR>
+　このウィンドウの左上にあるプルダウンリストで<BR>
+　「SE」フォルダを選択すると開くことができます。<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap><B>■UDB17:システム設定 について</B><BR>
+<BR>
+　このデータベースで出来ることは、大まかに<BR>
+　「メニューのこと」と「戦闘の設定」に分けられます。<BR>
+<BR>
+・[0]～[18]のメニュー欄コマンドと特殊メニューでは、<BR>
+　<B>メニューの内容、並び順などを変えられたり、<BR>
+　好きなコモンイベントをメニューに追加したり</B>できます。<BR>
+　コモンイベントをメニューに追加する場合は、<BR>
+　「特殊メニュー(A～D)名称/呼出コモン」に登録してから<BR>
+　「メニュー欄コマンド」で呼び出してください。<BR>
+<BR>
+・[19]～の項目は、状態異常やHPの表示方法、ダメージ計算式、<BR>
+　戦闘後のHP・SPと戦闘不能の扱いやデフォルトBGMなど、<BR>
+　<B>ゲーム全体の戦闘に共通する設定</B>が行えます。<BR>
+　(キャラクター個々の設定は主人公が可変データベース0～5、<BR>
+　 敵キャラクターがユーザデータベース9～12で行えます。)<BR>
+　成長時パラメータを「数値の1/10だけ上昇させる」設定では、<BR>
+　十の位の数を基本上昇数として、一の位の数の割合で＋1されます。<BR>
+　「32」と入力していれば、80%の確率で3、20%の確率で(＋1されて)4になります。<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<HR>
+
+<P>＜執筆者：ウディタ公式ガイド執筆コミュ。＞
+    <ul>
+        <li>トピック原案：真波、<A href="http://hinezumi.velvet.jp/index.php" target="_blank">ユノ</A></li>
+        <li>HTML作成：真波</li>
+    </ul>
+</P>
+<HR>
+【改訂履歴】<BR>
+　Ver1.00　2013/10/19 新規作成<BR>
+<HR><A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+
+</BODY>
+</HTML>

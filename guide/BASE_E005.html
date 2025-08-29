@@ -1,0 +1,365 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>主人公を回復させたりダメージを与えたい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【主人公を回復させたりダメージを与えたい】</H2>
+<HR>
+<P><pre>【目標】
+　イベントと接触するとダメージを受けたり
+　回復したりするようにしたい
+　
+　<a href="#5">おまけ</a>
+　使用バージョン[2.x系]
+</pre></p>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【1】
+　・まずマップ選択<IMG height=20 src="image/icon_mapselector.png" width=22 border=0>で
+　「イベントを作成したいマップ」
+　に切り替えて下さい。
+
+　・適当な場所にイベントを作成して
+　ニワトリの画像を設定しておきます。
+　
+　手順は<a href="EV_001.html" target="B">◆決定キーで起動するイベント</a>の
+　【1】～【5】を参考にしてください。
+<pre></TD>
+<TD nowrap><pre><a href="image/BASE_E012_1.png"><img src="image/BASE_E012_1.png" border="1"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【2】
+　1.作成したら、イベントの起動条件を
+　「イベント接触」にしてください。
+　
+　2.イベントコマンドから
+　<b>I コモンイベント</b> を選択し
+　「コモンEv名で呼出」が
+　選ばれているか、確認します。
+　
+　今回は 
+　「<b>主人公を回復させたりダメージを与えたい</b> 」
+　イベントなので、
+　<b>「○能力値増減」</b>を選択しましょう。
+　
+　3.<b>対象主人公</b> にはてきとうな
+　キャラを撰びましょう。
+　テストプレイ時にパーティ内に
+　存在するキャラを指定するといいです。
+　
+　<b>どの能力値を</b> には「22:HP」を選択
+　
+　<b>何ポイント</b> には「-10」を入力
+　　ダメージを与える場合は負の値(-1以下)
+　　回復させる場合は正の値(1以上)を入力
+　
+　<b>メッセージ</b> はとりあえず
+　「有り」にしておきましょう
+<pre></TD>
+<TD nowrap><pre><a target="B" href="image/BASE_E005_1.png"><img width="400" src="image/BASE_E005_1.png" border="1"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【3】テストプレイ、の前に
+
+　1.「イベントの一時消去」を
+　追加しておきましょう。
+　このままだと何度も回復・ダメージ処理が
+　されてしまいます、なので一度処理されれば
+　イベントを消去し何度も処理しないようにします。
+　
+　
+　2.イベントを消去せずに１度だけ処理したい場合は
+　条件（変数）を使いましょう。
+　
+　分岐内で、分岐に使った変数を
+　条件に一致しないように変更します。
+　
+　これで１度だけしか
+　回復・ダメージ処理されないようになりました。
+<pre></TD>
+<TD nowrap><pre><a target="B" href="image/BASE_E005_2.png"><img width="400" src="image/BASE_E005_2.png" border="1"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【4】テストプレイ
+　早速作成したイベントに接触されてみましょう。
+　接触される前にメニューを開き
+　パーティにいるキャラが
+　【2】で <b>対象主人公</b> に指定されて
+　いるか確認します。
+　
+　されているキャラがいなければ
+　【2】でパーティ内にいるキャラを
+　指定し直しましょう。
+　
+　それでは早速イベントに接触されてみましょう。
+　接触されたときに画像のように
+　文章が表示されれば成功です。
+　
+　おつかれさまでした。
+<pre></TD>
+<TD nowrap><pre><a target="B" href="image/BASE_E005_3.png"><img width="320" src="image/BASE_E005_3.png"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre><a name="5">【5】おまけ</a>
+　メッセージ表示でいちいち止まるのは 嫌だ！
+　という人向けの処理の作り方です。
+　
+　ピクチャを使用してメッセージを表示
+　メッセージを移動
+　少ししたら移動しつつ消去させます。
+<pre></TD>
+<TD nowrap><pre><a target="B" href=""><img src=""></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【6】処理の設定その１
+　
+　画像のとおりに設定していきましょう。
+　1.<b>3 変数操作</b> で
+　<b>このｾﾙﾌ変数0 = 0 + 0</b> を追加
+　※ これは「対象主人公」の
+　　 データ位置をです。
+　
+　2.<b>3 変数操作</b> で
+　<b>このｾﾙﾌ変数1 = -10 + 0</b> を追加
+　※ これは「何ポイント」の値です。
+　
+　3.赤い下線を引いた部分に 1. と 2. で
+　作成した変数を指定しましょう。
+　
+　<B>現在のイベントのｾﾙﾌ変数0</b> を指定するなら
+　<b>「1100000」</b>を入力
+　<b>現在のイベントのｾﾙﾌ変数1</b> を指定するなら
+　<b>「1100001」</b>を入力
+
+<pre></TD>
+<TD nowrap><pre><a target="B" href="image/BASE_E005_4.png"><img width="360" src="image/BASE_E005_4.png"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【7】処理の設定その２
+　
+　1.変数操作 で <b>Self2 絶対値= Self1 + 0</b> を指定
+　　絶対値は 0 を基点にどれだけ数値の差があるか
+　　計算するものです。
+　　今回は Self1 には -10 を入力したので
+　　10 という数値が Self2 に代入(=)されます。
+　　
+　2.▲メンバー情報取得[文字列]を呼び出し
+　　対象主人公の名前を取得します。
+　　下の赤線の「結果【取得文字列】」の
+　　項目に指定した変数に
+　　対象主人公の名前が代入されます。
+<pre></TD>
+<TD nowrap><pre><a target="B" href="image/BASE_E005_5.png"><img width="360" src="image/BASE_E005_5.png"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【8】処理の設定その３
+　
+　1.<b>このEvのSelf1</b> を使い分岐処理させます。
+　　<b>Self1</b> が <b>-1 以下</b> の場合と
+　　<b>Self1</b> が <b>0 以上</b> の場合の
+　　２つの条件で分岐させます。
+　　
+　2.<b>Self1</b> が <b>-1 以下</b> の分岐内へ移動し
+　　<b>5 文字列操作</b> で <b>S1</b> に
+　　「<b> は \self[2] の ダメージを受けた！</b>」
+　　と代入(=)しましょう。
+　　
+　3.<b>Self1</b> が <b>0 以上</b> の分岐内へ移動し
+　　<b>5 文字列操作</b> で <b>S1</b> に
+　　「<b> は \self[2] 回復した！</b>」
+　　と代入(=)しましょう。
+<pre></TD>
+<TD nowrap><pre><a target="B" href="image/BASE_E005_6.png"><img width="360" src="image/BASE_E005_6.png"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【9】ピクチャ表示
+
+　画像のとおりに入力してください
+　Xには画面サイズXの半分を
+　Yには画面サイズYよりも少々少ない値を
+　パターンは必ず１、透明度は０を
+　※ 透明状態から徐々に文字が
+　　 不透明になるようにするためです
+　処理時間と発動ディレイは０を
+　拡大率とカラーは１００を入力して完了
+<pre></TD>
+<TD nowrap><pre><a target="B" href="image/BASE_E005_7.png"><img width="420" src="image/BASE_E005_7.png"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【10】文字を徐々に表示
+
+　こちらも画像のとおりに入力してください
+　赤線以外の場所は変わりません。
+　
+　移動を選択します
+　Yには【9】で入力した値よりも小さい値を
+　透明度は255を、処理時間は20を入力
+　
+　これで画面下部から、徐々に不透明になり
+　つつ、文字が上へ滑るように表示されます
+　
+　
+<pre></TD>
+<TD nowrap><pre><a target="B" href="image/BASE_E005_8.png"><img width="420" src="image/BASE_E005_8.png"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【11】一定時間表示後に消す
+　
+　こちらも画像のとおりに入力してください
+　赤線以外の場所は変わりません。
+　
+　Yには【10】で入力した値よりも小さい値を
+　透明度は0を、発動ディレイは50を入力
+　※ 発動ディレイは【9】の処理が
+　　 完全に終わってから、30フレーム後に
+　　 【10】の処理が起こるようにする
+　　 ためのものです。
+　　 50 - 20 = 30
+<pre></TD>
+<TD nowrap><pre><a target="B" href="image/BASE_E005_9.png"><img width="420" src="image/BASE_E005_9.png"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【12】後始末
+　1.最後はピクチャの「消去」を選択し
+　処理時間は０を入力
+　発動ディレイには70を入力
+　
+　2.【3】と同じように１回しか処理
+　しないように調整したら完成です。
+　
+　画像は処理の全体像です。
+<pre></TD>
+<TD nowrap><pre><a target="B" href="image/BASE_E005_10.png"><img width="420" src="image/BASE_E005_10.png"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【13】テストプレイ
+　Self1の値を -10 から色々な数値に変えて
+　きちんと動作するか試しましょう
+　
+　
+　文字列が画面下部から上へ向かって移動し
+　途中で少し止まったあとに
+　また上へ向けて移動しつつ消えていき
+　
+　指定したキャラクターのＨＰが
+　Self1の値の分だけ増減していたら成功です。
+　※ ただし最大ＨＰ以上には増えません。
+　
+　文字の滑る時間を長くしたいのなら
+　【10】と【11】の処理時間を増やす
+　
+　文字が止まってからの表示時間を長くするなら
+　【11】の発動ディレイを増やし
+　増やした分だけ【12】で指定する
+　<b>発動ディレイ</b>も増やすこと
+　
+　拙い説明ですがこれで終了です
+　おつかれさまでした。
+<pre></TD>
+<TD nowrap><pre>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<HR>
+<P>＜執筆者：きじこ</A>＞　</P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

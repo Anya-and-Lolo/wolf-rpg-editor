@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>新しいコモンを作ってみたい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【新しいコモンを作ってみたい】</H2>
+<HR>
+<P><pre>【目標】
+　新しくコモンイベントを作成し
+　マップイベントからそのコモンを呼び出す
+</pre></p>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【1】
+　まずはコモンイベントの一覧を開きましょう。
+　右の円にある <IMG src="image/icon_eventlayer.png" width="22" height="20" border="0"> を左クリック。
+</pre></TD>
+<TD nowrap><a href="image/BASE_B005_0.png"><img src="image/BASE_B005_0.png"border="1"></a><BR>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【2】
+　コモンイベントエディタが開いたら
+　ウィンドウの左側にある
+　コモンイベント一覧の中から
+　「■以下､自由に使用可■■」
+　というコモンのあたりに移動します。
+　
+　かなり下の方にあるので横のバーを
+　一気に下げてしまっていいでしょう。
+　
+　1,このあたりからの空白なコモンは
+　好きなように改造可能なものです。
+<pre></TD>
+<TD nowrap><pre><a href="image/EV_014_1.png"><img width="360" src="image/EV_014_1.png"border="1"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【3】空白が足りなくなった！
+　空きコモンの数が足りなくなってしまったら
+　四角で囲んだところをクリックしましょう。
+　
+　データ数の設定というウィンドウがあらわれます
+　入力されていた数値よりも多くすれば
+　コモンの最大数が増え
+　増えた分だけ空きコモンの数も増えます
+　
+　逆に入力されていた数値よりも減らした場合
+　その減った分のコモンは中身もろとも消滅
+　してしまうので気をつけましょう。
+<pre></TD>
+<TD nowrap><pre><a href="image/EV_014_2.png"><img width="360" src="image/EV_014_2.png"border="1"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【4】
+　それでは空きコモンを選択して
+　コモンイベントを作成してみましょう。
+　
+　1,編集するコモンを選択
+　今回は216番のコモンを撰んでみました。
+　
+　2,コモンイベント名
+　コモンイベントの名前を決めましょう
+　分かりやすい名前がいいです。
+　今回は「メッセージ表示01」としましょう。
+　※ 空白のままだと
+　<b>コモンEV名</b> でのコモンの呼出が
+　できなくなるので注意です。
+　　
+　3,起動条件
+　マップイベントからの呼び出しで使うので
+　「呼び出しのみ」を選択します。
+<pre></TD>
+<TD nowrap><pre><a href="image/EV_014_3.png"><img width="360" src="image/EV_014_3.png"border="1"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【5】文章の表示
+　1.<b>イベントコマンド入力ウィンドウ表示</b>を
+　クリックし、イベントコマンドウィンドウを表示
+　
+　2.<b>1 文章の表示</b> を選択します
+　
+　3.入力欄に表示したい文章を入力します。
+　　今回は
+　　「「メッセージ表示コモン01」テスト」
+　　と入力してみましょう。
+　
+　4.入力をクリックすれば完了です
+　
+　これで新しいコモンが完成しました。
+<pre></TD>
+<TD nowrap><pre><a href="image/EV_014_4.png"><img width="360" src="image/EV_014_4.png"border="1"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【6】イベントの作成
+　・まずマップ選択<IMG height=20 src="image/icon_mapselector.png" width=22 border=0>で「イベントを作成したいマップ」に切り替えて下さい。
+
+　・適当な場所にイベントを作成してニワトリの画像を設定しておきます。
+
+　手順は<a href="EV_001.html" target="B">◆決定キーで起動するイベント</a>の【1】～【5】を参考にしてください。
+<pre></TD>
+<TD nowrap><pre><a href="image/BASE_E012_1.png"><img src="image/BASE_E012_1.png" border="1"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【7】
+　作成したら、イベントウィンドウの右下にある
+　<b>「■コマンド入力ウィンドウ表示■」</b>を
+　クリックしてください。
+
+1.「イベントコマンドの挿入」ウィンドウが出たら
+　<b>I コモンイベント</b> をクリックして選択します。
+
+2.丸で囲まれた「コモンEv名で呼出」が選ばれてい
+　るか、確認します。
+　文字の左の白丸の中に黒丸がついていれば
+　選択されています。
+　※ もし、選ばれてなかったら
+　クリックして選択して下さい。
+
+3.四角3で囲まれた場所をクリックすると、選ぶこ
+　とができるコモンイベントのリストが表示されま
+　す。
+　今回は新しく作ったコモンを呼び出すので
+　先ほど作った「メッセージ表示01」
+　を選択しましょう。
+<pre></TD>
+<TD nowrap><pre><a href="image/BASE_E013_1.png"><img width="418" src="image/BASE_E013_1.png"border="1"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【8】
+　特に設定することはないので
+　入力をクリックしましょう。
+　
+　入力できたらイベントの設定は完了です。
+<pre></TD>
+<TD nowrap><pre><a href="image/EV_014_5.png"><img width="400"src="image/EV_014_5.png"border="1"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap><pre>【9】テストプレイ
+　それではテストプレイで
+　先ほど作成したイベントに話しかけてみましょう。
+　
+　「メッセージ表示01」テスト　と
+　文章が表示されたら成功です。
+　
+　おつかれさまでした。
+　
+　※　うまくいかない場合の可能性
+　1.I コモンイベント で呼び出すコモンを間違えている
+　2.作成したコモンの中身がからっぽ
+　
+<pre></TD>
+<TD nowrap><pre><a href="image/EV_014_6.png"><img width="320"src="image/EV_014_6.png" border="1"></a>
+<pre></TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<HR>
+
+<HR>
+<P>＜執筆者：きじこ</A>＞　</P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>[戦]｢攻撃｣や｢防御｣みたいな、選ぶとすぐ技が出る戦闘ｺﾏﾝﾄﾞを作りたい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【[戦]｢攻撃｣や｢防御｣みたいな、選ぶとすぐ技が出る戦闘ｺﾏﾝﾄﾞを作りたい】</H2>
+<HR>
+
+<P>
+【目標】 <BR>
+　サンプルゲーム内の主人公、ウルファール（青い人）に、選択すると「ヒール」の魔法を使用するコマンドとして<BR>
+　「治癒魔法を使用」のコマンドを追加します。<BR>
+　<BR>
+　ちなみに、既存の技以外を追加したい場合、下記の説明の「ヒール」に関する部分を独自の技に置き換えてください。<BR>
+　新しい技（魔法）の追加方法は、<A href=BASE_S007.html>技能（魔法）の種類を増やしたい</A>の項目を参照して下さい。<BR>
+</P>
+
+<HR>
+<P>
+【コマンド作成方法の概要】
+　コマンドを作成し、主人公（味方）に使用させるには、大きく分けて以下の２つのことを行います。<BR>
+　１：ユーザーデータベース<IMG src="image/icon_userDB.png" width="22" height="20" border="0">で、コマンドを追加<BR>
+　２：可変データベース<IMG src="image/icon_changeDB.png" width="22" height="20" border="0">で、主人公（味方）にコマンドを設定<BR>
+　<BR>
+　まずは、ユーザーデータベース<IMG src="image/icon_userDB.png" width="22" height="20" border="0">で、コマンドを追加しましょう。
+</P>
+<HR>
+
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【1】<BR>
+      　ユーザーデータベース<IMG src="image/icon_userDB.png" width="22" height="20" border="0">をクリックすると、<BR>
+      　右のようなウィンドウが表示されます。<BR>
+      　　</TD>
+      <TD nowrap><IMG src="image/window_UserDB.jpg" width="332" height="291" border="0"></TD>
+    </TR>
+
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY><TR>
+      <TD nowrap>【2】<BR>
+      　恐らく「タイプ」の設定が「0:技能」になっているので、<BR>
+      　これを「6:戦闘コマンド」に変更して下さい。<BR>
+      <BR>
+      </TD>
+      <TD nowrap>
+        <TABLE border="0">
+          <TBODY>
+            <TR>
+            <TD align="center"><IMG src="image/BASE_B001_1.png" border="0"></TD>
+            <TD><B><FONT size="+3">&nbsp;→</FONT></B><FONT size="+3"> </FONT><B><FONT size="-1"></FONT></B></TD>
+            <TD align="center"><IMG src="image/BASE_B001_2.png" border="0"><BR></TD>
+            </TR>
+          </TBODY>
+        </TABLE>
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【3】<BR>
+      　そのまま右の方を見ると、↓のような一覧が表示されています。<BR>
+      　現在使用されていない「9:」へ、新しいコマンドを設定しましょう。<BR>
+      　（↓図では、コマンド名に「治癒魔法を使用」を入力しているので、<BR>
+      　　コマンド名と連動して、「9:」から「9:治癒魔法を使用」となっています）<BR>
+      　<BR>
+      　↓図のように、<B>コマンド名</B>に「<B>治癒魔法を使用</B>」を、<BR>
+      　<B>コマンドの説明文</B>に「<B>「ヒール」を使用します</B>」を、<BR>
+      　<B>コマンド選択時の効果</B>を、今回の場合「ヒール」を使用するコマンドなので<BR>
+      　「<B>[6]:ヒール [ﾕｰｻﾞ0]</B>」を記述（選択）します。<BR>
+      　<BR>
+        <IMG src="image/BASE_B001_3.png"><BR>
+      　<BR>
+      　ちなみに、通常の魔法と同じく「技能（魔法）封じ」で使用（選択）不可能にしたい場合、<BR>
+      　コマンドのタイプの「<B>[0]通常</B>」を「<B>[1]特殊技能封印で不能</B>」に変更して下さい。<BR>
+       </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<P>
+　これで、ユーザーデータベース<IMG src="image/icon_userDB.png" width="22" height="20" border="0">の設定は完了です。<BR>
+　次に、可変データベース<IMG src="image/icon_changeDB.png" width="22" height="20" border="0">で、
+ウルファール（青い人）がこのコマンドを使用できるように変更します。<BR>
+</P>
+<HR>
+
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【4】<BR>
+      　可変データベース<IMG src="image/icon_changeDB.png" width="22" height="20" border="0">をクリックすると、<BR>
+      　右のようなウィンドウが表示されます。<BR>
+      　　</TD>
+      <TD nowrap><IMG src="image/window_ChangeDB.jpg" width="332" height="291" border="1"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【5】<BR>
+      　「タイプ」が「主人公ステータス」に<BR>
+      　なっていることを確認してください。<BR>
+      <BR>
+      　（もしなっていなければ、<BR>
+
+      　　「<B>0:主人公ステータス</B>」をクリック）</TD>
+      <TD nowrap><IMG src="image/BASE_S001_DB_type_name.png" width="137" height="102" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【6】<BR>
+      　そのまま右の方を見ると、右のような一覧が<BR>
+      　表示されています。<BR>
+      　すでにウルファールが選択されていますね。<BR>
+      　<BR>
+      　次に、上の方にある「<B>ページ１</B>」「<B>ページ２</B>」……<BR>
+      　と書いてあるボタンから、<B>ページ３</B>に変更してください。<BR>
+      　すると、右の画像のような一覧に変わります。<BR>
+      　<BR>
+      　ここで、「<B>[-1]:空欄</B>」になっている項目である<BR>
+      　45番目の項目「<B>[コマンド4]</B>」をクリックして、<BR>
+      　表示されたメニューから、先ほど作成したコマンド<BR>
+      　「<B>[9]:治癒魔法を使用 [ﾕｰｻﾞ6]</B>」へ変更してください。<BR>
+      <TD nowrap><IMG src="image/BASE_B001_4.png"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【5】<BR>
+      　これで、可変データベース<IMG src="image/icon_changeDB.png" width="22" height="20" border="0">
+でのコマンドの設定は完了です。<BR>
+      　<BR>
+      　テストプレイ<IMG src="image/icon_testplay.png" width="22" height="20" border="0">をすると、無事に<BR>
+      　「治癒魔法を使用」の戦闘コマンドが表示されました。
+      <TD nowrap><IMG src="image/BASE_B001_5.png"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+
+<HR>
+<P>＜執筆者：<A href="http://sinryokunokoya.karamatu.com/" target="_blank">Barong</A>＞　</P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>武器に属性を設定したい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【武器に属性を設定したい】</H2>
+<HR>
+　<B>【目標】</B><BR>
+<HR>
+<P>
+　RPGなどのゲームをよくプレイされていて、<BR>
+　属性についてすでによくご存じの方には今更かもしれませんが、<BR>
+　属性とは キャラクターの得意なもの、苦手なものを決めて<BR>
+　戦略性を広げるためのルールです。<BR>
+<BR>
+　ウディタ基本システムでは、味方や敵、装備、技能にこの属性を設定できます。<BR>
+　属性を使えば、火属性に弱くて冷気属性に強いモンスターも作れますし、<BR>
+　地震を起こして敵全体を攻撃できるが空を飛ぶモンスターに無効な技能、さらには<BR>
+　「魔王」のような特定のボスにだけ大ダメージを与えられる「聖剣」のような武器も作れます。<BR>
+<BR>
+　本トピックでは、サンプルゲームに元から入っている<BR>
+　武器「ダガー」に炎属性を設定し、<BR>
+　武器への属性の設定の仕方を習得します。</P>
+<HR>
+　<B>【手順】</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>
+　本トピックの【手順】では、<BR>
+　まず「属性の設定」の項でダガーが炎属性をもつように設定し、<BR>
+　次に「設定の確認」の項でテストプレイの仕方をご紹介します。<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+　<B>■属性の設定</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【1】 ユーザDBを開く<BR>
+<BR>
+　ユーザデータベース<IMG src="image/icon_userDB.png" width="22" height="20" border="0">をクリックすると、<BR>
+　右のようなウィンドウが表示されます。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_002_1.png" width="340" height="300" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【2】 編集するタイプの選択<BR>
+<BR>
+　ウィンドウが開いた直後は「タイプ」が「技能」になっています。<BR>
+　<B>「3:武器」</B>をクリックして下さい。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_002_2.png" width="201" height="258" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【3】 編集するデータの選択<BR>
+<BR>
+　ウィンドウの中ほどにデータ一覧があります。<BR>
+　データはこの中から<B>「0:ダガー」</B>を選択してください。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_002_3.png" width="207" height="257" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【4】 項目の編集<BR>
+<BR>
+　①ページを<B>「ページ２」</B>に切り替えてください。<BR>
+<BR>
+　②項目番号28番の<B>「付与属性1」で、<BR>
+　　「[1]炎攻撃 [ﾕｰｻﾞ7]」</B>を選択してください。<BR>
+<BR>
+　（項目番号29番の「付与属性2」にも設定を入れることができるので、<BR>
+　　武器の属性は最大二つまで付けることができます）<BR>
+<BR>
+　③設定できたら、<B>更新ボタンかＯＫボタン</B>を押して保存します。<BR>
+<BR>
+　ダガーに「炎攻撃」の属性がつきました。<BR>
+　これで属性のある武器の設定は完了です。<BR>
+<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_002_4.png" width="255" height="420" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+　<B>■設定の確認</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>　基本システムにデフォルトで設定されている敵「ドラゴンバイン」には、<BR>
+　炎攻撃が弱点である設定がされています。<BR>
+<BR>
+　炎属性をつけたダガーと属性なしのダガーで比較すると、<BR>
+　ダメージ量が変化していることがわかるでしょう。<BR>
+<BR>
+　テストプレイしたいけど戦闘イベントの作り方が分からないという場合は、<BR>
+　まず「<A href="http://www.silversecond.com/WolfRPGEditor/Guide/BASE_B003.html" target="_blank">敵グループを設定したい</A>」を参考にして<BR>
+　ドラゴンバインを含む敵グループをユーザーデータベースに作り、<BR>
+　これを「<A href="http://www.silversecond.com/WolfRPGEditor/Guide/BASE_E001.html" target="_blank">バトルを発生させたい</A>」を参考にして<BR>
+　マップイベントなどで呼び出してください。<BR>
+<BR>
+　属性をつけただけではダメージ量の変化以外にわかるところは少ないので、<BR>
+　あとは名前やグラフィックを変更して好みの演出をするとよいでしょう。<BR>
+　お疲れ様でした。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_002_5.png" width="404" height="288" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+　<B>【余談】</B><BR>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>
+<B>■武器に状態異常付与効果を持たせる</B><BR>
+<BR>
+　ユーザーデータベース「3:武器」には属性を設定できる他に、<BR>
+　毒や麻痺などの「状態異常（ステータス異常）」を与える機能を<BR>
+　追加することができます。<BR>
+<BR>
+　項目番号18番「付与ステータス状態」と項目番号19番「付与確率[％]」が<BR>
+　これにあたります。<BR>
+<BR>
+　それぞれ、攻撃した相手に与える状態異常の種類と、<BR>
+　その状態異常を与える確率を設定することができます。<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<HR>
+
+<P>＜執筆者：ウディタ公式ガイド執筆コミュ。＞
+    <ul>
+        <li>トピック原案：真波、<A href="http://hinezumi.velvet.jp/index.php" target="_blank">ユノ</A></li>
+        <li>HTML作成：真波</li>
+    </ul>
+</P>
+<HR>
+【改訂履歴】<BR>
+　Ver1.00　2013/09/06 新規作成<BR>
+<HR><A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+
+</BODY>
+</HTML>

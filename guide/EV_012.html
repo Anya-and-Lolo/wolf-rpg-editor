@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>選択肢が表示される位置を変更したい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【選択肢が表示される位置を変更したい】</H2>
+<HR>
+　<B>【目標】</B><BR>
+<HR>
+<P>
+　ウディタでは、選択肢はゲーム画面の中央に表示されます。<BR>
+　しかし、タイトル画面のニューゲーム/コンティニュー選択肢を<BR>
+　画面の右下など、中央ではない位置に表示しているゲームも<BR>
+　少なくありません。<BR>
+<BR>
+　今回は、<B>選択肢を画面右下に表示</B>させるイベントを<BR>
+　作成することで、選択肢の表示位置の変え方を習得します。</P>
+<HR>
+　<B>【手順】</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【1】 イベントの作成<BR>
+<BR>
+　「サンプルマップA」の適当な場所にイベントを作成し、<BR>
+　ニワトリの画像を設定しておきます。<BR>
+<BR>
+　やり方が分からない場合は、「<A href="http://www.silversecond.com/WolfRPGEditor/Guide/MUST_001x.html" target="_blank">新しいイベントを作ってみたい</A>」の<BR>
+　【1】～【5】を参考にしてみてください。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE_E008_2.png" width="325" height="234" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【2】 イベントコマンドの入力 ： 選択肢のX座標<BR>
+<BR>
+　イベントウィンドウの右下にある、<BR>
+　<B>「■ コマンド入力ウィンドウ表示 ■」</B>をクリックしてください。<BR>
+<BR>
+　ではいきなりですが、選択肢を入力する前に、<BR>
+　<B>選択肢の表示位置を変える</B>コマンドを入力します。<BR>
+<BR>
+　選択肢を表示する位置は、画面の中の座標で指定します。<BR>
+　ウディタのゲーム画面は、数学で扱うグラフと同じように<BR>
+　X軸とY軸のある平面ですが、ただしY座標については真逆で、<BR>
+　下に行くほど数字が大きくなりますのでご注意を。<BR>
+　画面のいちばん左上の座標が(x,y)=(0,0)で原点であり、<BR>
+　画面のいちばん右下の座標が(x,y)=(320,240)です。<BR>
+<BR>
+　では座標をそれぞれ入力していきましょう。<BR>
+①イベントコマンド入力ウィンドウのタブを<BR>
+　<B>「3 変数操作」</B>に変更し、<BR>
+②変数の種類は<B>「Sys」</B>をボタンで選択してください。<BR>
+③プルダウンリストから<B>「Sys3:選択肢ｳｨﾝﾄﾞｳ X座標」</B>を選んで、<BR>
+④右辺に<B>「250」「＋」「0」</B>を入力します。<BR>
+⑤入力できたら、ウィンドウ右下の<B>「入力」</B>ボタンを押してください。<BR>
+<BR>
+　これで、<B>X座標</B>を<B>250</B>に設定できました。<BR>
+</TD>
+<TD nowrap><IMG src="image/EV_012_1.png" width="470" height="255" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【3】 イベントコマンドの入力 ： 選択肢のY座標<BR>
+<BR>
+　次に、Y座標も同様に設定します。<BR>
+①プルダウンリストから<B>「Sys4:選択肢ｳｨﾝﾄﾞｳ Y座標」</B>を選んで、<BR>
+②右辺に<B>「160」「＋」「0」</B>を入力します。<BR>
+③入力できたら、ウィンドウ右下の<B>「入力」</B>ボタンを押してください。<BR>
+<BR>
+　これで、<B>Y座標</B>を<B>160</B>に設定できました。<BR>
+　選択肢の表示座標を(x,y)=(250,160)に変更する設定は完了です。<BR>
+</TD>
+<TD nowrap><IMG src="image/EV_012_2.png" width="470" height="255" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【4】 選択肢の入力<BR>
+<BR>
+　あとは選択肢を入力してテストプレイするだけです。<BR>
+①イベントコマンド入力ウィンドウのタブを<B>「2 選択肢」</B>に変更し、<BR>
+②入力欄の上から２つにそれぞれ<B>「選択肢１」「選択肢２」</B>を入力します。<BR>
+③入力できたら、ウィンドウ右下の<B>「入力」</B>ボタンを押してください。<BR>
+<BR>
+　これで、画面の右下に選択肢を表示するイベントコマンドは完成です。<BR>
+</TD>
+<TD nowrap><IMG src="image/EV_012_3.png" width="470" height="255" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【5】 確認<BR>
+<BR>
+　テストプレイしてみましょう。イベントを起動すると、<BR>
+　画面の右下に選択肢が表示されるはずです。<BR>
+　もしうまく行かない場合は、入力したイベントコマンドの<BR>
+　順序を見直してみてください。<BR>
+　ウィンドウ座標の変数操作コマンドの入力位置は、<BR>
+　文章選択肢の前でないとうまく動きません。<BR>
+　お疲れ様でした！<BR>
+</TD>
+<TD nowrap><IMG src="image/EV_012_4.png" width="320" height="240" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+　<B>【余談】</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>　・選択肢まわりの設定について<BR>
+<BR>
+　選択肢を起動した場合、最初にカーソルがある位置は一番上の<BR>
+　選択肢ですが、これを変更してそれより下にある選択肢に<BR>
+　カーソルを合わせておくこともできます。<BR>
+　変数操作で、<B>Sys7:選択肢次回初期位置(0,1,2...)</B>の右辺を<BR>
+　たとえば<B> 1 </B>にして入力すると、(選択肢は上から0番、1番、2番...と<BR>
+　番号がつけられているので)上から２つめの選択肢にカーソルが<BR>
+　合った状態で起動されます。<BR>
+<BR>
+・また、<B>Sys73:文･選択肢のﾏｳｽ入力(1なら受付)</B>の右辺を<BR>
+　<B> 1 </B>にして入力すると、選択肢をマウス操作で選択できるようになります。<BR>
+　マウス中心で操作をするゲームでは必須とも言える機能ですね。<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<HR>
+
+<P>＜執筆者：ウディタ公式ガイド執筆コミュ。＞
+    <ul>
+        <li>トピック原案：真波、<A href="http://hinezumi.velvet.jp/index.php" target="_blank">ユノ</A></li>
+        <li>HTML作成：真波</li>
+    </ul>
+</P>
+<HR>
+【改訂履歴】<BR>
+　Ver1.00　2013/11/02 新規作成<BR>
+<HR><A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+
+</BODY>
+</HTML>

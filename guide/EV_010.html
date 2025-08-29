@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>同じような内容のイベントを並べなくても済む方法ってないの？</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【同じような内容のイベントを並べなくても済む方法ってないの？】</H2>
+<HR>
+<BR>
+　イベントには<B>接触範囲</B>と言うものがあります。<BR>
+　今回はこれを利用して、次のようなイベントを作ってみましょう。<BR>
+<BR>
+【目標】<BR>
+<BR>
+　１．触れると起動するイベントを作成する。<BR>
+　<BR>
+　２．そのイベントの接触範囲を広げて、<B>1つのイベントで広範囲をカバーする</B>。<BR>
+　<BR>
+　３．イベントの範囲内に入ると、場所移動をする。<BR>
+　<BR>
+　<BR>
+<HR>
+<P>【手順】</P>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap valign="top">―― 【1】イベント作成 ――<BR>
+      <BR>
+　まずマップ選択<img height=20 src="image/icon_mapselector.png" width=22 border=0>で「サンプルマップA」に切り替えてください。<BR>
+　マップ中央左下の高台の真ん中（座標：11,20）にイベントを作成します。<BR>
+　<BR>
+　今回はイベント画像の設定はしません。<BR>
+　<BR>
+　<a href="EV_002.html" target="B">【プレイヤーが触れると起動するイベント】</a>を参考に、<BR>
+　イベントの起動条件を<B>プレイヤー接触</B>に設定しましょう。<BR>
+　<BR>
+      </TD>
+      <TD nowrap><IMG src="image/EV_010_1.png" width="270" height="200" border="1"></TD></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY><TR>
+      <TD nowrap valign="top"><BR>
+      ―― 【2】接触範囲の拡張 ――　<BR>
+      <BR>
+　イベントの接触範囲を拡張します。<BR>
+　<BR>
+　イベント編集ウィンドウ左下を見てください。<BR>
+　<B>「接触範囲拡張」</B>の所を、X、Y共に2に設定します。<BR>
+　<BR>
+      </TD>
+      <TD nowrap><IMG src="image/EV_010_2.png" width="350" height="300" border="1"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap valign="top"><BR>
+      ―― 【3】場所移動 ――<BR>
+      <BR>
+　今度はイベントの内容を設定しましょう。<BR>
+　<BR>
+　イベントウィンドウの右下にある<BR>
+　「■ コマンド入力ウィンドウ表示 ■」をクリックして<BR>
+　イベントコマンド入力ウィンドウを開いてください。<BR>
+　<BR>
+　<BR>
+　場所移動のコマンドを入力します。<BR>
+　<BR>
+　左側一覧から「Ｇ 場所移動」を選択してください。<BR>
+　対象は「[ 主人公 ]」です。<BR>
+　「同じマップ」にチェックが入っていれば外して、<BR>
+　移動先マップを[2:サンプルマップB]にします。<BR>
+　<BR>
+　右の「精密座標」にチェックが<B>入っていない</B>事を確認し、<BR>
+　移動先位置に[X:12 Y:24]を設定してください。<BR>
+　出来ましたら右下の「入力」ボタンをクリックしましょう。<BR>
+　<BR>
+　<font color="#696969" style="font-size:9pt">※分からない所があれば、<BR>
+　<a href="MUST_003.html" target="B">【主人公を別のマップに移動させたい】</a>を参考にしてください。</font><BR>
+　<BR>
+
+      </TD>
+      <TD nowrap><IMG src="image/EV_010_3.png" width="320" height="200" border="1"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap valign="top"><BR>
+　イベントが<B>完成</B>しました。<BR>
+　マップをセーブしてテストプレイをしてみましょう。<BR>
+　<BR>
+　高台に上がるはしご（右図の位置）を上りきると画面が変わり、<BR>
+　サンプルマップBに出ていれば成功です。<BR>
+　お疲れ様でした！<BR>
+<BR>
+      </TD><TD nowrap><IMG src="image/EV_010_4.png" width="320" height="340" border="1"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap><BR>
+      【問題が発生した場合】<BR>
+      <BR>
+<font color="#ee6600">◆高台に侵入しても場所移動が発生しない</font><BR>
+　接触範囲の拡張が出来ていないか、イベントの起動条件が間違っている可能性があります。<BR>
+　<BR>
+<font color="#ee6600">◆場所移動は起こったが、サンプルマップBへ行かない</font><BR>
+　場所移動コマンドの「同じマップ」にチェックが入っているか、移動先マップを間違えている可能性があります。<BR>
+　<a href="MUST_003.html" target="B">【主人公を別のマップに移動させたい】</a>を見ながら確認しましょう。</font><BR>
+<BR>
+      </TD>
+      <TD nowrap></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<BR>
+
+<HR>
+<HR>
+<P>＜執筆者：七海＞　</P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><HTML LANG="ja"><HEAD><META http-equiv="Content-Style-Type" content="text/css"><META http-equiv="Content-Type" content="text/html; charset=Shift_JIS"><TITLE>会話した回数を覚えているイベント</TITLE><LINK REL="stylesheet" HREF="manual.css" TYPE="text/css"></HEAD><BODY><HR><H2>【会話した回数を覚えているイベント】</H2><HR>
+<P>【目標】 <BR>
+	ニワトリのイベントに話しかけると「話すのは○○回目だね！」と表示され、<BR>
+	10回話しかけると、新たな文章が追加されるイベントを作りたいと思います。<BR>
+	<IMG src="./image/EV_007_2.png">　<b>→</b>　<IMG src="./image/EV_007_3.png"><br>
+</P><HR><TABLE border="0"><TBODY><TR><TD nowrap>
+【1】・まずマップ選択<IMG src="image/icon_mapselector.png" width="22" height="20" border="0">で「<B>サンプルマップA</B>」に切り替えて下さい。<BR>
+　<BR>
+　・適当な場所にイベントを新しく作成して下さい。<BR>
+<BR>　・適当な場所にイベントを作成して<br>
+ 　ニワトリの画像を設定しておきます。<br>
+　　（ここでは右の画像の位置に設置）<br>
+ 
+<br>
+　→ 分からないときは、<br><B><A href="MUST_001x.html" target="B">◆新しいイベントを作ってみたい</A></B>の【1】～【3】を参考に。<BR>
+<TD nowrap>
+	<IMG src="./image/EV_007_1.png">
+<TD></TR></TBODY></TABLE><HR><TABLE border="0"><TBODY><TR><TD nowrap>
+【2】<B>イベントウィンドウ</B>の右下にある<BR>
+　　 「<B>■コマンドウィンドウ表示■</B>」を<BR>
+　　 クリックしてください。
+</TD><TD nowrap>
+	<IMG src="./image/EV_007_4.png" width="198" height="60" border="1">
+</TD><TD nowrap><BR><TR></TR></TBODY></TABLE><HR><TABLE border="0"><TBODY><TR><TD nowrap>
+【3】変数操作のタブに変更し、<br>
+　　 画像と同じように変更します。<br>
+　　 そして入力をクリックします。<br>
+　　 これが、話した回数になるのです！<BR>
+	<BR>
+　　 ここでは「このイベント:Self0」を<BR>
+　　 話しかけた回数として使用します。<BR>
+　　 このイベントを起こすたびにｾﾙﾌ変数0に<BR>
+　　 １ずつ足していく(+=  1)ことで、<BR>
+　　 「話しかけた回数」も１ずつ増えて<BR>
+　　 いくのです。<BR>
+</TD><TD nowrap>
+	<IMG src="./image/EV_007_6.PNG"></TD>
+</TR></TBODY></TABLE><HR><TABLE border="0"><TBODY><TR><TD nowrap>
+【4】&nbsp;<B><A href="MUST_001x.html" target="B">◆新しいイベントを作ってみたい</A></B>の<BR>
+　　 【7】～【10】の手順をまねて、<br>
+　　 「話すのは、\self[0]回目だね！」と入力します。<BR>
+	<BR>
+　　 <B>\self[0]</B>は特殊文字のひとつで、<BR>
+　　 「このイベントのセルフ変数０に入っている数」を<BR>
+　　 表します。ここまでで、○回話しかけると<BR>
+　　 「話すのは、○回目だね！」としゃべるイベントが<BR>
+　　 できました。次に、10回以上話すと会話内容が<BR>
+　　 変わるようにします。<BR>
+</TD></TD><TD nowrap>
+	<IMG src="./image/EV_007_5.PNG">
+</TD></TR></TBODY></TABLE><HR><TABLE border="0"><TBODY><TR><TD nowrap>
+【5】次に「条件分岐」のタブをクリックします。<br>
+　　 そして、画像のように設定します。<br>
+　　 これは、10 回以上話したということを <br>
+　　 確認しています。
+</TD></TD><TD nowrap>
+	<IMG src="./image/EV_007_7.PNG">
+</TD></TR></TBODY></TABLE><HR><TABLE border="0"><TBODY><TR><TD nowrap>
+【6】カーソルの場所を画像の場所に移動します、</TD>
+<TD nowrap><TD nowrap>
+	<IMG src="./image/EV_007_8.PNG">
+</TD></TD></TR></TBODY></TABLE><HR><TABLE border="0"><TBODY><TR><TD nowrap>
+ 【7】10回以上話した後の文章を入力します。<br>
+　　 「もう、\self[0]回も話したんだね！」と、<br>
+　　 入力します。
+</TD></TD><TD nowrap>
+	<IMG src="./image/EV_007_9.PNG">
+</TD></TR></TBODY></TABLE><HR><TABLE border="0"><TBODY><TR><TD nowrap>
+【8】最終的に、画像のように<br>
+　　 なっていたら成功です。<br>
+　　 是非テストプレイをして確かめてみてください。<br>
+　　 お疲れさまでした！<BR>
+</TD><TD nowrap>
+	<IMG src="./image/EV_007_10.PNG">
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><TABLE border="0"><TBODY><TR><TD nowrap>	
+　　 <BR>
+　　 もしもうまくいかない場合は、以下の症状と原因をチェックしてみて下さい。<BR>
+	<BR>
+　　 ・会話文の中の数が増えない。<BR>
+　　┣【3】変数操作を確認して下さい。<BR>
+　　┃　　 変数は<B>このイベント:Self0</B>、演算記号は<B>＋＝</B>になっていますか？<BR>
+　　┗【4】もしくは文章表示の中の特殊文字が<B>\self[0]</B>になっているか確認して下さい。<BR>
+	<BR>
+　　 ・10回以上話したのに文章が変わらない。<BR>
+　　┣【5】条件分岐を確認して下さい。<BR>
+　　┃　　 変数は<B>このイベント:Self0</B>になっていますか？<BR>
+　　┗【6】【7】また、条件分岐の内部に文章が入っているか確認してください。
+</TD><TD nowrap>
+	<!-- 画像なし -->
+</TD></TR></TBODY></TABLE><HR></TD></TR></TBODY></TABLE><HR><TABLE border="0"><TBODY><TR><TD nowrap>
+	【余談】<BR>
+「\self[0]」とかって、何よ！！<br>
+これは、特殊文字と言って、WOLF_RPG_エディター内でテキスト等に使用できる文字のことをいいます。<br>なので今回も特殊文字で話した回数を表示しているのです。<br>特殊文字は、たくさんあります、例を紹介します。<br><br>
+<b>・\self[X]=セルフ変数X</b><br>
+<b>・\s[XXX]=文字列変数XXX</b>　など<br>
+<br>これらは、ウディタのヘルプの中にある「変数呼出値/特殊文字一覧」<br>でいつでも確認できます。これらを応用してゲーム作りがんばってください！！<br>
+ 
+</TD></TR></TBODY></TABLE><HR>
+<P>＜執筆者：<A href="http://sns.prtls.jp/rpgeditor/community.html?cid=33af3514107db1a4" target="_blank">ウディタ公式ガイド執筆コミュ。</A>＞<br>
+	<ul>
+		<li>のと</li>
+		<li>真波</li>
+	</ul>
+</P><HR><A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A><P><BR></P></BODY></HTML>

@@ -1,0 +1,271 @@
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>
+マップに入った時点で起動するイベント
+</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+
+<HR>
+	<H2>【マップに入った時点で起動するイベント】</H2>
+<HR>
+
+	<P>
+		【目標】<BR>
+		　<b>マップに入った瞬間に、自動的に起動するイベント</b>を作ります。<br>
+		　<br>
+		　ここでは、サンプルマップBに入ると<br>
+		　「ここは、サンプルマップBです」とメッセージを表示するイベントを作ります。<br>
+		　<br>
+		　<img src="image/EV_008_1.jpg" border="1" width="320" height="240"><br>
+		　こんな感じ。<br>
+	</P>
+	
+<HR>
+
+	<TABLE border="0"><TBODY><TR>
+		<TD nowrap>
+			【1】<br>
+			　１．マップを「<B>サンプルマップB</B>」に切り替えます。<br>
+			　　　<br>
+			　　　・<b>マップ選択ボタン</b><IMG src="image/icon_mapselector.png" width="22" height="20" border="0">を押します。<br>
+			　　　・現れた<b>「マップ選択」ウィンドウ</b>から<br>
+			　　　　「<B>サンプルマップB</B>」を選択。<br>
+			　　　<br>
+			　　　
+			　<br>
+			　２．<b>適当な場所にイベントを新しく作成</b>します。<br>
+			　<br>
+			　　　・マップ上のイベントを新しく作りたいことろを<br>
+			　　　　<b>ダブルクリック</b>します。<br>
+			　　　・もしくは、作りたいところで<br>
+			　　　　<b>右クリック→「イベント作成／編集」</b>を選択。<br>
+
+		</TD>
+		<TD nowrap>
+			<img src="image/EV_008_2.png" border="1" width="377" height="276">
+		</TD>
+	</TR></TBODY></TABLE>
+	
+<HR>
+	<TABLE border="0"><TBODY><TR>
+		<TD nowrap>
+			【2】<br>
+			<br>
+			　・グラフィックは今回は設定しません。<br>
+			　<br>			
+			　・<b>起動条件を「自動実行」</b>にします。<br>
+			　<br><br>
+			　　「自動実行」が今回の要点です。<br>
+			　<br>
+			　　「自動実行」というのは、<br>
+			　　マップに入ったときに<br>
+			　　自動で起動するイベントのことです。<br>
+			　　<br>
+			　　※ 詳細はこの頁の【余談】に<br>
+			　　　　記しておきましたので、<br>
+			　　　　そちらをご参照ください。<br>
+			　　<br>
+			　			
+		</TD>
+		<TD nowrap>
+			<img src="image/EV_008_3.gif" border="1" width="236" height="228">
+		</TD>
+	</TR></TBODY></TABLE>
+	
+<HR>
+
+
+	<TABLE border="0"><TBODY><TR>
+		<TD nowrap>
+			【3】<br>
+			　続いてイベントの内容を設定していきます。<br>
+			<br>
+			　<B>イベントウィンドウ</B>の右下にある<BR>
+			　「<B>■コマンドウィンドウ表示■</B>」を<BR>
+			　クリックしてください。<br>
+		</TD>
+		<TD nowrap>
+			<IMG src="image/window_evbase2.jpg" width="198" height="60" border="1">
+		</TD>
+	</TR></TBODY></TABLE>
+	
+<HR>
+
+	<TABLE border="0"><TBODY><TR>
+		<TD nowrap>
+			【4】<br>
+			　・<b>「イベントコマンドの挿入」ウィンドウ</b>が<br>
+			　　出てくるので、上部タブにある<br>
+			　　「<b>文章の表示</b>」を選択して下さい。<br>
+			<br>
+			　・<b>文章入力欄</b>に<br>
+			　　『ここは、サンプルマップBです』<br>
+			　　と入力します。<br>
+			<br>
+			　・入力できたら<b>「入力」ボタン</b>をクリック。<br>
+			　<br><br>
+			　※　続けて別のコマンドを入力するので<br>
+			　　　　ウィンドウは閉じないでくださいね。<br>
+			　
+		</TD>
+		<TD nowrap>
+			<img src="image/EV_008_4.jpg" border="1" width="320" height="273">
+		</TD>
+	</TR></TBODY></TABLE>
+	
+<HR>
+
+	<TABLE border="0"><TBODY><TR>
+		<TD nowrap>
+			【5】<br>
+			　・続いて、上部タブを<br>
+			　　「<b>その他１</b>」に切り替えます。<br>
+			　<br>
+			　・下の方にある<br>
+			　　「<b>イベントの一時消去</b>」を選択。<br>
+			<br>
+			　・対象は「<b>このイベント</b>」にして、<br>
+			　　フェードは<b>［0］</b>を入力します。<br>
+			<br>
+			　・設定できたら「<b>入力</b>」ボタンをクリック。&nbsp;<br>
+			<br>
+			<br>
+			　ここで設定したコマンドは、イベントを<br>
+			　一時的に消去するコマンドです。<br>
+			　これをしてやらないと、延々と<br>
+			　メッセージが表示されてしまいます。<br>
+			<br>
+			　入力するコマンドは以上です。<br>
+			　ウィンドウを閉じましょう。<br>
+		</TD>
+		<TD nowrap>
+			<img src="image/EV_008_5.jpg" border="1" width="320" height="273">
+		</TD>
+	</TR></TBODY></TABLE>
+	
+<HR>
+
+	<TABLE border="0"><TBODY><TR>
+		<TD nowrap>
+			【6】<br>
+			　確認します。<br>
+			　イベントコマンド表示欄は……
+			　<br>
+              <hr>
+			　■文章：ここは、サンプルマップBです<br>
+			　■イベントの一時消去：このEv（0フレーム）<br>
+			　■
+              <hr>
+			　<br>
+			　このようになっているでしょうか。<br>
+			　<br>
+			　<br>
+			　では、テストプレイに移ります。<br>
+			　<br>
+			　「<B>セーブ（マップ全体）</B>」をクリックした後、<BR>
+			　「<B>テストプレイ</B>」をクリックしてください。
+			
+		</TD>
+		<TD nowrap>
+			<IMG src="image/window_evbase4.png" width="247" height="100" border="1">
+		</TD>
+	</TR></TBODY></TABLE>
+	
+<HR>
+
+	<TABLE border="0"><TBODY><TR>
+		<TD nowrap>
+			【7】<br>
+			　・オープニングのデモが終わったら<br>
+			　　ずっと上に進み、<br>
+			　　<b>サンプルマップBに移動</b>します。<br>
+			　　<br>
+			　・移動すると即座に<br>
+			　　「ここは、サンプルマップBです」<br>
+			　　と1度だけ表示されたと思います。<br>
+			　　<br>
+			　・一旦前のマップに戻って<br>
+			　　再度サンプルマップBに移動してくると、<br>
+			　　同じように表示されるはずです。<br>
+			　　
+			　　<br><br>
+			　　これで完成となります。<br>
+			　　お疲れ様でした。<br>
+			　　<br><br>
+		</TD>
+		<TD nowrap>
+			<img src="image/EV_008_1.jpg" border="1" width="320" height="240">
+		</TD>
+	</TR></TBODY></TABLE>
+	
+<HR>
+
+	<TABLE border="0"><TBODY><TR>
+		<TD nowrap>
+			【うまくいかない人】<br>
+			　<br>
+			　<b>・メッセージが表示されない！</b><br>
+			　　→起動条件が「自動実行」になっているか、確認してください。<br>
+			　　<br>
+			　<b>・メッセージが何度も表示されて動けない！</b><br>
+			　　→■イベントの一時消去：このEv（0フレーム）<br>
+			　　　というコマンドが正しく入力されているか確認してください。<br>
+			　　　イベントの一時消去を行わないと何度も繰りかえしてしまいます。<br>
+		</TD>
+		<TD nowrap>
+
+		</TD>
+	</TR></TBODY></TABLE>
+	
+<HR>
+<br>
+<HR>
+
+
+	<TABLE border="0"><TBODY><TR>
+		<TD nowrap>
+			【余談】自動実行イベントの詳細<br>
+			　<br>
+			　自動実行イベントとは、設置されたマップに主人公が入ったときに、自動的にはじまるイベントのことです。<br>
+			　<br>
+			　「演出」のために使われることが多いようです。<br>
+			　たとえば、洞窟に入るなり悲鳴が聞こえる、とか、ボスの間でのやり取りとか…。<br>
+			　<br>
+			　気をつけなければいけないのは……
+			　<br>
+			　・実行中は主人公の操作ができません。また、他のイベントも起動できません。<br>
+			　<br>
+			　・自動実行のイベントは<b>条件を満たす限り、繰り返し続けます</b>。<br>
+			　　そのため、イベントが終わり次第、イベントを消してやる必要があります。<br>
+			　　基本的には以下の方法が考えられます。<br>
+			　　<br>
+			　　<b>１：「イベントの一時消去」で消す<br></b>
+			　　　　今回作ったイベントと同様に、一旦マップを出てから戻ってくると、再度表示されます。<br>
+			　　<br>
+			　　<b>２：変数とイベント起動条件を使って、イベントを完全に消去する<br></b>
+                　　セルフ変数などを使うことでイベントページを切り替えて、起動しないようにすることで<br>
+                　　一旦マップから出て戻ってきても、実行されないイベントになります。<br>
+                　　→関連：<a href="EV_005.html">◆一度消えたら二度と出てこないイベント</a>
+			　　
+			　<br>
+		</TD>
+		<TD nowrap>
+
+		</TD>
+	</TR></TBODY></TABLE>
+	
+
+
+<HR>
+	<br>
+<HR>
+<div>＜執筆者：<A href="http://blog.livedoor.jp/mikenekonyanko/" target="_blank">ミケ</A>＞</div>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

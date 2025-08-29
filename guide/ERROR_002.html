@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>横128または256のマップチップじゃないとダメって出てきた</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【◆横128または256のマップチップじゃないとダメって出てきた】</H2>
+<HR>
+<P>【事象】 <BR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>
+横128または256(または320)のマップチップじゃないとダメといった内容のエラーについて紹介いたします。<br>
+マップチップを登録する際に、このエラーに遭遇するでしょう。(「<a href="MATERIAL_002.html">◆違うマップチップ素材をゲームで使いたい</a>」参照)<br>
+以下、確認事項を述べていきます。<br>
+</TD>
+<TD nowrap><img src="image/ERROR_002_1.png"><br>こんなエラーですね</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【1】今使おうとしている素材のサイズは？<br>
+マップチップを登録するときに、ベースマップの横のサイズを確認しましょう。<br>
+タイプA：横サイズが128ピクセルである<br>
+タイプB：横サイズが256ピクセルである<br>
+タイプC：横サイズが320ピクセルである<br>
+(タイプX：上記のいずれでもない)<br>
+</TD>
+<TD nowrap></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【2】現在の解像度設定は？<br>
+解像度設定(ゲームの基本設定から)はどれでしょうか。<br>
+タイプa：320×240になっている<br>
+タイプb：640×480になっている<br>
+タイプc：800×600になっている<br>
+</TD>
+<TD nowrap></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【3】　上記2つのタイプの組み合わせはどうなりましたか？<br>
+Aとa、Bとb、Cとcならば、正しい組み合わせなのでエラーは起こりません。<br>
+逆に言いますと、これ以外の組み合わせだとこのエラーに遭遇します。<br>
+</TD>
+<TD nowrap></TD>
+</TR>
+</TBODY>
+</TABLE>
+</P><HR><P>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【解決】<br>
+ゲームの基本設定を変えて回避します。<br>
+最も簡単なのは、ゲームの基本設定から、解像度の設定を変更して、「正しい組み合わせ」にします。<br>
+これでエラーは回避できます。<br>
+</TD>
+<TD nowrap></TD>
+</TR>
+</TBODY>
+</TABLE></P>
+<HR>【余談】<HR><P>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>◆もし上記タイプ判定で、タイプXに当てはまったなら…<br>
+下記いずれかの可能性があります。<br>
+甲：ツクール規格の素材をそのまま登録しようとしています。<br>
+乙：自作マップチップで、サイズを間違って作成しています。<br>
+丙：オートタイルをマップチップに登録しようとしています。<br>
+<br>
+甲の場合、素材変換ツール「tkool2WOLF+」を使用して、ウディタで使用できる形状にしてください。<br>
+詳細は「<a href="MATERIAL_003.html">◆ツクール用サイズの素材をウディタに使いたい</a>」を参照してください。<br>
+使用に際しては、「<a href="MATERIAL_007.html">◆素材を使うためのルールってどんな感じなの？</a>」も一読お願いします。<br>
+<br>
+乙の場合、横サイズをもう一度確認の上、作成しなおしてください。<br>
+これについては「<a href="MAKEMAT_004.html">◆ﾏｯﾌﾟﾁｯﾌﾟ素材はどういう風に作ればいいの？</a>」を参照してください。<br>
+<br>
+丙の場合、本来登録すべきところがどこかを確認しましょう。<br>
+なお、サンプルに含まれる画像のうち<u>[A]</u>が付いているファイルが、オートタイルです。<br>
+マップチップとして登録するべき画像には<u>[Base]</u>が付いています。
+</TD>
+<TD nowrap></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>◆オートタイルの類似エラー<br>
+オートタイルですが、こちらはエラーが出ません。<br>
+ですが表示が意図通りにならない可能性があります。<br>
+規格があっているかは以下で確認します。こちらは縦のサイズを見ましょう。<br>
+タイプA：縦サイズが80ピクセルである<br>
+タイプB：縦サイズが160ピクセルである<br>
+タイプC：縦サイズが200ピクセルである<br>
+(タイプX：上記のいずれでもない)<br>
+解像度設定は上記【事象】の2と同じです。<br>
+</TD>
+<TD nowrap></TD>
+</TR>
+</TBODY>
+</TABLE>
+</P>
+<HR>
+<P>＜＜執筆者：<A href="http://sns.prtls.jp/rpgeditor/community.html?cid=33af3514107db1a4" target="_blank">ウディタ公式ガイド執筆コミュ。</A>＞＞<BR>
+<UL>
+	<LI>設計書作成：Hdk103-Arch、ユノ</LI>
+	<LI>トピック執筆：Hdk103-Arch</LI>
+</UL></P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

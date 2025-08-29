@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML LANG="ja">
+<HEAD>
+    <META http-equiv="Content-Style-Type" content="text/css">
+    <META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+    <TITLE>オートタイルの境界を自由に描きたい</TITLE>
+    <LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD>
+<BODY>
+    <HR>
+    <H1>【オートタイルの境界を自由に描きたい】</H1>
+    <HR>
+    <TABLE border="0">
+    <TBODY>
+        <TR>
+        <TD nowrap>
+            <H2>【目標】</H3>
+            <P>
+                オートタイルは並べるだけで勝手につながった形になってくれるタイルですが、<BR>
+                本当に思ったように描くのは慣れが必要かもしれません。<BR>
+            </P>
+            <P>
+                今回はちょっと変わったマップを描いてみましょう。<BR>
+                マップを作ってみた方は一見「あれっ？」と思うかもしれません。<BR>
+                ですが、今回学ぶ方法を用いると、一つのレイヤーでこんな描画もできちゃうんです。<BR>
+            </P>
+            <P>
+                <B>注意！</B><BR>
+                Ver1.31までとVer2.00からでは、方法が変わります。<BR>
+                Ver1.31以前でのやり方は、<A HREF="#10">補遺２</A>をご覧下さい。<BR>
+            </P>
+        </TD>
+        <TD nowrap>
+            <IMG src="image/MAP_005_0.png" width="320" height="240" border="0"><BR>
+            こんな風な文字だって書けちゃう！<BR>
+        </TD>
+        </TR>
+    </TBODY>
+    </TABLE>
+    <HR>
+        <H2>【手順】</H2>
+    <HR>
+    <TABLE border="0">
+    <TBODY>
+        <TR>
+        <TD nowrap>
+            <H3>【1】サンプルゲームで「サンプルマップB」を開いてください。</H3>
+            <P>
+                今回は見本にあるように、女神像の右側の川のさらに右に川を増設してみます。<BR>
+            </P>
+            <P>
+                まずはレイヤー2を選択します。<BR>
+                とりあえず見本みたいに水のオートタイルを置いてみましょう。すると……<BR>
+            </P>
+        </TD>
+        <TD nowrap>
+            <IMG src="image/MAP_005_1.png" width="320" height="240" border="0"><BR>
+            こんな風に描いてみたい<BR>
+        </TD>
+    </TR>
+    </TBODY>
+    </TABLE>
+    <HR>
+    <TABLE border="0">
+    <TBODY>
+        <TR>
+        <TD nowrap>
+            <H3>【2】オートタイルの厄介なところ</H3>
+            <P>
+                右のように水辺が全部つながってしまいますね。<BR>
+                オートタイルは、隣接するマスに同じオートタイルがある場合はつながる形に、<BR>
+                それ以外はつながらない形に描画されます。<BR>
+                また、マップの端も、オートタイルがあるのと同じ扱いなんですね。<BR>
+            </P>
+        </TD>
+        <TD nowrap>
+            <IMG src="image/MAP_005_2.png" width="320" height="240" border="0"><BR>
+            あ～あ～全部つながってもうたやんけ！<BR>
+        </TD>
+        </TR>
+    </TBODY>
+    </TABLE>
+    <HR>
+    <TABLE border="0">
+    <TBODY>
+        <TR>
+            <TD nowrap>
+                <H3>【3】必殺！「オートタイル機能解除」！</H3>
+                <P>
+                    そこで役に立つのが「Shiftキーを押しながらペースト」です。<BR>
+                    これを使うと、マップ上のパーツの形を「そのまま」コピーできてしまうんです。<BR>
+                    オートタイルで恐ろしい威力を発揮しますよ！<BR>
+                </P>
+                <P>
+                    なお、今回説明する方法を「オートタイル機能解除」と呼ばせていただきます。<BR>
+                    実はこれ、某ツールでも採用されている方法なんです（あっちでも意外と知らない人はいるようです）。<BR>
+                </P>
+            </TD>
+        </TR>
+    </TBODY>
+    </TABLE>
+    <HR>
+    <TABLE border="0">
+    <TBODY>
+        <TR>
+        <TD nowrap>
+            <H3>【4】実際にやってみよう！</H3>
+            <P>
+                まず、コピーしたいパーツにカーソルを合わせて、<BR>
+                そこで｢右クリック｣をしてコピーします。<BR>
+                そして、配置したい箇所で「Shift+左クリック」してみましょう。<BR>
+                すると……<BR>
+            </P>
+        </TD>
+        <TD nowrap>
+            <IMG src="image/MAP_005_3.png" width="320" height="240" border="0"><BR>
+            このパーツをコピー<BR>
+        </TD>
+        </TR>
+    </TBODY>
+    </TABLE>
+    <HR>
+    <TABLE border="0">
+    <TBODY>
+        <TR>
+        <TD nowrap>
+            <H3>【5】いかがですか？</H3>
+            <P>
+                コピーしたパーツと同じ形のパーツが貼り付けられます！<BR>
+                あとは同様に「右クリック」でコピーしてから「Shift+左クリック」で、<BR>
+                欲しい形のパーツが貼り付けられます。<BR>
+            </P>
+        </TD>
+        <TD nowrap>
+            <IMG src="image/MAP_005_4.png" width="320" height="240" border="0"><BR>
+            ハイこの通り！そのままの形で貼り付けられます！<BR>
+        </TD>
+        </TR>
+    </TBODY>
+    </TABLE>
+    <HR>
+    <TABLE border="0">
+    <TBODY>
+        <TR>
+        <TD nowrap>
+            <H3>【6】解除するときは</H3>
+            <P>
+                このモードだと、オートタイルを設置する際に、自動でつながらなくなります。<BR>
+                解除したいときは「左クリックだけ」を行いましょう。<BR>
+            </P>
+            <P>
+                但し、「オートタイル機能解除」で作成したオートタイルの隣にて通常モードでチップの配置を行うと、<BR>
+                配置したオートタイルの形状が変わってしまうのでご注意下さい。<BR>
+            </P>
+        </TD>
+        </TR>
+    </TBODY>
+    </TABLE>
+    <HR>
+    <H2>補遺</H2>
+    <HR>
+    <TABLE border="0">
+    <TBODY>
+        <TR>
+        <TD nowrap>
+            <H3>【補遺１】オートタイルのパターン数</H3>
+            <P>
+                オートタイルは大きく5種類のパーツからなっています。<BR>
+                ここから様々なパターンが作られていきますが、何パターンあるのでしょう。<BR>
+            </P>
+            <P>
+                答えは……47パターンです！（使わない、を含めると48とキリが良くなります）<BR>
+                あれだけのチップからこれだけのパターンが出来上がるのです。<BR>
+            </P>
+            <P>
+                右の図にパターンを示します。<BR>
+                左側が元のオートタイルの形状、右側がそれで作られる全てのパターンです。<BR>
+                （分かりやすいように、もとのオートタイルを編集しています）<BR>
+            </P>
+        </TD>
+        <TD nowrap>
+            <IMG src="image/MAP_005_7.png" width="16" height="80" border="0">　<IMG src="image/MAP_005_8.png" width="128" height="96" border="0">
+        </TD>
+        </TR>
+    </TBODY>
+    </TABLE>
+    <HR>
+    <A NAME="10"></A>
+    <TABLE border="0">
+        <TBODY>
+            <TR>
+            <TD nowrap>
+                <H3>【補遺２】Ver1.31まではどうするの？</H3>
+                <P>
+                    <B>上記の方法はVer1.31以前のバージョンでは使えません。</B><BR>
+                    その場合以下の方法をお試し下さい。<BR>
+                </P>
+                <P>
+                    まず、欲しい形のオートタイルで「Shihft+右クリック」でコピーします。<BR>
+                    そして、置きたいところで<B>左クリック</B>です！<BR>
+                </P>
+                <P>
+                    こうすると、コピーしたところと同じ形にオートタイルが配置されます。<BR>
+                    なお、通常通りにオートタイルを配置したいときは、<BR>
+                    もう一度「Shiftキー+左クリック」で元のモードに戻ります。<BR>
+                </P>
+                <P>
+                    ちなみにこれらのモードを見分ける方法として、以下の方法があります。<BR>
+                     チップ選択画面からオートタイルを選び、マップに描画したときに、<BR>
+                     これ<IMG src="image/MAP_005_5.png" width="16" height="16" border="0">が出てきたら「通常」<BR>
+                     これ<IMG src="image/MAP_005_6.png" width="16" height="16" border="0">が出てきたら「オートタイル機能解除状態」です。<BR>
+                </P>
+            </TD>
+            </TR>
+        </TBODY>
+    </TABLE>
+    <HR>
+    <P>
+        今回の講座はここまでです。お疲れ様でした。<BR>
+    </P>
+    <HR>
+    <P>
+        ＜執筆者：<A href="http://sns.prtls.jp/rpgeditor/community.html?cid=33af3514107db1a4" target="_blank">ウディタ公式ガイド執筆コミュ。</A>＞<BR>
+        <UL>
+            <LI>Hdk103-Arch</LI>
+        </UL>
+        Updated 2012/2/15　Ver.2に対応<BR>
+    </P>
+    <HR>
+    <P>
+        <A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A><BR>
+    </P>
+</BODY>
+</HTML>

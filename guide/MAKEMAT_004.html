@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>ﾏｯﾌﾟﾁｯﾌﾟ素材はどういう風に作ればいいの？</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【ﾏｯﾌﾟﾁｯﾌﾟ素材はどういう風に作ればいいの？】</H2>
+<HR>
+<P>【疑問】 <BR>
+マップチップは、普通にゲームを作成すると、頻繁に画面に現れるものです。<br>
+世界観を演出するためにも、マップチップは重要な役割を果たします。<br>
+さて、ウディタで使用するマップチップは、どのような規格で作ればいいのでしょうか。<br><br>
+今回は簡便のため、画面サイズ320×240で説明をいたします。チップの大きさは16ピクセル四方です。<br>
+その他のサイズについては、<a href="#APPENDIX">【補遺】</a>をご覧下さい。<br>
+</P>
+<HR>
+<P>【解決】<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>
+■まず画像形式は<br>
+256色の透過PNGが推奨です。<br>
+<br>
+■マップチップはこのサイズで<br>
+横<b>128</b>ピクセル×縦<b>16の倍数</b>(図中N)のピクセル<br>
+<br>
+■オートタイルはこのサイズで<br>
+横(<b>16×アニメパターン数</b>(図中P))ピクセル×縦<b>80</b>ピクセル<br>
+</TD>
+<TD nowrap><img src="image/MAKEMAT_004_1.png"><br>マップチップはこんな感じ、Nはチップの列数で任意です<br>
+<img src="image/MAKEMAT_004_2.png"><br>オートタイルはこんな感じ、Pはパターン数です</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+【詳細】<HR>
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>
+■画像形式は、256色、透過色を持つPNG形式がいいでしょう。<br>
+(透過については「<a href="MAKEMAT_003.html">◆画像を透過させたい</a>」参照)<br>
+ここで透過色を設定していないと、エディット画面で正常に表示されませんし、<br>
+ゲーム画面でも意図した表示になりません。<br>
+</TD>
+<TD nowrap></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>
+■マップチップは、横に8つのチップが並ぶのが基本です。<br>
+あとは縦にどんどん伸ばしていけばいいでしょう。<br>
+<br>
+例として、サンプルで使用されているベースマップは横128×縦3984ピクセルです。<br>
+チップは横に8列、縦に249行並んでいます。<br>
+</TD>
+<TD nowrap><img src="image/MAKEMAT_004_3.png"><br>サンプルのチップはこんな感じ</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>
+■オートタイルは、この画像のように並べます。<br>
+上から<br>
+赤「上下左右どこにもこのオートタイルがない(直角に配置したときの外側の角に現れる)」<br><!--・-->
+黄「上下にこのオートタイルがある」<br><!--┃-->
+緑「左右にこのオートタイルがある」<br><!--━-->
+青「直角にこのオートタイルを配置したとき、内側の角に現れる」<br><!--╋-->
+紫「このオートタイルに周囲を全て囲まれている」<br><!--■-->
+パターンになります。<br>
+全てのパターンを並べると図のようになります。<br>
+使用例としてのパターンも用意しました。これでイメージをつかんでくだされば幸いです。<br>
+<br>
+あとはアニメーションさせたいパターン分だけ、右へどんどん追加していけばいいでしょう。<br>
+実際のゲーム画面では、一定間隔で次のパターンに切り替わり、また最初のパターンに戻ります。<br>
+<br>
+</TD>
+<TD nowrap><img src="image/MAKEMAT_004_4.png"><br>これだけパターンがあります<br><img src="image/MAKEMAT_004_5.png" width="350" height="300"><br>一例です、上のパターンと見比べてみましょう</TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>
+例として、サンプルにあるこの滝のチップは、アニメが4パターンとなっています。<br>
+サイズは横64×縦80ピクセルとなっております。<br>
+ゲーム画面では、水の流れ落ちるアニメーションをしていることが分かるはずです。<br>
+</TD>
+<TD nowrap><img src="image/MAKEMAT_004_6.png"><br>サンプルにもある画像です<br>このように横に並べるとアニメーションします</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>
+★<b>サイズには注意してください。</b><br>
+1ピクセルでも違うと、「<a href="ERROR_002.html">◆横128または256のマップチップじゃないとダメって出てきた</a>」にあるようなエラーを発生させることになります。<br>
+</TD>
+<TD nowrap></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+</P>
+<HR>
+<P><a name="APPENDIX">【補遺】</a><HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>
+★そのほかのゲーム画面サイズでは<br>
+■640×480では、チップのサイズは32ピクセル四方になります。<br>
+マップチップは、横256ピクセル×縦32の倍数のピクセル<br>
+オートタイルは、横(32×アニメパターン数)ピクセル×縦160ピクセル<br>
+■800×600では、チップのサイズは40ピクセル四方になります。<br>
+マップチップは、横320ピクセル×縦40の倍数のピクセル<br>
+オートタイルは、横(40×アニメパターン数)ピクセル×縦200ピクセル<br>
+このようになります。<br>
+</TD>
+<TD nowrap></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>
+★環境依存で注意するべきこと<br>
+一部の環境では、640×480の画面サイズにしたとき、<br>
+アニメパターン数が1のオートタイル(横32×縦160)が表示されないという報告がございます。<br>
+あるサイズ未満の画像を認識しないための不具合らしいです。<br>
+解決方法は、同じパターンの画像を横に追加して、横サイズを64ピクセルにすることです。<br>
+(もし自作ではなく、余所から借りてきた素材の場合は、利用規約をちゃんと読むこと。「<a href="MATERIAL_007.html">◆素材を使うためのルールってどんな感じなの？</a>」参照)<br>
+</TD>
+<TD nowrap></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+</P>
+<HR>
+<P>＜＜執筆者：<A href="http://sns.prtls.jp/rpgeditor/community.html?cid=33af3514107db1a4" target="_blank">ウディタ公式ガイド執筆コミュ。</A>＞＞<BR>
+<UL>
+	<LI>設計書作成：Hdk103-Arch、ユノ</LI>
+	<LI>トピック執筆：Hdk103-Arch</LI>
+</UL></P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

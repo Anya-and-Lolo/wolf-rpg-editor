@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>敵のｽﾃｰﾀｽ異常への耐性を決めたい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【敵のｽﾃｰﾀｽ異常への耐性を決めたい】</H2>
+<HR>
+　<B>【目標】</B><BR>
+<HR>
+<P>
+　戦闘中のキャラクターに影響を及ぼして、毎ターンHPが減少したり、<BR>
+　眠らせて動けなくしたり、魔法が使えなくなったりするステータス（状態）異常。<BR>
+<BR>
+　魔法使い型の敵キャラクターの魔法を封じたり、<BR>
+　素早い獣のモンスターを動きを遅くしたりして、<BR>
+　戦略性に富んだバトルを作ることは楽しいですが、<BR>
+　主人公の前に立ちはだかる強力なボスが麻痺にかかって動けなくなって、<BR>
+　ボコボコにされてしまうようなことがあるとちょっと情けないですよね。<BR>
+<BR>
+　今回はサンプルゲームにあらかじめ入っている<BR>
+　敵キャラクター「ゴブリン」の麻痺状態への耐性を<BR>
+　強く設定することで、ステータス異常への耐性の設定の仕方を習得します。</P>
+<HR>
+　<B>【手順】</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【1】 ユーザDBを開く<BR>
+<BR>
+　ユーザデータベース<IMG src="image/icon_userDB.png" width="22" height="20" border="0">をクリックすると、<BR>
+　右のようなウィンドウが表示されます。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_002_1.png" width="340" height="300" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【2】 編集するタイプの選択<BR>
+<BR>
+　ウィンドウが開いた直後は「タイプ」が「技能」になっています。<BR>
+　今回の設定はユーザデータベースの12番「┗ 状態耐性」で行いますので、<BR>
+　<B>「12:┗ 状態耐性」</B>をクリックして下さい。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_004_1.png" width="191" height="261" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【3】 編集するデータの選択<BR>
+<BR>
+　ウィンドウの中ほどにデータ一覧があります。<BR>
+　データはこの中から<B>「31:ゴブリン」</B>を選択してください。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_004_2.png" width="191" height="256" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【4】 属性への耐性<BR>
+<BR>
+　次に、状態異常が通用する確率を設定します。<BR>
+　今回は「麻痺」状態への耐性を強くしますので、<BR>
+　ウィンドウ右端にある<B>「＜麻痺＞成功率」</B>を編集します。<BR>
+　ページ1の一番上から5つ目にある項目です。<BR>
+<BR>
+　入力欄に<B>「0」</B>（全く効かない）を入力してください。<BR>
+　選択できたらウィンドウ右下のボタン「OK」か「更新」を押して上書きします。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_004_3.png" width="239" height="420" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【5】 テストプレイ<BR>
+<BR>
+　ステータス異常耐性を設定出来たら、テストプレイしてみましょう。<BR>
+　テストプレイしたいけど戦闘イベントの作り方が分からないという場合は、<BR>
+　「<A href="http://www.silversecond.com/WolfRPGEditor/Guide/BASE_E001.html" target="_blank">バトルを発生させたい</A>」を参考にして<BR>
+　敵グループの31番「ゴブリン1匹」をマップイベントなどで呼び出してください。<BR>
+<BR>
+　デフォルトで入っている技能「パラライズ」をゴブリンに対して使ってみると、<BR>
+　麻痺状態にならないことがわかると思います。<BR>
+<BR>
+　主人公に技能「パラライズ」を覚えさせる方法については<BR>
+　「<A href="http://www.silversecond.com/WolfRPGEditor/Guide/BASE_S006.html" target="_blank">主人公の技の習得レベルを設定したい</A>」を参照してください。<BR>
+<BR>
+　以上でこの記事の内容は終了です。お疲れ様でした。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_004_4.png" width="498" height="237" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+　<B>【余談】</B><BR>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>
+<B>■ステータス異常が付与される仕組み</B><BR>
+<BR>
+　今回はステータス異常を受ける側の耐性を設定しましたが、<BR>
+　状態異常を与える側として、技能と武器にもステータス異常状態を<BR>
+　付与する確率があります。<BR>
+<BR>
+　基本システムにおいて、これらの確率が<BR>
+　計算される順序は技能→(武器)→耐性となっています。<BR>
+<BR>
+　武器の状態付与率は技能とは別枠で計算されているので、<BR>
+　例えば100%麻痺させる武器を装備して100%麻痺を受ける敵に<BR>
+　通常攻撃を行うと、通常攻撃には麻痺判定はありませんが<BR>
+　100%麻痺を付与できます。<BR>
+<BR>
+　また、状態異常攻撃を受ける側ならば、味方の装備や敵に<BR>
+　ステータス異常耐性があると<BR>
+　それらの耐性が上記の付与確率から引かれます。<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>
+<B>■属性攻撃への耐性の設定</B><BR>
+<BR>
+　本トピックではステータス異常耐性の設定方法をご紹介しました。<BR>
+　属性攻撃への耐性の設定の仕方については<BR>
+　「<A href="http://www.silversecond.com/WolfRPGEditor/Guide/BASE2_003.html" target="_blank">敵に弱点・吸収・無効の属性を設定したい</A>」を参照してください。<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<HR>
+
+<P>＜執筆者：ウディタ公式ガイド執筆コミュ。＞
+    <ul>
+        <li>トピック原案：真波、<A href="http://hinezumi.velvet.jp/index.php" target="_blank">ユノ</A></li>
+        <li>HTML作成：真波</li>
+    </ul>
+</P>
+<HR>
+【改訂履歴】<BR>
+　Ver1.00　2013/09/20 新規作成<BR>
+<HR><A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+
+</BODY>
+</HTML>

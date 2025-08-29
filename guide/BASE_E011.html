@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+ 
+ 
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+ 
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+ 
+<TITLE>ゲームオーバーの処理をちゃんと作りたい</TITLE>
+ 
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+ 
+</HEAD><BODY>
+<HR>
+<H2>【ゲームオーバーの処理をちゃんと作りたい】</H2>
+ 
+<HR>
+<P>【目標】 <BR>
+　　　戦闘中に味方全員のHPが０になると<br>
+　　　『「ゲームオーバー」と表示されて画面が暗転し、タイトル画面に戻る』<br>
+　　　処理を作ります。<BR>
+<BR>
+ 
+ 
+</P>
+ 
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+ 
+<TD nowrap>【1】　『コモンイベントの設定』<img src="./image/BASE_E011_1.png">を開き、<BR>
+　　　コモン82を選択し、開きます。<br>	
+</TD>
+<TD nowrap><img src="./image/BASE_E011_2.png"><BR>
+</TD>
+</TR>
+ 
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY><TR>
+ 
+<TD nowrap>【2】　次に、コモンイベントエディタの下のほうにある<br>
+　　　『イベントコマンド挿入ウィンドウを表示』をクリックします。</TD>
+<TD nowrap><img src="./image/BASE_E011_3.png"><BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+ 
+<TD nowrap>【3】　『イベントコマンドの挿入』の<br>
+　　　「画面処理」タブを選択し、画面の色調変更から、<br>
+　　　「真っ黒に」を押し、処理時間を10フレームにして、入力を押します。<br></TD>
+<TD nowrap><img src="./image/BASE_E011_4.png"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+ 
+<TD nowrap>【4】　最初からあった、文章を『BackSpace』キーで消去し<br>
+　　　新たに『ゲームオーバーになってしまった！』と入力します。<br><br><A href="http://www.silversecond.com/WolfRPGEditor/Guide/" target="_blank">新しいイベントを作ってみたい</A>の【8】【9】参照<br></TD>
+<TD nowrap><img src="./image/BASE_E011_5.png"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+ 
+<TD nowrap>【5】　画面の色調変更で10フレームかかるので、<br>　　　その他1のタブから「ウェイト」10フレーム入力します。</TD>
+<TD nowrap><img src="./image/BASE_E011_6.png"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+ 
+<TD nowrap>【6】　タイトルに戻る処理としてその他1から、<br>　　　『タイトル画面へ』を押します。</TD>
+<TD nowrap><img src="./image/BASE_E011_7.png"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+ 
+<TD nowrap>【7】　『画面処理』から、画面の色調変更で<br>　　　「色リセット」を押し、入力します。</TD>
+<TD nowrap><img src="./image/BASE_E011_8.png"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+ 
+<TD nowrap>【8】　次に、『ユーザーデータベースエディタ』<img src="./image/BASE_E011_9.png">を開きます。</TD>
+<TD nowrap><img src="./image/BASE_E011_10.png"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+ 
+<TD nowrap>【9】　「15:ﾍﾞｰｽｼｽﾃﾑ設定」を開き、「ページ3」<img src="./image/BASE_E011_11.png">を押します。<br>[戦闘]ｹﾞｰﾑｵｰﾊﾞｰ処理Evがコモン82になってるのを確認して、<br>「OK」を押します。<br> <br>ゲームオーバー処理の作り方は以上です。お疲れさまでした。</TD>
+<TD nowrap><img src="./image/BASE_E011_12.png"></TD>
+</TR>
+</TBODY>
+</TABLE> 
+<HR>
+<P>
+＜執筆者：<A href="http://sns.prtls.jp/rpgeditor/community.html?cid=33af3514107db1a4" target="_blank">ウディタ公式ガイド執筆コミュ。</A>＞<br>
+<ul>
+<li>のと</li>
+<li>真波</li>
+</ul>　
+</P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><br>
+</P>
+</BODY>
+</HTML>

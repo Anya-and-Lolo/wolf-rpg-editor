@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>マップに音楽を設定したい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【マップに音楽を設定したい】</H2>
+<HR>
+<P>【目標】 <BR>
+　RPGのマップを作れるようになりましたでしょうか。<BR>
+　さて、普通にゲームをプレイしていると、大体マップで音楽が鳴っていますよね。<BR>
+　音楽(BGM)は、ゲームでもかなり重要な要素になっております。<BR>
+　今回は、タイトル画面のBGMを変更する方法をご紹介します。<BR>
+　ここでは、システムデータベースに登録している別のBGMに変更する方法と、<br>
+　ファイル名でBGMを変更する方法をお伝えします。<br>
+　なお、新しくマップを作成する際にBGMを設定する方法にも触れておきます。<BR>
+　ちなみに変更するBGMは「スタッフロール」(システムデータベースに1番で登録されている、Piece01_Takumi.mid)です。
+</P>
+<HR>
+<TABLE border="0">
+<TBODY>
+<P>【手順】 <BR><HR>
+<TR>
+<TD nowrap>【1】<b>何はともあれまずはタイトルマップの設定から</b><BR>
+　マップツリーから、タイトルマップを選択してみましょう。<BR>
+　そのあとで、スパナのアイコン<IMG src="image/icon_mapsetting.png" width ="22" height ="20" border ="0">をクリックして、マップの設定画面を開きましょう。<BR>
+　そして出てきたダイアログで、枠で囲った箇所をクリックします。<BR>
+</TD>
+<TD nowrap><IMG src="image/MAP_006_1.png" width="372" height="600" border="0"><BR>ここですよ！
+</TD>
+</TR>
+
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【2A】<b>BGM変更:データベースから</b><BR>
+　このようになるはずです。<BR>
+　青で囲ったところにチェックが入っていないとこの画面のようになります。<BR>
+　このタイトルマップでは、システムデータベースからBGMを選択する方法をとっております。<br>
+　赤枠で囲ったところのリストから、使いたいBGMの番号を選びましょう。<br>
+　今回の例では、「2：スタッフロール」を選択します。<br>
+　なお、同じ枠内、「使用する」にチェックがないと、BGMは鳴りません。<br>
+　さらに、「前MAPのまま」にチェックがあると、設定ができません。<br>
+</TD>
+<TD nowrap><IMG src="image/MAP_006_2.png" width="372" height="600" border="0"><BR>
+赤枠内を確認！</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【2B】<b>BGM変更:ファイル名を入力</b><BR>
+　ここで、図にある「ファイル名指定」をクリックすると、このようになります。<BR>
+　ここで、黄緑枠で囲った「File」ボタンをクリックし、出現したダイアログから、使いたいBGMを選びましょう。<br>
+　今回は、BGMフォルダ内の、「Piece01_Takumi.mid」を選択します。<br>
+　例えばシステムデータベースに登録していない曲を使いたいときは、こちらの方法をどうぞ。<BR>
+</TD>
+<TD nowrap><IMG src="image/MAP_006_3.png" width="372" height="600" border="0"><BR>
+正しく選択できれば、選んだBGMのアドレスが表示されます</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【3】<b>実際に確認してみましょう</b><br>
+　ゲームを起動してみてください。<br>
+　設定したBGM(この例ではスタッフロール曲)が鳴っていればOKです。<br>
+</TD>
+<TD nowrap></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【4】<b>新しいマップでBGMを設定するには</b><br>
+　白紙のアイコン<IMG src="image/icon_newmap.png" width ="22" height ="20" border ="0">をクリックして、新規のマップを作成します。<br>
+　このとき、このようなウインドウが出現します。<br>
+　【2A】などで出てきたものとよく似ています。但し「DBに登録する」にはじめからチェックが入っています。<br>
+　ここでも先ほどと同じようにBGMを設定すれば、設定が完了します(やり方は同じです)。<br>
+　そのマップに入った際に、設定したBGMが流れるようになるはずです。<br>
+</TD>
+<TD nowrap><IMG src="image/MAP_006_4.png" width="372" height="600" border="0">
+<br>上部が「マップ新規作成」になっています</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR><br>
+</P><HR>
+<P>【余談】 <BR><HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【5】<b>環境音(BGS)の設定方法</b><br>
+　設定の容量はBGMと同じです。<br>
+　変更するところは、「再生するBGS」の箇所です。<br>
+</TD>
+<TD nowrap><IMG src="image/MAP_006_5.png" width="372" height="600" border="0"><br>
+ここですよ！なお、「使用する」にチェックがないと設定できません。</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【6】<b>システムデータベースにBGMを登録するには</b><br>
+　「<a href="MATERIAL_005.html">◆BGM・効果音素材をゲームで使いたい</a>」を参照下さい。<br>
+　なお、末尾でBGSについても軽く触れております。<br>
+<!--該当記事のHTMLが出来次第リンクを貼る事-->
+</TD>
+<TD nowrap></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【7】<b>慣れてきたらこっちの方法でも</b><br>
+　システムデータベースを開きましょう。そしてタイプ0番を選択します。<br>
+　図に示す箇所で、マップのBGMは指定されております。<br>
+　ここに設定されている値を変更することでも、マップのBGMを変えられます。<br>
+</TD>
+<TD nowrap><IMG src="image/MAP_006_6.png" width="669" height="587" border="0"><br>
+ここですよ！なお、「[-3]:ファイル名で指定」を選んだときは、項目番号5番で、使用するファイル名の入力をお忘れなく。</TD>
+</TR>
+</TBODY>
+</TABLE>
+</P>
+<HR><HR>
+<P>　今回の講座はここまでです。ありがとうございました。</P>
+<HR>
+<P>＜執筆者：ウディタ公式ガイド執筆コミュ。＞　<br>
+　　・トピック原案：Hdk103-Arch、ユノ<br>
+　　・HTML作成：Hdk103-Arch<br>
+</P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

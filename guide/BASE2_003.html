@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>敵に弱点・吸収・無効の属性を設定したい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【敵に弱点・吸収・無効の属性を設定したい】</H2>
+<HR>
+　<B>【目標】</B><BR>
+<HR>
+<P>
+　キャラクターの得意なもの、苦手なものを決めるのが属性という項目です。<BR>
+　この属性の設定によって、雷に弱い鳥、冷気の効かない魚、炎を吸収するトカゲ、<BR>
+　通常攻撃が効きにくいゴーレムなど個性のあるモンスターを作ることができます。<BR>
+<BR>
+　本トピックではサンプルゲームにあらかじめ入っている、<BR>
+　敵キャラクター「ゴブリン」の「物理攻撃」属性への耐性を<BR>
+　「弱点」「半減」「無効」「吸収」に設定することで、<BR>
+　属性攻撃に対する耐性の度合いの設定の仕方を習得します。</P>
+<HR>
+　<B>【手順】</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>
+　本トピックの【手順】では、<BR>
+　まず「属性耐性について」の項で、どこでどのような数値を<BR>
+　設定すれば属性耐性が生まれるのかについて解説し、<BR>
+　次に「属性の設定」の項でゴブリンの物理攻撃耐性を実際に設定し、<BR>
+　最後に「結果の確認」の項でテストプレイの行い方をご紹介します。<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+　<B>■属性耐性について</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【1】 ユーザDBを開く<BR>
+<BR>
+　ユーザデータベース<IMG src="image/icon_userDB.png" width="22" height="20" border="0">をクリックすると、<BR>
+　右のようなウィンドウが表示されます。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_002_1.png" width="340" height="300" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【2】 編集するタイプの選択<BR>
+<BR>
+　ウィンドウが開いた直後は「タイプ」が「技能」になっています。<BR>
+　今回の設定はユーザデータベースの11番「┣ 属性耐性」で行いますので、<BR>
+　<B>「11:┣ 属性耐性」</B>をクリックして下さい。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_003_1.png" width="188" height="275" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【3】 編集するデータの選択<BR>
+<BR>
+　ウィンドウの中ほどにデータ一覧があります。<BR>
+　データはこの中から<B>「31:ゴブリン」</B>を選択してください。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_003_2.png" width="204" height="239" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>【4】 属性への耐性<BR>
+<BR>
+　次に、各属性の攻撃がダメージに及ぼす効果を設定します。<BR>
+　この記事では「物理攻撃」への耐性を設定しますので、<BR>
+　ウィンドウ右端にある<B>「＜物理攻撃＞効果[%]」</B>を編集します。<BR>
+　ページ1の一番上にある項目です。<BR>
+<BR>
+　ここの数値は、ウディタダウンロード時から設定を変えていなければ、<BR>
+　「[100]100%[変化なし]」が選択されているはずです。<BR>
+<BR>
+　この100%を基準として、耐性設定値が<B> 100より大きい </B>場合は<BR>
+　ダメージが大きくなっていきます。<B>（弱点）</B><BR>
+<BR>
+　耐性設定値が<B> 100より小さい </B>場合はダメージも小さくなる、<BR>
+　つまり 耐性がある ことになります。<B>（半減）</B><BR>
+<BR>
+　<B>0 </B>に設定するとその属性の攻撃は全く効かなくなります。<B>（無効）</B><BR>
+<BR>
+　<B>-1以下 </B>の値を入力すると、<BR>
+　属性攻撃を吸収してHP/SPを回復させてしまう設定になります。<B>（吸収）</B><BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_003_3.png" width="359" height="281" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+　<B>■属性の設定</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>
+　ここでは「物理攻撃」属性をゴブリンの<B> 弱点、半減、無効、吸収 </B>属性に<BR>
+　設定する方法をそれぞれご紹介します。<BR>
+　これらは全て同一箇所への設定ですので、どれか１つを設定したら<BR>
+　テストプレイ(次の項「結果の確認」にて方法をご紹介しています)を<BR>
+　セットで行うようにしてください。<BR>
+<BR>
+　<B>①弱点属性の設定</B><BR>
+　「物理攻撃」をゴブリンの「弱点属性」にします。<BR>
+　プルダウンリストから<B>「[200]200%」</B>を選択してください。<BR>
+　選択できたらウィンドウ右下のボタン「OK」か「更新」を押して上書きします。<BR>
+<BR>
+　<B>②半減属性の設定</B><BR>
+　ゴブリンに対して、「物理攻撃」が効きにくい「半減属性」を設定します。<BR>
+　プルダウンリストから<B>「[50]50%」</B>を選択してください。<BR>
+　選択できたらウィンドウ右下のボタン「OK」か「更新」を押して上書きします。<BR>
+<BR>
+　<B>③無効属性の設定</B><BR>
+　ゴブリンにとっての「物理攻撃」を「無効属性」にします。<BR>
+　プルダウンリストから<B>「[0]0%[無効化]」</B>を選択してください。<BR>
+　選択できたらウィンドウ右下のボタン「OK」か「更新」を押して上書きします。<BR>
+<BR>
+　<B>④吸収属性の設定</B><BR>
+　「物理攻撃」をゴブリンの「吸収属性」にします。<BR>
+　プルダウンリストから<B>「[-100]-100%[100%吸収]」</B>を選択してください。<BR>
+　選択できたらウィンドウ右下のボタン「OK」か「更新」を押して上書きします。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_003_4.png" width="309" height="334" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+　<B>■結果の確認</B><BR>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>
+　属性耐性を設定出来たら、テストプレイしてみましょう。<BR>
+　テストプレイしたいけど戦闘イベントの作り方が分からないという場合は、<BR>
+　「<A href="http://www.silversecond.com/WolfRPGEditor/Guide/BASE_E001.html" target="_blank">バトルを発生させたい</A>」を参考にして<BR>
+　敵グループの31番「ゴブリン1匹」をマップイベントなどで呼び出してください。<BR>
+<BR>
+　通常、弱点、半減、無効、吸収の５パターンのゴブリンに対して、<BR>
+　「物理攻撃」である通常攻撃で攻撃するテストプレイを<BR>
+　行った結果が右の画像です。<BR>
+　属性耐性以外のパラメータがまったく同一であるモンスターでも、<BR>
+　属性耐性を変更することで大きな差が生まれましたね。<BR>
+　以上でこの記事の内容は終了です。お疲れ様でした。<BR>
+</TD>
+<TD nowrap><IMG src="image/BASE2_003_5.png" width="470" height="158" border="0"></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+　<B>【余談】</B><BR>
+
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>
+<B>■武器に状態異常付与効果を持たせる</B><BR>
+<BR>
+　今回は属性攻撃への耐性の設定を扱いましたが、<BR>
+　ステータス異常への耐性については<BR>
+　「<A href="http://www.silversecond.com/WolfRPGEditor/Guide/BASE2_004.html" target="_blank">敵のｽﾃｰﾀｽ異常への耐性を決めたい</A>」を参照してください。<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<HR>
+
+<P>＜執筆者：ウディタ公式ガイド執筆コミュ。＞
+    <ul>
+        <li>トピック原案：真波、<A href="http://hinezumi.velvet.jp/index.php" target="_blank">ユノ</A></li>
+        <li>HTML作成：真波</li>
+    </ul>
+</P>
+<HR>
+【改訂履歴】<BR>
+　Ver1.00　2013/09/13 新規作成<BR>
+<HR><A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+
+</BODY>
+</HTML>

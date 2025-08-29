@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>イベント後に消え、マップを移動して戻ると復活しているイベント</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+
+<HR>
+	<H2>【イベント後に消え、マップを移動して戻ると復活しているイベント】</H2>
+<HR>
+
+	<P>
+		【目標】<BR>
+		　イベント後に消えて、マップを移動して戻ってみると復活しているイベントを作ります。<br>
+		<br>
+		　ここでは例として、<b>「話しかけると消え、戻ってくると復活してるニワトリ」</b>を作ります。<br>
+		　話しかけるとなにごとも起きずに消えてしまいますが、<br>
+		　別マップに移動して戻ってくると復活している、というイベントです。<br>
+
+
+	</P>
+	
+<HR>
+
+<TABLE border="0"><TBODY><TR><TD nowrap>【1】<BR>
+　・まずマップ選択<IMG src="image/icon_mapselector.png" width="22" height="20" border="0">で「<B>サンプルマップA</B>」に<BR>
+　　切り替えて下さい。<BR><BR>
+　・適当な場所に<B>イベントを作成して<BR>
+&#160;　ニワトリの画像を設定</B>しておきます。<BR>
+　　（ここでは右の画像の位置に設置）<BR>
+<BR><BR>&#160;→ 分からないときは、<BR>
+　 &#160;<B><A href="MUST_001x.html" target="B">◆新しいイベントを作ってみたい</A></B>の<BR>
+　　【1】～【5】までの手順をまねてください。<BR>
+</TD><TD nowrap><IMG src="image/window_evbase.jpg" width="289" height="240" border="1"></TD></TR></TBODY></TABLE><HR>
+<TABLE border="0"><TBODY><TR><TD nowrap>【2】　<BR>
+　<B>イベントウィンドウ</B>の右下にある<BR>
+　「<B>■コマンドウィンドウ表示■</B>」を<BR>
+　クリックしてください。</TD>
+<TD nowrap><IMG src="image/window_evbase2.jpg" width="198" height="60" border="1"></TD>
+</TR></TBODY></TABLE>
+	
+<HR>
+	
+
+	<TABLE border="0"><TBODY><TR>
+		<TD nowrap>
+			【3】　<br>
+			　・<b>「イベントコマンドの挿入」ウィンドウ</b>が出てくるので、<br>
+			　　　上部タブにある<b>「その他1」</b>を選択して下さい。<br>
+			<br>
+			　１．下の方にある「<b>イベントの一時消去</b>」を選びます<br>
+			<br>
+			　２．一時的に消去するイベントを選びます。<br>
+			　　　<b>対象</b>が［ <b>このイベント</b> ］であることを確認して下さい。<br>
+			　　　※ここで指定すれば、今動いているイベントとは<br>
+			　　　別のイベントを一時的に消すこともできます。<br>
+			<br>
+			　３．<b>フェードにかける時間</b>を指定します。<br>
+			　　　フェードの横の入力欄に<b>［60］</b>と入力して下さい。<br>
+			<br>
+			　　　なお、フェード時間は［0］にすることが多いです。<br>
+			　　　今回は効果を実感するために指定しました。<br>
+			<br>
+			　　※　ここでのフェードというのは<br>
+			　　　　「<b>徐々に消えていく</b>」という意味です。<br>
+			　　　　フェード［0］にすると、「ぱっ」と瞬間的に消え、<br>
+			　　　　［0］以上を指定すると、徐々に消えていきます。<br>
+			<br>
+			　できたら<b>「OK」ボタン</b>を押して下さい。<br>
+			<br>
+			<br>
+			　ここで指定したのは<br>
+			　<b>「このイベントを一時的に消去、<br>
+			　　60フレームかけて徐々に消える。」</b><br>
+			　というコマンドです。<br>
+			<br>
+			　今回は入力するのはこれだけです。<br>
+			<br>
+		</TD>
+		<TD nowrap>
+			<img src="image/EV_004_1.jpg" border="1" width="320" height="273">
+		</TD>
+	</TR></TBODY></TABLE>
+	
+<HR>
+	
+
+
+	<TABLE border="0"><TBODY><TR>
+		<TD nowrap>
+			【4】<br>　
+			<br>
+			右の図のようになっているでしょうか。<br>
+			<br>
+			　では、マップをセーブして、<br>
+			　作ったイベントをテストしてみましょう。<br>
+			<br>
+			　「<b>セーブ（マップ全体）</b>」をクリックした後、<br>
+			　「<b>テストプレイ</b>」をクリックしてください。<br>
+		</TD>
+		<TD nowrap>
+			<img src="image/EV_004_2.jpg" border="0" alt="EV_004_2_.jpg(10333 byte)" width="320" height="254">
+		</TD>
+	</TR></TBODY></TABLE>
+	
+<HR>
+	
+
+
+
+	<TABLE border="0"><TBODY><TR>
+		<TD nowrap>
+			【5】<br>
+			<br>
+			作ったニワトリに話しかけます。<br>
+			<b>なにも起こりません。</b><br>
+			しかし、<b>ニワトリのグラフィックが透明になり始めます</b>。<br>
+			１の画像はその途中。半透明です。<br>
+			<br>
+			60フレーム後（約1秒）、ニワトリは<b>完全に消えました</b>。<br>
+			いままでニワトリがいた場所も通ることが出来ますし、<br>
+			その場所でクリックしても反応はありません。<br>
+			イベントは消えました。（画像２）<br>
+			<br>
+			では、<b>別マップに移動</b>して戻ってきて下さい。<br>
+			上の方にずっと行くと別のマップに移動しますので、<br>
+			そちらに一度行って、戻ってきて下さい。（画像３・４）<br>
+			<br>
+			すると、<b>先程消えたニワトリが復活</b>しています。（画像５）<br>
+			再度話しかけると、同様に60フレームかけて消えます。<br>
+			そして、移動して戻ってくれば何度でも復活します。<br>
+			<br>
+			<br>
+			<b>これで完成です</b>。<br>
+			お疲れさまでした。<br>
+			<br>
+			<br>
+			なお、この「イベントの一時消去」というのは<br>
+			あくまで一時的で、今回やったとおり<br>
+			別マップに移動して戻ってくると、復活してしまいます。<br>
+			<br>
+			<b>完全に消す（二度と起動しなくする）方法</b>は<br>
+			別稿「<b><a href="EV_005.html">◆一度消えたら二度と出てこないイベント</a></b>」に<br>
+			記しますのでそちらをご覧下さい。<br>
+			
+			<br>
+
+		</TD>
+		<TD nowrap>
+			<img src="image/EV_004_3.jpg" border="0" alt="EV_004_4_.jpg(33639 byte)" width="155" height="472">
+		</TD>
+	</TR></TBODY></TABLE>
+	
+<HR>
+	<br>
+<HR>
+
+
+
+	<TABLE border="0"><TBODY><TR>
+		<TD nowrap>
+			【余談】<br>
+			<br>
+			本稿では効果を実感できるよう、決定キーで起動するイベントに使用しましたが<br>
+			<b>「イベントの一時削除」は、自動起動イベントで多用されます</b>。<br>
+			<br>
+			詳しくは<a href="EV_008.html">自動起動イベントの頁</a>に譲りますので、そちらをご参照ください。<br>
+		</TD>
+		<TD nowrap>
+			
+		</TD>
+	</TR></TBODY></TABLE>
+	
+
+
+<HR>
+
+<br>
+<HR>
+<div>＜執筆者：<A href="http://blog.livedoor.jp/mikenekonyanko/" target="_blank">ミケ</A>＞</div>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>◆ウディタで使うと鳴らないMIDIがある</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【◆ウディタで使うと鳴らないMIDIがある】</H2>
+　　　[MIDI素材の音が鳴らない]<BR>
+<HR>
+<P>【目標】 <BR>
+　一部または全部の音の鳴らないMIDIファイルの音が出る状態にします。<BR>
+　<BR>
+　サンプルとして通常の音楽再生ソフトでは普通に再生され、<BR>
+　ウディタではメロディが鳴らなくなるMIDIを用意しましたので、動作確認用にお使いください。<BR>
+　<BR>
+　<A HREF ="image/ERROR_005_1.mid">sample.mid</A>(右クリック→対象をファイルに保存)<BR>
+　<BR>
+　※注意※<BR>
+　状況によってはMIDI素材自体を改変することになります。<BR>
+　ダウンロード先の素材利用規約を必ず読み、トラブルが起こらないようくれぐれも気をつけてください。<BR>
+</P>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>
+	【1】<BR>
+	　※この作業は予想外の音が出る可能性があるため、<BR>
+	　ヘッドホン等は外してスピーカーで音を聴くことをおすすめします。<BR>
+	　<BR>
+	　まず始めに音の環境を確認します。<BR>
+	　デスクトップの通知領域(右下の部分)から音量を右クリック、<BR>
+	　ボリュームコントロールを開きます。<BR>
+	　<BR>
+	　各項目を確認し、ボリュームが0になって無いか、<BR>
+	　「入力モニタ」以外のミュートのチェックが外されているかを確認します。<BR>
+	　<BR>
+	　この状態で一度MIDI素材の音を聴きます。<BR>
+	　自分で使っている音楽再生ソフト(Windows Media Playerなど)で<BR>
+	　聴いたときと比べて抜けている音がある場合はウディタで<BR>
+	　対応していない音色を使った素材なので、【2】に進みます。<BR>
+</TD>
+<TD nowrap>
+	<IMG SRC = "image/ERROR_005_1.jpg"><BR>
+	<BR>
+	<IMG SRC = "image/ERROR_005_2.jpg"><BR>
+</TD>
+</TR>
+
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY><TR>
+<TD nowrap>
+	【2】<BR>
+	　ウディタ側で抜けている音は素材の中身を<BR>
+	　変更することで応急処置ができます。<BR>
+	　これは素材の改変になりますので、<BR>
+	　MIDI編集のためのソフトが必要になります。<BR>
+	　<BR>
+	　面倒な設定の不要なものとして以下のものがありますので、<BR>
+	　今回はこのソフトを説明のために利用し、<BR>
+	　音がきちんと再生されるように素材を改変します。<BR>
+	　<BR>
+	　Cherry　MIDIシーケンサ<BR>
+	　http://www.vector.co.jp/soft/win95/art/se071842.html<BR>
+	　（Vector）<BR>
+	　<BR>
+	　ダウンロードと解凍を行い、<BR>
+	　フォルダを整えたらcherry.exeを起動してください。<BR>
+	　<BR>
+	　各ウィンドウの解説<BR>
+	　メインウィンドウ：ファイルの保存、ソフトの設定、曲の再生等<BR>
+	　Track Listウィンドウ：曲全体の情報を表示するウィンドウ<BR>
+	　Track#1～ウィンドウ：各パートの編集をするウィンドウ<BR>
+</TD>
+<TD nowrap>
+	<IMG SRC = "image/ERROR_005_3.jpg"><BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>
+	【3】<BR>
+	　「ファイル」より「開く」を選択し、<BR>
+	　編集したいMIDIファイルを読み込みます<BR>
+	　読み込みが終わると「Track List」ウィンドウに<BR>
+	　赤い線で音のデータが表示されるので確認します。<BR>
+	　(サンプルの場合はCH2、CH3、CH4、CH10のパートに<BR>
+	　音の情報が入っています)
+</TD>
+<TD nowrap>
+	<IMG SRC = "image/ERROR_005_4.jpg"><BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【4】<BR>
+	　楽器の情報を確認していきます。<BR>
+	　Track#1～ウィンドウを表示し、左上のボックスから<BR>
+	　音の情報が入っているパートであるCH2を選択します。<BR>
+	　<BR>
+	　すると、その下にデータが出ますので、<BR>
+	　その中から「Program」を探し、ダブルクリックします。<BR>
+	
+</TD>
+<TD nowrap>
+	<IMG SRC = "image/ERROR_005_5.jpg"><BR>
+	<IMG SRC = "image/ERROR_005_6.jpg"><BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【5】
+	すると、右図のような音色を選択する画面が出るので、<BR>
+	MAPの番号を"000"番、BANKの番号を"000"番に設定します。<BR>
+	設定し終わったらOKを押します。(PC#はそのまま)<BR>
+	これで、このパート(CH2)はウディタで使える音色になりました<BR>
+</TD>
+<TD nowrap>
+	<IMG SRC = "image/ERROR_005_7.jpg"><BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD nowrap>【6】
+	どの音色のパートが鳴っていないかがわかればそこだけを直せば良いのですが(sampleはCH2のみ)<BR>
+	わからなければ打楽器パート(CH10)以外の全部のパートで【4】～【5】を繰り返します。<BR>
+	(sampleの場合はCH2、CH3、CH4の3つに対して設定)<BR>
+	<BR>
+	あとはウディタ上で鳴り方を確認して終了です。<BR>
+</TD>
+<TD nowrap></TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+
+<HR>
+<P>＜執筆者：<A href="http://hinezumi.velvet.jp/" target="_blank">ユノ</A>＞　</P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>

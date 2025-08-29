@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML LANG="ja">
+<HEAD>
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<META name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 8.0.0.0 for Windows">
+<TITLE>お店イベントを作りたい</TITLE>
+<LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
+</HEAD><BODY>
+<HR>
+<H2>【お店イベントを作りたい】</H2>
+<HR>
+<P>【目標】　<BR>
+　サンプルゲームの「サンプルマップＡ」内に、<BR>
+<B>「薬ビン」が買えるお店イベントを作ります。</B></P>
+<HR>
+<TABLE border="0"><TBODY><TR><TD nowrap>【1】<BR>
+      　・まずマップ選択<IMG src="image/icon_mapselector.png" width="22" height="20" border="0">で「<B>サンプルマップA</B>」に<BR>
+　　切り替えて下さい。<BR><BR>
+      　・適当な場所に<B>イベントを作成して<BR>
+　　ニワトリの画像を設定</B>しておきます。<BR>
+　　（ここでは右の画像の位置に設置）<BR>
+<BR><BR>
+      　→　分からないときは、<BR>
+      　　　<B><A href="MUST_001+.html" target="B">◆新しいイベントを作ってみたい</A></B>の<BR>
+　　【1】～【5】までの手順をまねてください。<BR>
+</TD><TD nowrap><IMG src="image/window_evbase.jpg" width="289" height="240" border="1"></TD></TR></TBODY></TABLE><HR>
+<TABLE border="0">
+  <TBODY><TR><TD nowrap>【2】　<BR>
+　<B>イベントウィンドウ</B>の右下にある<BR>
+　「<B>■コマンドウィンドウ表示■</B>」を<BR>
+　クリックしてください。</TD>
+<TD nowrap><IMG src="image/window_evbase2.jpg" width="198" height="60" border="1"></TD>
+</TR></TBODY></TABLE><HR>
+<TABLE border="0"><TBODY><TR><TD nowrap>【3】　<BR>
+      　「<B>イベントコマンドの挿入</B>」ウィンドウが<BR>
+　出てくるので、上部タブにある<BR>
+　「<B>その他2</B>」を選択して下さい。</TD>
+<TD nowrap><IMG src="image/window_evbase3.jpg" width="300" height="254" border="0"></TD>
+</TR></TBODY></TABLE><HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【4】　<BR>
+      　　・「<B>イベントの挿入</B>」を選び、<BR>
+      　　「<B>コモン28：【1】　お店　初期化</B>」を選択します。<BR>
+      <BR>
+      　　・選択したら、「<B>入力</B>」をクリックしてください。</TD>
+      <TD nowrap><IMG src="image/BASE_E002_1.png" width="438" height="299" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【5】　<BR>
+      　　もう一度「<B>イベントの挿入</B>」を選び、<BR>
+      　　「<B>コモン29：【2】　お店　商品+</B>」を選択します。<BR>
+      </TD>
+      <TD nowrap><IMG src="image/BASE_E002_2.png" width="438" height="300" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【6】　<BR>
+      　　次に、「コモンEv入力（数値）」の欄を、<BR>
+      　　以下のように設定します。<BR>
+      <BR>
+      　　・<B>追加するのは？</B>　「<B>1:ｱｲﾃﾑ[A]</B>」<BR>
+      　　・<B>[A]ｱｲﾃﾑ</B>　「<B>0:薬ビン</B>」<BR>
+      　　・<B>[B]武器</B>　「<B>-1:</B>」<BR>
+      　　・<B>[C]防具</B>　「<B>-1:</B>」<BR>
+      <BR>
+      　　・設定したら、「<B>入力</B>」をクリックしてください。</TD>
+      <TD><IMG src="image/BASE_E002_3.png" width="438" height="300" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【7】<BR>
+      　　さらにもう一度「<B>イベントの挿入</B>」を選び、<BR>
+      　　「<B>コモン30：【3】　お店処理　実行</B>」<BR>
+      　　を選択します。</TD>
+      <TD><IMG src="image/BASE_E002_4.png" width="436" height="302" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【8】<BR>
+      　　次に、「コモンEv入力（数値）」の欄を、<BR>
+      　　以下のように設定します。<BR>
+      <BR>
+      　　・<B>お店のタイプ</B>　「<B>3:売り・買い　両方</B>」<BR>
+      　　※この他に[1:売りのみ　/　2:買いのみ]<BR>
+      　　の2つがありますが、ここでは売り買い<BR>
+      　　両方できるようにしておきます。<BR>
+      <BR>
+      　　・設定したら、「<B>入力</B>」をクリックしてください。</TD>
+      <TD><IMG src="image/BASE_E002_5.png" width="436" height="299" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【9】<BR>
+      　　これでイベントは完成です。<BR>
+      <BR>
+      　　・右側のイベントコマンド表示欄に、<BR>
+      　　■イベントの挿入：　コモン28［【1】お店　初期化］<BR>
+      　　■イベントの挿入：　コモン29［【2】お店　商品+］　/　1:ｱｲﾃﾑ[A]　/　0:薬ビン　/　-1　/　-1<BR>
+      　　■イベントの挿入：コモン30［【3】お店処理　実行］　/　3:売り・買い　両方<BR>
+      　　と表示されているか確認して下さい。</TD>
+      <TD></TD>
+    </TR>
+    <TR>
+      <TD><IMG src="image/BASE_E002_6.png" width="441" height="65" border="0"></TD>
+      <TD></TD>
+    </TR>
+    <TR>
+      <TD>　　この画像のようになっていれば大丈夫です。<BR>
+      　　※この時、イベントの順番が違うとちゃんとお店が実行されないので注意してください。</TD>
+      <TD></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY><TR><TD nowrap>【10】　<BR>
+　さて、マップをセーブして、<BR>
+　作ったイベントをテストしてみましょう。<BR>
+<BR>
+　「<B>セーブ（マップ全体）</B>」をクリックした後、<BR>
+　「<B>テストプレイ</B>」をクリックしてください。</TD>
+<TD nowrap><IMG src="image/window_evbase4.png" width="247" height="100" border="1"></TD>
+</TR></TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD>【11】<BR>
+      　　作成したイベントに近づいて決定キーを押してみましょう。<BR>
+      <BR>
+      　　右の画像のようにお店イベントが実行されていれば成功です。<BR>
+      <BR>
+      　　おつかれさまでした。</TD>
+      <TD><IMG src="image/BASE_E002_7.png" width="321" height="241" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<P><BR>
+</P>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>【余談】<B><BR>
+      　　武器や防具を商品にしたい</B>場合は？<BR>
+      <BR>
+      　　・手順【6】の「コモンEv入力（数値）」の設定で、<BR>
+      <B>　　「追加するのは？</B>」に「<B>2:武器[B]</B>」または「<B>3:防具[C]</B>」<BR>
+      　　を選択し、商品を「<B>[B]武器</B>」または「<B>[C]防具</B>」<BR>
+      　　から設定しましょう。</TD>
+      <TD><IMG src="image/BASE_E002_8.png" width="341" height="325" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<P><BR>
+</P>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap><B><BR>
+      　　商品を2つ以上設定したい</B>場合は？<BR>
+      <BR>
+      　　・手順【5】【6】を繰り返して必要なだけ<BR>
+      　　商品を追加しましょう。<BR>
+      <BR>
+      　　※この時もイベントの順番に注意しましょう。<BR>
+      　　右の画像のようになっていれば大丈夫です。</TD>
+      <TD><IMG src="image/BASE_E002_9.png" width="432" height="125" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<P><BR>
+</P>
+<HR>
+<P>＜執筆者：<A href="http://music377.seesaa.net/" target="_blank">コロラル</A>＞　</P>
+<HR>
+<A href="index.html" target="_top">【←にフレームが表示されていない方はここをクリック】</A>
+<P><BR>
+</P>
+</BODY>
+</HTML>
