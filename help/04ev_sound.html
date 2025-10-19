@@ -10,30 +10,33 @@
 
 
 <style>
-body {
+<!--
+
+body{
   margin: 0;
   display: flex;
   height: 100vh;
   overflow: hidden;
 
 }
-#menu-frame {
+#menu-frame{
   width: 185px;
   min-width: 185px;
   max-width: 185px;
   border-right: 1px solid #aaa;
   height: 100%;
 }
-#content {
+#content{
   flex-grow: 1;
   overflow-y: auto;
   padding: 16px;
 }
-iframe {
+iframe{
   width: 100%;
   height: 100%;
   border: none;
 }
+-->
 </style>
 </HEAD>
 <BODY>
@@ -42,7 +45,7 @@ iframe {
 <iframe src="00_menu.html" title="メニュー"></iframe>
 </div>
 <!--ここから右欄-->
-<div id="content" id="scroll-target">
+<div id="content">
 
 
 <P><BR>イベントコマンド　<B><FONT 
@@ -176,7 +179,7 @@ size=+1>【サウンド】</FONT></B><BR>
 　<b>「ファイル指定」</b>で再生した場合のみ、「同じファイル名」でも時間をずらして再生可能です。<BR>
 　 
 <HR>
-<P><b style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255);">【SE（効果音）の多重再生させたい場合はチャンネル別に】</b>　<BR>
+<P><b style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255);">【SE（効果音）の多重再生をさせたい場合はチャンネル別に分けてください】</b>　<BR>
 <BR>
 　同じSEを複数連続でウェイトを挟んで同時再生した場合、2つめのSEが再生され始めると、すでに鳴っている最初のSEは停止されてしまいます。<BR>
 　もし同じSEを停止させずに次々に再生したい場合は、以下の手順を取ってください。<br>
@@ -192,18 +195,33 @@ size=+1>【サウンド】</FONT></B><BR>
 　「<b>ファイル名で指定</b>」→BGM指定に「<b>INITIALIZE</b>」とだけ入れて実行すると、「<b>音声メモリの全リセット</b>」が可能です。<br>
 　その際、BGMやBGSは停止してしまうのでご注意ください。<br>
 　音声周りでバグが発生してどうしようもない場合への対策として用意されていますが、基本的には使う必要はありません。<br>
-　</p>
+  　</p>
 <hr>
 <p><b style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255);">【<b style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255);">BGM・BGSを</b>「ファイル名」指定で<b style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255);"><b style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255);">再生中、</b></b>「同じファイル名」で「再生」すると再生途中のままパラメータ変更可】</b><BR>
 <br>
 　「ファイル名」指定であるファイル名の曲を再生中、それと「<b><span style="color : #cc0000;">同じファイル名</span></b>」（BGSの場合は「<b>チャンネル</b>」も同じにする）で「<b><span style="color : #cc0000;">再生</span></b>」を行うと、<b><span style="color : #cc0000;">再生を途切れさせずに「音量」「周波数」「途中再生」「パン」を変更</span></b>できます。<br>
 <br>
 　※ただし「途中再生」だけは、再生位置によっては処理が重くなる場合があります。<br>
-　</p>
-<hr>
+  　<br>
+  </p>
+  
+  <hr>
+  <p><b style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255);">【注意！　BGSやSEの多重再生で音量をオーバーフローさせると、以後ノイズ音になる場合があります】</b></p>
+  <p data-start="695" data-end="791">　一度に<b>異なるチャンネル</b>で多数のBGSやSEを同時再生したり、再生速度（周波数）を極端に上げた音声を10曲以上再生したりすると、内部ミキサーの音量が限界（0dB）を超えてしまい、<b><span style="color : #cc0000;">以後、（小さい音声でも）特定の周波数帯域でノイズが発生する</span></b>ようになる場合があります。</p>
+  <p data-start="843" data-end="852">　そうなった場合、対策としては、 </p>
+  <ul data-start="855" data-end="910">
+<li data-start="855" data-end="868">
+<p data-start="857" data-end="868">同時再生数を減らす</p>
+</li>
+<li data-start="871" data-end="906">
+<p data-start="873" data-end="906">音量を減らす、高すぎる再生周波数を1000％以下に抑える（再生周波数を高くするほど波形のピーク部分が短時間に集中し、ある一瞬の音量が大きくなりやすくなります）</p>
+</li>
+</ul>
+  <p data-start="913" data-end="984">　などを行ってください。</p>
+  <hr>
 <p><br>
 </p>
 
 </div>
 </BODY>
-</HTML>
+</html>
