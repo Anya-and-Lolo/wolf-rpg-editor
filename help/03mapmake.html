@@ -4,34 +4,36 @@
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <META http-equiv="Content-Style-Type" content="text/css">
-<TITLE>1.マップの新規作成から登録まで</TITLE><LINK rel="stylesheet" href="./style.css">
-
-
+<TITLE>1.マップの新規作成から登録まで</TITLE>
+<link rel="stylesheet" href="style.css">
 <style>
-body {
+<!--
+
+body{
   margin: 0;
   display: flex;
   height: 100vh;
   overflow: hidden;
 
 }
-#menu-frame {
+#menu-frame{
   width: 185px;
   min-width: 185px;
   max-width: 185px;
   border-right: 1px solid #aaa;
   height: 100%;
 }
-#content {
+#content{
   flex-grow: 1;
   overflow-y: auto;
   padding: 16px;
 }
-iframe {
+iframe{
   width: 100%;
   height: 100%;
   border: none;
 }
+-->
 </style>
 </HEAD>
 <BODY>
@@ -49,67 +51,77 @@ iframe {
 RPGエディターでは、<B>マップを作成してもシステムデータベースに登録しないとゲームで使うことができません</B>。<BR>
 <BR>
 <BR>
-　まず、マップの新規作成を行います。<BR>
-<BR>
-　<IMG src="./Map_newmap.png" border="0"><BR>
-　この左端のアイコンをクリックすると、「マップの新規作成」ウィンドウが表示されます。<BR>
-<BR>
+  　まず、マップの新規作成を行います。2通りの方法があります。<BR>
+  <br>
+  <br>
+  <b><span style="font-size : 120%;">【方法1】</span></b><BR>
+　<img src="Map_newmap.png" border="1"><BR>
+  　メインウィンドウの左端のアイコンをクリックすると、「マップの新規作成」ウィンドウが表示されます。<br>
+  <br>
+  <br>
+  <b><span style="font-size : 120%;">【方法2】</span></b><br>
+  　<img src="Map_newmap1.png" border="1"><br>
+  　または、「マップ選択」ウィンドウ上で、子マップを作りたい位置を選択して「右クリック」し、「マップの新規作成」を選ぶことでも新規マップを作成できます。<br>
+  <br>
+  <br>
+  <br>
+  <br>
+  　どちらの場合でも、以下の「マップの新規作成」ウィンドウが表示されます。<BR>
 
 
 <TABLE border="0">
 <TBODY>
 <TR>
-<TD><IMG src="./Map_newmap2.png" border="0"></TD>
-      <TD valign="top" width="310"><B><BR>
-【マップの保存フォルダとファイル名】</B><BR>
-      　保存したいフォルダを左のプルダウンメニューから選び、<BR>
-      保存したいファイル名を右の文字入力欄に入力します。<BR>
+        <td><b><span style="font-size : 120%;">【マップの新規作成ウィンドウ】</span></b><br>
+        　<img src="Map_newmap2.png" border="0" style="width : 667px;height : 397px;"><br>
+        <b><br>
+【マップの保存フォルダとファイル名】</b><BR>
+        　「保存したいフォルダ」を左のプルダウンメニューから選び、「保存したいファイル名」を右の文字入力欄に入力します。<br>
+        　すでに初期状態で仮のマップファイル名（Map004など）が入っているので、変更しなくても問題ありません。<BR>
+        <br>
+        <b>【登録先】</b><br>
+        　システムDBの「タイプ0：マップ設定」に保存する際の「登録ID番号」と「登録名」を指定します。<br>
+        　「登録名」は「マップ選択」ウィンドウ上で表示される名前でゲーム中は表示されませんので、分かりやすいよう好きな名前を付けて構いません。<BR>
       <BR>
-      <BR>
-<B>【マップサイズ】</B><BR>　マップの大きさを指定します。単位はチップ数です。<BR>
-      <BR>
-      <BR>
+<B>【マップサイズ】</B><BR>
+        　マップの大きさを指定します。単位はチップ数です。<br>
+        　ループ設定もここで設定します。<BR>
+        <BR>
 <B>【タイルセット】</B><BR>　マップの描画に使用するタイルセットを選択します。<BR>
       <BR>
       <BR>
-<B>【登録先】</B><BR>
-      　マップファイル（mpsファイル）は通常、システムDBタイプ0番のデータベースにファイル名を書き込まないとゲームで使うことができません。しかし、ここで登録先を指定することで、簡単にシステムDBタイプ0番にそれらを書き込むことができます。<BR>
-      <BR>
-      　デフォルトで「登録する」のチェックが押されているので、あとは「<B>登録先</B>」を選択し、登録名、ループ設定、BGM、BGS、遠景設定を指定してください。<BR>
-　なお、ここの「登録名」はゲーム的には意味はありません、あなたがエディットする際に区別するための名前ですので、自由に設定してください。</TD>
-    </TR>
+<B>【再生するBGM・再生するBGS・遠景設定】</B><BR>
+        　必要ならBGM、BGS、遠景設定を指定してください。<BR>
+        　</td>
+      </TR>
 </TBODY>
 </TABLE>
-<P>　　　　　　　　　　　　<FONT size="+2"><B>↓</B></FONT>入力例</P>
+<P>　　　　　　　　　　　　<FONT size="+2"><B>↓</B></FONT>最低限の入力例</P>
 <TABLE>
 <TBODY>
 <TR>
-<TD><IMG src="./Map_newmap3.png" border="0"></TD>
-      <TD valign="top" width="310"><BR>
-      <BR>
-      <BR>
-　<FONT color="#ff0000">最低限、赤枠の部分だけ入力して「ＯＫ」を押せば、<BR>
-      マップの新規作成およびシステムデータベースへの<BR>
-      登録は完了します</FONT>。ここできっちり設定しなくとも、<BR>
-      後でマップの設定を変更したいときは、メインウィンドウの<BR>
-      <IMG src="./icon_mapsetting.gif" border="0"> 「<B><A href="./02mapsetting.html">マップの基本設定</A></B>」で再設定が可能です。<BR>
-      </TD>
-    </TR>
+        <td><img src="Map_newmap3.png" border="0" style="width : 683px;height : 405px;"><br>
+        <br>
+        　<FONT color="#ff0000">最低限、赤枠の「登録名」の部分だけ入力して「ＯＫ」を押せば、マップの新規作成およびシステムデータベースへの登録は完了します</FONT>。<br>
+        　ここできっちり設定しなくとも、後でマップの設定を変更したいときは、メインウィンドウの<img src="icon_mapsetting.gif" border="0"> 「<B><a href="02mapsetting.html">マップの基本設定</a></B>」で再設定が可能です。<br>
+        <BR>
+        </td>
+      </TR>
 </TBODY>
 </TABLE>
 <P>　さて、マップの新規作成からシステムデータベースへの登録はここまでで終わりですが、新規作成されたマップは何も描かれていないので、少しマップを作ってみましょう。<BR>
 　レイヤー選択ボタンを押して表示される「マップチップ」ウィンドウからチップを選び、以下のようなマップを書いてみます。<BR>
 <BR>
-　<IMG src="./Map_newmap4.png" border="0"><BR>
+　<img src="Map_newmap4.png" border="0"><BR>
 <BR>
 　マップを描いたら、「上書き保存」のアイコンをクリックして保存しましょう。保存すると、タイトルバーの「*」の文字が消えます。<BR>
-　この「*」マークは、記録されてる状態からマップを変更したかどうかを表すマークで、何か描いたり、イベントを作成したりすると表示されます。<BR>
+  　この「*」マークは、記録されてる状態から何かマップを変更したかを表すマークで、何か描いたり、イベントを作成したりすると表示されます。<BR>
 <BR>
 　<BR>
 　以上の手順で、マップの新規作成からシステムデータベースへの登録、簡単なマップの作成までが完了しました。<BR>
 　では、次はゲームの開始位置の設定方法について説明します。<BR>
 <BR>
-　　 【<A href="./03mapstartpos.html">2.スタート位置の設定</A>】<BR>
+　　 【<a href="03mapstartpos.html">2.スタート位置の設定</a>】<BR>
 　<BR>
 　</P>
 
