@@ -256,8 +256,8 @@ EDF</span>
 <br>
 <br>
 <b>【合成音声系】<br>
-</b>- <a href="#VOICE1" class="glink"><b>1.Windowsの合成音声で読み上げさせる <span>&lt;&lt;MS_VOICE_PLAY/SPEED=(数値)/VOL=(数値)/VOICE=(合成音声名)&gt;&gt;(読み上げ文字列)</span></b></a>
-<span style="display: none;" id="codeVOICE1">&lt;&lt;MS_VOICE_PLAY/SPEED=0/VOL=100/VOICE=Microsoft Haruka Desktop - Japanese&gt;&gt;読み上げ文章です</span>
+</b>- <a href="#VOICE1" class="glink"><b>1.Windowsの合成音声で読み上げさせる <span>&lt;&lt;MS_VOICE_PLAY/ABS/SPEED=(数値)/VOL=(数値)/VOICE=(合成音声名)&gt;&gt;(読み上げ文字列)</span></b></a>
+<span style="display: none;" id="codeVOICE1">&lt;&lt;MS_VOICE_PLAY/ABS/SPEED=0/VOL=100/VOICE=Microsoft Haruka Desktop - Japanese&gt;&gt;読み上げ文章です</span>
 <button onclick="copyToClipboard('codeVOICE1', this)" class="copy-button">📋 Copy</button>
 <br>
 - <a href="#VOICE2" class="glink"><b>2.使用可能なWindowsの合成音声名をリストアップする &lt;&lt;GET_MS_VOICE_LIST&gt;&gt; </b></a>
@@ -653,17 +653,20 @@ EDF</span>
 <hr>
 <P>
 <b><span style="font-size : 150%;">【合成音声系】</span></b></P>
-<p>　<a id="VOICE1"></a><B>【1】Windowsの合成音声で読み上げさせる　<span style="color : #cc0000;">&lt;&lt;MS_VOICE_PLAY/SPEED=</span><span style="color : #0000ff;">(数値1)</span><span style="color : #cc0000;">/VOL=</span><span style="color : #0000ff;">(数値2)</span><span style="color : #cc0000;">/VOICE=</span><span style="color : #0000ff;">(合成音声名)</span><span style="color : #cc0000;">&gt;&gt;</span><span style="color : #0000ff;">(読み上げ文字列)</span> </B>
-<span style="display: none;" id="codeVOICE1">&lt;&lt;MS_VOICE_PLAY/SPEED=0/VOL=100/VOICE=Microsoft Haruka Desktop - Japanese&gt;&gt;読み上げ文章です</span>
+<p>　<a id="VOICE1"></a><B>【1】Windowsの合成音声で読み上げさせる　<span style="color : #cc0000;">&lt;&lt;MS_VOICE_PLAY/ABS/SPEED=</span><span style="color : #0000ff;">(数値1)</span><span style="color : #cc0000;">/VOL=</span><span style="color : #0000ff;">(数値2)</span><span style="color : #cc0000;">/VOICE=</span><span style="color : #0000ff;">(合成音声名)</span><span style="color : #cc0000;">&gt;&gt;</span><span style="color : #0000ff;">(読み上げ文字列)</span> </B>
+<span style="display: none;" id="codeVOICE1">&lt;&lt;MS_VOICE_PLAY/ABS/SPEED=0/VOL=100/VOICE=Microsoft Haruka Desktop - Japanese&gt;&gt;読み上げ文章です</span>
 <button onclick="copyToClipboard('codeVOICE1', this)" class="copy-button">📋 Copy</button>
  （Ver3.60以降）</p>
-<p>　たとえば「<b>手動入力</b>」欄に「<B><span style="color : #cc0000;">&lt;&lt;MS_VOICE_PLAY/SPEED=1/VOL=100/VOICE=Microsoft Haruka Desktop -
-Japanese&gt;&gt;読み上げられる文章です</span></B>」と指定すると、速度+1、音量100で日本語で「読み上げられる文章です」と合成音声で再生されます。<br>
+<p>　たとえば「<b>手動入力</b>」欄に「<B><span style="color : #cc0000;">&lt;&lt;MS_VOICE_PLAY/ABS/SPEED=1/VOL=100/VOICE=Microsoft Haruka Desktop
+  - Japanese&gt;&gt;読み上げられる文章です</span></B>」と指定すると、速度+1、絶対音量100で日本語で「読み上げられる文章です」と合成音声で再生されます。<br>
 　<b>パラメータはいずれも省略可能</b>で、最小入力だと「<b><span style="color : #cc0000;">&lt;&lt;MS_VOICE_PLAY&gt;&gt;こんにちは</span></b>」だけでも再生可能です<br>
+  <br>
+  - <b>/ABS</b> (絶対音量) を入れた場合、↓のVOL値が「<b>絶対音量</b>」として再生されます。(Ver3.678以降で有効化)<br>
+  　/ABSがない場合はVOL値が「<b>SE音量に比例した相対音量</b>」で再生されます。通常は/ABSを入れておくほうが分かりやすいでしょう。<br>
 - <b>SPEED</b>（再生速度）は<b>-10～10</b>までの範囲で指定でき、数値が大きいほど高速で読み上げられます。「<b>0</b>」がデフォルトで、標準速度です。<br>
-- <b>VOL</b>（音量）は<b>0～100</b>までで、<b>「Sys102:SE音量補正[%]」</b>の影響を受けます。デフォルトは「<b>100</b>」です。<br>
+- <b>VOL</b>（音量）は<b>0～無制限</b>の範囲で指定できます。<b>/ABS</b>がない場合は<b>「Sys102:SE音量補正[%]」×VOL%</b>が再生音量になります（つまりVOL=100なら「Sys102:SE音量補正」と同じ数値の音量になります）。デフォルトは「<b>100</b>」です。<br>
 - <b>VOICE</b>(合成音声名)に指定できるのは、Windows側で認識されている合成音声名です。デフォルト音声はプレイヤー側のWindows設定によって変わると思います。<br>
-　Windows11の初期状態では、合成音声名として「<b>Microsoft Haruka Desktop - Japanese</b>」か「<b>Microsoft Zira Desktop - English (United States)</b>」のみ指定可能です<span style="color : #999999;">（長いですが正しく入力してください。これを指定しない場合は「</span><span style="color : #cc0000;"><b>最後に使用された合成音声名</b></span><span style="color : #999999;">」が選ばれている気がします。使用可能な合成音声リストは後述の<b>&lt;&lt;GET_MS_VOICE_LIST&gt;&gt;</b>で得ることができます）</span><br>
+  　日本語Windows11の初期状態では、合成音声名として「<b>Microsoft Haruka Desktop - Japanese</b>」か「<b>Microsoft Zira Desktop - English (United States)</b>」のみ指定可能でした<span style="color : #999999;">（長いですが正しく入力してください。これを指定しない場合は「</span><span style="color : #cc0000;"><b>最後に使用された合成音声名</b></span><span style="color : #999999;">」が選ばれている気がします。使用可能な合成音声リストは後述の<b>&lt;&lt;GET_MS_VOICE_LIST&gt;&gt;</b>で得ることができます）</span><br>
 <br>
 　返り値は常に「1」が返されます。<br>
 　<b><span style="color : #cc0000;">もしすでに合成音声が再生されている最中に新たに再生しようとした場合、前の合成音声は中断され、新しい音声のみ再生開始</span></b>されます。<br>
