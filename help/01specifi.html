@@ -68,9 +68,9 @@ iframe{
 【10】<a href="#10" class="glink">ウェイト有りの「トランジション実行」中は「並列イベント」の実行も一時停止する</a><br>
 【11】<a href="#11" class="glink">等幅フォントでも、フォントサイズが「奇数」の場合だけ「半角2文字」と「全角」がずれて表示される</a><br>
 【12】<a href="#12" class="glink">DBから出力したCSVファイル内の&lt;&lt;!--DATANAME--!&gt;&gt;を含む項目はデータID「手動で入力」による「データ名」を示す</a><br>
-【13】<a href="#13" class="glink">処理が500万回になってなくても500万回エラーは起きる(一部の重い処理で50倍カウントしてる)</a><br>
-
-<hr size="1" noshade id="1">
+  【13】<a href="#13" class="glink">処理が500万回になってなくても500万回エラーは起きる(一部の重い処理で50倍カウントしてる)</a><br>
+  【14】<a href="#14" class="glink">デフォルトのフォントサイズなどは「画面サイズ」をもとに決定されている</a><br>
+  <hr size="1" noshade id="1">
 <BR>
 <table class="mgray" cellpadding="6" cellspacing="1">
   <TBODY>
@@ -536,9 +536,36 @@ iframe{
     </TR>
   </TBODY>
 </table>
-<P><BR>
+  <hr size="1" noshade id="14">
+  <P>
 </P>
-<P><br>
+  <P>
+　
+</P>
+  <table class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <td class="fw" nowrap><span style="font-size : 120%;">【14】デフォルトのフォントサイズなどは「画面サイズ」を元に決定されている</span></td>
+    </TR>
+    <TR>
+      <TD class="white">　<br>
+        　ゲーム起動時、「デフォルトのフォントサイズ」やメッセージ、選択肢の表示位置などは<br>
+        「ゲーム基本設定」の「画面サイズ」を元に自動的に決定されます。<br>
+        <br>
+        　たとえば画面サイズ<b>[320×240[x2]]</b>なら「<b>Sys8：基本フォントサイズ</b>」は<b>12</b>、<br>
+        <b>[1280×720]</b>なら基本フォントサイズ<b>28</b>になります。<br>
+        　メッセージ表示位置（Sys1～2）や選択肢表示位置（Sys3～4）、<br>
+        ポーズカーソル位置（Sys5～6）なども同様に、画面サイズに合わせて初期値が算出されます。<br>
+        <br>
+        　ただ、これらはあくまでおおまかに決められた値なので、通常はあなたが<br>
+        これらの「システム変数」に数値を入力して、手動で設定し直すことをおすすめします。<br>
+        　</TD>
+    </TR>
+    </TBODY>
+  </table>
+  <P><BR>
+  </P>
+  <P><br>
 <br>
 <br>
 <br>
