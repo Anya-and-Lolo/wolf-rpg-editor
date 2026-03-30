@@ -8,30 +8,33 @@
 <LINK rel="stylesheet" href="style.css">
 
 <style>
-body {
+<!--
+
+body{
   margin: 0;
   display: flex;
   height: 100vh;
   overflow: hidden;
 
 }
-#menu-frame {
+#menu-frame{
   width: 185px;
   min-width: 185px;
   max-width: 185px;
   border-right: 1px solid #aaa;
   height: 100%;
 }
-#content {
+#content{
   flex-grow: 1;
   overflow-y: auto;
   padding: 16px;
 }
-iframe {
+iframe{
   width: 100%;
   height: 100%;
   border: none;
 }
+-->
 </style>
 </HEAD>
 <BODY>
@@ -129,7 +132,7 @@ size=+1>【ダウンロード】</FONT></B><BR>
 </P>
 <hr>
 <p><b>【裏技4】　http(s)://localhost　への接続に限り、連続接続ウェイトは増加しない<br>
-　<br>
+  　<br>
 </b>　【ダウンロード】機能は1分以内に連続して接続を行うと待ち時間が増加していきますが、<br>
 　接続先URLが自分である「<b>http://localhost:～</b>」や「<b>https://localhost/～</b>」などから始まる場合に限り<br>
 　連続接続時のウェイトが増加しないようになっています（Ver3.106以降）。<br>
@@ -138,7 +141,16 @@ size=+1>【ダウンロード】</FONT></B><BR>
 　この効果は適用されませんのでご注意ください。<br>
 　その場合は、「<b>127.0.0.1</b>」の部分を「<b>localhost</b>」に書き替えてご利用ください。<br>
 </p>
-<hr>
+  <hr>
+<p><b>【裏技5】　URLの先頭に「&lt;&lt;VERIFY_TLS&gt;&gt;」と入れるとTLS認証を確認する<br>
+  <br>
+  </b>　マニアックな話ですが、「<b>URL</b>」に「<b>&lt;&lt;VERIFY_TLS&gt;&gt;https://～～</b>」のように<br>
+  　先頭に「<b>&lt;&lt;VERIFY_TLS&gt;&gt;</b>」を足してURLを記述すると、<br>
+  　サーバー側に証明書期限切れやホスト名不一致があった場合に自動で通信中断を行うようになります（たぶん）。<br>
+  <br>
+  　作者が把握していないURLにダウンロードしにいく可能性がある場合など、接続先の信頼性が不明な場合にお使いください。<br>
+  </p>
+  <hr>
 <P><BR>
 <BR>
 
