@@ -303,6 +303,73 @@ A:hover.newstxA,A:active.newstxA{
       　※このページの更新履歴は上が新しい内容です</span><br>
       <br>
       <hr size="1" noshade>
+      <span style="font-size : 120%;"><b>【Ver3.689のアップデート内容】</b></span>　2026/4/7　 <a href="#top" class="green" style="width:200px;">↑トップへ</a><br>
+      <br>
+      <b><span style="font-size : 120%;"><br>
+      【新機能】</span></b><br>
+<br>
+      <b><span style="color : #cc0000;">●【デバッグ文・パフォーマンスモニター/新機能】</span></b><br>
+      　「デバッグ文」で「<b><span style="color : #cc0000;">PerformanceMonitor:ON:FRAME=1:TOP=10</span></b>」<br>
+      　のように記述して実行すると、以後、「1」フレームごと(FRAME=1)に、上位「10」位(TOP=10)の<br>
+　イベント処理時間が長くかかっている高負荷なイベントリストを<br>
+      　以下のような形でデバッグウィンドウに出力します。<br>
+      <table border="0">
+        <tbody>
+          <tr>
+            <td>　　</td>
+            <td><br>
+      <table border="1">
+        <tbody>
+          <tr>
+            <td>【パフォーマンスモニター(10ﾌﾚｰﾑ間隔)】<br>
+ｺﾓﾝ63 [X[共]メッセージウィンドウ] 0.05 ms<br>
+ｺﾓﾝ126 [X[移]歩行時_並列キー処理] 0.02 ms<br>
+                  Map1 Ev11 [メニューの男] 0.01 ms</td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+→　「FRAME」の値を増やすと、そのフレーム間隔で処理時間が出力されます。<br>
+→　「TOP」の値を変えると、その順位分だけを出力することができます。<br>
+→　「ON」のところを「ON2」にすると、デバッグ文には表示されなくなり、<br>
+      　　後述の「SysS82:[読]ﾊﾟﾌｫｰﾏﾝｽﾓﾆﾀｰ最終出力文」にのみ出力されます。<br>
+      →　「ON」のところを「OFF」にすると、パフォーマンスモニターは終了します。<br>
+<br>
+<br>
+      <b><span style="color : #cc0000;">●【システム文字列/新機能】</span></b><br>
+      <span style="color : #cc0000;">　システム文字列「SysS82:[読]ﾊﾟﾌｫｰﾏﾝｽﾓﾆﾀｰ最終出力文」を追加。</span><br>
+　デバッグ文に表示されるパフォーマンスモニターの内容のうち、<br>
+　最後に出力された内容が返されます。<br>
+　ゲーム画面内に表示したい場合などにご利用ください。<br>
+<br>
+<br>
+<br>
+      <b><span style="font-size : 120%;"><br>
+      【ゲーム部の修正】<br>
+      </span></b><br>
+●【システム変数/不具合】<br>
+　仮想全画面（F11など）にしている際、<br>
+　システム変数の「Sys71/72:マウスX/Y座標」に座標を代入すると<br>
+　画面拡大が考慮されていない座標にカーソルが飛んでしまうバグを修正<br>
+<br>
+●【ピクチャ/不具合】<br>
+      　徐々にピクチャの拡大率を変更する際、表示座標がブレて描画されてしまっていた現象を修正<br>
+      　　左：旧拡大描画（ブレながら拡大）　　右：修正後の拡大描画（安定して拡大）<br>
+      　　<img src="old_releaselog/image/20260405_WoditorOldExtend.gif" width="196" height="196" border="0">　　　<img src="old_releaselog/image/20260405_WoditorNewExtend.gif" width="196" height="196" border="0"><br>
+      <br>
+      <br>
+      <b><span style="font-size : 120%;"><br>
+      【エディター部の修正】</span></b><br>
+<br>
+●【コモンイベントウィンドウ/不具合】<br>
+　右クリックの「この範囲を0回ループに入れる」をした後に<br>
+　「一つ元に戻す」を実行すると2手分戻ってしまうバグを修正<br>
+      <br>
+      <hr size="1" noshade>
       <span style="font-size : 120%;"><b>【Ver3.688のアップデート内容】</b></span>　2026/4/2　 <a href="#top" class="green" style="width:200px;">↑トップへ</a><br>
       <br>
       <b><span style="font-size : 120%;"><br>
