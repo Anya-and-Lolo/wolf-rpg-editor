@@ -304,17 +304,75 @@ A:hover.newstxA,A:active.newstxA{
       <br>
       <br>
       <hr size="1" noshade>
+      <span style="font-size : 120%;"><b>【Ver3.700のアップデート内容】</b></span>　2026/5/16　 <a href="#top" class="green" style="width:200px;">↑トップへ</a><br>
+      <br>
+      <b><span style="font-size : 120%;"><br>
+      【新機能】</span></b><br>
+<br>
+●【スタートガイド/新機能】<br>
+　初心者向けのヒント集として「スタートガイド」ウィンドウを追加。<br>
+　「ヘルプ」→「スタートガイド」から開くことができます。<br>
+      　今は基本的な内容だけですが、必要に応じて今後追加予定です。<br>
+      <br>
+      　<img src="old_releaselog/image/20260516_StartGuide2.jpg" border="0" width="543" height="263"><br>
+      <b><span style="font-size : 120%;"><br>
+      <br>
+      <br>
+      【ゲーム部の修正】</span></b><br>
+<br>
+●【システム文字列/不具合】<br>
+　「SysS82:[読]ﾊﾟﾌｫｰﾏﾝｽﾓﾆﾀｰ最終出力文]の文字列の内部改行コードが<br>
+　他と異なるコードになっていたバグ修正<br>
+ → この影響で、一見内容が同じなのに「条件（文字列）」の比較で<br>
+      　　判定が成立しないことがある問題が起きていました。<br>
+<br>
+●【サウンド/不具合】<br>
+　「BGS」を「同じチャンネル」で音声を切り替える際、<br>
+　2つめのフェード再生が完了する前に「全チャンネル停止」を入れると<br>
+      　1つめの音声再生が残ったままになるバグを修正。<br>
+      <br>
+      <br>
+      <hr size="1" noshade>
+      <span style="font-size : 120%;"><b>【Ver3.699のアップデート内容】</b></span>　2026/5/13　 <a href="#top" class="green" style="width:200px;">↑トップへ</a><br>
+      <b><span style="font-size : 120%;"><br>
+      <br>
+      【ゲーム部の修正】</span></b><br>
+      <br>
+●【DB操作/不具合】<br>
+　DB操作のVer3.696～3.698の修正において、<br>
+　「名前を付けたデータ数」しかデータ数としてカウントされてなかったために、<br>
+　データがあるのに「データが存在しないエラー」が<br>
+　出てしまうことがあったバグ修正<br>
+<br>
+      <br>
+      <hr size="1" noshade>
+      <span style="font-size : 120%;"><b>【Ver3.698のアップデート内容】</b></span>　2026/5/12　 <a href="#top" class="green" style="width:200px;">↑トップへ</a><br>
+      <b><span style="font-size : 120%;"><br>
+      <br>
+      【ゲーム部の修正】</span></b><br>
+<br>
+●【DB操作/不具合】<br>
+　DB操作のVer3.696～3.697の修正によって、<br>
+　データが存在するのに[固定値](100万未満)で<br>
+　[データ番号]を指定したときにもエラーが<br>
+　出てしまうようになっていたバグ修正<br>
+<br>
+      <br>
+      <hr size="1" noshade>
       <span style="font-size : 120%;"><b>【Ver3.697のアップデート内容】</b></span>　2026/5/11　 <a href="#top" class="green" style="width:200px;">↑トップへ</a><br>
       <br>
       <b><span style="font-size : 120%;"><br>
       【ゲーム部の修正】</span></b><br>
 <br>
 ●【DB操作/不具合】<br>
-　Ver3.696で修正した内容のうち、<br>
-　DB操作の代入の[数値]処理で、「ユーザDB」や「システムDB」における<br>
-　「データ番号」が限界を超えている場合のエラー処理の条件として、<br>
-　「変数(100万以上)」でなく「固定値（100万未満）」が指定された場合のみ<br>
-　エラーが出るよう調整<br>
+      　Ver3.696で修正した内容のうち、<br>
+      <br>
+      　・DB操作の代入の[数値]処理で、「ユーザDB」や「システムDB」における<br>
+      　　「データ番号」が限界を超えている場合のエラー処理の条件として、<br>
+      　　「変数(100万以上)」でなく「固定値（100万未満）」が指定された場合のみ<br>
+      　　エラーが出るよう調整<br>
+      <br>
+      　・上記エラー文のDB名がユーザDBとシステムDBが逆になってたミス修正<br>
 <br>
       <br>
       <hr size="1" noshade>
