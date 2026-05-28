@@ -16,14 +16,18 @@ A:HOVER,A:ACTIVE{color : #88d6dc;text-decoration : underline;}
 
 /*--ﾃｰﾌﾞﾙ--*/
 TABLE{
-  font-size : 10pt;
-  line-height: 120%;
+  font-size : 11pt;
+  line-height: 130%;
 }
 
 
 P.menu{
   line-height: 130%;
   padding: 20px;
+}
+
+.note {
+  font-size : 10pt;
 }
 
 /*--線色--*/
