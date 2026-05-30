@@ -1,0 +1,52 @@
+.translation-banner {
+  display: block;
+  clear: both;
+  width: 100%;
+  box-sizing: border-box;
+
+  background-color: #f8fafc;
+  color: #334155;
+  border-top: 1px solid #e2e8f0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  font-size: 15px;
+  line-height: 1.6;
+  padding: 14px 20px;
+}
+
+.translation-banner-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.translation-banner-content {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.translation-banner-text {
+  font-weight: 400;
+}
+
+.translation-banner-text strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.translation-banner-link {
+  color: #2563eb !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+  margin-left: 8px;
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+
+.translation-banner-link:hover {
+  color: #1d4ed8 !important;
+  text-decoration: underline;
+  /* Override the link hover background in the release log pages */
+  background: transparent;
+}
