@@ -3,7 +3,6 @@ BODY{background-color : #fdfffd;
   font-size : 11pt;
   color : #437543;
   margin: 20px 0px 0px 5px;
-
 }
 
 /*--リンク色--*/
@@ -12,14 +11,11 @@ A:LINK{color:#38869c;text-decoration : underline;}
 A:VISITED{color:#a85c96;text-decoration : underline;}
 A:HOVER,A:ACTIVE{color : #88d6dc;text-decoration : underline;}
 
-
-
 /*--ﾃｰﾌﾞﾙ--*/
 TABLE{
   font-size : 11pt;
   line-height: 130%;
 }
-
 
 P.menu{
   line-height: 130%;
