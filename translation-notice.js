@@ -24,6 +24,20 @@
   const menuFrame = document.querySelector('#menu-frame');
   const parent = menuFrame ? document.querySelector('#content') : document.body;
 
+  // Create a padded wrapper
+  const wrapper = document.createElement('div');
+  wrapper.style.paddingLeft = '20px';
+  wrapper.style.paddingRight = '30px';
+
+  // Move all existing page content into the wrapper
+  while (parent.firstChild) {
+  wrapper.appendChild(parent.firstChild);
+  }
+
+  // Put wrapper back into page
+  parent.appendChild(wrapper);
+
+  // Add the translation notice AFTER the wrapper
   parent.appendChild(translationBanner);
 
   parent.style.paddingBottom = '0px';
