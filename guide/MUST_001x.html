@@ -13,11 +13,11 @@
 <H2>◆ Creating your first event</H2>
 <HR>
 <P>[Goal] <BR><BR>
-　In the Sample Game's "<B>Sample Map A</B>" we'll create a new <B>chicken event<BR>
+　In the Sample Game's "<B>Sample Map A</B>", we'll create a new <B>chicken event<BR>
 　that says "Cock-a-doodle-doo♪" when the player talks to it</B>.<BR>
 <BR>
 　<i class="note">※ <B>What is an event?</B><BR>
-　　For now, you can think of an event as "an NPC in an RPG villager that does or says <BR>
+　　For now, think of an event as "an RPG villager or creature that does or says <BR>
 　　something when you interact with it". That's all you need to know for now.</i></P>
 <HR>
 <TABLE border="0">
@@ -25,7 +25,7 @@
     <TR>
       <TD nowrap>[1]　<B>Switch the map</B><BR><BR>
       　Open the <B>Map Selection</B> window by clicking the &nbsp; &nbsp;<BR>
-      　<IMG src="image/icon_mapselector.png" width="22" height="20" border="0"> icon and select "<B>1: Sample Map A</B>".<BR>
+      　<IMG src="image/icon_mapselector.png" width="22" height="20" border="0"> icon, then select "<B>1: Sample Map A</B>."<BR>
       　<BR>
       </TD>
       <TD nowrap><IMG src="image/mapselector.jpg" width="186" border="1"></TD>
@@ -38,10 +38,10 @@
       <TD nowrap>[2]　<B>Switch the map layer</B><BR><BR>
       　Switch to the <B>Event Layer</B> <IMG src="image/icon_eventlayer.png" width="22" height="20" border="0">.<BR>
       　<B>Right-click</B> near the area just above the tranfer &nbsp; &nbsp;<BR>
-      　destination position. A menu like the one shown<BR>
-      　on the right will appear.<BR>
+      　destination position. A menu like the one on the<BR>
+      　right will appear.<BR>
       <BR>
-      　Select "<B>Create/Edit Event</B>".</TD>
+      　Select "<B>Create/Edit Event</B>."</TD>
       <TD nowrap><IMG src="image/MUST_001_newevent.jpg" width="425" border="0"></TD>
     </TR>
   </TBODY>
@@ -50,7 +50,7 @@
 <TABLE border="0">
   <TBODY>
     <TR>
-      <TD nowrap>[3]　<B>Create new event</B><BR><BR>
+      <TD nowrap>[3]　<B>Create a new event</B><BR><BR>
       　The <B>Event Settings</B> window will appear, as shown&nbsp;<BR>
       　on the right.<BR>
       <BR>
@@ -63,7 +63,7 @@
 <TABLE border="0">
   <TBODY>
     <TR>
-      <TD nowrap>[4]　<B>Set the event sprite</B><BR><BR>
+      <TD nowrap>[4]　<B>Set the event graphics</B><BR><BR>
       　Let's set the event's walking sprite first. To do &nbsp; &nbsp; &nbsp; &nbsp;<BR>
       　that, <B>double-click the area highlighted in<BR>
       　red</B>.<BR>
@@ -81,7 +81,8 @@
       　Select "<B>Animal_Chicken.png</B>" and click "<B>OK</B>".<BR>
       <BR>
       <BR>
-      　<i class="note">※ You can click the character image in the<BR>
+      　<i class="note"><B>※ Tip:</B> <BR>
+      　　You can click the character image in the<BR>
       　　right-hand preview area to change the<BR>
       　　direction the character is facing.</i></TD>
       <TD nowrap><IMG src="image/MUST_001xev3.jpg" width="328" border="1"></TD>
@@ -92,9 +93,9 @@
 <TABLE border="0">
   <TBODY>
     <TR>
-      <TD nowrap>[6]　<B>Done!</B><BR><BR>
+      <TD nowrap>[6]　<B>Great work!</B><BR><BR>
       　The chicken sprite has now been successfully &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<BR>
-      　assigned to an event.</TD>
+      　assigned to the event.</TD>
       <TD nowrap><IMG src="image/MUST_001xev31.jpg" width="111" border="1"></TD>
     </TR>
   </TBODY>
@@ -103,12 +104,12 @@
 <TABLE border="0">
   <TBODY>
     <TR>
-      <TD nowrap>[7]　<B>Make it speak</B><BR><BR>
+      <TD nowrap>[7]　<B>Let's make it talk</B><BR><BR>
       　Next, let's add some dialogue for the chicken.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<BR>
       <BR>
       　Click the button in the lower-right corner of<BR>
       　the Event Window:<BR>
-      　"<B>■ Command Input Window ■</B>"<BR></TD>
+      　"<B>■ Open Command Window ■</B>"<BR></TD>
       <TD nowrap><IMG src="image/MUST_001xev2.jpg" width="260" border="0"></TD>
     </TR>
   </TBODY>
@@ -117,11 +118,11 @@
 <TABLE border="0">
   <TBODY>
     <TR>
-      <TD nowrap>[8]　<BR><BR>
-      　The "<B>Insert Event Command</B>" window will open.<BR>
-      　Make sure the selected tab is "<B>Show Message</B>",<BR>
+      <TD nowrap>[8]　<B>Open Command Window</B><BR><BR>
+      　The "<B>Command Window</B>" will now open.<BR>
+      　Make sure the selected tab is "<B>Show Message</B>",&nbsp; &nbsp; &nbsp;<BR>
       　as shown on the right.</TD>
-      <TD nowrap><IMG src="image/window_text.jpg" width="300" height="254" border="0"></TD>
+      <TD nowrap><IMG src="image/window_text.jpg" width="400" border="1"></TD>
     </TR>
   </TBODY>
 </TABLE>
@@ -129,10 +130,11 @@
 <TABLE border="0">
   <TBODY>
     <TR>
-      <TD nowrap>[9]　<BR><BR>
-      　Type "<B>Cock-a-doodle-doo♪</B>" in the text input field,<BR>
-      　then click the "<B>Input</B>" button.</TD>
-      <TD nowrap><IMG src="image/MUST_001xev4.jpg" width="260" height="146" border="0"></TD>
+      <TD nowrap>[9]　<B>Add Show Message command</B><BR><BR>
+      　In the text input field, type what the chicken<BR>
+      　says. Something like: "<B>Cock-a-doodle-doo♪</B>", &nbsp; &nbsp; &nbsp; &nbsp;<BR>
+      　and click the "<B>Insert</B>" button.</TD>
+      <TD nowrap><IMG src="image/MUST_001xev4.jpg" width="400" border="1"></TD>
     </TR>
   </TBODY>
 </TABLE>
@@ -140,15 +142,14 @@
 <TABLE border="0">
   <TBODY>
     <TR>
-      <TD nowrap>[10]<BR><BR>
-      　If everything looks like the image on the right,<BR>
-      　you've succeeded.<BR>
+      <TD nowrap>[10]　<B>Double-check the event settings</B><BR><BR>
+      　If your event looks like the example shown on&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<BR>
+      　the right, you’ve set it up correctly.<BR>
       <BR>
-      　The <B>Trigger Condition</B> is already set to<BR>
-      　"<B>Execute on Confirm key</B>",<BR>
-      　so this event will work as a<BR>
-      　talk-triggered event right away.</TD>
-      <TD nowrap><IMG src="image/MUST_001xev5.jpg" width="412" height="186" border="0"></TD>
+      　By default, the event <B>Trigger</B> is already set to<BR>
+      　"<B>Confirm key</B>". This means the event will activate<BR>
+      　when the player presses the key while facing it.<BR></TD>
+      <TD nowrap><IMG src="image/MUST_001xev5.jpg" width="500" border="1"></TD>
     </TR>
   </TBODY>
 </TABLE>
@@ -156,13 +157,12 @@
 <TABLE border="0">
   <TBODY>
     <TR>
-      <TD nowrap>[11]　<BR><BR>
-      　Click the "<B>Save (Entire Map)</B>" button<BR>
-      　at the bottom-right of the Event window,<BR>
-      　then click "<B>Test Play</B>"<BR>
-      　to save this map (with the new event)<BR>
-      　and start a test play.</TD>
-      <TD nowrap><IMG src="image/MUST_001xev6.png" width="247" height="100" border="0"></TD>
+      <TD nowrap>[11]　<B>Remember to save it!</B><BR><BR>
+      　Click the "<B>Save (Entire Map)</B>" button in the<BR>
+      　lower-right corner of the Event window. Then click&nbsp; &nbsp;<BR>
+      　"<B>Test Play (F9)</B>". This will save the map with<BR>
+      　the new event and start a test play session.</TD>
+      <TD nowrap><IMG src="image/MUST_001xev6.jpg" width="237" border="0"></TD>
     </TR>
   </TBODY>
 </TABLE>
@@ -170,51 +170,49 @@
 <TABLE border="0">
   <TBODY>
     <TR>
-      <TD nowrap>[12]　<BR><BR>
-      　Select "New Game" on the title screen,<BR>
-      　skip through the intro, then<BR>
-      <B>　press the Confirm key while facing the chicken<BR>
-      　to talk to it!</B><BR>
+      <TD nowrap>[12]　<B>Let's play test</B><BR><BR>
+      　At the title screen, select "<B>New Game</B>".<BR><BR>
+      　After the introduction finishes, walk up to the<BR>
+      　chicken you just created, and press the<BR>
+      　<B>Confirm Key</B> while facing it. &nbsp;<BR>
       <BR>
-      　It said "Cock-a-doodle-doo♪"!<BR>
+      　The chicken should say: <B>"Cock-a-doodle-doo♪"</B>&nbsp; &nbsp; &nbsp; <BR>
       <BR>
-      　Your first event is complete!<BR>
-      　Great work!</TD>
-      <TD nowrap><IMG src="image/MUST_001xev7.png" width="318" height="240" border="0"></TD>
+      　Great job, and <B>congratulations</B> on creating <BR>
+      　your first event!</TD>
+      <TD nowrap><IMG src="image/MUST_001xev7.jpg" width="400" border="0"></TD>
     </TR>
   </TBODY>
 </TABLE>
 <HR>
-<BR>
-<P><BR>
-<BR>
-<BR>
-　　</P>
-<HR>
 <TABLE border="0">
   <TBODY>
     <TR>
-      <TD nowrap><B>[Side Note]<BR>
-      　Can I put anything I want in the event "Name" field?</B><BR>
+      <TD nowrap><BR><B>[Extra Note]<BR><BR>
+      　What is the "Name" field actually used for?</B><BR>
       <BR>
-      　When you set a graphic, the filename is automatically entered<BR>
-      　in the "<B>Name</B>" field, but you can change it<BR>
-      　to anything — "<B>Chicken</B>", "<B>Cock-a-doodle-doo Event</B>", whatever you like.<BR>
+      　When you assign a sprite to an event, the filename &nbsp; <BR>
+      　is automatically entered in the "<B>Name</B>" field.<BR><BR>
+      　However, you're free to change it to anything you<BR>
+      　like, such as "<B>Cock-a-doodle-doo</B>", "<B>Talking<BR>
+      　Chicken</B>" or just "<B>Chicken</B>".<BR>
       <BR>
-      　So what is the "<B>Name</B>" actually used for?<BR>
-      　While editing the Event Layer, hovering the cursor over an event<BR>
-      　will show that event's "<B>Name</B>" in the <B>title bar</B>.<BR>
+      　When you place your cursor over an event while<BR>
+      　editing the Event Layer, the event's name will<BR>
+      　appear in the <B>title bar</B>.<BR>
       　<BR>
-      　That's all it does — so a cool name won't get you anything!</TD>
-      <TD nowrap><IMG src="image/MUST_001xev8.png" width="191" height="173" border="0"></TD>
+      　That's all it does, so giving it a cool name won’t<BR>
+      　grant it any special powers 😊
+	  <BR><BR>
+      　→ <B><A href="MUST_002.html" target="B">Creating a new map</A></B><BR>
+      　← <B><A href="MUST_001.html" target="B">Switching the map you’re editing</A></B><BR><BR>
+	  </TD>
+      <TD nowrap><IMG src="image/MUST_001xev8.jpg" width="230" border="1"></TD>
     </TR>
   </TBODY>
 </TABLE>
-<HR>
-<HR>
-<P>&lt;Author: <A href="http://www.silversecond.net/" target="_blank">SmokingWOLF</A>&gt;　</P>
-<HR>
-<A href="index.html" target="_top">[If you don't see the navigation frame on the left, click here]</A>
+<HR><BR>
+<A href="index.html" target="_top">[If you don't see the navigation menu on the left, click here]</A>
 <P><BR>
 </P>
 </BODY>
