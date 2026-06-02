@@ -9,20 +9,20 @@
 <script defer src="../translation-notice.js"></script>
 </HEAD><BODY>
 <HR>
-<H2>[I want to move the player character to a different map]</H2>
+<H2>◆ Moving the player to another map</H2>
 <HR>
-<P>[Goal] <BR>
-　We will create an <B>invisible event next to the barrel in Sample Map A<BR>
-　that teleports the player to Sample Map B when touched</B>.</P>
+<P>[Goal] <BR><BR>
+　Create an <B>invisible event</B> next to the barrel in <B>Sample Map A</B><BR>
+　that <B>transfers</B> the player to <B>Sample Map B</B> when touched</B>.</P>
 <TABLE border="0">
   <TBODY>
     <TR>
       <TD align="center"><IMG src="image/MUST_003_6.gif" width="161" height="143" border="0"><BR>
-      Walk to the barrel in Sample Map A...</TD>
-      <TD><B><FONT size="+3">&#160;→</FONT></B><FONT size="+3"> </FONT><B><FONT size="-1">.</FONT><BR>
+      When you walk next to the barrel on Sample Map A...</TD>
+      <TD><B><FONT size="+3">&#160;→</FONT></B><FONT size="+3"> </FONT><B><FONT size="-1">&nbsp;</FONT><BR>
       </B>　</TD>
       <TD align="center"><IMG src="image/MUST_003_7.gif" width="159" height="131" border="0"><BR>
-      ...and you are transported to in front of the goddess statue in Sample Map B.</TD>
+      ...the player will be transferred to the area in front of the goddess statue on Sample Map B.</TD>
     </TR>
   </TBODY>
 </TABLE>
@@ -32,25 +32,25 @@
 <TABLE border="0">
   <TBODY>
     <TR>
-      <TD nowrap>[1]　<BR>
-      　Open the Map Selector <IMG src="image/icon_mapselector.png" width="22" height="20" border="0"> and<BR>
-      　select "<B>1: Sample Map A</B>".<BR>
+      <TD nowrap>[1]　<B>Select the map</B><BR><BR>
+      　Open the <B>Map Selection</B> window by clicking the &nbsp; &nbsp;<BR>
+      　<IMG src="image/icon_mapselector.png" width="22" height="20" border="0"> icon, then select "<B>1: Sample Map A</B>".<BR>
       　<BR>
       </TD>
-      <TD nowrap><IMG src="image/mapselector.png" width="172" height="240" border="1"></TD>
+      <TD nowrap><IMG src="image/mapselector1.jpg" width="186" border="1"></TD>
     </TR>
   </TBODY>
 </TABLE>
 <HR>
 <TABLE border="0">
   <TBODY><TR>
-      <TD nowrap>[2]<BR>
-      　Switch to the Event Layer <IMG src="image/icon_eventlayer.png" width="22" height="20" border="0">,<BR>
-      　then <B>right-click</B> next to the barrel near the start position.<BR>
-      　A menu will appear as shown.<BR>
+      <TD nowrap>[2]　<B>Switch the map layer</B><BR><BR>
+      　Switch to the <B>Event Layer</B> <IMG src="image/icon_eventlayer.png" width="22" height="20" border="0">.<BR><BR>
+      　<B>Right-click</B> the tile next to the barrel. A menu like&nbsp;<BR>
+      　the one on the right will appear.<BR>
       <BR>
-      　Select "<B>Create/Edit Event</B>".</TD>
-      <TD nowrap><IMG src="image/MUST_003_1.gif" width="204" height="163" border="0"></TD>
+      　Click "<B>Create/Edit Event</B>".</TD>
+      <TD nowrap><IMG src="image/MUST_003_1.jpg" width="350" border="0"></TD>
     </TR>
   </TBODY>
 </TABLE>
@@ -58,24 +58,12 @@
 <TABLE border="0">
   <TBODY>
     <TR>
-      <TD nowrap>[3]　<BR>
-      　The Event Settings window<BR>
-      　shown on the right will appear.<BR>
-      <BR>
-      　</TD>
-      <TD nowrap><IMG src="image/window_mapevent.jpg" width="415" height="187" border="0"></TD>
-    </TR>
-  </TBODY>
-</TABLE>
-<HR>
-<TABLE border="0">
-  <TBODY>
-    <TR>
-      <TD nowrap>[4]　<BR>
-Set the Trigger Condition to "Player Touch".<BR>
+      <TD nowrap>[3]　<B>Create a new event</B><BR><BR>
+      　The <B>Event Settings</B> window will appear, as shown &nbsp;<BR>
+      　on the right.<BR>
       <BR>
       　</TD>
-      <TD nowrap><IMG src="image/MUST_003_9.gif" border="1"></TD>
+      <TD nowrap><IMG src="image/window_mapevent.jpg" width="420" border="1"></TD>
     </TR>
   </TBODY>
 </TABLE>
@@ -83,12 +71,12 @@ Set the Trigger Condition to "Player Touch".<BR>
 <TABLE border="0">
   <TBODY>
     <TR>
-      <TD nowrap>[5]　<BR>
-      　Click "<B>■ Show Command Input Window ■</B>"<BR>
-      　to open the "Insert Event Command" window.<BR>
+      <TD nowrap>[4]　<B>Set the event trigger</B><BR><BR>
+      　Set the <B>Trigger</B> of the event from "Confirm Key"&nbsp; &nbsp; &nbsp;<BR>
+      　to "<B>Player Touch</B>".
       <BR>
-      　Then click the "<B>Location Transfer</B>" tab at the top.</TD>
-      <TD nowrap><IMG src="image/window_evbase3.jpg" width="300" height="254" border="0"></TD>
+      　</TD>
+      <TD nowrap><IMG src="image/MUST_003_9.jpg" width="148" border="1"></TD>
     </TR>
   </TBODY>
 </TABLE>
@@ -96,34 +84,47 @@ Set the Trigger Condition to "Player Touch".<BR>
 <TABLE border="0">
   <TBODY>
     <TR>
-      <TD nowrap>[6]<BR>
-      　The window shown on the right<BR>
-      　will appear. Click<BR>
-      　"<B>Specify while viewing destination</B>".</TD>
-      <TD nowrap><IMG src="image/MUST_003_3.gif" width="287" height="204" border="0"></TD>
-    </TR>
-  </TBODY>
-</TABLE>
-<HR>
-<TABLE border="0">
-  <TBODY>
-    <TR>
-      <TD nowrap>[7]　<BR>
-      　The "Select Location Transfer Destination"<BR>
-      　window will appear.<BR>
-      　Click "<B>2: Sample Map B</B>" in the left panel<BR>
-      　to switch maps.<BR>
+      <TD nowrap>[5]　<B>Open command window</B><BR><BR>
+      　Click the button in the lower-right corner of the&nbsp; &nbsp; &nbsp; &nbsp;<BR>
+      　Event Window: "<B>■ Open Command Window ■</B>".<BR>
       <BR>
-      　<B>Click in front of the goddess statue</B><BR>
-      　on the right map to set<BR>
+      　Then look for the "<B>Transfer</B>" option on the left.</TD>
+      <TD nowrap><IMG src="image/window_text.jpg" width="400" border="1"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>[6]　<B>Open the map view</B><BR><BR>
+      　A window like the one on the right will appear.<BR>
+      　Click "<B>Pick Destination With Map View</B>".</TD>
+      <TD nowrap><IMG src="image/MUST_003_3.jpg" width="330" border="1"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+  <TBODY>
+    <TR>
+      <TD nowrap>[7]　<B>Pick transfer destination</B><BR><BR>
+      　The "Pick Transfer Destination" window will<BR>
+      　appear. In the list on the left, select "<B>2: Sample Map B</B>"<BR>
+      　to switch to that map.<BR>
+      <BR>
+      　On the map displayed on the right, <B>click the tile in<BR>
+      　front of the goddess statue</B> to place<BR>
       　the red-and-white cursor.<BR>
       <BR>
       　Click "<B>OK</B>" when done.<BR>
       <BR>
       <BR>
-      　※<B>Middle-click and drag</B> on the right<BR>
-      　　map to scroll the view.</TD>
-      <TD nowrap><IMG src="image/MUST_003_4.gif" width="411" height="300" border="0"></TD>
+　<i class="note">※ <B>Note:</B><BR>
+      　　You can scroll the map by holding the <B>middle <BR>
+      　　mouse button</B> and dragging the map view. <BR>
+      　　It's a very handy shortcut.</TD>
+      <TD nowrap><IMG src="image/MUST_003_4.jpg" width="411" border="1"></TD>
     </TR>
   </TBODY>
 </TABLE>
@@ -131,12 +132,12 @@ Set the Trigger Condition to "Player Touch".<BR>
 <TABLE border="0">
   <TBODY>
     <TR>
-      <TD nowrap>[8]<BR>
-      　You can see that the destination map<BR>
-      　and destination position now have values.<BR>
+      <TD nowrap>[8]　<B>Double check the values</B><BR><BR>
+      　You'll see that values have now been entered for<BR>
+      　the destination map and travel coordinates.<BR>
       <BR>
-      　Click "<B>Input</B>" to register the event command.</TD>
-      <TD nowrap><IMG src="image/MUST_003_5.gif" width="400" height="300" border="1"></TD>
+      　Click "<B>Insert</B>" to add the event command.</TD>
+      <TD nowrap><IMG src="image/MUST_003_5.jpg" width="400" border="1"></TD>
     </TR>
   </TBODY>
 </TABLE>
@@ -144,10 +145,10 @@ Set the Trigger Condition to "Player Touch".<BR>
 <TABLE border="0">
   <TBODY>
     <TR>
-      <TD nowrap>[9]<BR>
-      　When done, click "<B>Save (Entire Map)</B>"<BR>
-      　to save, then start <B>Test Play</B>.</TD>
-      <TD nowrap><IMG src="image/window_evbase4.png" width="247" height="100" border="1"></TD>
+      <TD nowrap>[9]　<B>Great work!</B><BR><BR>
+      　When done, click "<B>Save (Entire Map)</B>" to save,<BR>
+      　then start a <B>Test Play</B> session.</TD>
+      <TD nowrap><IMG src="image/MUST_001xev6.jpg" width="237" border="0"></TD>
     </TR>
   </TBODY>
 </TABLE>
@@ -155,9 +156,9 @@ Set the Trigger Condition to "Player Touch".<BR>
 <TABLE border="0">
   <TBODY>
     <TR>
-      <TD nowrap>[10]　<BR>
+      <TD nowrap>[10]　<B>Let's play test</B><BR><BR>
       　Start the game and walk toward<BR>
-      　the barrel to the right of the start point...</TD>
+      　the barrel to the right of the starting position.</TD>
       <TD nowrap><IMG src="image/MUST_003_6.gif" width="161" height="143" border="0"></TD>
     </TR>
   </TBODY>
@@ -165,44 +166,39 @@ Set the Trigger Condition to "Player Touch".<BR>
 <HR>
 <TABLE border="0">
   <TBODY>
-    <TR>
-      <TD nowrap>[11]　<BR>
-      　After a brief pause, you are transported to<BR>
-      　in front of the <B>goddess statue</B> in <B>Sample Map B</B>!<BR>
+    <TR><BR>
+      <TD nowrap>[11]　<B>Transfer event is complete!</B><BR><BR>
+      　After a brief pause, you'll be transported to the<BR>
+      　area in front of the <B>goddess statue</B> in <B>Sample Map B</B>!<BR>
       <BR>
-      　The location transfer event connecting<BR>
-      　two maps is complete!</TD>
+      　The two maps are now successfully connected!</TD>
       <TD nowrap><IMG src="image/MUST_003_7.gif" width="159" height="131" border="0"></TD>
     </TR>
   </TBODY>
 </TABLE>
+<BR>
 <HR>
-<P><BR>
 <BR>
-<BR>
-<BR>
-</P>
-<HR>
 <TABLE border="0">
   <TBODY>
     <TR>
-      <TD nowrap><B>[Side Note]</B><BR>
-      <B>　I want to move to the "Test" map created in<BR>
-      　<A href="MUST_002.html">[How do I create a new map?]</A>!</B><BR>
+      <TD nowrap><B>[Extra Note]</B><BR><BR>
+      　Using the same method described above, you can create a transfer event<BR>
+      　that moves the player from the barrel on "<B>Sample Map A</B>"<BR>
+      　to your "<B>Test</B>" map.<BR>
       <BR>
-      <BR>
-      　Using the same method, create a location transfer event<BR>
-      　from the barrel area in "<B>Sample Map A</B>"<BR>
-      　to the "<B>Test</B>" map.<BR>
-      <BR>
-      　However, if you only have an event going from<BR>
-      　"<B>Sample Map A</B>" to "<B>Test</B>",<BR>
-      　<B>you won't be able to return to "Sample Map A"</B>.<BR>
+      　However, if you only create an event that transfers<BR>
+      　the player from "<B>Sample Map A</B>" to the "<B>Test</B>" map,<BR>
+      　<B>you won't be able to get back to "Sample Map A"</B>.<BR><BR>
       　You also need to create a<BR>
       　<B>return event from "Test" back to "Sample Map A"</B>.<BR>
       <BR>
-      　To properly connect two maps, you need<BR>
-      　<B>two location transfer events: one to go and one to return</B>.</TD>
+      　To solve this and properly connect two maps together, create<BR> 
+      　<B>two transfer events: one for teleporting somewhere and one for coming back</B>.
+	  <BR><BR>
+      　→ <B><A href="MUST_002.html" target="B">Creating a new map</A></B><BR>
+      　← <B><A href="MUST_001.html" target="B">Switching the map you’re editing</A></B><BR><BR>
+	  </TD>
       <TD nowrap align="center"><IMG src="image/MUST_003_6.gif" width="161" height="143" border="0"><BR>
       <BR>
       <B><FONT size="+2">↓</FONT></B><BR>
@@ -211,10 +207,8 @@ Set the Trigger Condition to "Player Touch".<BR>
     </TR>
   </TBODY>
 </TABLE>
-<HR>
-<P>&lt;Author: <A href="http://www.silversecond.net/" target="_blank">SmokingWOLF</A>&gt;　</P>
-<HR>
-<A href="index.html" target="_top">[If you don't see the navigation frame on the left, click here]</A>
+<HR><BR>
+<A href="index.html" target="_top">[If you don't see the navigation menu on the left, click here]</A>
 <P><BR>
 </P>
 </BODY>
