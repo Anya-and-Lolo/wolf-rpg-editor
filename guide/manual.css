@@ -26,6 +26,16 @@ P.menu{
   font-size : 10pt;
 }
 
+.manualtext {
+    white-space: pre-wrap;
+    font-family: inherit;
+    margin: 0;
+}
+
+a img{
+	color: #5b8387;
+}
+
 /*--線色--*/
 HR {
    border-width: 1px 0px 0px 0px; /* 太さ */
