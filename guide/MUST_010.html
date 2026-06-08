@@ -3,42 +3,134 @@
 <HEAD>
 <META http-equiv="Content-Style-Type" content="text/css">
 <meta charset="UTF-8">
-<TITLE>I want to name my variables</TITLE>
+<TITLE>Working with Variables</TITLE>
 <LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
 <link rel="stylesheet" href="../translation-notice.css">
 <script defer src="../translation-notice.js"></script>
 </HEAD><BODY>
 <HR>
-<H2>[I want to name my variables]</H2>
+<H2>◆ Working with Variables</H2>
 <HR>
-<P><pre>[Goal]
-Excluding Self variables and System variables,
+<P>[Learn How To]<BR><BR>
+　Learn about different types of variables:<BR><BR>
 
-assign names to <b>Common Self variables, normal variables,
-normal spare variables, and string variables</b>
-to make them easier to tell apart.
+　• <B>Normal variables</B><BR>
+　• <B>Spare variables</B><BR>
+　• <B>String variables</B><BR>
+　• <B>Self variables</B> in Common Events<BR><BR>
 
-Version used: [2.x series]
+　Then assign names to them to make them easier <BR>
+　to identify and work with.<BR><BR>
+  
+　<i class="note">※ <B>What's a variable and why would I need one?</B> <BR>
+      　　Variables are part of the game's memory. They store<BR>
+      　　information such as numbers or text that help the game<BR>
+      　　remember what has happened and decide what should<BR>
+      　　happen next.<BR><BR>
+      　　For example:<BR>
+      　　- How many times a player talked to an NPC.<BR>
+      　　- Whether a quest has been completed.<BR>
+      　　- How much gold the player has.</i>
+  <BR><BR>
+　<a href="#1">Method 1</a> (Beginner) ◆ <a href="#3">Method 2</a> (Advanced)<BR><BR>
 
-<a href="#1">Method 1</a>
-<a href="#3">Method 2</a>
-
-</pre></p>
+</p>
 <HR>
 <TABLE border="0">
 <TBODY>
 <TR>
-<TD nowrap><pre><a target="B" name="1">[1] Method 1</a>
-　· Open the Map Selector <IMG height=20 src="image/icon_mapselector.png" width=22 border=0>
-　  and switch to the map where you want to create an event.
+<TD nowrap><B><U>Method 1</U></B><BR><BR>
+<a target="B" name="1">[1] <B>Create a new event on the map</B></a><BR><BR>
+　Open the <B>Map Selection</B> <IMG height=20 src="image/icon_mapselector.png" width=22 border=0> window to switch to&nbsp; &nbsp;<BR>
+　the map where you'd like to create the event.
+　<BR><BR>
+　Create an event anywhere on the map.<BR>
+　You don't need to assign an event graphic.
+　<BR><BR>
+　For detailed instructions, refer to steps <B>[1]–[5]</B><BR> 
+　of <a target="B" href="EV_001.html" target="B">◆ Events activated by the Confirm key</a>.
+</TD>
+<TD nowrap><a target="B" href="image/BASE_E012_1.jpg"><img src="image/BASE_E012_1.jpg" border="1"></a>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<TABLE border="0">
+<TBODY>
+<TR><BR>
+<TD nowrap>[2]　<B>Naming your variables</B><BR><BR>
+　You can assign custom names to variables<BR>
+　to make them easier to identify. For example,<BR>
+　a variable named "<B>PlayerGold</B>" is much<BR>
+　easier to recognize than "<B>V237</B>".<BR><BR>
 
-　· Create an event somewhere.
-　  You don't need to set an image for the event.
+　Once the event has been created, click:<BR>
+　<B>"■ Open Command Window ■"</B> in the<BR>
+　lower-right corner of the Event Window.<BR><BR>
 
-　Refer to steps [1]–[5] of <a target="B" href="EV_001.html" target="B">◆An event that activates with the Confirm key</a>.
-</pre></TD>
-<TD nowrap><pre><a target="B" href="image/BASE_E012_1.png"><img src="image/BASE_E012_1.png" border="1"></a>
-</pre></TD>
+　1. In the list on the left, select<BR>
+　   ③ "<B>Set Variable</b>"<BR><BR>
+
+　2. Giving variables clear names makes<BR>
+　   projects much easier to understand later.<BR><BR>
+
+　   To do that, look for the section labeled<BR>
+　   "<B>Set Variable Name</B>". Use this area to<BR>
+　   assign a name to any variable.<BR><BR>
+
+　<i class="note">※ <B>Good to know:</B><BR>
+      　　⑤ "<B>Set String</b>" also includes<BR>
+      　　a similar naming option.<BR></i><BR>
+
+　3. Select the variable you want to name.<BR>
+　   For ③ "<B>Set Variable</b>" these are:<BR>
+　   <B>V n</b> &nbsp; Normal variables<BR>
+　   <B>V n-j</b> &nbsp; Spare variables<BR><BR>
+
+　   For ⑤ "<B>Set String</b>":<BR>
+　   <B>S n</b> &nbsp; String variables<BR><BR>
+
+　<i class="note">※ <B>What are n and j?</B> <BR>
+      　　n and j here simply represent numeric <BR>
+      　　values. For example, <B>V n</B> could be <B>V0</B>, <BR>
+      　　and <B>V n-j</B> could be <B>V8-0</B>.</i><BR><BR>
+	
+　   When editing a Common Event:<BR>
+　   For ③ "<B>Set Variable</b>":<BR>
+　   <B>V n</b> &nbsp; Normal variables<BR>
+　   <B>CSelf n</b> &nbsp; Common Event Self variables<BR><BR>
+
+　   For ⑤ "<B>Set String</b>":<BR>
+　   <B>S n</b> &nbsp; String variables<BR>
+　   <B>CSelf n</b> &nbsp; Common Event Self variables<BR><BR>
+
+　4. Enter the name you want to use, then click<BR>
+　   <B>"Assign Name"</B> button next to "Insert".<BR><BR>
+
+　<i class="note">※ <B>What the other buttons are for?</B><BR>
+      　　"Copy" copies the currently selected<BR>
+      　　variable name into the name field.<BR>
+      　　"Size +1" increases the available<BR>
+      　　variable range. For example:<BR>
+      　　- For <B>Normal variables (V n)</B>: increases the<BR>
+      　　upper limit of n<BR>
+      　　- For <B>Spare variables (V n-j)</B>: increases<BR>
+      　　the upper limit of j for the selected n<BR>
+      　　- For <B>String variables (S n)</B>: increases<BR>
+      　　the upper limit of n</i><BR><BR>
+
+　   You can now give variables meaningful names <BR>
+　   and make them much easier to work with!<BR><BR>
+
+　   If you'd like to learn <B>Method 2</B>, continue reading. &nbsp; <BR>
+　   Otherwise, you're finished. Great work!<BR><BR>
+</TD>
+<TD nowrap>
+<a target="B" href="image/MUST_010_0.jpg"><img width="592" src="image/MUST_010_0.jpg"></a>
+<BR><BR><BR>
+<a target="B" href="image/MUST_010_1.jpg"><img width="620" src="image/MUST_010_1.jpg"></a>
+</TD>
 </TR>
 </TBODY>
 </TABLE>
@@ -46,74 +138,26 @@ Version used: [2.x series]
 <TABLE border="0">
 <TBODY>
 <TR>
-<TD nowrap><pre>[2]
-　Once created, click
-　<b>"■ Show Command Input Window ■"</b>
-　at the bottom-right of the Event window.
 
-　1. When the "Insert Event Command" window appears,
-　   click and select <b>3 Variable Operation</b>.
+<TD nowrap><B><U>Method 2</U> (Advanced)</B><BR><BR>
+<a target="B" name="3">[3] <B>Open the System Database Editor</B></a><BR><BR>
 
-　2. You will see a section labeled "Variable Name Setting".
-　   Use this to assign a name to a variable.
-　   ※ <b>5 String Operation</b> also has
-　      a similar setting field.
+　There's one more place where you can configure &nbsp; &nbsp; &nbsp;<BR>
+　variables, and it's the <B>System Database Editor</B>.<BR><BR>
 
-　3. Specify the variable you want to name.
-　   For <b>3 Variable Operation</b>:
-　   <b>V n</b> = "Normal variable"
-　   <b>V n-j</b> = "Normal spare variable"
+　To open it, click this icon <IMG src="image/icon_sysDB.png" width="22" height="20" border="0"> in the toolbar.<BR><BR>
+　The <B>System Database Editor</B> window will open.<BR><BR>
 
-　   For <b>5 String Operation</b>:
-　   <b>S n</b> = "String variable"
-
-　   When editing a Common Event:
-　   For <b>3 Variable Operation</b>:
-　   <b>CSelf n</b> = "Common Self variable"
-　   <b>V n</b> = "Normal variable"
-
-　   For <b>5 String Operation</b>:
-　   <b>CSelf n</b> = "Common Self variable"
-　   <b>S n</b> = "String variable"
-
-　   ※ n and j represent numbers.
-
-　4. Type the name you want and click
-　   "Assign Name" to the right of the field.
-
-　   The "Copy" button next to step 3 copies
-　   the variable name from step 3 into the step 4 field.
-
-　   "Size +1" increases:
-　   - For V n: the upper limit of n
-　   - For V n-j: the upper limit of j for the specified n
-　   - For S n: the upper limit of n
-
-　   You've now assigned a name to a variable.
-　   If you want to know Method 2, continue reading.
-　   Otherwise, you're done — great work!
-</pre></TD>
-<TD nowrap><pre><a target="B" href="image/MUST_010_1.png"><img width="360" src="image/MUST_010_1.png"></a>
-</pre></TD>
-</TR>
-</TBODY>
-</TABLE>
-<HR>
-<TABLE border="0">
-<TBODY>
-<TR>
-<TD nowrap><pre><a name="3">[3] Method 2</a>
-
-　First, here is how to set names for everything except Common Self (CSelf) variables.
-
-　(Image 1) Click the <IMG src="image/icon_sysDB.png" width="22" height="20" border="0"> highlighted by the red circle
-　(Image 2) to open the System Database.
-</pre></TD>
-<TD nowrap>Image 1<br>
-<pre><a target="B" href="image/MUST_010_2.png"><IMG src="image/MUST_010_2.png" width="332" border="1"></a><br><br>
-Image 2<br>
+　<i class="note">※ <B>Note:</B><BR>
+      　　Most variables in your project (except<BR>
+      　　Common Event Self (CSelf) variables)<BR>
+      　　can be managed here. For CSelf variables<BR>
+      　　use <B>Common Events Editor</B> in step [5].<BR></i>
+</TD>
+<TD nowrap><br>
+<a target="B" href="image/MUST_010_2.jpg"><IMG src="image/MUST_010_2.jpg" width="390" border="1"></a><br><br>
 <a target="B" href="image/window_SystemDB.jpg"><IMG src="image/window_SystemDB.jpg" width="332" height="291" border="1"></a>
-</pre></TD>
+</TD>
 </TR>
 </TBODY>
 </TABLE>
@@ -121,24 +165,23 @@ Image 2<br>
 <TABLE border="0">
 <TBODY>
 <TR>
-<TD nowrap><pre>[4] Corresponding types:
-　 　 　4: String variable names "S n"
-　 　　14: Normal variable names "V n"
-　15–23: Spare variable names "V n-j"
-　※ n and j represent numbers.
 
-　Assign names to the <b>data</b> in the type
-　corresponding to the variable names you want to change.
+<TD nowrap>[4]　<B>Editing variable names</B><BR><BR>
+　 　 　Here are the areas you can safely edit: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<BR><BR>
+　 　 　4: <B>String variables (S n)</B><BR>
+　 　　14: <B>Normal variables (V n)</B><BR>
+　 　　15–23: <B>Spare variables (V n-j)</B><BR><BR>
 
-　After making changes, click "OK" or "Update"
-　at the bottom-right of the window,
-　or press Ctrl+S.
-　This saves your changes.
+　From the System Database, you can manage<BR>
+　the names of most variables from one place.<BR><BR>
 
-　The changes are now saved and applied.
-</pre></TD>
-<TD nowrap><pre><a target="B" href="image/MUST_010_3.png"><img src="image/MUST_010_3.png"></a>
-</pre></TD>
+　After making changes, save them by either<BR>
+　clicking "<B>OK</B>" or "<B>Update</B>" or pressing <B>Ctrl+S</B>.<BR><BR>
+
+　Your changes will then be saved and applied.
+</TD>
+<TD nowrap><a target="B" href="image/MUST_010_3.jpg"><img src="image/MUST_010_3.jpg"></a>
+</TD>
 </TR>
 </TBODY>
 </TABLE>
@@ -146,79 +189,69 @@ Image 2<br>
 <TABLE border="0">
 <TBODY>
 <TR>
-<TD nowrap><pre>[5] For Common Self (CSelf) variables
+<TD nowrap>[5]　<B>For Common Event Self (CSelf) variables</B><BR><BR>
 
-　Refer to step [1] of <a target="B" href="MUST_009.html">I want to try creating a new Common Event</a>
-　to open the <b>Common Event Editor</b>.
+　Refer to step <B>[1]</B> of <a target="B" href="MUST_009.html">◆ Creating a new Common</a><BR>
+　<a target="B" href="MUST_009.html">Event</a> on where to find the <B>Common Event Editor</b>. &nbsp; <BR><BR>
 
-　Click "Self Variable Usage" in the top-right of the window.
-</pre></TD>
-<TD nowrap><pre><a target="B" href="image/MUST_010_4.png"><IMG src="image/MUST_010_4.png" width="332" height="291" border="1"></a>
-</pre></TD>
+　To view all CSelf variables, click "<B>CSelf Var List</B>"<BR>
+　in the top-right corner of the window.
+</TD>
+<TD nowrap><a target="B" href="image/MUST_010_4.jpg"><IMG src="image/MUST_010_4.jpg" width="500" border="1"></a>
+</TD>
 </TR>
 </TBODY>
 </TABLE>
 <HR>
 <TABLE border="0">
 <TBODY>
-<TR>
-<TD nowrap><pre>[6]
+<TR><BR>
+<TD nowrap>[6]　<B>Common Event Self (CSelf) variable list</B><BR><BR>
 
-　Did the window shown on the right appear?
+　A window like the one shown on the right<BR>
+　will appear where you can enter names for<BR>
+　99 <B>Common Event Self (CSelf) variables</b>.<BR><BR>
 
-　Each entry in that window is a field
-　where you can enter a name for a
-　<b>Common Self (CSelf) variable</b>.
+　After changing entries, always click "Done". If you<BR>
+　click "Cancel", your changes will not be saved.<BR><BR><BR>
 
-　After changing entries, don't forget to
-　click "Settings Complete" at the bottom-right.
-
-　Clicking Cancel will discard your changes.
-
-
-　※ About the copy/paste buttons at the bottom-left:
-　<b>Copy All</b>
-　   Copies the text of all CSelf00–CSelf99
-　   from the <b>currently edited Common Event</b>.
-
-　<b>Paste All</b>
-　   Overwrites everything with what was copied
-　   using Copy All.
-
-　<b>Paste to Empty Fields Only</b>
-　   Only fills in empty fields (fields that have
-　   at least a space are considered non-empty)
-　   with the content from Copy All.
-</pre></TD>
-<TD nowrap><pre><a target="B" href="image/MUST_010_5.png"><IMG src="image/MUST_010_5.png" width="332" height="291" border="1"></a>
-</pre></TD>
+　<i class="note">※ <B>What these Copy/Paste buttons are for?</B><BR><BR>
+      　　- "<B>Copy All</B>" copies all variable names from<BR>
+      　　CSelf00–CSelf99 for the Common Event<BR>
+      　　currently being edited.<BR>
+      　　- "<B>Paste All</B>" completely overwrites the <BR>
+      　　current list with the content from<BR>
+      　　Copy All.<BR>
+      　　- "<B>Paste Into Blanks Only</B>" fills in empty fields<BR>
+      　　If an entry already contains any text<BR>
+      　　(even a single space), it will be left unchanged.<BR><BR></i>
+</TD>
+<TD nowrap><a target="B" href="image/MUST_010_5.jpg"><IMG src="image/MUST_010_5.jpg" width="660" border="1"></a>
+</TD>
 </TR>
 </TBODY>
 </TABLE>
 <HR>
 <TABLE border="0">
 <TBODY>
-<TR>
-<TD nowrap><pre>[7] Verify
-　Check that the name you set in [5] or [6]
-　has been applied correctly.
+<TR><BR>
+<TD nowrap>
 
-　From the command list, select
-　<b>3 Variable Operation</b> or
-　<b>5 String Operation</b>,
-　then specify the Common Self variable you changed.
-　If the variable now shows a name, you're done!
+　You now know what variables are and how to give them meaningful names.<BR>
+　Even if you're not using variables yet, naming them early can make your<BR>
+　projects much easier to understand as they grow.<BR><BR>
 
 　Great work!
-</pre></TD>
+	  <BR><BR>
+      　→ <B><A href="MUST_003.html" target="B">Moving the player to another map</A></B><BR>
+      　← <B><A href="MUST_009.html" target="B">Creating a new Common Event</A></B><BR><BR>
+</TD>
 <TD nowrap></TD>
 </TR>
 </TBODY>
 </TABLE>
 <HR>
-<HR>
-<P>&lt;Author: Kijiko&gt;　</P>
-<HR>
+<P>Written by Kijiko ◆ English edition lovingly prepared by <a href="https://anya-and-lolo.github.io/" target="_blank">Anya & Lolo</a></P>
 <A href="index.html" target="_top">[If you don't see the navigation frame on the left, click here]</A>
 <P><BR>
 </P>
