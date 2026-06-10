@@ -3,43 +3,46 @@
 <HEAD>
 <META http-equiv="Content-Style-Type" content="text/css">
 <meta charset="UTF-8">
-<TITLE>I want to change the game's starting position</TITLE>
+<TITLE>Changing the game's starting position</TITLE>
 <LINK REL="stylesheet" HREF="manual.css" TYPE="text/css">
 <link rel="stylesheet" href="../translation-notice.css">
 <script defer src="../translation-notice.js"></script>
 </HEAD><BODY>
 <!--Write the article below this line. Don't forget to update the <TITLE> tag!-->
 <HR>
-<H2>[I want to change the game's starting position]</H2>
+<H2>◆ Changing the game's starting position</H2>
 <HR>
-<P>[Goal] <BR>
-　In the sample game, the game starts from the <B>title screen</B>. We will change the setting so that<BR>
-　the game begins directly in front of <B>the Professor</B> in "<B>Sample Map A</B>".<BR>
+<P>[Learn How To] <BR><BR>
+　<B>Change the game's starting position so the player appears<BR>
+　in front of the Professor on "Sample Map A</B>".<BR>
+　In the Sample Game, the player starts from the <B>Title map</B>.<BR>
+　This tutorial shows how to change the starting location.<BR>
 <BR>
-　　<IMG src="image/MUST_004_hakase_position.jpg" width="163" height="130" border=1> 　<BR>
-　　　↑We will set the spot where the blue character is standing as the game start position.<BR>
+　　<IMG src="image/MUST_004_hakase_position.jpg" width="163" height="130" border="1"><BR>
+　　↑ Let's make the tile marked by the blue character the game's starting position.<BR>
 <BR>
 </P>
 <HR>
 <TABLE border="0">
   <TBODY>
     <TR>
-      <TD nowrap>[1]　Load "Sample Map A" — the starting map<BR>
-      <BR>
-      　Open the Map Selector window <IMG src="image/icon_mapselector.png" width="22" height="21"> and<BR>
-      　select "<B>1: Sample Map A</B>".<BR>
+      <TD nowrap>[1]　<B>Open the starting map</B><BR><BR>
+      　Open the Map Selection window <IMG src="image/icon_mapselector.png" width="22" height="21"> and choose&nbsp; &nbsp; &nbsp;<BR>
+      　"<B>1: Sample Map A</B>".<BR>
       <BR>
       　</TD>
-      <TD nowrap><IMG src="image/MUST_004_mapselect_sampleA.jpg" border="1" width="254" height="190"></TD>
+      <TD nowrap><IMG src="image/MUST_004_mapselect_sampleA.jpg" border="1" width="237"></TD>
     </TR>
   </TBODY>
 </TABLE>
 <HR>
 <TABLE border="0">
-  <TBODY><TR>
-      <TD nowrap>[2]　Click the icon labeled "<B>[Ev]</B>"<BR>
-      　　　to switch to Event Layer editing.</TD>
-      <TD nowrap><IMG src="image/event_layer.jpg" border="1" width="217" height="65"></TD>
+  <TBODY><TR><BR>
+      <TD nowrap>[2]　<B>Switch to Event Layer editing</B><BR><BR>
+      　Click the "<B>[Ev]</B>" icon to switch to <B>Event Layer</B> &nbsp; &nbsp; &nbsp;<BR>
+      　editing.<BR><BR>
+	  </TD>
+      <TD nowrap><IMG src="image/event_layer.jpg" border="1" width="390"></TD>
     </TR>
   </TBODY>
 </TABLE>
@@ -47,68 +50,57 @@
 <TABLE border="0">
   <TBODY>
     <TR>
-      <TD nowrap>[3]　<BR>
-      　<B>Right-click</B> the spot where you want the game to start<BR>
-      　(here, in front of the Professor),<BR>
-      　and select "<B>Set as Game Start Position</B>".<BR>
+      <TD nowrap>[3]　<B>Change the starting position</B><BR><BR>
+      　<B>Right-click</B> the location where you want the game&nbsp;<BR>
+      　to start (in this example, the tile in front of the<BR>
+      　Professor). Select "<B>Set as Game Start Position</B>".<BR>
  </TD>
-      <TD nowrap><IMG src="image/MUST_004_hakase_right_click.jpg" border="1" width="221" height="195"></TD>
+      <TD nowrap><IMG src="image/MUST_004_hakase_right_click.jpg" border="1" width="300"></TD>
     </TR>
   </TBODY>
 </TABLE>
 <HR>
 <TABLE border="0">
   <TBODY>
-    <TR>
-      <TD nowrap>[4]　<BR>
-      　A window titled "Register Destination" will appear.<BR>
-      　Do not change anything and just press "<B>OK</B>".<BR>
- </TD>
-      <TD nowrap><IMG src="image/MUST_004_startposition_touroku.jpg" border="1" width="225" height="163"></TD>
-    </TR>
-  </TBODY>
-</TABLE>
-<HR>
-<TABLE border="0">
-  <TBODY>
-    <TR>
-      <TD nowrap>[5]<BR>
-      　Running Test Play <IMG src="image/icon_testplay.png" width="22" height="20"> will now start the game at the location shown on the right.<BR>
+    <TR><BR>
+      <TD nowrap>[4]　<B>Play Test!</B><BR><BR>
+      　Start a <B>Test Play</B> <IMG src="image/icon_testplay.png" width="22" height="20"> session. The game will now &nbsp; &nbsp;<BR> 
+      　begin from the selected location.<BR>
       <BR>
-      <BR>
-      　The game start position has been set successfully!</TD>
+      　You've successfully changed the game's starting <BR>
+      　position!<BR><BR></TD>
       <TD nowrap><IMG src="image/MUST_004_hakase_position.jpg" width="163" height="130" border=1></TD>
     </TR>
 </TBODY>
 </TABLE>
 <HR>
-<P><BR>
-<BR>
-</P>
-<HR>
 <TABLE border="0">
   <TBODY>
-    <TR>
-      <TD nowrap><B>[Side Note]</B> How to <B>revert the start position</B>?<BR>
+    <TR><BR>
+      <TD nowrap><B>[Extra Note]</B><BR><BR>
+      　　<B>"Save position to Database"</B> is different from<BR>
+      　　"Set as Game Start Position".<BR>
       <BR>
-      　　Switch the map to "<B>0: Title</B>", then<BR>
-      　　right-click <B>anywhere</B> and select "<B>Set as Game Start Position</B>".<BR>
-      　　The rest is the same as above.<BR>
+      　　Instead of changing where a new game begins,<BR>
+      　　it stores the selected map coordinates so they<BR>
+      　　can be used later by events and location-transfer &nbsp; <BR>
+      　　commands.<BR>
       <BR>
+      　　If you click "<B>Save Position to Database</B>", a<BR>
+      　　window titled "Register Location" will appear.<BR>
+      　　Leaving the default settings and clicking "<B>OK</B>"<BR>
+      　　will save that location for later use.<BR>
       <BR>
-      　※The event in the sample game's "Title" map uses<BR>
-      　　the "<B>Auto-execute</B>" trigger,<BR>
-      　　so <B>the opening event runs no matter where the player is on that map</B>.</TD>
+</TD>
       <TD nowrap>
-<IMG src="image/MUST_004_title_right_click.jpg" border=1>
+<IMG src="image/MUST_004_startposition_touroku.jpg" width="300" border="1">
 </TD>
     </TR>
   </TBODY>
 </TABLE>
 <HR>
-<P>&lt;Author: <A href="http://www.silversecond.net/" target="_blank">SmokingWOLF</A>&gt;</P>
-<HR>
-<A href="index.html" target="_top">[If you don't see the navigation frame on the left, click here]</A>
+<P>Written by SmokingWOLF ◆ English edition lovingly prepared by <a href="https://anya-and-lolo.github.io/" target="_blank">Anya & Lolo</a>.</P>
+<A href="index.html" target="_top">[If you don't see the navigation menu on the left, click here]</A>
 <P><BR>
 </P>
 </BODY>
