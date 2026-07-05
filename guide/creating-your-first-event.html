@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creating your first event | WOLF RPG Editor Complete Guide (English)</title>
+<meta name="description" content="Create a new chicken event in the Sample Game&#x27;s &quot;Sample Map A&quot; that says &quot;Cock-a-doodle-doo♪&quot; when the player talks to it."><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://anya-and-lolo.github.io/wolf_rpg_editor_ENG/guide/creating-your-first-event.html">
+<meta property="og:type" content="article"><meta property="og:title" content="Creating your first event | WOLF RPG Editor Complete Guide">
+<meta property="og:image" content="image/header_woditor.jpg"><meta name="theme-color" content="#5a3ec8">
+<link rel="stylesheet" href="../translation-notice.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Creating your first event",
+  "description": "Create a new chicken event in the Sample Game's \"Sample Map A\" that says \"Cock-a-doodle-doo♪\" when the player talks to it.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Select the map",
+      "text": "Open the Map Selection window by clicking the icon, then select \"1: Sample Map A.\""
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Switch the map layer",
+      "text": "Switch to the Event Layer . Right-click near the area just above the tranfer destination position. A menu like the one on the right will appear. Select \"Create/Edit Event.\""
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Create a new event",
+      "text": "The Event Settings window will appear, as shown on the right."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Set the event graphics",
+      "text": "Let's set the event's walking sprite first. To do that, double-click the area highlighted in red."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Change the facing direction",
+      "text": "A window like the one on the right will appear. Select \"Animal_Chicken.png\" and click \"OK\". ※ Tip: You can click the character image in the right-hand preview area to change the direction the character is facing."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 6,
+      "name": "Great work!",
+      "text": "The chicken sprite has now been successfully assigned to the event."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 7,
+      "name": "Let's make it talk",
+      "text": "Next, let's add some dialogue for the chicken. Click the button in the lower-right corner of the Event Window: \"■ Open Command Window ■\""
+    },
+    {
+      "@type": "HowToStep",
+      "position": 8,
+      "name": "Open Command Window",
+      "text": "The \"Command Window\" will now open. Make sure the selected tab is \"Show Message\", as shown on the right."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 9,
+      "name": "Add Show Message command",
+      "text": "In the text input field, type what the chicken says. Something like: \"Cock-a-doodle-doo♪\", and click the \"Insert\" button."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 10,
+      "name": "Double-check the event settings",
+      "text": "If your event looks like the example shown on the right, you’ve set it up correctly. By default, the event Trigger is already set to \"Confirm key\". This means the event will activate when the player presses the key while facing it."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 11,
+      "name": "Remember to save it!",
+      "text": "Click the \"Save (Entire Map)\" button in the lower-right corner of the Event window. Then click \"Test Play (F9)\". This will save the map with the new event and start a test play session."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 12,
+      "name": "Let's play test",
+      "text": "At the title screen, select \"New Game\". After the introduction finishes, walk up to the chicken you just created, and press the Confirm Key while facing it. The chicken should say: \"Cock-a-doodle-doo♪\" Great job, and congratulations on creating your first event!"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "WOLF RPG Editor Guide",
+      "item": "https://anya-and-lolo.github.io/wolf_rpg_editor_ENG/guide/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Essential Knowledge",
+      "item": "https://anya-and-lolo.github.io/wolf_rpg_editor_ENG/guide/essential-knowledge.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Creating your first event",
+      "item": "https://anya-and-lolo.github.io/wolf_rpg_editor_ENG/guide/creating-your-first-event.html"
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="../guide.css"></head>
+<body>
+<div class="topbar"><button class="hamb" id="hambBtn" aria-label="Open menu" aria-expanded="false">&#9776;</button><div class="tb-title">WOLF RPG Editor <span>Guide</span></div></div>
+<div class="overlay" id="overlay"></div>
+<div class="layout">
+  <aside class="sidebar" id="sidebar" aria-label="Guide navigation">
+    <a class="brand" href="index.html"><img class="brand-logo" src="image/icon_editorexe.png" alt=""><div class="brand-text"><strong>WOLF RPG Editor</strong><small>Complete Guide &middot; English</small></div></a>
+    <nav>
+      <section class="nav-sec" id="sec-essential-knowledge"><h3>Essential Knowledge <span class="sec-here" aria-hidden="true"></span></h3><a class="nav-link" href="installing-wolf-rpg-editor.html">◆ Installing WOLF RPG Editor</a><a class="nav-link" href="switching-the-map-youre-editing.html">◆ Switching the map you’re editing</a><a class="nav-link active" href="creating-your-first-event.html">◆ Creating your first event</a><a class="nav-link" href="creating-a-new-map.html">◆ Creating a new map</a><a class="nav-link" href="moving-the-player-to-another-map.html">◆ Moving the player to another map</a><a class="nav-link" href="changing-the-games-starting-position.html">◆ Changing the game's starting position</a><span class="nav-link soon">◆ Removing the Sample Data</span><span class="nav-link soon">◆ Understanding the "Title" map</span><span class="nav-link soon">◆ Setting the game title</span><span class="nav-link soon">◆ Changing the title image (Sample Game only)</span><a class="nav-link" href="creating-a-new-common-event.html">◆ Creating a new Common Event</a><a class="nav-link" href="working-with-variables.html">◆ Working with variables</a><a class="nav-link" href="uninstalling-wolf-rpg-editor.html">◆ Uninstalling WOLF RPG Editor</a></section>
+<section class="nav-sec nav-soon" id="sec-basic-system"><h3>Basic System</h3><span class="nav-link">◆ Understanding the Basic System</span><div class="nav-sub">Settings Section</div><span class="nav-link">◆ Changing the player's walking graphic</span><span class="nav-link">◆ Setting the starting party</span><span class="nav-link">◆ The starting character image isn’t showing</span><span class="nav-link">◆ Adding additional player characters</span><span class="nav-link">◆ Setting character stats and starting equipment</span><span class="nav-link">◆ Configuring skill learning for characters</span><span class="nav-link">◆ Adding new skill/magic types</span><span class="nav-link">◆ Adding new item types</span><span class="nav-link">◆ Adding new weapon types</span><span class="nav-link">◆ Adding new armor types</span><span class="nav-link">◆ Setting different equipment per character</span><span class="nav-link">◆ Changing basic terms like currency name</span><span class="nav-link">◆ Removing the "Talk" command from the menu</span><span class="nav-link">Adding custom commands to the menu</span><div class="nav-sub">Battle Section</div><span class="nav-link">◆ Creating battle commands that activate skills immediately</span><span class="nav-link">◆ Adding enemy characters</span><span class="nav-link">◆ Setting enemy groups</span><span class="nav-link">◆ Creating status effects</span><span class="nav-link">◆ Triggering events during battle</span><span class="nav-link">◆ Displaying enemy names and counts at battle start</span><div class="nav-sub">Events</div><span class="nav-link">◆ Starting a battle</span><span class="nav-link">Setting enemy groups</span><span class="nav-link">◆ Creating a shop event</span><span class="nav-link">◆ Changing item quantities</span><span class="nav-link">◆ Increasing or decreasing money</span><span class="nav-link">◆ Healing or damaging the player</span><span class="nav-link">◆ Changing character stats during gameplay</span><span class="nav-link">◆ Making characters learn skills during gameplay</span><span class="nav-link">◆ Opening the menu or save screen within an event</span><span class="nav-link">◆ Making events react differently based on items, money, or party members</span><span class="nav-link">◆ Creating random encounters</span><span class="nav-link">◆ Making a Game Over sequence</span><span class="nav-link">◆ Adding or removing party members</span><span class="nav-link">◆ Changing character names</span><span class="nav-link">◆ Disabling saving from the menu</span><div class="nav-sub">Advanced Settings</div><span class="nav-link">◆ Adding icons to item names</span><span class="nav-link">◆ Setting weapon elements/attributes</span><span class="nav-link">◆ Setting enemy weaknesses, resistances, absorption, and immunity</span><span class="nav-link">◆ Setting enemy resistance to status effects</span><span class="nav-link">◆ Understanding whether “Defend” is a status effect</span><span class="nav-link">◆ Adding custom commands to the menu</span><span class="nav-link">◆ Configuring advanced system settings</span></section>
+<section class="nav-sec nav-soon" id="sec-event-creation"><h3>Event Creation</h3><span class="nav-link">Events activated by the Confirm key</span><span class="nav-link">◆ Events triggered when the player touches them</span><span class="nav-link">◆ Events triggered when NPCs touch the player</span><span class="nav-link">◆ Events that reset after leaving the map</span><span class="nav-link">◆ Permanently disappearing events</span><span class="nav-link">◆ Treasure chests that stay empty</span><span class="nav-link">◆ Events that remember conversation counts</span><span class="nav-link">◆ Events that start when entering the map</span><span class="nav-link">◆ Events that operate in parallel with normal events</span><span class="nav-link">◆ How to avoid having multiple similar events</span><span class="nav-link">◆ Changing character and event movement speed</span><span class="nav-link">◆ Changing choice window position</span></section>
+<section class="nav-sec nav-soon" id="sec-map-creation"><h3>Map Creation</h3><span class="nav-link">◆ Creating nice-looking maps</span><span class="nav-link">◆ Scrolling the map screen more easily</span><span class="nav-link">◆ Copying all three map layers at once</span><span class="nav-link">◆ Shifting the entire map</span><span class="nav-link">◆ Drawing autotile borders freely</span><span class="nav-link">◆ Setting music for a map</span></section>
+<section class="nav-sec nav-soon" id="sec-basic-settings"><h3>Basic Settings</h3><span class="nav-link">◆ Switching character graphics to 8‑directional</span><span class="nav-link">Fixing a character that splits into 2</span><span class="nav-link">◆ Setting half‑tile or full‑tile movement</span><span class="nav-link">◆ Changing the choice window image</span><span class="nav-link">◆ Changing the message wait arrow indicator</span></section>
+<section class="nav-sec nav-soon" id="sec-using-downloaded-assets-common-events"><h3>Using Downloaded Assets/Common Events</h3><span class="nav-link">◆ Changing map tile passability settings</span><span class="nav-link">◆ Adapting different map tilesets</span><span class="nav-link">◆ Using RPG Maker assets in WOLF RPG Editor</span><span class="nav-link">◆ Using face graphics <Basic System></span><span class="nav-link">◆ Using BGM and sound effects</span><span class="nav-link">◆ Adding custom fonts to the game</span><span class="nav-link">◆ Understanding asset usage rules</span><span class="nav-link">◆ Applying the Basic System bug‑fix patch</span></section>
+<section class="nav-sec nav-soon" id="sec-creating-assets"><h3>Creating Assets</h3><span class="nav-link">◆ Creating high‑quality walking character assets</span><span class="nav-link">◆ Arranging walking character sheets</span><span class="nav-link">◆ Making images transparent</span><span class="nav-link">◆ Creating custom map tilesets</span></section>
+<section class="nav-sec nav-soon" id="sec-effects-presentation"><h3>Effects &amp; Presentation</h3><span class="nav-link">◆ Adding wait times and delays</span><span class="nav-link">◆ Darkening the screen or making it flash</span><span class="nav-link">◆ Enlarging text in messages</span><span class="nav-link">◆ Changing text colors in messages</span><span class="nav-link">◆ Changing fonts in messages</span><span class="nav-link">◆ Other message‑related effects</span></section>
+<section class="nav-sec nav-soon" id="sec-errors-and-strange-behavior"><h3>Errors and Strange Behavior</h3><span class="nav-link">◆ Fixing halved or split into 2 characters</span><span class="nav-link">◆ Fixing tileset size errors "Map chip must be 128 or 256 pixels wide"</span><span class="nav-link">◆ Fixing "Over 500,000 processes per frame!" error</span><span class="nav-link">◆ Fixing "maximum map coordinates..." error</span><span class="nav-link">◆ Fixing MIDI playback issues in WOLF RPG Editor</span></section>
+<section class="nav-sec nav-soon" id="sec-beyond-the-basics"><h3>Beyond the Basics</h3><span class="nav-link">◆ Using parallel and auto events effectively</span><span class="nav-link">◆ Displaying JPG/PNG images</span><span class="nav-link">◆ Using variables in editor number fields</span><span class="nav-link">◆ Retrieving a string from keyboard input</span><span class="nav-link">◆ Detecting key presses in WOLF RPG Editor</span><span class="nav-link">◆ Detecting mouse input</span><span class="nav-link">◆ Learning how to use the Database</span><span class="nav-link">◆ Creating a dash function tied to a specific key</span><span class="nav-link">◆ Detecting multiple simultaneous key presses</span><span class="nav-link">◆ Tricks using movement input and facing direction values</span></section>
+<section class="nav-sec nav-soon" id="sec-for-veteran-users"><h3>For Veteran Users</h3><span class="nav-link">◆ Working from a USB drive</span></section>
+<div class="nav-sec nav-soon"><span class="nav-link">Closing Notes</span></div>
+    </nav>
+  </aside>
+  <main class="content">
+    <div class="wrap"><article>
+      <div class="crumb"><a href="index.html">WOLF RPG Editor Guide</a> &nbsp;/&nbsp; <a href="essential-knowledge.html">Essential Knowledge</a> &nbsp;/&nbsp; <strong>Creating your first event</strong></div>
+      <span class="kicker">Essential Knowledge</span>
+      <h1>Creating your first event</h1>
+      <p class="lead">Create a new <strong>chicken event</strong> in the Sample Game's "<strong>Sample Map A</strong>" that says "Cock-a-doodle-doo♪" <strong>when the player talks to it</strong>.</p>
+      <p class="byline">Author: <strong>SmokingWOLF</strong></p>
+      
+      <div class="note"><strong>&#8251; What is an event?</strong> For now, think of an event as &quot;an RPG villager or creature that does or says something when you interact with it&quot;. That&#x27;s all you need to know for now.</div>
+      <hr class="intro-sep">
+      <section class="step">
+  <div class="step-head"><span class="step-num">1</span><h2 class="step-title">Select the map</h2></div>
+  <div class="step-text">
+      <p>Open the <strong>Map Selection</strong> window by clicking the <IMG src="image/icon_mapselector.png" width="22" height="20" border="0"> icon, then select "<strong>1: Sample Map A</strong>."</p>
+    </div>
+    <div class="step-imgs"><a class="step-img" href="image/mapselector.jpg" target="_blank" rel="noopener"><img src="image/mapselector.jpg" alt="Select the map" loading="lazy"></a></div>
+  
+</section>
+
+<section class="step">
+  <div class="step-head"><span class="step-num">2</span><h2 class="step-title">Switch the map layer</h2></div>
+  <div class="step-text">
+      <p>Switch to the <strong>Event Layer</strong> <IMG src="image/icon_eventlayer.png" width="22" height="20" border="0">. <strong>Right-click</strong> near the area just above the tranfer destination position. A menu like the one on the right will appear.</p>
+      <p>Select "<strong>Create/Edit Event</strong>."</p>
+    </div>
+    <div class="step-imgs"><a class="step-img" href="image/MUST_001_newevent.jpg" target="_blank" rel="noopener"><img src="image/MUST_001_newevent.jpg" alt="Switch the map layer" loading="lazy"></a></div>
+  
+</section>
+
+<section class="step">
+  <div class="step-head"><span class="step-num">3</span><h2 class="step-title">Create a new event</h2></div>
+  <div class="step-text">
+      <p>The <strong>Event Settings</strong> window will appear, as shown on the right.</p>
+    </div>
+    <div class="step-imgs"><a class="step-img" href="image/window_mapevent.jpg" target="_blank" rel="noopener"><img src="image/window_mapevent.jpg" alt="Create a new event" loading="lazy"></a></div>
+  
+</section>
+
+<section class="step">
+  <div class="step-head"><span class="step-num">4</span><h2 class="step-title">Set the event graphics</h2></div>
+  <div class="step-text">
+      <p>Let's set the event's walking sprite first. To do that, <strong>double-click the area highlighted in red</strong>.</p>
+    </div>
+    <div class="step-imgs"><a class="step-img" href="image/MUST_001xev1.jpg" target="_blank" rel="noopener"><img src="image/MUST_001xev1.jpg" alt="Set the event graphics" loading="lazy"></a></div>
+  
+</section>
+
+<section class="step">
+  <div class="step-head"><span class="step-num">5</span><h2 class="step-title">Change the facing direction</h2></div>
+  <div class="step-text">
+      <p>A window like the one on the right will appear. Select "<strong>Animal_Chicken.png</strong>" and click "<strong>OK</strong>".</p>
+      <div class="note"><strong>※ Tip:</strong> You can click the character image in the right-hand preview area to change the direction the character is facing.</div>
+    </div>
+    <div class="step-imgs"><a class="step-img" href="image/MUST_001xev3.jpg" target="_blank" rel="noopener"><img src="image/MUST_001xev3.jpg" alt="Change the facing direction" loading="lazy"></a></div>
+  
+</section>
+
+<section class="step">
+  <div class="step-head"><span class="step-num">6</span><h2 class="step-title">Great work!</h2></div>
+  <div class="step-text">
+      <p>The chicken sprite has now been successfully assigned to the event.</p>
+    </div>
+    <div class="step-imgs"><a class="step-img" href="image/MUST_001xev31.jpg" target="_blank" rel="noopener"><img src="image/MUST_001xev31.jpg" alt="Great work!" loading="lazy"></a></div>
+  
+</section>
+
+<section class="step">
+  <div class="step-head"><span class="step-num">7</span><h2 class="step-title">Let&#x27;s make it talk</h2></div>
+  <div class="step-text">
+      <p>Next, let's add some dialogue for the chicken.</p>
+      <p>Click the button in the lower-right corner of the Event Window: "<strong>■ Open Command Window ■</strong>"</p>
+    </div>
+    <div class="step-imgs"><a class="step-img" href="image/MUST_001xev2.jpg" target="_blank" rel="noopener"><img src="image/MUST_001xev2.jpg" alt="Let&#x27;s make it talk" loading="lazy"></a></div>
+  
+</section>
+
+<section class="step">
+  <div class="step-head"><span class="step-num">8</span><h2 class="step-title">Open Command Window</h2></div>
+  <div class="step-text">
+      <p>The "<strong>Command Window</strong>" will now open. Make sure the selected tab is "<strong>Show Message</strong>", as shown on the right.</p>
+    </div>
+    <div class="step-imgs"><a class="step-img" href="image/window_text.jpg" target="_blank" rel="noopener"><img src="image/window_text.jpg" alt="Open Command Window" loading="lazy"></a></div>
+  
+</section>
+
+<section class="step">
+  <div class="step-head"><span class="step-num">9</span><h2 class="step-title">Add Show Message command</h2></div>
+  <div class="step-text">
+      <p>In the text input field, type what the chicken says. Something like: "<strong>Cock-a-doodle-doo♪</strong>", and click the "<strong>Insert</strong>" button.</p>
+    </div>
+    <div class="step-imgs"><a class="step-img" href="image/MUST_001xev4.jpg" target="_blank" rel="noopener"><img src="image/MUST_001xev4.jpg" alt="Add Show Message command" loading="lazy"></a></div>
+  
+</section>
+
+<section class="step">
+  <div class="step-head"><span class="step-num">10</span><h2 class="step-title">Double-check the event settings</h2></div>
+  <div class="step-text">
+      <p>If your event looks like the example shown on the right, you’ve set it up correctly.</p>
+      <p>By default, the event <strong>Trigger</strong> is already set to "<strong>Confirm key</strong>". This means the event will activate when the player presses the key while facing it.</p>
+    </div>
+    <div class="step-imgs"><a class="step-img" href="image/MUST_001xev5.jpg" target="_blank" rel="noopener"><img src="image/MUST_001xev5.jpg" alt="Double-check the event settings" loading="lazy"></a></div>
+  
+</section>
+
+<section class="step">
+  <div class="step-head"><span class="step-num">11</span><h2 class="step-title">Remember to save it!</h2></div>
+  <div class="step-text">
+      <p>Click the "<strong>Save (Entire Map)</strong>" button in the lower-right corner of the Event window. Then click "<strong>Test Play (F9)</strong>". This will save the map with the new event and start a test play session.</p>
+    </div>
+    <div class="step-imgs"><a class="step-img" href="image/MUST_001xev6.jpg" target="_blank" rel="noopener"><img src="image/MUST_001xev6.jpg" alt="Remember to save it!" loading="lazy"></a></div>
+  
+</section>
+
+<section class="step">
+  <div class="step-head"><span class="step-num">12</span><h2 class="step-title">Let&#x27;s play test</h2></div>
+  <div class="step-text">
+      <p>At the title screen, select "<strong>New Game</strong>".</p>
+      <p>After the introduction finishes, walk up to the chicken you just created, and press the <strong>Confirm Key</strong> while facing it.</p>
+      <p>The chicken should say: <strong>"Cock-a-doodle-doo♪"</strong></p>
+      <p>Great job, and <strong>congratulations</strong> on creating your first event!</p>
+    </div>
+    <div class="step-imgs"><a class="step-img" href="image/MUST_001xev7.jpg" target="_blank" rel="noopener"><img src="image/MUST_001xev7.jpg" alt="Let&#x27;s play test" loading="lazy"></a></div>
+  
+</section>
+
+<section class="step">
+  <div class="step-head"><span class="step-tag">Extra Note</span></div>
+  <div class="step-text">
+      <p><strong>What is the "Name" field actually used for?</strong></p>
+      <p>When you assign a sprite to an event, the filename is automatically entered in the "<strong>Name</strong>" field.</p>
+      <p>However, you're free to change it to anything you like, such as "<strong>Cock-a-doodle-doo</strong>", "<strong>Talking Chicken</strong>" or just "<strong>Chicken</strong>".</p>
+      <p>When you place your cursor over an event while editing the Event Layer, the event's name will appear in the <strong>title bar</strong>.</p>
+      <p>That's all it does, so giving it a cool name won’t grant it any special powers 😊</p>
+    </div>
+    <div class="step-imgs"><a class="step-img" href="image/MUST_001xev8.jpg" target="_blank" rel="noopener"><img src="image/MUST_001xev8.jpg" alt="Extra Note: Creating your first event" loading="lazy"></a></div>
+  
+</section>
+      <div class="pager"><a class="prev" href="switching-the-map-youre-editing.html"><span class="pg-ico">❮</span>Switching the map you’re editing</a><a class="next" href="creating-a-new-map.html">Next: Creating a new map<span class="pg-ico">❯</span></a></div>
+      <p class="xnote">&#8251; This is a faithful translation of the original guide, with minor editorial additions (terminology notes, extra examples, beginner-friendly clarifications) and updated screenshots, while preserving the original intent and instructions.</p>
+      <div class="footer">Copyright &copy; <strong>SmokingWOLF</strong>. All rights reserved.<br>English edition lovingly prepared by <a href="https://anya-and-lolo.github.io/" target="_blank" rel="noopener">Anya &amp; Lolo</a>.</div>
+    </article></div>
+    <div class="translation-banner"><div class="translation-banner-container"><p class="translation-banner-content"><span class="translation-banner-text">This page is a translation of content created by <strong>SmokingWOLF</strong>, with the author's permission to translate and publish.</span> <a href="https://smokingwolf.github.io/tool_wolf_rpg_editor/guide/creating-your-first-event.html" class="translation-banner-link" target="_blank" rel="noopener noreferrer">View original</a></p></div></div>
+  </main>
+</div>
+<script>
+(function(){var b=document.body,btn=document.getElementById("hambBtn"),ov=document.getElementById("overlay");function c(){b.classList.remove("nav-open");btn.setAttribute("aria-expanded","false");}btn.addEventListener("click",function(){var o=b.classList.toggle("nav-open");btn.setAttribute("aria-expanded",o?"true":"false");});ov.addEventListener("click",c);document.addEventListener("keydown",function(e){if(e.key==="Escape")c();});var here=location.pathname.split("/").pop();document.querySelectorAll("#sidebar .nav-link").forEach(function(a){a.addEventListener("click",c);if(a.getAttribute("href")===here)a.classList.add("active");});})();
+</script>
+</body></html>          

@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Working with Variables | WOLF RPG Editor Complete Guide (English)</title>
+<meta name="description" content="Understand the different types of variables used in WOLF RPG Editor and give them meaningful names."><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://anya-and-lolo.github.io/wolf_rpg_editor_ENG/guide/working-with-variables.html">
+<meta property="og:type" content="article"><meta property="og:title" content="Working with Variables | WOLF RPG Editor Complete Guide">
+<meta property="og:image" content="image/header_woditor.jpg"><meta name="theme-color" content="#5a3ec8">
+<link rel="stylesheet" href="../translation-notice.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Working with Variables",
+  "description": "Understand the different types of variables used in WOLF RPG Editor and give them meaningful names.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Create a new event on the map",
+      "text": "Open the Map Selection window to switch to the map where you'd like to create the event. Create an event anywhere on the map. You don't need to assign an event graphic. For detailed instructions, refer to Steps 1–5 of \"Events activated by the Confirm key\"."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Naming your variables",
+      "text": "You can assign custom names to variables to make them easier to identify. For example, a variable named \"PlayerGold\" is much easier to recognize than \"V237\". Once the event has been created, click: \"■ Open Command Window ■\" in the lower-right corner of the Event Window. 1. In the list on the left, select ③ \"Set Variable\" 2. Giving variables clear names makes projects much easier to understand later. To do that, look for the section labeled \"Set Variable Name\". Use this area to assign a name to any variable. ※ Good to know: ⑤ \"Set String\" also includes a similar naming option. 3. Select the variable you want to name. For ③ \"Set Variable\" these are: V n Normal variables V n-j Spare variables For ⑤ \"Set String\": S n String variables ※ What are n and j? n and j here simply represent numeric values. For example, V n could be V0, and V n-j could be V8-0. When editing a Common Event: For ③ \"Set Variable\": V n Normal variables CSelf n Common Event Self variables For ⑤ \"Set String\": S n String variables CSelf n Common Event Self variables 4. Enter the name you want to use, then click \"Assign Name\" button next to \"Insert\". ※ What the other buttons are for? \"Copy\" copies the currently selected variable name into the name field. \"Size +1\" increases the available variable range. For example: - For Normal variables (V n): increases the upper limit of n - For Spare variables (V n-j): increases the upper limit of j for the selected n - For String variables (S n): increases the upper limit of n You can now give variables meaningful names and make them much easier to work with! If you'd like to learn Method 2, continue reading. Otherwise, you're finished. Great work!"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Open the System Database Editor",
+      "text": "There's one more place where you can configure variables, and it's the System Database Editor. To open it, click this icon in the toolbar. The System Database Editor window will open. ※ Note: Most variables in your project (except Common Event Self (CSelf) variables) can be managed here. For CSelf variables use Common Events Editor in Step 5."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Editing variable names",
+      "text": "Here are the areas you can safely edit: 4: String variables (S n) 14: Normal variables (V n) 15–23: Spare variables (V n-j) From the System Database, you can manage the names of most variables from one place. After making changes, save them by either clicking \"OK\" or \"Update\" or pressing Ctrl+S. Your changes will then be saved and applied."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "For Common Event Self (CSelf) variables",
+      "text": "Refer to Step 1 of \"Creating a new Common Event\" on where to find the Common Event Editor. To view all CSelf variables, click \"CSelf Var List\" in the top-right corner of the window."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 6,
+      "name": "Common Event Self (CSelf) variable list",
+      "text": "A window like the one shown on the right will appear where you can enter names for 99 Common Event Self (CSelf) variables. After changing entries, always click \"Done\". If you click \"Cancel\", your changes will not be saved. ※ What these Copy/Paste buttons are for? - \"Copy All\" copies all variable names from CSelf00–CSelf99 for the Common Event currently being edited. - \"Paste All\" completely overwrites the current list with the content from Copy All. - \"Paste Into Blanks Only\" fills in empty fields If an entry already contains any text (even a single space), it will be left unchanged."
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "WOLF RPG Editor Guide",
+      "item": "https://anya-and-lolo.github.io/wolf_rpg_editor_ENG/guide/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Essential Knowledge",
+      "item": "https://anya-and-lolo.github.io/wolf_rpg_editor_ENG/guide/essential-knowledge.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Working with Variables",
+      "item": "https://anya-and-lolo.github.io/wolf_rpg_editor_ENG/guide/working-with-variables.html"
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="../guide.css"></head>
+<body>
+<div class="topbar"><button class="hamb" id="hambBtn" aria-label="Open menu" aria-expanded="false">&#9776;</button><div class="tb-title">WOLF RPG Editor <span>Guide</span></div></div>
+<div class="overlay" id="overlay"></div>
+<div class="layout">
+  <aside class="sidebar" id="sidebar" aria-label="Guide navigation">
+    <a class="brand" href="index.html"><img class="brand-logo" src="image/icon_editorexe.png" alt=""><div class="brand-text"><strong>WOLF RPG Editor</strong><small>Complete Guide &middot; English</small></div></a>
+    <nav>
+      <section class="nav-sec" id="sec-essential-knowledge"><h3>Essential Knowledge <span class="sec-here" aria-hidden="true"></span></h3><a class="nav-link" href="installing-wolf-rpg-editor.html">◆ Installing WOLF RPG Editor</a><a class="nav-link" href="switching-the-map-youre-editing.html">◆ Switching the map you’re editing</a><a class="nav-link" href="creating-your-first-event.html">◆ Creating your first event</a><a class="nav-link" href="creating-a-new-map.html">◆ Creating a new map</a><a class="nav-link" href="moving-the-player-to-another-map.html">◆ Moving the player to another map</a><a class="nav-link" href="changing-the-games-starting-position.html">◆ Changing the game's starting position</a><span class="nav-link soon">◆ Removing the Sample Data</span><span class="nav-link soon">◆ Understanding the "Title" map</span><span class="nav-link soon">◆ Setting the game title</span><span class="nav-link soon">◆ Changing the title image (Sample Game only)</span><a class="nav-link" href="creating-a-new-common-event.html">◆ Creating a new Common Event</a><a class="nav-link active" href="working-with-variables.html">◆ Working with variables</a><a class="nav-link" href="uninstalling-wolf-rpg-editor.html">◆ Uninstalling WOLF RPG Editor</a></section>
+<section class="nav-sec nav-soon" id="sec-basic-system"><h3>Basic System</h3><span class="nav-link">◆ Understanding the Basic System</span><div class="nav-sub">Settings Section</div><span class="nav-link">◆ Changing the player's walking graphic</span><span class="nav-link">◆ Setting the starting party</span><span class="nav-link">◆ The starting character image isn’t showing</span><span class="nav-link">◆ Adding additional player characters</span><span class="nav-link">◆ Setting character stats and starting equipment</span><span class="nav-link">◆ Configuring skill learning for characters</span><span class="nav-link">◆ Adding new skill/magic types</span><span class="nav-link">◆ Adding new item types</span><span class="nav-link">◆ Adding new weapon types</span><span class="nav-link">◆ Adding new armor types</span><span class="nav-link">◆ Setting different equipment per character</span><span class="nav-link">◆ Changing basic terms like currency name</span><span class="nav-link">◆ Removing the "Talk" command from the menu</span><span class="nav-link">Adding custom commands to the menu</span><div class="nav-sub">Battle Section</div><span class="nav-link">◆ Creating battle commands that activate skills immediately</span><span class="nav-link">◆ Adding enemy characters</span><span class="nav-link">◆ Setting enemy groups</span><span class="nav-link">◆ Creating status effects</span><span class="nav-link">◆ Triggering events during battle</span><span class="nav-link">◆ Displaying enemy names and counts at battle start</span><div class="nav-sub">Events</div><span class="nav-link">◆ Starting a battle</span><span class="nav-link">Setting enemy groups</span><span class="nav-link">◆ Creating a shop event</span><span class="nav-link">◆ Changing item quantities</span><span class="nav-link">◆ Increasing or decreasing money</span><span class="nav-link">◆ Healing or damaging the player</span><span class="nav-link">◆ Changing character stats during gameplay</span><span class="nav-link">◆ Making characters learn skills during gameplay</span><span class="nav-link">◆ Opening the menu or save screen within an event</span><span class="nav-link">◆ Making events react differently based on items, money, or party members</span><span class="nav-link">◆ Creating random encounters</span><span class="nav-link">◆ Making a Game Over sequence</span><span class="nav-link">◆ Adding or removing party members</span><span class="nav-link">◆ Changing character names</span><span class="nav-link">◆ Disabling saving from the menu</span><div class="nav-sub">Advanced Settings</div><span class="nav-link">◆ Adding icons to item names</span><span class="nav-link">◆ Setting weapon elements/attributes</span><span class="nav-link">◆ Setting enemy weaknesses, resistances, absorption, and immunity</span><span class="nav-link">◆ Setting enemy resistance to status effects</span><span class="nav-link">◆ Understanding whether “Defend” is a status effect</span><span class="nav-link">◆ Adding custom commands to the menu</span><span class="nav-link">◆ Configuring advanced system settings</span></section>
+<section class="nav-sec nav-soon" id="sec-event-creation"><h3>Event Creation</h3><span class="nav-link">Events activated by the Confirm key</span><span class="nav-link">◆ Events triggered when the player touches them</span><span class="nav-link">◆ Events triggered when NPCs touch the player</span><span class="nav-link">◆ Events that reset after leaving the map</span><span class="nav-link">◆ Permanently disappearing events</span><span class="nav-link">◆ Treasure chests that stay empty</span><span class="nav-link">◆ Events that remember conversation counts</span><span class="nav-link">◆ Events that start when entering the map</span><span class="nav-link">◆ Events that operate in parallel with normal events</span><span class="nav-link">◆ How to avoid having multiple similar events</span><span class="nav-link">◆ Changing character and event movement speed</span><span class="nav-link">◆ Changing choice window position</span></section>
+<section class="nav-sec nav-soon" id="sec-map-creation"><h3>Map Creation</h3><span class="nav-link">◆ Creating nice-looking maps</span><span class="nav-link">◆ Scrolling the map screen more easily</span><span class="nav-link">◆ Copying all three map layers at once</span><span class="nav-link">◆ Shifting the entire map</span><span class="nav-link">◆ Drawing autotile borders freely</span><span class="nav-link">◆ Setting music for a map</span></section>
+<section class="nav-sec nav-soon" id="sec-basic-settings"><h3>Basic Settings</h3><span class="nav-link">◆ Switching character graphics to 8‑directional</span><span class="nav-link">Fixing a character that splits into 2</span><span class="nav-link">◆ Setting half‑tile or full‑tile movement</span><span class="nav-link">◆ Changing the choice window image</span><span class="nav-link">◆ Changing the message wait arrow indicator</span></section>
+<section class="nav-sec nav-soon" id="sec-using-downloaded-assets-common-events"><h3>Using Downloaded Assets/Common Events</h3><span class="nav-link">◆ Changing map tile passability settings</span><span class="nav-link">◆ Adapting different map tilesets</span><span class="nav-link">◆ Using RPG Maker assets in WOLF RPG Editor</span><span class="nav-link">◆ Using face graphics <Basic System></span><span class="nav-link">◆ Using BGM and sound effects</span><span class="nav-link">◆ Adding custom fonts to the game</span><span class="nav-link">◆ Understanding asset usage rules</span><span class="nav-link">◆ Applying the Basic System bug‑fix patch</span></section>
+<section class="nav-sec nav-soon" id="sec-creating-assets"><h3>Creating Assets</h3><span class="nav-link">◆ Creating high‑quality walking character assets</span><span class="nav-link">◆ Arranging walking character sheets</span><span class="nav-link">◆ Making images transparent</span><span class="nav-link">◆ Creating custom map tilesets</span></section>
+<section class="nav-sec nav-soon" id="sec-effects-presentation"><h3>Effects &amp; Presentation</h3><span class="nav-link">◆ Adding wait times and delays</span><span class="nav-link">◆ Darkening the screen or making it flash</span><span class="nav-link">◆ Enlarging text in messages</span><span class="nav-link">◆ Changing text colors in messages</span><span class="nav-link">◆ Changing fonts in messages</span><span class="nav-link">◆ Other message‑related effects</span></section>
+<section class="nav-sec nav-soon" id="sec-errors-and-strange-behavior"><h3>Errors and Strange Behavior</h3><span class="nav-link">◆ Fixing halved or split into 2 characters</span><span class="nav-link">◆ Fixing tileset size errors "Map chip must be 128 or 256 pixels wide"</span><span class="nav-link">◆ Fixing "Over 500,000 processes per frame!" error</span><span class="nav-link">◆ Fixing "maximum map coordinates..." error</span><span class="nav-link">◆ Fixing MIDI playback issues in WOLF RPG Editor</span></section>
+<section class="nav-sec nav-soon" id="sec-beyond-the-basics"><h3>Beyond the Basics</h3><span class="nav-link">◆ Using parallel and auto events effectively</span><span class="nav-link">◆ Displaying JPG/PNG images</span><span class="nav-link">◆ Using variables in editor number fields</span><span class="nav-link">◆ Retrieving a string from keyboard input</span><span class="nav-link">◆ Detecting key presses in WOLF RPG Editor</span><span class="nav-link">◆ Detecting mouse input</span><span class="nav-link">◆ Learning how to use the Database</span><span class="nav-link">◆ Creating a dash function tied to a specific key</span><span class="nav-link">◆ Detecting multiple simultaneous key presses</span><span class="nav-link">◆ Tricks using movement input and facing direction values</span></section>
+<section class="nav-sec nav-soon" id="sec-for-veteran-users"><h3>For Veteran Users</h3><span class="nav-link">◆ Working from a USB drive</span></section>
+<div class="nav-sec nav-soon"><span class="nav-link">Closing Notes</span></div>
+    </nav>
+  </aside>
+  <main class="content">
+    <div class="wrap"><article>
+      <div class="crumb"><a href="index.html">WOLF RPG Editor Guide</a> &nbsp;/&nbsp; <a href="essential-knowledge.html">Essential Knowledge</a> &nbsp;/&nbsp; <strong>Working with Variables</strong></div>
+      <span class="kicker">Essential Knowledge</span>
+      <h1>Working with Variables</h1>
+      <p class="lead">Understand the different types of variables used in WOLF RPG Editor and give them meaningful names.</p>
+      <p class="lead">This tutorial covers:<br>
+	  • <strong>Normal variables</strong><br>
+	  • <strong>Spare variables</strong><br>
+	  • <strong>String variables</strong><br>
+	  • <strong>Self variables</strong> in Common Events</p>
+      <p class="lead"><strong><a href="#1">Method 1</a></strong> (from an Event) &nbsp;|&nbsp; <strong><a href="#3">Method 2</a></strong> (from the Database)</p>
+      <p class="byline">Author: <strong>Kijiko</strong></p>
+      
+      <div class="note"><strong>&#8251; What&#x27;s a variable and why would I need one?</strong>
+	  <br>Variables are part of the game&#x27;s memory. They store information such as numbers or text that help the game remember what has happened and decide what should happen next. For example, how many times a player talked to an NPC? How much gold the player has? Or whether a quest has been completed.</div>
+      <hr class="intro-sep">
+      <h3 class="method-head"><a name="1"></a><span class="method-tag">Method 1</span> from an Event</h3>
+      <section class="step">
+  <div class="step-head"><span class="step-num">1</span><h2 class="step-title">Create a new event on the map</h2></div>
+  <div class="step-text">
+      <p>Open the <strong>Map Selection</strong> <IMG height="20" src="image/icon_mapselector.png" width="22" border="0"> window to switch to the map where you'd like to create the event.</p>
+      <p>Create an event anywhere on the map. You don't need to assign an event graphic.</p>
+      <p>For detailed instructions, refer to <strong>Steps 1–5</strong> of "<span class="xref-soon">Events activated by the Confirm key</span>".</p>
+    </div>
+    <div class="step-imgs"><a class="step-img" href="image/BASE_E012_1.jpg" target="_blank" rel="noopener"><img src="image/BASE_E012_1.jpg" alt="Create a new event on the map" loading="lazy"></a></div>
+  
+</section>
+
+<section class="step">
+  <div class="step-head"><span class="step-num">2</span><h2 class="step-title">Naming your variables</h2></div>
+  <div class="step-text">
+      <p>You can assign custom names to variables to make them easier to identify. For example, a variable named "<strong>PlayerGold</strong>" is much easier to recognize than "<strong>V237</strong>".</p>
+      <p>Once the event has been created, click: <strong>"■ Open Command Window ■"</strong> in the lower-right corner of the Event Window.</p>
+      <p>1. In the list on the left, select ③ "<strong>Set Variable</strong>"</p>
+      <p>2. Giving variables clear names makes projects much easier to understand later.</p>
+      <p>To do that, look for the section labeled "<strong>Set Variable Name</strong>". Use this area to assign a name to any variable.</p>
+      <div class="note">※ <strong>Good to know:</strong><br>⑤ "<strong>Set String</strong>" also includes a similar naming option.</div>
+      <p>3. Select the variable you want to name. <br>For ③ "<strong>Set Variable</strong>" these are: <br><strong>V n</strong> Normal variables <br><strong>V n-j</strong> Spare variables</p>
+      <p>For ⑤ "<strong>Set String</strong>": <strong>S n</strong> String variables</p>
+      <div class="note">※ <strong>What are n and j?</strong><br>n and j here simply represent numeric values. For example, <strong>V n</strong> could be <strong>V0</strong>, and <strong>V n-j</strong> could be <strong>V8-0</strong>.</div>
+      <p>When editing a Common Event:<br>For ③ "<strong>Set Variable</strong>":<br><strong>V n</strong> Normal variables<br><strong>CSelf n</strong> Common Event Self variables</p>
+      <p>For ⑤ "<strong>Set String</strong>":<br><strong>S n</strong> String variables<br><strong>CSelf n</strong> Common Event Self variables</p>
+      <p>4. Enter the name you want to use, then click <strong>"Assign Name"</strong> button next to "Insert".</p>
+      <div class="note">※ <strong>What the other buttons are for?</strong><br>"Copy" copies the currently selected variable name into the name field. "Size +1" increases the available variable range. For example:<br>- For <strong>Normal variables (V n)</strong>: increases the upper limit of n<br>- For <strong>Spare variables (V n-j)</strong>: increases the upper limit of j for the selected n<br>- For <strong>String variables (S n)</strong>: increases the upper limit of n</div>
+      <p>You can now give variables meaningful names and make them much easier to work with!</p>
+      <p>If you'd like to learn <strong>Method 2</strong>, continue reading. Otherwise, you're finished. Great work!</p>
+    </div>
+    <div class="step-imgs"><a class="step-img" href="image/MUST_010_0.jpg" target="_blank" rel="noopener"><img src="image/MUST_010_0.jpg" alt="Naming your variables (1 of 2)" loading="lazy"></a><a class="step-img" href="image/MUST_010_1.jpg" target="_blank" rel="noopener"><img src="image/MUST_010_1.jpg" alt="Naming your variables (2 of 2)" loading="lazy"></a></div>
+  
+</section>
+
+      <hr class="method-sep">
+      <h3 class="method-head"><a name="3"></a><span class="method-tag">Method 2</span> from the Database</h3>
+<section class="step">
+  <div class="step-head"><span class="step-num">1</span><h2 class="step-title">Open the System Database Editor</h2></div>
+  <div class="step-text">
+      <p>There's one more place where you can configure variables, and it's the <strong>System Database Editor</strong>.</p>
+      <p>To open it, click this icon <IMG src="image/icon_sysDB.png" width="22" height="20" border="0"> in the toolbar.</p>
+      <p>The <strong>System Database Editor</strong> window will open.</p>
+      <div class="note">※ <strong>Note:</strong> Most variables in your project (except Common Event Self (CSelf) variables) can be managed here. For CSelf variables use <strong>Common Events Editor</strong> in <strong>Step 3</strong> below.</div>
+    </div>
+    <div class="step-imgs"><a class="step-img" href="image/MUST_010_2.jpg" target="_blank" rel="noopener"><img src="image/MUST_010_2.jpg" alt="Open the System Database Editor (1 of 2)" loading="lazy"></a><a class="step-img" href="image/window_SystemDB.jpg" target="_blank" rel="noopener"><img src="image/window_SystemDB.jpg" alt="Open the System Database Editor (2 of 2)" loading="lazy"></a></div>
+  
+</section>
+
+<section class="step">
+  <div class="step-head"><span class="step-num">2</span><h2 class="step-title">Editing variable names</h2></div>
+  <div class="step-text">
+      <p>Here are the areas you can safely edit:</p>
+      <p>4: <strong>String variables (S n)</strong><br>14: <strong>Normal variables (V n)</strong><br>15–23: <strong>Spare variables (V n-j)</strong></p>
+      <p>From the System Database, you can manage the names of most variables from one place.</p>
+      <p>After making changes, save them by either clicking "<strong>OK</strong>" or "<strong>Update</strong>" or pressing <strong>Ctrl+S</strong>.</p>
+      <p>Your changes will then be saved and applied.</p>
+    </div>
+    <div class="step-imgs"><a class="step-img" href="image/MUST_010_3.jpg" target="_blank" rel="noopener"><img src="image/MUST_010_3.jpg" alt="Editing variable names" loading="lazy"></a></div>
+  
+</section>
+
+<section class="step">
+  <div class="step-head"><span class="step-num">3</span><h2 class="step-title">For Common Event Self (CSelf) variables</h2></div>
+  <div class="step-text">
+      <p>Refer to <strong>Step 1</strong> of <strong><a target="B" href="creating-a-new-common-event.html">Creating a new Common Event</a></strong> on where to find the <strong>Common Event Editor</strong>.</p>
+      <p>To view all CSelf variables, click "<strong>CSelf Var List</strong>" in the top-right corner of the window.</p>
+    </div>
+    <div class="step-imgs"><a class="step-img" href="image/MUST_010_4.jpg" target="_blank" rel="noopener"><img src="image/MUST_010_4.jpg" alt="For Common Event Self (CSelf) variables" loading="lazy"></a></div>
+  
+</section>
+
+<section class="step">
+  <div class="step-head"><span class="step-num">4</span><h2 class="step-title">Common Event Self (CSelf) variable list</h2></div>
+  <div class="step-text">
+      <p>A window like the one shown on the right will appear where you can enter names for 99 <strong>Common Event Self (CSelf) variables</strong>.</p>
+      <p>After changing entries, always click "Done". If you click "Cancel", your changes will not be saved.</p>
+      <div class="note">※ <strong>What these Copy/Paste buttons are for?</strong><br>- "<strong>Copy All</strong>" copies all variable names from CSelf00–CSelf99 for the Common Event currently being edited.<br>- "<strong>Paste All</strong>" completely overwrites the current list with the content from Copy All.<br>- "<strong>Paste Into Blanks Only</strong>" fills in empty fields If an entry already contains any text (even a single space), it will be left unchanged.</div>
+    </div>
+    <div class="step-imgs"><a class="step-img" href="image/MUST_010_5.jpg" target="_blank" rel="noopener"><img src="image/MUST_010_5.jpg" alt="Common Event Self (CSelf) variable list" loading="lazy"></a></div>
+  
+</section>
+
+<section class="step">
+  <div class="step-text">
+      <p>You now know what variables are and how to give them meaningful names. Even if you're not using variables yet, naming them early can make your projects much easier to understand as they grow.</p>
+      <p>Great work!</p>
+    </div>
+    
+  
+</section>
+      <div class="pager"><a class="prev" href="creating-a-new-common-event.html"><span class="pg-ico">❮</span>Creating a new Common Event</a><a class="next" href="uninstalling-wolf-rpg-editor.html">Next: Uninstalling WOLF RPG Editor<span class="pg-ico">❯</span></a></div>
+      <p class="xnote">&#8251; This is a faithful translation of the original guide, with minor editorial additions (terminology notes, extra examples, beginner-friendly clarifications) and updated screenshots, while preserving the original intent and instructions.</p>
+      <div class="footer">Copyright &copy; <strong>SmokingWOLF</strong>. All rights reserved.<br>English edition lovingly prepared by <a href="https://anya-and-lolo.github.io/" target="_blank" rel="noopener">Anya &amp; Lolo</a>.</div>
+    </article></div>
+    <div class="translation-banner"><div class="translation-banner-container"><p class="translation-banner-content"><span class="translation-banner-text">This page is a translation of content created by <strong>SmokingWOLF</strong>, with the author's permission to translate and publish.</span> <a href="https://smokingwolf.github.io/tool_wolf_rpg_editor/guide/working-with-variables.html" class="translation-banner-link" target="_blank" rel="noopener noreferrer">View original</a></p></div></div>
+  </main>
+</div>
+<script>
+(function(){var b=document.body,btn=document.getElementById("hambBtn"),ov=document.getElementById("overlay");function c(){b.classList.remove("nav-open");btn.setAttribute("aria-expanded","false");}btn.addEventListener("click",function(){var o=b.classList.toggle("nav-open");btn.setAttribute("aria-expanded",o?"true":"false");});ov.addEventListener("click",c);document.addEventListener("keydown",function(e){if(e.key==="Escape")c();});var here=location.pathname.split("/").pop();document.querySelectorAll("#sidebar .nav-link").forEach(function(a){a.addEventListener("click",c);if(a.getAttribute("href")
