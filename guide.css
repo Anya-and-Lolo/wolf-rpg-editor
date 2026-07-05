@@ -15,7 +15,7 @@ a:hover{text-decoration:underline}
   height:var(--top);padding:0 14px;background:var(--sidebar);color:#fff;border-bottom:1px solid var(--sb-line)}
 .hamb{appearance:none;border:0;background:transparent;color:#fff;font-size:22px;line-height:1;padding:8px;cursor:pointer;border-radius:8px}
 .hamb:hover{background:var(--sb-hover)}
-.topbar .tb-title{font-weight:800;font-size:15px;letter-spacing:.2px}
+.topbar .tb-title{font-weight:800;font-size:15px;letter-spacing:.2px;color:#fff;text-decoration:none}
 .topbar .tb-title span{color:var(--accent2)}
 .layout{display:grid;grid-template-columns:var(--sbw) 1fr;align-items:start}
 /* sidebar */
@@ -51,7 +51,7 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--mu
 .ov-card:hover{border-color:var(--accent);box-shadow:0 8px 22px rgba(90,62,200,.12);transform:translateY(-2px);text-decoration:none}
 .ov-title{font-weight:800;font-size:15.5px}
 .ov-desc{color:var(--muted);font-size:13.5px;line-height:1.5;flex:1}
-.ov-go{color:var(--accent);font-weight:800;font-size:13px;margin-top:4px}
+.ov-go{color:var(--accent);font-weight:800;font-size:14.5px;margin-top:4px}
 .xnote{font-style:italic;color:#5f7d63;font-size:13.5px;line-height:1.65;margin:30px 0 0}
 .footer{margin-top:26px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
 /* overlay for mobile drawer */
@@ -128,7 +128,7 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--mu
 .lesson-info h2 a{color:var(--ink)}
 .lesson-info h2 a:hover{color:var(--accent);text-decoration:none}
 .lesson-info p{margin:0 0 12px;color:var(--muted);font-size:14.5px;line-height:1.6}
-.lesson-more{color:var(--accent);font-weight:800;font-size:14px}
+.lesson-more{color:var(--accent);font-weight:800;font-size:15.5px}
 @media(min-width:620px){.lesson{grid-template-columns:300px 1fr}.lesson-thumb img,.lesson-thumb--ph{height:100%;aspect-ratio:auto;min-height:150px}}
 .byline strong{color:var(--muted);font-weight:700}
 /* coming-soon greying (single items) */
@@ -251,8 +251,9 @@ a.brand:hover .brand-text strong{color:#fff}
   .lesson-info h2{font-size:20px}
   .lesson-info p{font-size:15.5px}
   .lesson-idx{font-size:14px}
-  .lesson-more{font-size:15px}
+  .lesson-more{font-size:16.5px}
   .ov-title{font-size:16.5px}
   .ov-desc{font-size:14.5px}
-  .ov-go{font-size:14px}
+  .ov-go{font-size:15.5px}
+  .ov-prog-track{height:10px}
 }
