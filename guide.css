@@ -111,7 +111,7 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--mu
 .step-img img{max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);box-shadow:0 8px 22px rgba(30,25,60,.10)}
 @media(min-width:760px){.step{display:grid;grid-template-columns:1fr minmax(0,400px);grid-template-rows:1fr auto auto 1fr;column-gap:24px}.step-head{grid-column:1;grid-row:2}.step-text{grid-column:1;grid-row:3}.step-imgs{grid-column:2;grid-row:1 / span 4;align-self:center}}
 .pager{display:flex;justify-content:space-between;gap:10px;margin:36px 0 0;flex-wrap:wrap}
-.pager a{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-weight:700;font-size:14.5px;padding:11px 16px;border-radius:12px;max-width:48%}
+.pager a{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-weight:700;font-size:14.5px;line-height:1.3;padding:11px 16px;border-radius:12px;max-width:48%}
 .pager a:hover{filter:brightness(1.06);text-decoration:none}
 .pager a.prev{background:transparent;color:var(--accent);border:1px solid var(--line)}
 .pager a.prev:hover{background:var(--accent-soft);filter:none}
@@ -226,3 +226,6 @@ a.brand:hover .brand-text strong{color:#fff}
 
 /* bold purple in-text links (prose only, not nav/pager/breadcrumb) */
 .step-text a,.lead a,.note a,.fig-item figcaption a{font-weight:700}
+
+/* slightly larger reading font on mobile */
+@media(max-width:759px){.step-text{font-size:16.5px}.step-text .note{font-size:15.5px}}
