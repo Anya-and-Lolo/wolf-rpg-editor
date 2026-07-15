@@ -257,3 +257,8 @@ a.brand:hover .brand-text strong{color:#fff}
   .ov-go{font-size:15.5px}
   .ov-prog-track{height:10px}
 }
+
+/* editorial note added by Anya & Lolo (distinct purple box + byline label) */
+.note--anya{background:#f5f2ff;border-color:#d9cdfb;color:#4a4460}
+.note--anya .note-by{display:block;font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--accent);margin:0 0 6px}
+.note--anya a{color:var(--accent)}
